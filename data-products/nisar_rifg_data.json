@@ -1,0 +1,103 @@
+{
+  "granule": "NISAR_L1_PR_RIFG_001_030_A_019_002_2000_SH_20081012T060911_20081012T060925_20081127T061000_20081127T061014_D00404_N_F_J_001",
+  "dimension": {
+    "geolocationCubeHeight": 20,
+    "geolocationCubeLength": 226,
+    "geolocationCubeWidth": 68,
+    "twoLayersCubeHeight": 2
+  },
+  "science": {
+    "LSAR": {
+      "RIFG": {
+        "metadata": {
+          "geolocationGrid": {
+            "coordinateY": {
+              "type": "cube",
+              "dimension": "(geolocationCubeHeight,geolocationCubeLength,geolocationCubeWidth)",
+              "data_type": "float64",
+              "shape": "(20,226,68)"
+            },
+            "coordinateX": {
+              "type": "cube",
+              "dimension": "(geolocationCubeHeight,geolocationCubeLength,geolocationCubeWidth)",
+              "data_type": "float64",
+              "shape": "(20,226,68)"
+            },
+            "incidenceAngle": {
+              "type": "cube",
+              "dimension": "(geolocationCubeHeight,geolocationCubeLength,geolocationCubeWidth)",
+              "data_type": "float64",
+              "shape": "(20,226,68)"
+            },
+            "losUnitVectorX": {
+              "type": "cube",
+              "dimension": "(geolocationCubeHeight,geolocationCubeLength,geolocationCubeWidth)",
+              "data_type": "float32",
+              "shape": "(20,226,68)"
+            },
+            "losUnitVectorY": {
+              "type": "cube",
+              "dimension": "(geolocationCubeHeight,geolocationCubeLength,geolocationCubeWidth)",
+              "data_type": "float32",
+              "shape": "(20,226,68)"
+            },
+            "alongTrackUnitVectorX": {
+              "type": "cube",
+              "dimension": "(geolocationCubeHeight,geolocationCubeLength,geolocationCubeWidth)",
+              "data_type": "float32",
+              "shape": "(20,226,68)"
+            },
+            "alongTrackUnitVectorY": {
+              "type": "cube",
+              "dimension": "(geolocationCubeHeight,geolocationCubeLength,geolocationCubeWidth)",
+              "data_type": "float32",
+              "shape": "(20,226,68)"
+            },
+            "elevationAngle": {
+              "type": "cube",
+              "dimension": "(geolocationCubeHeight,geolocationCubeLength,geolocationCubeWidth)",
+              "data_type": "float32",
+              "shape": "(20,226,68)"
+            },
+            "parallelBaseline": {
+              "type": "cube",
+              "dimension": "(twoLayersCubeHeight,geolocationCubeLength,geolocationCubeWidth)",
+              "data_type": "float32",
+              "shape": "(2,226,68)"
+            },
+            "perpendicularBaseline": {
+              "type": "cube",
+              "dimension": "(twoLayersCubeHeight,geolocationCubeLength,geolocationCubeWidth)",
+              "data_type": "float32",
+              "shape": "(2,226,68)"
+            },
+            "slantRange": {
+              "type": "cube dimension",
+              "dimension": "(geolocationCubeWidth)",
+              "data_type": "float64",
+              "shape": "(68)"
+            },
+            "zeroDopplerTime": {
+              "type": "cube dimension",
+              "dimension": "(geolocationCubeLength)",
+              "data_type": "float64",
+              "shape": "(226)"
+            },
+            "groundTrackVelocity": {
+              "type": "cube",
+              "dimension": "(geolocationCubeHeight,geolocationCubeLength,geolocationCubeWidth)",
+              "data_type": "float64",
+              "shape": "(20,226,68)"
+            },
+            "heightAboveEllipsoid": {
+              "type": "cube dimension",
+              "dimension": "(geolocationCubeHeight)",
+              "data_type": "float64",
+              "shape": "(20)"
+            }
+          }
+        }
+      }
+    }
+  }
+}

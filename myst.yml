@@ -1,15 +1,78 @@
-# See docs at: https://mystmd.org/guide/frontmatter
 version: 1
 project:
-  id: 8dd5b2b2-0fbb-4920-8817-2459cc038656
-  # title:
-  # description:
-  # keywords: []
-  # authors: []
-  github: https://github.com/ua-asf/nisar-docs
-  # To autogenerate a Table of Contents, run "myst init --write-toc"
+  bibliography:
+    - nisar-docs.bib
+  numbering:
+    figure:
+      continue: true
+      enabled: true
+  toc:
+    - file: index.md
+    - file: introduction/index.md
+      children:
+        - file: introduction/history.md
+        - file: introduction/scientific-objectives.md
+        - file: introduction/about-jpl.md
+        - file: introduction/about-asf.md
+    - file: about-nisar/index.md
+      children:
+        - file: about-nisar/instrument.md
+        - file: about-nisar/frequencies-polarization.md
+        - file: about-nisar/atbd.md
+        - file: about-nisar/data-use-citation-guidance.md
+        - file: about-nisar/product-specification.md
+        - file: about-nisar/naming-conventions.md
+    - file: processing-levels/index.md
+      children:
+        - file: processing-levels/level0.md
+        - file: processing-levels/level1.md
+        - file: processing-levels/level2.md
+        - file: processing-levels/level3.md
+    - file: data-products/index.md
+      children:
+        - file: data-products/l0b-rrsd.md
+        - file: data-products/l1-rslc.md
+        - file: data-products/l2-gslc.md
+        - file: data-products/l1-rifg.md
+        - file: data-products/l1-runw.md
+        - file: data-products/l2-gunw.md
+        - file: data-products/l2-gcov.md
+        - file: data-products/l1-roff.md
+        - file: data-products/l2-goff.md
+        - file: data-products/l3-sme2.md
+        - file: data-products/ancillary-files.md
+        - file: data-products/data-format.md
+        - file: data-products/metadata.md
+        - file: data-products/software-support.md
+    - file: applications/index.md
+      children:
+        - file: applications/amplitude.md
+        - file: applications/phase.md
+        - file: applications/ecosystem-applications.md
+        - file: applications/geologic-land-hazard-monitoring.md
+        - file: applications/critical-infrastructure-monitoring.md
+        - file: applications/maritime-coastal-ocean-applications.md
+        - file: applications/hydrology-underground-reservoirs.md
+        - file: applications/cryosphere.md
+    - file: getting-nisar-data.md
+    - file: user-support/index.md
+      children:
+        - file: user-support/documents.md
+        - file: user-support/storymaps.md
+        - file: user-support/mission-homepage-tutorials.md
+        - file: user-support/earthdata-forum.md
+        - file: user-support/faqs.md
+    - title: Appendices
+      children:
+        - file: appendices/acronyms.md
+        - file: appendices/glossary.md
+        - title: Naming Conventions
+          file: appendices/naming-conventions/index.md
+          children:
+            - file: appendices/naming-conventions/raw.md
+            - file: appendices/naming-conventions/single.md
+            - file: appendices/naming-conventions/interferometric.md
 site:
   template: book-theme
-  # options:
-  #   favicon: favicon.ico
-  #   logo: site_logo.png
+  options:
+    logo_text: "NISAR User Guide"

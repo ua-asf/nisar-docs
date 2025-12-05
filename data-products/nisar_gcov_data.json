@@ -1,0 +1,90 @@
+{
+  "granule": "NISAR_L2_PR_GCOV_008_029_A_010_0005_NASV_A_20251031T044409_20251031T044425_P05000_N_P_J_001",
+  "dimension": {
+    "radarCubeHeight": 21,
+    "radarCubeLength": 686,
+    "radarCubeWidth": 699,
+  },
+  "science": {
+    "LSAR": {
+      "GCOV": {
+        "metadata": {
+          "radarGrid": {
+            "slantRange": {
+              "type": "cube",
+              "dimension": "(radarCubeHeight,radarCubeLength,radarCubeWidth)",
+              "data_type": "float64",
+              "shape": "(21,686,699)"
+            },
+            "zeroDopplerAzimuthTime": {
+              "type": "cube",
+              "dimension": "(radarCubeHeight,radarCubeLength,radarCubeWidth)",
+              "data_type": "float64",
+              "shape": "(21,686,699)"
+            },
+            "incidenceAngle": {
+              "type": "cube",
+              "dimension": "(radarCubeHeight,radarCubeLength,radarCubeWidth)",
+              "data_type": "float32",
+              "shape": "(21,686,699)"
+            },
+            "losUnitVectorX": {
+              "type": "cube",
+              "dimension": "(radarCubeHeight,radarCubeLength,radarCubeWidth)",
+              "data_type": "float32",
+              "shape": "(21,686,699)"
+            },
+            "losUnitVectorY": {
+              "type": "cube",
+              "dimension": "(radarCubeHeight,radarCubeLength,radarCubeWidth)",
+              "data_type": "float32",
+              "shape": "(21,686,699)"
+            },
+            "alongTrackUnitVectorX": {
+              "type": "cube",
+              "dimension": "(radarCubeHeight,radarCubeLength,radarCubeWidth)",
+              "data_type": "float32",
+              "shape": "(21,686,699)"
+            },
+            "alongTrackUnitVectorY": {
+              "type": "cube",
+              "dimension": "(radarCubeHeight,radarCubeLength,radarCubeWidth)",
+              "data_type": "float32",
+              "shape": "(21,686,699)"
+            },
+            "elevationAngle": {
+              "type": "cube",
+              "dimension": "(radarCubeHeight,radarCubeLength,radarCubeWidth)",
+              "data_type": "float32",
+              "shape": "(21,686,699)"
+            },
+            "groundTrackVelocity": {
+              "type": "cube",
+              "dimension": "(radarCubeHeight,radarCubeLength,radarCubeWidth)",
+              "data_type": "float64",
+              "shape": "(21,686,699)"
+            },
+            "xCoordinates": {
+              "type": "cube",
+              "dimension": "(radarCubeWidth)",
+              "data_type": "float64",
+              "shape": "(699)"
+            },
+            "yCoordinates": {
+              "type": "cube",
+              "dimension": "(radarCubeLength)",
+              "data_type": "float64",
+              "shape": "(686)"
+            },
+            "heightAboveEllipsoid": {
+              "type": "cube",
+              "dimension": "(radarCubeHeight)",
+              "data_type": "float64",
+              "shape": "(21)"
+            }
+          }
+        }
+      }
+    }
+  }
+}
