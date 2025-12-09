@@ -10,27 +10,26 @@ project:
       enabled: true
   toc:
     - file: index.md
-    - file: introduction/index.md
+    - title: Introduction
       children:
         - file: introduction/history.md
         - file: introduction/scientific-objectives.md
         - file: introduction/about-jpl.md
         - file: introduction/about-asf.md
-    - file: about-nisar/index.md
+    - title: About NISAR
       children:
         - file: about-nisar/instrument.md
         - file: about-nisar/frequencies-polarization.md
         - file: about-nisar/atbd.md
         - file: about-nisar/data-use-citation-guidance.md
         - file: about-nisar/product-specification.md
-        - file: about-nisar/naming-conventions.md
-    - file: processing-levels/index.md
+    - title: Processing Levels
       children:
         - file: processing-levels/level0.md
         - file: processing-levels/level1.md
         - file: processing-levels/level2.md
         - file: processing-levels/level3.md
-    - file: data-products/index.md
+    - title: Data Products
       children:
         - file: data-products/overview.md
         - file: data-products/l0b-rrsd.md
@@ -47,24 +46,24 @@ project:
         - file: data-products/data-format.md
         - file: data-products/metadata.md
         - file: data-products/software-support.md
-    - file: applications/index.md
+    - title: Applications
       children:
         - file: applications/overview.md
         - file: applications/amplitude.md
         - file: applications/phase.md
     - file: getting-nisar-data.md
-    - file: user-support/index.md
+    - title: User Support
       children:
         - file: user-support/documents.md
         - file: user-support/storymaps.md
         - file: user-support/mission-homepage-tutorials.md
         - file: user-support/earthdata-forum.md
         - file: user-support/faqs.md
-    - file: appendices/index.md
+    - title: Appendices
       children:
         - file: appendices/acronyms.md
         - file: appendices/glossary.md
-        - file: appendices/naming-conventions/index.md
+        - title: Naming Conventions
           children:
             - file: appendices/naming-conventions/raw.md
             - file: appendices/naming-conventions/single.md
