@@ -36,7 +36,7 @@ The table below summarizes the characteristics of NISAR data products with respe
     <tr>
         <td style="border: 1px solid black">ROFF</td>
         <td style="text-align: center; border: 1px solid black;">90</td>
-        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+        <td style="text-align: center; border: 1px solid black;">&nbsp;</td>
         <td style="text-align: center; border: 1px solid black;">&nbsp;</td>
         <td style="border: 1px solid black">along-track offset, slant range offset<br>(three layers)</td>
         <td style="border: 1px solid black">offset variances,<br>correlation surface peak,<br>cross offset variance,<br>signal-to-noise ratio</td>
@@ -45,7 +45,7 @@ The table below summarizes the characteristics of NISAR data products with respe
     <tr>
         <td style="border: 1px solid black">GOFF</td>
         <td style="text-align: center; border: 1px solid black;">80</td>
-        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+        <td style="text-align: center; border: 1px solid black;">&nbsp;</td>
         <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
         <td style="border: 1px solid black">along-track offset, slant range offset<br>(three layers)</td>
         <td style="border: 1px solid black">offset variances,<br>correlation surface peak,<br>cross offset variance,<br>signal-to-noise ratio</td>
@@ -98,7 +98,7 @@ The table below summarizes the characteristics of NISAR data products with respe
     <tr>
         <td style="border: 1px solid black">SME2</td>
         <td style="text-align: center; border: 1px solid black;">200</td>
-        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+        <td style="text-align: center; border: 1px solid black;">&nbsp;</td>
         <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
         <td style="border: 1px solid black">three soil moisture estimates: disaggregation (DSG),<br>physical model inversion (PMI),<br>time series ratio (TSR)</td>
         <td style="border: 1px solid black">soil moisture uncertainty,<br>DSG algorithm parameters,<br>PMI crop type and vegetation water content,<br>TSR algorithm parameters</td>
