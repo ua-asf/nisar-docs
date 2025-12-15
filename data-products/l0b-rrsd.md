@@ -1,7 +1,7 @@
 ---
 short_title: RRSD
 ---
-# Radar Raw Signal Data and Calibration Product (RRSD)
+# Radar Raw Signal Data (RRSD)
 
 {button}`Product Specification <https://nisar.asf.earthdatacloud.nasa.gov/NISAR-SAMPLE-DATA/DOCS/NISAR_D-102267_RevE_NASA_SDS_Product_Specification_L0B_RRSD_CRSD_Nov8_2024_w-sigs.pdf>`
 {button}`Find Data <https://search.asf.alaska.edu/#/?dataset=NISAR&sciProducts=RRSD>`
