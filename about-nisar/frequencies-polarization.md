@@ -5,20 +5,40 @@ NISAR is equipped to acquire data in two slightly different frequencies. The tab
 :::{table} NISAR acquisition modes
 :label: tbl:areas-html
 
-<table>
+<table style="border: 2px solid #000">
     <tr>
-        <td><strong>L-band bandwdith [MHz]</strong></td>
-        <td colspan="2" align="center"><strong>Center frequency [MHz]</strong></td>
+        <td rowspan="2" align="center" style="vertical-align: bottom; border: 1px solid #000"><strong>L-band bandwdith [MHz]</strong></td>
+        <td colspan="2" align="center" style="border: 1px solid #000"><strong>Center frequency [MHz]</strong></td>
     </tr>
     <tr>
-        <td></td><td><strong>Frequency A</strong></td>
-        <td><strong>Frequency B</strong></td>
+        <td align="center" style="border: 1px solid #000"><strong>Frequency A</strong></td>
+        <td align="center" style="border: 1px solid #000"><strong>Frequency B</strong></td>
     </tr>
-    <tr><td>77</td><td>1257.5</td><td>NA</td></tr>
-    <tr><td>40+5</td><td>1239</td><td>1293.5</td></tr>
-    <tr><td>20+5</td><td>1229</td><td>1293.5</td></tr>
-    <tr><td>20+20</td><td>1229</td><td>1286</td></tr>
-    <tr><td>5+5</td><td>1221.5</td><td>1236.5</td></tr>
+    <tr>
+        <td align="center" style="border: 1px solid #000">77</td>
+        <td align="center" style="border: 1px solid #000">1257.5</td>
+        <td align="center" style="border: 1px solid #000">NA</td>
+    </tr>
+    <tr>
+        <td align="center" style="border: 1px solid #000">40+5</td>
+        <td align="center" style="border: 1px solid #000">1239</td>
+        <td align="center" style="border: 1px solid #000">1293.5</td>
+    </tr>
+    <tr>
+        <td align="center" style="border: 1px solid #000">20+5</td>
+        <td align="center" style="border: 1px solid #000">1229</td>
+        <td align="center" style="border: 1px solid #000">1293.5</td>
+    </tr>
+    <tr>
+        <td align="center" style="border: 1px solid #000">20+20</td>
+        <td align="center" style="border: 1px solid #000">1229</td>
+        <td align="center" style="border: 1px solid #000">1286</td>
+    </tr>
+    <tr>
+        <td align="center" style="border: 1px solid #000">5+5</td>
+        <td align="center" style="border: 1px solid #000">1221.5</td>
+        <td align="center" style="border: 1px solid #000">1236.5</td>
+    </tr>
 </table>
 :::
 

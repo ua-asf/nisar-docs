@@ -18,10 +18,254 @@ The L2 GCOV example below takes the x coordinates, y coordinates, and heights ab
 
 The table below summarizes which parameters are available for the users’ analysis in the various NISAR L1 and L2 products. The parameters highlighted in gray indicate the input parameters for calculating the values of the remaining parameters.
 
-```{figure} /assets/nisar-cube-metadata.png
-:label: cube_metadata
-:alt: NISAR cube metadata
-:align: center
-
-NISAR cube metadata
-```
+:::{table} NISAR cube metadata
+:label: tbl:cube-metadata-html
+<table style="text-align: center; border: 2px solid black;">
+    <tr>
+        <th rowspan="2" style="text-align: center; border: 1px solid black;">&nbsp;</th>
+        <th colspan="4" align="center" style="text-align: center; border: 1px solid black;">Level 1</th>
+        <th colspan="4" align="center" style="text-align: center; border: 1px solid black;">Level 2</th>
+    </tr>
+    <tr>
+        <th align="center" style="width: 55px; text-align: center; border: 1px solid black;">RIFG</th>
+        <th align="center" style="width: 55px; text-align: center; border: 1px solid black;">ROFF</th>
+        <th align="center" style="width: 55px; text-align: center; border: 1px solid black;">RSLC</th>
+        <th align="center" style="width: 55px; text-align: center; border: 1px solid black;">RUNW</th>
+        <th align="center" style="width: 55px; text-align: center; border: 1px solid black;">GCOV</th>
+        <th align="center" style="width: 55px; text-align: center; border: 1px solid black;">GOFF</th>
+        <th align="center" style="width: 55px; text-align: center; border: 1px solid black;">GSLC</th>
+        <th align="center" style="width: 55px; text-align: center; border: 1px solid black;">GUNW</th>
+    </tr>
+    <tr>
+        <th style="border: 1px solid black;">&nbsp;coordinateY</th>
+        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+        <td style="text-align: center; background-color: #ccc; border: 1px solid black;">&nbsp;</td>
+        <td style="text-align: center; background-color: #ccc; border: 1px solid black;">&nbsp;</td>
+        <td style="text-align: center; background-color: #ccc; border: 1px solid black;">&nbsp;</td>
+        <td style="text-align: center; background-color: #ccc; border: 1px solid black;">&nbsp;</td>
+    </tr>
+    <tr>
+        <th style="border: 1px solid black;">&nbsp;coordinateX</th>
+        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+        <td style="text-align: center; background-color: #ccc; border: 1px solid black;">&nbsp;</td>
+        <td style="text-align: center; background-color: #ccc; border: 1px solid black;">&nbsp;</td>
+        <td style="text-align: center; background-color: #ccc; border: 1px solid black;">&nbsp;</td>
+        <td style="text-align: center; background-color: #ccc; border: 1px solid black;">&nbsp;</td>
+    </tr>
+    <tr>
+        <th style="border: 1px solid black;">&nbsp;incidenceAngle</th>
+        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+    </tr>
+    <tr>
+        <th style="border: 1px solid black;">&nbsp;losUnitVectorX</th>
+        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+    </tr>
+    <tr>
+        <th style="border: 1px solid black;">&nbsp;losUnitVectorY</th>
+        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+    </tr>
+    <tr>
+        <th style="border: 1px solid black;">&nbsp;alongTrackUnitVectorX</th>
+        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+    </tr>
+    <tr>
+        <th style="border: 1px solid black;">&nbsp;alongTrackUnitVectorY</th>
+        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+    </tr>
+    <tr>
+        <th style="border: 1px solid black;">&nbsp;elevationAngle</th>
+        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+    </tr>
+    <tr>
+        <th style="border: 1px solid black;">&nbsp;parallelBaseline</th>
+        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+        <td style="text-align: center; border: 1px solid black;">&nbsp;</td>
+        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+        <td style="text-align: center; border: 1px solid black;">&nbsp;</td>
+        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+        <td style="text-align: center; border: 1px solid black;">&nbsp;</td>
+        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+    </tr>
+    <tr>
+        <th style="border: 1px solid black;">&nbsp;perpendicularBaseline</th>
+        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+        <td style="text-align: center; border: 1px solid black;">&nbsp;</td>
+        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+        <td style="text-align: center; border: 1px solid black;">&nbsp;</td>
+        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+        <td style="text-align: center; border: 1px solid black;">&nbsp;</td>
+        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+    </tr>
+    <tr>
+        <th style="border: 1px solid black;">&nbsp;slantRange</th>
+        <td style="text-align: center; background-color: #ccc; border: 1px solid black;">&nbsp;</td>
+        <td style="text-align: center; background-color: #ccc; border: 1px solid black;">&nbsp;</td>
+        <td style="text-align: center; background-color: #ccc; border: 1px solid black;">&nbsp;</td>
+        <td style="text-align: center; background-color: #ccc; border: 1px solid black;">&nbsp;</td>
+        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+        <td style="text-align: center; border: 1px solid black;">&nbsp;</td>
+        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+        <td style="text-align: center; border: 1px solid black;">&nbsp;</td>
+    </tr>
+    <tr>
+        <th style="border: 1px solid black;">&nbsp;referenceSlantRange</th>
+        <td style="text-align: center; border: 1px solid black;">&nbsp;</td>
+        <td style="text-align: center; border: 1px solid black;">&nbsp;</td>
+        <td style="text-align: center; border: 1px solid black;">&nbsp;</td>
+        <td style="text-align: center; border: 1px solid black;">&nbsp;</td>
+        <td style="text-align: center; border: 1px solid black;">&nbsp;</td>
+        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+        <td style="text-align: center; border: 1px solid black;">&nbsp;</td>
+        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+    </tr>
+    <tr>
+        <th style="border: 1px solid black;">&nbsp;secondarySlantRange</th>
+        <td style="text-align: center; border: 1px solid black;">&nbsp;</td>
+        <td style="text-align: center; border: 1px solid black;">&nbsp;</td>
+        <td style="text-align: center; border: 1px solid black;">&nbsp;</td>
+        <td style="text-align: center; border: 1px solid black;">&nbsp;</td>
+        <td style="text-align: center; border: 1px solid black;">&nbsp;</td>
+        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+        <td style="text-align: center; border: 1px solid black;">&nbsp;</td>
+        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+    </tr>
+    <tr>
+        <th style="border: 1px solid black;">&nbsp;zeroDopplerAzimuthTime</th>
+        <td style="text-align: center; background-color: #ccc; border: 1px solid black;">&nbsp;</td>
+        <td style="text-align: center; background-color: #ccc; border: 1px solid black;">&nbsp;</td>
+        <td style="text-align: center; background-color: #ccc; border: 1px solid black;">&nbsp;</td>
+        <td style="text-align: center; background-color: #ccc; border: 1px solid black;">&nbsp;</td>
+        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+        <td style="text-align: center; border: 1px solid black;">&nbsp;</td>
+        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+        <td style="text-align: center; border: 1px solid black;">&nbsp;</td>
+    </tr>
+    <tr>
+        <th style="border: 1px solid black;">&nbsp;referenceZeroDopplerAzimuthTime</th>
+        <td style="text-align: center; border: 1px solid black;">&nbsp;</td>
+        <td style="text-align: center; border: 1px solid black;">&nbsp;</td>
+        <td style="text-align: center; border: 1px solid black;">&nbsp;</td>
+        <td style="text-align: center; border: 1px solid black;">&nbsp;</td>
+        <td style="text-align: center; border: 1px solid black;">&nbsp;</td>
+        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+        <td style="text-align: center; border: 1px solid black;">&nbsp;</td>
+        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+    </tr>
+    <tr>
+        <th style="border: 1px solid black;">&nbsp;secondaryZeroDopplerAzimuthTime</th>
+        <td style="text-align: center; border: 1px solid black;">&nbsp;</td>
+        <td style="text-align: center; border: 1px solid black;">&nbsp;</td>
+        <td style="text-align: center; border: 1px solid black;">&nbsp;</td>
+        <td style="text-align: center; border: 1px solid black;">&nbsp;</td>
+        <td style="text-align: center; border: 1px solid black;">&nbsp;</td>
+        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+        <td style="text-align: center; border: 1px solid black;">&nbsp;</td>
+        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+    </tr>
+    <tr>
+        <th style="border: 1px solid black;">&nbsp;groundTrackVelocity</th>
+        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+        <td style="text-align: center; border: 1px solid black;">&nbsp;</td>
+        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+    </tr>
+    <tr>
+        <th style="border: 1px solid black;">&nbsp;hydrostaticTroposphericPhaseScreen</th>
+        <td style="text-align: center; border: 1px solid black;">&nbsp;</td>
+        <td style="text-align: center; border: 1px solid black;">&nbsp;</td>
+        <td style="text-align: center; border: 1px solid black;">&nbsp;</td>
+        <td style="text-align: center; border: 1px solid black;">&nbsp;</td>
+        <td style="text-align: center; border: 1px solid black;">&nbsp;</td>
+        <td style="text-align: center; border: 1px solid black;">&nbsp;</td>
+        <td style="text-align: center; border: 1px solid black;">&nbsp;</td>
+        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+    </tr>
+    <tr>
+        <th style="border: 1px solid black;">&nbsp;wetTroposphericPhaseScreen</th>
+        <td style="text-align: center; border: 1px solid black;">&nbsp;</td>
+        <td style="text-align: center; border: 1px solid black;">&nbsp;</td>
+        <td style="text-align: center; border: 1px solid black;">&nbsp;</td>
+        <td style="text-align: center; border: 1px solid black;">&nbsp;</td>
+        <td style="text-align: center; border: 1px solid black;">&nbsp;</td>
+        <td style="text-align: center; border: 1px solid black;">&nbsp;</td>
+        <td style="text-align: center; border: 1px solid black;">&nbsp;</td>
+        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+    </tr>
+    <tr>
+        <th style="border: 1px solid black;">&nbsp;slantRangeSolidEarthTidesPhase</th>
+        <td style="text-align: center; border: 1px solid black;">&nbsp;</td>
+        <td style="text-align: center; border: 1px solid black;">&nbsp;</td>
+        <td style="text-align: center; border: 1px solid black;">&nbsp;</td>
+        <td style="text-align: center; border: 1px solid black;">&nbsp;</td>
+        <td style="text-align: center; border: 1px solid black;">&nbsp;</td>
+        <td style="text-align: center; border: 1px solid black;">&nbsp;</td>
+        <td style="text-align: center; border: 1px solid black;">&nbsp;</td>
+        <td style="text-align: center; border: 1px solid black;">&#x2714;</td>
+    </tr>
+    <tr>
+        <th style="border: 1px solid black;">&nbsp;heightAboveEllipsoid</th>
+        <td style="text-align: center; background-color: #ccc; border: 1px solid black;">&nbsp;</td>
+        <td style="text-align: center; background-color: #ccc; border: 1px solid black;">&nbsp;</td>
+        <td style="text-align: center; background-color: #ccc; border: 1px solid black;">&nbsp;</td>
+        <td style="text-align: center; background-color: #ccc; border: 1px solid black;">&nbsp;</td>
+        <td style="text-align: center; background-color: #ccc; border: 1px solid black;">&nbsp;</td>
+        <td style="text-align: center; background-color: #ccc; border: 1px solid black;">&nbsp;</td>
+        <td style="text-align: center; background-color: #ccc; border: 1px solid black;">&nbsp;</td>
+        <td style="text-align: center; background-color: #ccc; border: 1px solid black;">&nbsp;</td>
+    </tr>
+</table>
+:::
