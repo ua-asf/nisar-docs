@@ -27,7 +27,7 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: ${{ steps.deploy.outputs.page_url }}
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -49,4 +49,5 @@ jobs:
         with:
           path: './_build/html'
 
-      - uses: actions/deploy-pages@v4
+      - id: deployment
+        uses: actions/deploy-pages@v4
