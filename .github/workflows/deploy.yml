@@ -12,7 +12,7 @@ env:
   BASE_URL: ${{ vars.BASE_URL }}
   # `DOMAIN` is a workaround for https://github.com/jupyter-book/myst-theme/issues/669:
   # - robots.txt,sitemap.xml as well as some other files use "localhost:3000" url
-  CUSTOM_DOMAIN: ${{ vars.DOMAIN }}
+  DOMAIN: ${{ vars.DOMAIN }}
 
 permissions:
   contents: read
