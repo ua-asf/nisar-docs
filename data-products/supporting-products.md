@@ -1,4 +1,4 @@
-# Ancillary files
+# Supporting Products
 
 There are a number of ancillary files that are available since they are used as part of the processing.
 

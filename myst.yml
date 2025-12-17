@@ -23,26 +23,28 @@ project:
         - file: about-nisar/atbd.md
         - file: about-nisar/data-use-citation-guidance.md
         - file: about-nisar/product-specification.md
-    - title: Processing Levels
-      children:
-        - file: processing-levels/level0.md
-        - file: processing-levels/level1.md
-        - file: processing-levels/level2.md
-        - file: processing-levels/level3.md
     - title: Data Products
       children:
         - file: data-products/overview.md
-        - file: data-products/l0b-rrsd.md
-        - file: data-products/l1-rslc.md
-        - file: data-products/l2-gslc.md
-        - file: data-products/l1-rifg.md
-        - file: data-products/l1-runw.md
-        - file: data-products/l2-gunw.md
-        - file: data-products/l2-gcov.md
-        - file: data-products/l1-roff.md
-        - file: data-products/l2-goff.md
-        - file: data-products/l3-sme2.md
-        - file: data-products/ancillary-files.md
+        - title: Level 3
+          children:
+            - file: data-products/level-3/sme2.md
+        - title: Level 2
+          children:
+            - file: data-products/level-2/gslc.md
+            - file: data-products/level-2/goff.md
+            - file: data-products/level-2/gunw.md
+            - file: data-products/level-2/gcov.md
+        - title: Level 1
+          children:
+            - file: data-products/level-1/rslc.md
+            - file: data-products/level-1/rifg.md
+            - file: data-products/level-1/roff.md
+            - file: data-products/level-1/runw.md
+        - title: Level 0
+          children:
+            - file: data-products/level-0/rrsd.md
+        - file: data-products/supporting-products.md
         - file: data-products/data-format.md
         - file: data-products/metadata.md
         - file: data-products/software-support.md
