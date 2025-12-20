@@ -13,11 +13,10 @@ project:
     - title: About NISAR
       children:
         - file: about-nisar/nisar-intro.md
-        - file: about-nisar/instrument.md
-        - file: about-nisar/frequencies-polarization.md
+        - file: about-nisar/instrumentation.md
+        - file: about-nisar/product-specification.md
         - file: about-nisar/atbd.md
         - file: about-nisar/data-use-citation-guidance.md
-        - file: about-nisar/product-specification.md
     - title: Data Products
       children:
         - file: data-products/overview.md
