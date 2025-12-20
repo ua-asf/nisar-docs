@@ -1,4 +1,4 @@
-# About the Instrument
+# NISAR Instrumentation
 
 NISAR was designed to deliver fast sampling, free and open access, and global coverage at full resolution and with polarimetric diversity. The technical innovation that allows this performance is the scan-on-receive *SweepSAR* design, conceived and refined collaboratively by NASA and the German Space Agency (DLR).
 
@@ -6,4 +6,4 @@ The L-band Synthetic Aperture Radar (L-SAR) instrument is the focus of the NASA-
 
 The S-band SAR (S-SAR) instrument, developed in a collaboration between NASA and the Indian Space Research Organization (ISRO), operates at a wavelength of 9.3 cm and is primarily used for acquisitions over India.
 
-A more detailed description of the NISAR instrument design is in section 4.7 of the [NISAR Mission Science Users' Handbook](https://assets.science.nasa.gov/content/dam/science/missions/nisar/nisar-jpl/pdf/NISAR_FINAL_9-6-19.pdf).
+A more detailed description of the NISAR instrument design is in section 4.7 of the [NISAR Mission Science Users' Handbook (2025)](https://doi.org/10.48577/jpl.UD4HV3).
