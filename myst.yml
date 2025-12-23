@@ -55,7 +55,7 @@ project:
     - title: NISAR Tutorials
       children:
         - file: tutorials/tutorials-overview.md
-        - file: user-support/storymaps.md
+        - file: tutorials/storymaps.md
     - title: Applications
       children:
         - file: applications/overview.md
