@@ -11,7 +11,7 @@ This naming convention is only used for Level 0B (L0 RRSD) products.
 
 -----
 
-```{figure} ../assets/NISAR_RRSD.jpg
+```{figure} ../assets/nisar-naming-conventions-rrsd.png
 :label: naming_convention_raw_data
 :alt: NISAR naming convention for raw data
 :align: center
@@ -31,7 +31,7 @@ This naming convention is used for products that take a single NISAR acquisition
 
 -----
 
-```{figure} ../assets/NISAR_RSLC.jpg
+```{figure} ../assets/nisar-naming-conventions-single.png
 :label: naming_convention_single_data
 :alt: NISAR naming convention for processed data
 :align: center
@@ -52,7 +52,7 @@ This naming convention is used for products that require pairs of NISAR acquisit
 
 -----
 
-```{figure} ../assets/NISAR_RIFG.jpg
+```{figure} ../assets/nisar-naming-conventions-pair.png
 :label: naming_convention_interferometric_data
 :alt: NISAR naming convention for interferometric data
 :align: center
