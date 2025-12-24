@@ -1,5 +1,6 @@
-# White papers and documents
-## Application white papers
+# White Papers and Documents
+
+## Application White Papers
 - [Mountain Glaciers and Snow Hydrology (4/15/2023)](https://assets.science.nasa.gov/content/dam/science/missions/nisar/nisar-jpl/pdf/SnowHydrology_Final.pdf)  
 - [Earthquake\! Tracking Location and Impact from Space (9/2/2022)](https://assets.science.nasa.gov/content/dam/science/missions/nisar/nisar-jpl/pdf/Earthquake%20NISAR_WhitePaper_final.pdf)
 - [Soil Moisture and Water Resources (2/26/2019)](https://assets.science.nasa.gov/content/dam/science/missions/nisar/nisar-jpl/pdf/NISARApplications_SoilMoisture1.pdf)  
@@ -27,12 +28,12 @@
 - [Levees and Dams (2/26/2017)](https://assets.science.nasa.gov/content/dam/science/missions/nisar/nisar-jpl/pdf/NISAR_Applications_Levees_and_Dams1.pdf)  
 - [Subsidence (2/26/2017)](https://assets.science.nasa.gov/content/dam/science/missions/nisar/nisar-jpl/pdf/NISAR_Applications_Subsidence.pdf)  
 
-## Mission specific documents
-- [NASA-ISRO SAR (NISAR) Mission Science Users' Handbook (8/1/2019)](https://assets.science.nasa.gov/content/dam/science/missions/nisar/nisar-jpl/pdf/NISAR_FINAL_9-6-19.pdf)  
+## Mission-Specific Documents
+- [NASA-ISRO SAR (NISAR) Mission Science Users' Handbook, Second Edition](@nisarMissionHandbook2025)  
 - [NISAR Utilization Plan (9/4/2018)](https://assets.science.nasa.gov/content/dam/science/missions/nisar/nisar-jpl/pdf/NISAR_Utilization_Plan.pdf)  
 - [NISAR Mission Calibration and Validation Plan (5/14/2018)](https://assets.science.nasa.gov/content/dam/science/missions/nisar/nisar-jpl/pdf/NISAR_Mission_CalVal_Plan_20180810.pdf)  
 
-## Science white papers
+## Science White Papers
 - [NISAR Brochure (11/10/2021)](https://assets.science.nasa.gov/content/dam/science/missions/nisar/nisar-jpl/images/nisar_brochure.png)  
 - [Earth Surface and Interior White Paper (1/1/2016)](https://assets.science.nasa.gov/content/dam/science/missions/nisar/nisar-jpl/pdf/NASA_ISRO_SAR_Mission_Earth1.pdf)  
 - [Cryosphere White Paper (1/1/2016)](https://assets.science.nasa.gov/content/dam/science/missions/nisar/nisar-jpl/pdf/NASA_ISRO_SAR_Mission_ColdRegions1.pdf)	  

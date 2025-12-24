@@ -1,5 +1,7 @@
 # Story Maps
 
+<!-- TODO: Differentiate ASF content vs. Mission team content, and potentially embed content or cards for a more visually appealing presentation -->
+
 [NISAR in GIS](https://storymaps.arcgis.com/stories/c8f85d20b73c48fd8e89f8eef49bc60b) (February 2025\)  
 [Spatial Subsetting for NISAR Data](https://storymaps.arcgis.com/stories/cac03522f82f420ab992316bb935a709) (April 2025\)  
 [Floods (2/16/2023)](https://storymaps.arcgis.com/stories/c00d7691b8004b20a14f28df710d05fd)  
