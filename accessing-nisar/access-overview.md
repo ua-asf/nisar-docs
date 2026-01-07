@@ -33,10 +33,20 @@ Because search parameters of interest for SAR differ from other types of Earth o
 
 ## Programmatic Access
 
-Many users 
+The global and reliable regular coverage of the NISAR mission makes it a compelling data source for big data analysis workflows. SAR data is often integrated into complex scripts to perform additional processing and time series analysis, and NISAR data access can be scripted into existing programmatic workflows. 
+
+As with the web-based user interfaces, ASF provides programmatic access patterns tailored to SAR datasets, but NISAR data can also be accessed using programmatic tools developed to support a wide range of NASA Earth observation data resources.
+
+* ASF provides the [asf_search Python package](#asf-search-python-package) to streamline the process of finding and accessing suitable SAR datasets for a time period and area of interest
+* The [earthaccess Python package](#earthaccess-python-package) provides programmatic access to a range of NASA Earth observation datasets
 
 ### ASF Search Python Package
 
+https://docs.asf.alaska.edu/asf_search/basics/
+https://pypi.org/project/asf-search/
+
 ### Earthaccess Python Package
+
+https://earthaccess.readthedocs.io/en/stable/
 
 <style>section {page-break-before: avoid}</style>
