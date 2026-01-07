@@ -8,10 +8,9 @@ All NISAR science data is freely available and open to the public, consistent wi
 
 This guide aims to help those who research and monitor the Earth find all the information they need to know about accessing and working with NISAR data in one place. 
 
-:::{image} assets/nisar_satellite.jpg
-:name: nisar-satellite
-:target: "https://nisar.jpl.nasa.gov/resources/206/nisar-satellite-in-earth-orbit-artists-concept/"
-:::
+<a href="https://nisar.jpl.nasa.gov/resources/206/nisar-satellite-in-earth-orbit-artists-concept/">
+<img id="nisar-satellite" src="assets/nisar_satellite.jpg" alt="NISAR Satellite Image">
+</a>
 _[NISAR Satellite in Earth Orbit (Artist's Concept)](https://nisar.jpl.nasa.gov/resources/206/nisar-satellite-in-earth-orbit-artists-concept/)_
 
 
