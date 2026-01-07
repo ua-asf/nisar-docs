@@ -36,4 +36,3 @@ Source for the public documentation of the NASA-ISRO Synthetic Aperture Radar (N
 1. Push changes to your fork in GitHub
 1. Make sure your branch is synced and up to date with `ua-asf/nisar-docs:main`
 1. Open a pull request to `ua-asf/nisar-docs:main`
-
