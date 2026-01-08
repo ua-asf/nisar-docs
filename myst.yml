@@ -79,12 +79,19 @@ project:
     EDC: Earthdata Cloud
     ESDIS: Earth Science Data and Information System
     GCOV: Geocoded Polarimetric Covariance
+    GOFF: Geocoded Pixel Offsets
+    GSLC: Geocoded Single Look Complex
+    GUNW: Geocoded Unwrapped Interferogram
     NISAR: NASA-ISRO Synthetic Aperture Radar
     NRB: Normalized Radar Backscatter
     RTC: Radiometric Terrain Correction; Radiometrically Terrain-Corrected
     SAR: Synthetic Aperture Radar
     UTM: Universal Transverse Mercator
+    RIFG: Range Doppler Wrapped Interferogram
+    ROFF: Range Doppler Pixel Offsets
+    RRSD: Radar Raw Signal Data
     RSLC: Range Doppler Single Look Complex
+    RUNW: Range Doppler Unwrapped Interferogram
 site:
   template: book-theme
   options:

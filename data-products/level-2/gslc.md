@@ -8,7 +8,7 @@ short_title: GSLC
 
 ## Product Overview
 
-The GSLC product is a Level 2 product derived from the Level-1 RSLC product by geocoding the input RSLC into a map coordinate system such as a UTM Zone or Polar stereographic projection system. 
+The GSLC product is a Level 2 product derived from the Level-1 [RSLC](../level-1/rslc#product-overview) product by geocoding the input RSLC into a map coordinate system such as a UTM Zone or Polar stereographic projection system. 
 
 The geocoding is performed by inverse mapping of the map coordinates with their topographic heights into the radar coordinate system and interpolating the radar signal at the radar location corresponding to the map coordinate. Phase-preserving complex interpolation projects the data onto a uniformly spaced, north-south/east-west aligned geographic grid. 
 
