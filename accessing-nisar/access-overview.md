@@ -31,7 +31,13 @@ Because search parameters of interest for SAR differ from other types of Earth o
 
 ### Earthdata Search
 
-<!-- TODO: add content to this section -->
+[Earthdata Search](https://search.earthdata.nasa.gov/) allows users to search for all of NASA's Earth observation datasets in one place. 
+
+<a href="https://search.earthdata.nasa.gov/">
+<img id="earthdata-search-screenshot" src="../assets/earthdata-search-screenshot.png" alt="Image of the Earthdata Search web interface">
+</a>
+
+[Learn more about using Earthdata Search to access NISAR data!](earthdata-search#earthdata-search)
 
 ## Programmatic Access
 
