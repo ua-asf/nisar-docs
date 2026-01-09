@@ -6,6 +6,7 @@ short_title: GCOV
 {button}`Product Specification <https://nisar.asf.earthdatacloud.nasa.gov/NISAR-SAMPLE-DATA/DOCS/NISAR_D-102274_RevE_NASA_SDS_Product_Specification_L2_GCOV_Nov8_2024_w-sigs.pdf>`
 {button}`Find Data <https://search.asf.alaska.edu/#/?dataset=NISAR&sciProducts=GCOV>`
 
+(gcov-product-overview)=
 ## Product Overview
 
 Geocoded Polarimetric Covariance (GCOV) products provide calibrated backscatter measurements corrected for both radiometric and terrain distortions, presented as gamma-0 power values. For users familiar with other corrected SAR amplitude products, these data can be used like Normalized Radar Backscatter (NRB) or Radiometrically Terrain Corrected (RTC) products.
@@ -42,7 +43,7 @@ The primary data elements of the GCOV product are the images of the geocoded pol
 
 The diagonal terms shown in @gcov-matrix (HHHH, HVHV, VVVV, VHVH, RHRH, RVRV) are real-valued and describe the intensity of the radar backscatter for the given polarization.
 
-The remaining terms shown in @gcov-matrix (HHHV, HHVH, HHVV, HVVH, HVVV, VHVV, RHRV) are complex-valued and describe the intensity and phase between different polarizations. These off-diagonal terms are only included for quad-pol data acquisitions. Users who require off-diagonal values for dual-pol acquisitions will need to generate these layers manually from [GSLC](gslc#product-overview) products. <!-- TODO: Link to the OSL notebook once it's available: There are [workflows available](link to OSL notebook or other reference) for generating off-diagonal terms for dual-pol acquisitions from [GSLC](gslc#product-overview) products if you need these values for your application.--> 
+The remaining terms shown in @gcov-matrix (HHHV, HHVH, HHVV, HVVH, HVVV, VHVV, RHRV) are complex-valued and describe the intensity and phase between different polarizations. These off-diagonal terms are only included for quad-pol data acquisitions. Users who require off-diagonal values for dual-pol acquisitions will need to generate these layers manually from [GSLC](#gslc-product-overview) products. <!-- TODO: Link to the OSL notebook once it's available: There are [workflows available](link to OSL notebook or other reference) for generating off-diagonal terms for dual-pol acquisitions from [GSLC](#gslc-product-overview) products if you need these values for your application.-->
 
 The frequencies and polarizations available in a particular GCOV data product will vary based on the acquisition mode used to collect the data.
 

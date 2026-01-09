@@ -6,6 +6,7 @@ short_title: SME2
 {button}`Product Specification <https://nisar.asf.earthdatacloud.nasa.gov/NISAR-SAMPLE-DATA/DOCS/NISAR_D-107677_RevC_NASA_SDS_Product_Specification_L3_SME2_Nov8_2024_w-sigs.pdf>`
 {button}`Find Data <https://search.asf.alaska.edu/#/?dataset=NISAR&sciProducts=SME2>`
 
+(sme2-product-overview)=
 ## Product Overview
 
 NISAR backscatter observations will estimate a global high-resolution soil moisture product at a pixel spacing of 200 m. On average, this product will be provided twice every 12 days, and is expected to have a data latency of 72 hours. 
