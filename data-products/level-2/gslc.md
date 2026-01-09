@@ -6,9 +6,10 @@ short_title: GSLC
 {button}`Product Specification <https://nisar.asf.earthdatacloud.nasa.gov/NISAR-SAMPLE-DATA/DOCS/NISAR_D-102269_RevE_NASA_SDS_Product_Specification_L2_GSLC_Nov8_2024_w-sigs.pdf>`
 {button}`Find Data <https://search.asf.alaska.edu/#/?dataset=NISAR&sciProducts=GSLC>`
 
+(gslc-product-overview)=
 ## Product Overview
 
-The GSLC product is a Level 2 product derived from the Level-1 [RSLC](../level-1/rslc#product-overview) product by geocoding the input RSLC into a map coordinate system such as a UTM Zone or Polar stereographic projection system. 
+The GSLC product is a Level 2 product derived from the Level-1 [RSLC](#rslc-product-overview) product by geocoding the input RSLC into a map coordinate system such as a UTM Zone or Polar stereographic projection system.
 
 The geocoding is performed by inverse mapping of the map coordinates with their topographic heights into the radar coordinate system and interpolating the radar signal at the radar location corresponding to the map coordinate. Phase-preserving complex interpolation projects the data onto a uniformly spaced, north-south/east-west aligned geographic grid. 
 

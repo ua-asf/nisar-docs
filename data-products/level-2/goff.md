@@ -8,7 +8,7 @@ short_title: GOFF
 
 ## Product Overview
 
-The GOFF product is an L2 product derived from the [ROFF](../level-1/roff#product-overview) product by geocoding the pixel offset layers and associated data layers (i.e., SNR) on a geographical grid at 80 m posting. Geocoding uses the orbit of the reference [RSLC](../level-1/rslc#product-overview) product and a DEM to project the data onto a pre-defined UTM or Polar stereographic projection system map grid. The geocoding algorithm uses a bilinear interpolation for interpolating data layers with floating-point data types. 
+The GOFF product is an L2 product derived from the [ROFF](#roff-product-overview) product by geocoding the pixel offset layers and associated data layers (i.e., SNR) on a geographical grid at 80 m posting. Geocoding uses the orbit of the reference [RSLC](#rslc-product-overview) product and a DEM to project the data onto a pre-defined UTM or Polar stereographic projection system map grid. The geocoding algorithm uses a bilinear interpolation for interpolating data layers with floating-point data types.
 
 The GOFF product contains a collection of data layers representing the pixel offset shifts between a pair of coarsely coregistered RSLC granules. The spacing, the window size, and the search radius used to generate the pixel offset layers in the range-Doppler geometry are organized by range bandwidth and area of observation. 
 

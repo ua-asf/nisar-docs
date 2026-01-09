@@ -5,9 +5,10 @@ short_title: ROFF
 {button}`Product Specification <https://nisar.asf.earthdatacloud.nasa.gov/NISAR-SAMPLE-DATA/DOCS/NISAR_D-105009_RevC_NASA_SDS_Product_Specification_L1_ROFF_Nov8_2024_w-sigs.pdf>`
 {button}`Find Data <https://search.asf.alaska.edu/#/?dataset=NISAR&sciProducts=ROFF>`
 
+(roff-product-overview)=
 ## Product Overview
 
-The ROFF product contains a collection of dense pixel offset layers obtained from applying incoherent cross-correlation on a pair of coarsely coregistered L1 Range Doppler Single Look Complex ([RSLC](../level-1/rslc#product-overview)) products in the range-Doppler geometry of the earlier reference RSLC product. 
+The ROFF product contains a collection of dense pixel offset layers obtained from applying incoherent cross-correlation on a pair of coarsely coregistered L1 Range Doppler Single Look Complex ([RSLC](#rslc-product-overview)) products in the range-Doppler geometry of the earlier reference RSLC product.
 
 The pair of RSLCs used to produce a ROFF product is first coarsely aligned with geometrical coregistration using the best available sensor orbit ephemeris and a DEM. The spacing, the window size, and the search radius used to generate the ROFF offsets layers for L-SAR data are organized by sensor mode and area of observation. 
 
