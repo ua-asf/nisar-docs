@@ -1,10 +1,14 @@
-# Story Maps
+# StoryMap Tutorials
+
+StoryMaps are an interactive web content format, hosted by [Esri](https://www.esri.com/en-us/arcgis/products/arcgis-storymaps/overview), which support interactive geospatial components, making them an engaging tool for presenting and demonstrating geospatial data capabilities. 
 
 <!-- TODO: Differentiate ASF content vs. Mission team content, and potentially embed content or cards for a more visually appealing presentation -->
 
+## NISAR StoryMaps
+
 There are a number of StoryMap tutorials available for NISAR, published both by ASF and the NISAR Mission Team. 
 
-## ASF NISAR StoryMaps
+### ASF NISAR StoryMaps
 
 NISAR StoryMaps published by ASF are all displayed in the [ASF ArcGIS Online Gallery](https://asf-daac.maps.arcgis.com/home/gallery.html?sortField=title&sortOrder=asc&categories=%2FCategories%2FNISAR).
 
@@ -17,9 +21,9 @@ They can also be accessed directly:
 * [NISAR in GIS](https://storymaps.arcgis.com/stories/c8f85d20b73c48fd8e89f8eef49bc60b) (February 2025\)  
 * [Spatial Subsetting for NISAR Data](https://storymaps.arcgis.com/stories/cac03522f82f420ab992316bb935a709) (April 2025\)  
 
-## NISAR Mission Team StoryMaps
+### JPL NISAR StoryMaps
 
-The NISAR Mission Team has published a series of StoryMaps focused on specific applications. These StoryMaps are highlighted on the [NISAR Mission Page](https://science.nasa.gov/mission/nisar/arcgis-storymaps/). 
+JPL has published a series of StoryMaps focused on specific applications. These StoryMaps are highlighted on the [NISAR Mission Page](https://science.nasa.gov/mission/nisar/arcgis-storymaps/). 
 
 <a href="https://science.nasa.gov/mission/nisar/arcgis-storymaps/">
 <img id="nisar-mission-storymaps" src="../assets/nisar-mission-storymaps.png" alt="Image of the NISAR Mission Page StoryMap Gallery" width="75%">
