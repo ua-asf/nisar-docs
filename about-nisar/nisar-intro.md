@@ -50,7 +50,7 @@ The [Jet Propulsion Laboratory (JPL)](https://www.jpl.nasa.gov/) is located on t
 
 JPL leads the U.S. portion of the NISAR project on behalf of NASA, including project management, providing physical components of the satellite, testing, coordinating science product development, developing and processing data products, and publishing product specifications and algorithm theoretical basis documents. 
 
-JPL generates a suite of products from NISAR mission data, ranging from Level 0 to Level 3, which ASF makes available to the public. Refer to the [data products](../data-products/products-overview#data-products-overview) section of this site for more information on NISAR data products. 
+JPL generates a suite of products from NISAR mission data, ranging from Level 0 to Level 3, which ASF makes available to the public. Refer to the [data products](#data-products-overview) section of this site for more information on NISAR data products. 
 
 ### Alaska Satellite Facility
 
@@ -130,7 +130,7 @@ The polarization refers to the direction that an electromagnetic wave travels. T
 
 The antennas of a SAR system can be configured to transmit and receive electromagnetic waves using various combinations of these polarizations. The polarimetric properties of the observed surface can reveal the structure, orientation and environmental conditions of the surface elements.
 
-For the NISAR mission, the combination of polarizations vary based on the acquisition mode, and the 2-digit polarization code is indicated as part of the filename for each data product. Refer to the [naming convention section](../data-products/naming-conventions#nisar-naming-conventions) of this site to see where the polarization is indicated in the filename. 
+For the NISAR mission, the combination of polarizations varies based on the acquisition mode, and the 2-digit polarization code is indicated as part of the filename for each data product. Refer to the [naming convention section](#nisar-naming-conventions) of this site to see where the polarization is indicated in the filename. 
 
 The potential polarization configurations for NISAR products are as follows:
 - Single polarization

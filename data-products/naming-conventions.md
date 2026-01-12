@@ -1,13 +1,14 @@
+(nisar-naming-conventions)=
 # NISAR Naming Conventions
 
 There are three different patterns used for naming NISAR data products, depending on the product type:
-1. Raw Data Products
-2. Products Generated from a Single Acquisition
-3. Products Generated from Pairs of Acquisitions
+1. [Raw Data Products](#raw-data-products)
+2. [Products Generated from a Single Acquisition](#products-generated-from-a-single-acquisition)
+3. [Products Generated from Pairs of Acquisitions](#products-generated-from-a-pair-of-acquisitions)
 
 ## Raw Data Products
 
-This naming convention is only used for Level 0B (L0 RRSD) products. 
+This naming convention is only used for Level 0 products, such as the Level 0B [RRSD](#rrsd-product-overview) products. 
 
 -----
 
@@ -24,10 +25,10 @@ NISAR naming convention for raw (L0B) data products
 ## Products Generated from a Single Acquisition
 
 This naming convention is used for products that take a single NISAR acquisition as input for processing, including:
-  * L1 RSLC
-  * L2 GSLC
-  * L2 GCOV
-  * L3 SME2
+  * L1 [RSLC](#rslc-product-overview)
+  * L2 [GSLC](#gslc-product-overview)
+  * L2 [GCOV](#gcov-product-overview)
+  * L3 [SME2](#sme2-product-overview)
 
 -----
 
@@ -44,11 +45,11 @@ NISAR naming convention for data products generated from a single acquisition
 ## Products Generated from a Pair of Acquisitions
 
 This naming convention is used for products that require pairs of NISAR acquisitions as input for processing, including:
-  * L1 RIFG
-  * L1 RUNW
-  * L2 GUNW
-  * L1 ROFF
-  * L2 GOFF
+  * L1 [RIFG](#rifg-product-overview)
+  * L1 [RUNW](#runw-product-overview)
+  * L2 [GUNW](#gunw-product-overview)
+  * L1 [ROFF](#roff-product-overview)
+  * L2 [GOFF](#goff-product-overview)
 
 -----
 

@@ -50,7 +50,7 @@ project:
 #        - file: accessing-nisar/earthaccess.md
     - title: Using NISAR Data
       children:
-#        - file: using-nisar/using-overview.md
+        - file: using-nisar/using-overview.md
         - file: using-nisar/software-support.md
         - file: using-nisar/data-use-citation-guidance.md
     - title: NISAR Tutorials
