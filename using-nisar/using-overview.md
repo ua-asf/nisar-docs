@@ -10,7 +10,7 @@ NISAR data can be accessed from cloud storage, either by downloading or using cl
 
 The processing algorithms used for the NISAR Mission are included in [ISCE3](https://github.com/isce-framework/isce3), the third iteration of the InSAR Scientific Computing Environment (ISCE). ISCE3 is an open source library for processing spaceborne and airborne Interferometric Synthetic Aperture Radar (InSAR) data, and development is currently funded through the NISAR project. 
 
-The NISAR Mission is using ISCE3 functionality to generate the products that are archived by ASF. This software package is also publicly available for users who want to script their own processing workflows, but this would require scientific programming expertise and an understanding of the principles of SAR acquisitions.
+The NISAR Mission is using ISCE3 functionality to generate the products that are archived by ASF. This software package is also publicly available for users who want to script their own processing workflows, but this requires scientific programming expertise and an understanding of the principles of SAR acquisitions.
 
 ## GIS Software
 
