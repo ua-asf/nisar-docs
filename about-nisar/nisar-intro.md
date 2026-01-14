@@ -44,6 +44,7 @@ Note that all references to the NISAR Mission Science Users' Handbook on this si
 <img id="nisar-handbook-cover" src="../assets/nisar-handbook-v2-cover.png" alt="NASA-ISRO SAR (NISAR) Mission Science Users' Handbook Image" width="50%">
 </a>
 
+(jet-propulsion-laboratory)=
 ### Jet Propulsion Laboratory
 
 The [Jet Propulsion Laboratory (JPL)](https://www.jpl.nasa.gov/) is located on the outskirts of Pasadena, California. Founded in 1936 by California Institute of Technology (Caltech) researchers, JPL is a research and development lab federally funded by NASA and managed by Caltech.
