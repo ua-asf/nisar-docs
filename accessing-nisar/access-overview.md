@@ -11,6 +11,7 @@ NISAR products are not yet available to the public. The NISAR mission team is wo
 The infrastructure is in place to make the products available as soon as they are approved for release, but the illustrations currently included on this documentation site are examples of what _will_ be possible. The results displayed will not be reproducible until the data is publicly available.
 :::
 
+(map-based-web-applications)=
 ## Map-based Web Applications
 
 Map-based web interfaces make it easy to explore data available for a particular geographic location and visualize the extent and characteristics of the products. 
@@ -18,6 +19,7 @@ Map-based web interfaces make it easy to explore data available for a particular
 * ASF's [Vertex](#vertex) data search site is optimized for searching NASA's SAR holdings
 * NASA's [Earthdata Search](#earthdata-search) provides access to all of NASA's Earth observation datasets
 
+(vertex)=
 ### Vertex
 
 [Vertex](https://search.asf.alaska.edu/#/) was developed by ASF to facilitate search and discovery for NASA's SAR datasets. To search for NISAR datasets specifically, select `NISAR` from the **Dataset** menu. Click the **Filters** button to expose additional parameters that can be used to narrow your search.
@@ -35,6 +37,7 @@ Refer to the [Vertex User Manual](https://docs.asf.alaska.edu/vertex/manual/) fo
 
 [//]: # ([Learn more about using Vertex to search for NISAR data!]&#40;vertex#vertex-data-search&#41;)
 
+(earthdata-search)=
 ### Earthdata Search
 
 [Earthdata Search](https://search.earthdata.nasa.gov/) allows users to search for all of NASA's Earth observation datasets in one place. 
@@ -57,6 +60,7 @@ As with the web-based user interfaces, ASF provides programmatic access patterns
 * ASF provides the [asf_search Python package](#asf-search-python-package) to streamline the process of finding and accessing suitable SAR datasets for a time period and area of interest
 * The [earthaccess Python package](#earthaccess-python-package) provides programmatic access to a range of NASA Earth observation datasets
 
+(asf-search-python-package)=
 ### ASF Search Python Package
 
 The [asf_search Python package](https://pypi.org/project/asf-search/) allows users to search and download products for all of ASF's data collections. It also provides support for compiling lists of SAR acquisitions that are suitable for interferometric time series analysis and other SAR-specific functionality.
@@ -65,6 +69,7 @@ Refer to the [ASF Data Search Manual](https://docs.asf.alaska.edu/asf_search/bas
 
 [Learn more about searching for NISAR datasets with the ASF Search Python Package!](#asf-search-package)
 
+(earthaccess-python-package)=
 ### Earthaccess Python Package
 
 The [earthaccess Python package](https://earthaccess.readthedocs.io/en/stable/) allows users to access NASA Earth observation datasets programmatically. The development of this package is facilitated by [NASA Openscapes](https://nasa-openscapes.github.io/), an initiative to support researchers using data hosted in NASA's [Earthdata Cloud](https://www.earthdata.nasa.gov/about/earthdata-cloud-evolution).
