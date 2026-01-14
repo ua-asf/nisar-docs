@@ -1,5 +1,7 @@
 # Glossary
 
+## General
+
 :::{glossary}
 
 Full-polarimetric covariance matrix
@@ -37,6 +39,12 @@ Total Electron Content
 
 Tropospheric delay
 : At altitudes up to ~ 30 km, which forms the troposphere, refractivity is mainly controlled by temperature, water vapor, and dry air partial pressure [@berradaBaby1988]. The zenith hydrostatic delay is ~2.3 m at sea level at typical meteorological conditions, while the zenith wet delay varies from a few mm at the polar region to ∼40 cm at the equatorial region [@boehm2013]. The tropospheric delay is corrected using a static tropospherical model (European Centre for Medium-Range Weather Forecasts) during focusing the raw data.
+
+:::
+
+## Radar grid (metadata cube)
+
+:::{glossary}
 
 referenceSlantRange / secondarySlantRange
 : The range position of the zero-Doppler grid in maters for each point of the geographical grid of the reference/secondary RSLS
