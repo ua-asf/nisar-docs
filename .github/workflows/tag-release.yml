@@ -1,0 +1,18 @@
+name: Tag New Version
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  call-bump-version-workflow:
+    if: ${{ ! github.event.repository.fork }}
+    # For first-time setup, create a v0.0.0 tag as shown here:
+    # https://github.com/ASFHyP3/actions#reusable-bump-versionyml
+    uses: ASFHyP3/actions/.github/workflows/reusable-bump-version.yml@v0.21.0
+    permissions:
+      contents: write
+      pull-requests: read
+    secrets:
+      USER_TOKEN: ${{ secrets.GITHUB_TOKEN }}
