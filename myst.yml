@@ -11,6 +11,9 @@ project:
   toc:
     - file: index.md
     - file: about-nisar/nisar-intro.md
+    - file: data-availability/availability-overview.md
+#      children:
+#        - file: data-availability/observation-scenario.md
     - title: Data Products
       children:
         - file: data-products/products-overview.md
@@ -86,6 +89,7 @@ project:
     NRB: Normalized Radar Backscatter
     RTC: Radiometric Terrain Correction; Radiometrically Terrain-Corrected
     SAR: Synthetic Aperture Radar
+    SNR: Signal-to-Noise Ratio
     UTM: Universal Transverse Mercator
     RIFG: Range Doppler Wrapped Interferogram
     ROFF: Range Doppler Pixel Offsets

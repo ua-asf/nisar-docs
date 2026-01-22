@@ -8,3 +8,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - Initial release.
+
+## [0.1.1]
+
+### Added
+- Content describing the January release of the NISAR Sample Data
