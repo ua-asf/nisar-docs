@@ -14,7 +14,7 @@ project:
     - title: Data Availability
       children:
 #      - file: data-availability/observation-scenario.md
-      - file: data-availability/available-data.md
+      - file: data-availability/availability-overview.md
     - title: Data Products
       children:
         - file: data-products/products-overview.md
