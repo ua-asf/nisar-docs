@@ -21,6 +21,8 @@ For more information about this data release, refer to the [NISAR Sample Product
 
 The January release of NISAR sample data includes data from five different locations around the world. @tbl:sample-jan-overview-html summarizes the data products available for each location and the polarization of the acquisitions.
 
+For areas with two acquisition dates listed, a single product is available for each of the pair-wise product types (GUNW, RIFG, RUNW, ROFF, GOFF), while product types generated from a single acquisition (RSLC, GSLC, GCOV) have a product available for each acquisition date.
+
 :::{table} NISAR Sample Data Product Overview
 :label: tbl:sample-jan-overview-html
 
