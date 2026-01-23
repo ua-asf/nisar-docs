@@ -29,7 +29,7 @@ Data users can request temporary AWS credentials enabling direct access to the d
    }
    ```
    
-   > More detailed guidance for requesting temporary S3 credentials is [available here](https://nisar.asf.earthdatacloud.nasa.gov/s3credentialsREADME).
+    >  More details about requesting temporary S3 credentials are [available here](https://nisar.asf.earthdatacloud.nasa.gov/s3credentialsREADME).
 
 2. Configure your environment to use the temporary AWS credentials by setting the environment variables in your terminal. 
    For example, if you are on a Linux operating system, you can export your credentials with the following commands:
