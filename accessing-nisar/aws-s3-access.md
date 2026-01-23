@@ -125,7 +125,7 @@ As more data becomes available, you may want to use wildcard searches when using
 
 When you search for NISAR data products in [Vertex](https://search.asf.alaska.edu/#/?maxResults=1000&dataset=NISAR), you can simply copy the S3 URL from the list of files for a search result, as shown in @vertex-s3-urls. 
 
-```{figure} ../assets/aws-s3-links.png
+```{figure} ../assets/vertex-s3-links.png
 :label: vertex-s3-urls
 :alt: Screenshot showing how to copy an S3 URL from Vertex search results
 :align: center
