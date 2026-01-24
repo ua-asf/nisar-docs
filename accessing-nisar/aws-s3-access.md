@@ -131,7 +131,9 @@ Here is an example of the S3 path for one of the available GCOV products:
 
 ## Finding S3 Paths
 
-As more data becomes available, you may want to use wildcard searches when using the `aws s3 ls` command to find specific products of interest. You may want to limit your results to products with specific track and/or frame numbers, acquisition dates, processing version, beam mode/polarization, or orbit direction. The product filenames contain all of this information, so to find the products you're looking for, you may want to consult [NISAR Naming Conventions](#naming-convention-overview).
+As more data becomes available, you may want to use wildcard searches with the `aws s3 ls` command to find specific products of interest. The product filenames contain a lot of information that can be used to restrict your search, such as track and/or frame numbers, acquisition dates, processing version, beam mode, polarization, or orbit direction. 
+
+Understanding the [NISAR Naming Conventions](#naming-convention-overview) can be helpful when constructing wildcard searches to narrow your results to specific products.
 
 <!-- TODO: Add sample code snippet for a wildcard search to narrow down results -->
 
@@ -144,8 +146,17 @@ When you search for NISAR data products in [Vertex](https://search.asf.alaska.ed
 :alt: Screenshot showing how to copy an S3 URL from Vertex search results
 :align: center
 
-Select an item from the search results, and click on the **copy link icon** next to the desired file listed in the right panel (you may need to adjust your screen size to see the third panel). Select **S3 URL** to copy the path to your clipboard.
+S3 URL links are available for files listed in Vertex search results for NISAR products.
 ```
+
+To copy an S3 URL in Vertex:
+
+1. [Search for the desired NISAR datasets in Vertex](https://search.asf.alaska.edu/#/?maxResults=1000&dataset=NISAR)
+1. Select an item in the left panel of the search results
+   * The files available for that item are listed in the right panel
+   * you may need to adjust your browser window size to see the third panel
+1. In the right panel, click on the **link icon** next to the desired file
+1. Select **S3 URL** from the drop-down menu to copy the path to your clipboard
 
 (s3-limitations)=
 ## Limitations
