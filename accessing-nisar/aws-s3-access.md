@@ -131,7 +131,7 @@ Here is an example of the S3 path for one of the available GCOV products:
 
 ## Finding S3 Paths
 
-As more data becomes available, you may want to use wildcard searches with the `aws s3 ls` command to find specific products of interest. The product filenames contain a lot of information that can be used to restrict your search, such as track and/or frame numbers, acquisition dates, processing version, beam mode, polarization, or orbit direction. 
+As more data becomes available, you may want to use wildcard searches with the `aws s3 ls` command to find specific products of interest. The product filenames contain a lot of information that can be used to restrict your search, such as track and/or frame numbers, acquisition dates, processing version, beam mode, polarization, and orbit direction. 
 
 Understanding the [NISAR Naming Conventions](#naming-convention-overview) can be helpful when constructing wildcard searches to narrow your results to specific products.
 
