@@ -176,12 +176,12 @@ To copy S3 URLs from Earthdata Search:
 1. [Search for the desired NISAR datasets in Earthdata Search](https://search.earthdata.nasa.gov/search?q=nisar%20beta&fpb0=Space-based%20Platforms&fpc0=Earth%20Observation%20Satellites&fps0=NISAR)
 1. Click on the **Download** button for the desired product
 1. Select the **AWS S3 Access** tab
-1. Click the filename to copy the S3 path to your clipboard
+1. Click the filename to copy the S3 URL to your clipboard
 
 (s3-limitations)=
 ## Direct S3 Access Limitations
 
-Please note that Direct S3 Access for NISAR data is subject to these limitations:
+Please note that direct S3 access for NISAR data is subject to these limitations:
 - Temporary credentials only allow access from within the us-west-2 region. Users attempting to access the NISAR S3 bucket from other regions or outside AWS will encounter an `Access Denied` error.
 - Temporary credentials expire after one hour. The expiration time is listed in the temporary credential payload, as shown in [Step 1](#s3-creds-step-1). You can revisit [the temporary credential link](https://nisar.asf.earthdatacloud.nasa.gov/s3credentials) for a new set of credentials when they expire. 
 - Temporary credentials cannot be used to copy content directly from the NISAR S3 bucket to another S3 bucket. Users can only download content or use tools that interact with the data directly in S3 storage.
