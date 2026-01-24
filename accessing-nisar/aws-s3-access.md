@@ -1,4 +1,5 @@
-# AWS S3 Access
+(direct-s3-access)=
+# Direct S3 Access
 
 (aws-s3-access-overview)=
 ## Overview
@@ -7,9 +8,9 @@ All NISAR data is hosted in [NASA's Earthdata Cloud (EDC)](https://www.earthdata
 
 Data users can request temporary AWS credentials enabling direct access to the data in S3. This supports the use of a wide range of S3-aware tooling for interacting with cloud-hosted data as well as for low-latency and high-throughput data access patterns.
 
-## Accessing NISAR Data in S3 Using AWS CLI
+## Using the AWS CLI to Access NISAR Data 
 
-Users can leverage direct S3 access from other AWS services such as EC2 and Lambda. Access is limited to resources in the us-west-2 (Oregon) region.
+Users can leverage direct S3 access from other AWS services, such as EC2 and Lambda, as long as the resources are in the us-west-2 (Oregon) region.
 
 (s3-creds-step-1)=
 ### 1. Visit https://nisar.asf.earthdatacloud.nasa.gov/s3credentials 
@@ -159,9 +160,9 @@ To copy an S3 URL in Vertex:
 1. Select **S3 URL** from the drop-down menu to copy the path to your clipboard
 
 (s3-limitations)=
-## Limitations
+## Direct S3 Access Limitations
 
-Please note that S3 Access for NISAR data is subject to these limitations:
+Please note that Direct S3 Access for NISAR data is subject to these limitations:
 - Temporary credentials only allow access from within the us-west-2 region. Users attempting to access the NISAR S3 bucket from other regions or outside AWS will encounter an `Access Denied` error.
 - Temporary credentials expire after one hour. The expiration time is listed in the temporary credential payload, as shown in [Step 1](#s3-creds-step-1). You can revisit [the temporary credential link](https://nisar.asf.earthdatacloud.nasa.gov/s3credentials) for a new set of credentials when they expire. 
 - Temporary credentials cannot be used to copy content directly from the NISAR S3 bucket to another S3 bucket. Users can only download content or use tools that interact with the data directly in S3 storage.
