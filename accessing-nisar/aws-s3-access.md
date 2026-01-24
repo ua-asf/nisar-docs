@@ -71,7 +71,7 @@ If you encounter an `Access Denied` error, check to make sure you are in the cor
 
 ### 4. Open or download data files 
 
-Once you have an S3 path for an item of interest, you can download the file to your local compute environment using the `aws s3 cp` AWS CLI command. You will need to include all relevant prefixes in your path. For example: 
+Once you have an S3 path for an item of interest, you can download the file to your compute environment using the `aws s3 cp` AWS CLI command. You will need to include all relevant prefixes in your path. For example: 
 
 ```shell
 aws s3 cp s3://sds-n-cumulus-prod-nisar-products/PRODUCT_TYPE_PREFIX/PRODUCT_NAME_PREFIX/PRODUCT_NAME.ext path/to/local/dir
