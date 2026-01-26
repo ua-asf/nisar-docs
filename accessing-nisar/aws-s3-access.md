@@ -136,7 +136,7 @@ Here is an example of the S3 path for one of the available GCOV browse images:
 (s3-urgent-response)=
 ### NISAR Urgent Response
 
-The NISAR mission will produce Urgent Response (UR) products when natural disasters or other major events occur. These products may use less precise orbits in order to make data available as quickly as possible. UR products will be hosted in `sds-n-cumulus-prod-nisar-ur-products`, and will be deleted once standard products are available. 
+The NISAR mission will produce Urgent Response (UR) products when natural disasters or other major events occur. These products may use less precise orbits in order to make data available as quickly as possible. UR products will be hosted in `sds-n-cumulus-prod-nisar-ur-products`, and will be retained for 30 days, allowing time for a standard product to become available before the UR product is deleted. 
 
 ### Prefix Tables
 
