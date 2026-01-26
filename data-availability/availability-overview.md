@@ -9,7 +9,7 @@ NISAR launched July 30, 2025, and has been successfully collecting data through 
 (nisar-sample-data-jan)=
 ## NISAR Sample Data: January 2026
 
-{button}`Find NISAR Sample Data <https://search.asf.alaska.edu/#/?dataset=NISAR&resultsLoaded=true>`
+{button}`Find NISAR Sample Data <https://search.asf.alaska.edu/#/?dataset=NISAR&prodConfig=PR&resultsLoaded=true>`
 
 NISAR mission data was processed to generate products from Level-1 to Level-3. These datasets are available for a range of geographic locations, and give users a first look at products generated from NISAR acquisitions. These sample products are a preview for a larger global product release of sample products, expected by the end of February 2026. 
 

@@ -131,7 +131,7 @@ The polarization refers to the direction that an electromagnetic wave travels. T
 
 The antennas of a SAR system can be configured to transmit and receive electromagnetic waves using various combinations of these polarizations. The polarimetric properties of the observed surface can reveal the structure, orientation and environmental conditions of the surface elements.
 
-For the NISAR mission, the combination of polarizations varies based on the acquisition mode, and the 2-digit polarization code is indicated as part of the filename for each data product. Refer to the [naming convention section](#nisar-naming-conventions) of this site to see where the polarization is indicated in the filename. 
+For the NISAR mission, the combination of polarizations varies based on the acquisition mode, and the 2-digit polarization code is indicated as part of the filename for each data product. Refer to [NISAR Naming Conventions](#naming-convention-overview) to see where the polarization is indicated in the filename. 
 
 The potential polarization configurations for NISAR products are as follows:
 - Single polarization
