@@ -12,6 +12,15 @@ All NISAR data is hosted in [NASA's Earthdata Cloud (EDC)](https://www.earthdata
 
 Data users can request temporary AWS credentials enabling direct access to the data in S3. This supports the use of a wide range of S3-aware tooling for interacting with cloud-hosted data as well as for low-latency and high-throughput data access patterns.
 
+(nisar-s3-buckets)=
+## NISAR S3 Buckets
+
+There are three S3 buckets associated with the NISAR mission: 
+
+- `sds-n-cumulus-prod-nisar-products` contains the [production data products](#s3-production-nisar-data)
+- `sds-n-cumulus-prod-nisar-browse` contains the [browse imagery](#s3-nisar-browse-imagery) associated with the data products
+- `sds-n-cumulus-prod-nisar-ur-products` will contain [urgent response](#s3-urgent-response) products when/while they are available
+
 ## Using the AWS CLI to Access NISAR Data 
 
 Users can leverage direct S3 access from other AWS services, such as EC2 and Lambda, as long as the resources are in the us-west-2 (Oregon) region.
@@ -61,7 +70,7 @@ For a full list of exportable variables, see [AWS's Temporary Credentials User G
 
 ### 3. Find NISAR products of interest
 
-NISAR data is all hosted in the `sds-n-cumulus-prod-nisar-products` S3 bucket. Each product type has a prefix, and while you cannot list the full bucket contents, you can list the contents of each prefix. Refer to @prefix-structure for more information about the organization of the NISAR bucket and a [table of prefixes](#tbl:s3-prefix-list-products) for the NISAR data products.
+NISAR production data is all hosted in the `sds-n-cumulus-prod-nisar-products` S3 bucket. Each product type has a prefix, and while you cannot list the full bucket contents, you can list the contents of each prefix. Refer to @prefix-structure for more information about the organization of the NISAR bucket and a [table of prefixes](#tbl:s3-prefix-list-products) for the NISAR data products.
 
 For example, if you want to list all available GCOV products, you can use this `aws s3 ls` command: 
 ```
@@ -93,15 +102,6 @@ aws s3 cp s3://sds-n-cumulus-prod-nisar-products/NISAR_L3_SME2_BETA_V1/NISAR_L3_
 :::{important}Copying directly to another S3 bucket not supported
 Copying data directly from the NISAR S3 bucket to another S3 bucket is not supported. Users can only download content or use tools that interact with the data directly in S3 storage. See @s3-access-limitations.
 :::
-
-(nisar-s3-buckets)=
-## NISAR S3 Buckets
-
-There are three S3 buckets associated with the NISAR mission: 
-
-- `sds-n-cumulus-prod-nisar-products` contains the [production data products](#s3-production-nisar-data)
-- `sds-n-cumulus-prod-nisar-browse` contains the [browse imagery](#s3-nisar-browse-imagery) associated with the data products
-- `sds-n-cumulus-prod-nisar-ur-products` will contain [urgent response](#s3-urgent-response) products when/while they are available
 
 (prefix-structure)=
 ## Prefix Structure
