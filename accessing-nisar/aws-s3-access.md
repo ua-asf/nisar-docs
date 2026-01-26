@@ -71,7 +71,7 @@ aws s3 ls s3://sds-n-cumulus-prod-nisar-products/NISAR_L2_GCOV_BETA_V1/
 Within each product type prefix, there is a nested prefix for each individual product, with no additional hierarchy for grouping the individual products. Refer to @finding-s3-paths for tools and methods available to help you find specific products of interest.
 
 :::{warning}Direct S3 Access only available within us-west-2
-If you encounter an `Access Denied` error, check to make sure you are in the correct region. Direct S3 access is only available within us-west-2. See @s3-limitations.
+If you encounter an `Access Denied` error, check to make sure you are in the correct region. Direct S3 access is only available within us-west-2. See @s3-access-limitations.
 :::
 
 ### 4. Open or download data files 
@@ -89,7 +89,7 @@ aws s3 cp s3://sds-n-cumulus-prod-nisar-products/NISAR_L3_SME2_BETA_V1/NISAR_L3_
 ```
 
 :::{important}Copying directly to another S3 bucket not supported
-Copying data directly from the NISAR S3 bucket to another S3 bucket is not supported. Users can only download content or use tools that interact with the data directly in S3 storage. See @s3-limitations.
+Copying data directly from the NISAR S3 bucket to another S3 bucket is not supported. Users can only download content or use tools that interact with the data directly in S3 storage. See @s3-access-limitations.
 :::
 
 ## Prefix Structure
@@ -182,8 +182,8 @@ To copy S3 URLs from Earthdata Search:
 1. Select the **AWS S3 Access** tab
 1. Click the filename to copy the S3 URL to your clipboard
 
-(s3-limitations)=
-## Direct S3 Access Limitations
+(s3-acess-limitations)=
+## S3 Access Limitations
 
 Please note that direct S3 access for NISAR data is subject to these limitations:
 - Temporary credentials only allow access from within the us-west-2 region. Users attempting to access the NISAR S3 bucket from other regions or outside AWS will encounter an `Access Denied` error.
