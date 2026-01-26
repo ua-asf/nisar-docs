@@ -127,7 +127,7 @@ Here is an example of the S3 path for one of the available GCOV products:
 
 NISAR browse imagery is hosted in a different bucket that the actual data products. The prefix structure for `sds-n-cumulus-prod-nisar-browse` is the same as for the production NISAR data, but this bucket can be searched from the root directory if desired. 
 
-Within each product name prefix, there are a number of different browse and thumbnail files available. The images displayed on the maps in Vertex and Earthdata Search are tagged with _browse.png, while the thumbnails are very small images used for search results lists and other applications requiring very low resolution imagery. 
+Within each product name prefix, there are two different browse and thumbnail files available in PNG format. The images displayed on the maps in Vertex and Earthdata Search are the main PNG files. Files tagged with _thumbnail.png are very small images used for applications like the Vertex search results, which require low resolution (100 x 100 pixels).
 
 Here is an example of the S3 path for one of the available GCOV browse images: 
 
