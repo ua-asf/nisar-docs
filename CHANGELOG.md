@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Set the overview content for each first-level navigation menu item to display when the menu item is clicked, rather than having a separate overview page included under the expanded menu
 
+### Removed
+- Removed the Software Options page from the Using NISAR Data section
+
 ## [0.1.2]
 
 ### Added
