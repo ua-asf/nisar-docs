@@ -95,6 +95,7 @@ project:
 site:
   template: book-theme
   options:
+    favicon: favicon.ico
     logo_text: 'NISAR Data User Guide'
     analytics_google: G-F5XFWH0KYR
   parts:
