@@ -41,12 +41,13 @@ The DEM dataset in the WGS84 projection provides global coverage, while the DEM 
 :::{table} DEM for NISAR Dataset Characteristics
 :label: tbl:nisar-dem-characteristics
 
-|                    | WGS84                        | North Polar                  | South Polar                  |
-|--------------------|------------------------------|------------------------------|------------------------------|
-| **EPSG Code**      | [4326](https://epsg.io/4326) | [3413](https://epsg.io/3413) | [3031](https://epsg.io/3031) |
-| **Spatial Extent** | Global                       | North of 60°N Latitude       | South of 60°S Latitude       |
-| **Pixel Spacing**  | 30 m                         | 20 m{sup}`*`                 | 20 m{sup}`*`                 |
-| **Tiling Scheme**  | 1 x 1 degree                 | 100 x 100 km                 | 100 x 100 km                 |
+|                    | WGS84                                                                                           | North Polar                                                                                     | South Polar                                                                                     |
+|--------------------|-------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|
+| **EPSG Code**      | [4326](https://epsg.io/4326)                                                                    | [3413](https://epsg.io/3413)                                                                    | [3031](https://epsg.io/3031)                                                                    |
+| **Spatial Extent** | Global                                                                                          | North of 60°N Latitude                                                                          | South of 60°S Latitude                                                                          |
+| **Pixel Spacing**  | 30 m                                                                                            | 20 m{sup}`*`                                                                                    | 20 m{sup}`*`                                                                                    |
+| **Tiling Scheme**  | 1 x 1 degree                                                                                    | 100 x 100 km                                                                                    | 100 x 100 km                                                                                    |
+| **Readme File**    | [EPSG4326 Readme](https://nisar.asf.earthdatacloud.nasa.gov/NISAR/DEM/v1.2/EPSG4326/README.txt) | [EPSG3413 Readme](https://nisar.asf.earthdatacloud.nasa.gov/NISAR/DEM/v1.2/EPSG3413/README.txt) | [EPSG3031 Readme](https://nisar.asf.earthdatacloud.nasa.gov/NISAR/DEM/v1.2/EPSG3031/README.txt) |
 
 {sup}`*` While the polar stereographic datasets have a pixel spacing of 20 meters, they are derived from the Copernicus 30-m DEM, so the resolution is coarser than the pixel spacing.
 :::
@@ -78,7 +79,7 @@ Enables programmatic subsetting to a custom AOI
 
 ### S3 File Organization
 
-While the DEM files are all included in a single collection, they are actually divided into different S3 prefixes based on their projection. When searching for content directly in S3, the DEM prefix includes a version prefix (v1.2), then a prefix for each different projection: 
+While the DEM files are all included in a single collection, they are divided into different S3 prefixes based on their projection. When searching for content directly in S3, the DEM prefix includes a version prefix (v1.2), then a prefix for each different projection: 
 
 - EPSG4326
 - EPSG3413
