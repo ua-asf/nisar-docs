@@ -11,8 +11,6 @@ jobs:
     # For first-time setup, create a v0.0.0 tag as shown here:
     # https://github.com/ASFHyP3/actions#reusable-bump-versionyml
     uses: ASFHyP3/actions/.github/workflows/reusable-bump-version.yml@v0.21.0
-    permissions:
-      contents: write
-      pull-requests: read
+    permissions: {}
     secrets:
       USER_TOKEN: ${{ secrets.TOOLS_BOT_NISAR_DOCS_TOKEN }}
