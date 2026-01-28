@@ -15,4 +15,4 @@ jobs:
       contents: write
       pull-requests: read
     secrets:
-      USER_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      USER_TOKEN: ${{ secrets.TOOLS_BOT_NISAR_DOCS_TOKEN }}
