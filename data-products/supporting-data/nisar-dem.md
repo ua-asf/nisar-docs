@@ -19,9 +19,9 @@ Because this DEM has had an ellipsoid correction applied, which is necessary for
 :label: ellipsoid-geoid
 :alt: Figure illustrating the difference between ellipsoid and geoid heights.
 :align: left
-:width: 50%
+:width: 75%
 
-Most DEMs are geoid-based, and require a conversion before being used in SAR processing workflows. 
+The elevation values in most DEMs are calculated relative to a geoid model, and require a conversion before being used in SAR processing workflows. This figure from @ellipsoid_diagram illustrates the relationship between measurements based on geoid and ellipsoid models.
 ```
 :::
 
