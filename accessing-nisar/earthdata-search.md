@@ -14,12 +14,6 @@
 
 * Search in the search bar using the product name or short name 
 * Apply filters to get list of all analysis-ready data types
-* Results can be filtered using parameters:
-  * Granule ID
-  * Spatial AOI
-  * Temporal Range
-  * Orbit Number
-  * Data Access
 
 :::{table} NISAR Data Product Earthdata Search Short Name List
 :label: tbl:earthdata-search-shortname-list
@@ -46,6 +40,14 @@
 Setting the platform filter to NISAR and the processing level to 2 and 3 will filter to show analysis-ready NISAR data products.
 ```
 
+### 3. Filter NISAR data for desired granule
+* Results can be filtered using parameters:
+  * Granule ID
+  * Spatial AOI
+  * Temporal Range
+  * Orbit Number
+  * Data Access
+  
 ```{figure} ../assets/earthdata-search-filters.png
 :label: earthdata-search-filters
 :alt: Screenshot showing the "Filter Granules" bar for GCOV products.  
@@ -70,7 +72,7 @@ Search by drawing a region of interest or entering coordinates using the "Spatia
 Search using a date range with the "Temporal" search filter. 
 ```
 
-### 3. Download data
+### 4. Download data
 * Individual granules can be downloaded directly through the results. 
 * To learn more about downloading multiple files at once, visit the [NASA Earthdata Cloud Cookbook](https://nasa-openscapes.github.io/earthdata-cloud-cookbook/how-tos/find-data/earthdata_search.html). 
 
