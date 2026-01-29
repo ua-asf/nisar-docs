@@ -4,10 +4,6 @@ project:
   github: https://github.com/ua-asf/nisar-docs
   bibliography:
     - nisar-docs.bib
-  numbering:
-    figure:
-      continue: true
-      enabled: true
   toc:
     - file: index.md
     - file: about-nisar/nisar-intro.md
