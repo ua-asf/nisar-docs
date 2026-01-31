@@ -194,4 +194,6 @@ When distributing the Modified Copernicus DEM for NISAR, acknowledge the dataset
 > Produced using Copernicus WorldDEM-30 © DLR e.V. 2010-2014 and © Airbus Defence and Space GmbH 2014-2018 provided under COPERNICUS by the European Union and ESA; all rights reserved. The organisations in charge of the Copernicus programme by law or by delegation do not incur any liability for any use of the
 Copernicus WorldDEM-30.
 
-To cite the DEM, refer to the [Dataset Citation](https://www.earthdata.nasa.gov/data/catalog/asf-nisar-dem-1#toc-copy-citation) to select a citation from a variety of reference styles.
+### Citing the DEM
+
+To cite the Modified Copernicus Digital Elevation Models used by the NASA-ISRO Synthetic Aperture Radar (NISAR) Mission, refer to the [Dataset Citation](https://www.earthdata.nasa.gov/data/catalog/asf-nisar-dem-1#toc-copy-citation).
