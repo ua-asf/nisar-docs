@@ -6,11 +6,11 @@ short_title: DEM for NISAR
 
 {button}`Find Data <https://search.earthdata.nasa.gov/search?q=NISAR_DEM>`
 
-The [Modified Copernicus Digital Elevation Models used by the NISAR Mission](https://www.earthdata.nasa.gov/data/catalog/asf-nisar-dem-1) is a tiled collection of Cloud-Optimized GeoTIFF (COG) files representing the DEM used for processing NISAR products. 
+The [Modified Copernicus Digital Elevation Model used by the NISAR Mission](https://www.earthdata.nasa.gov/data/catalog/asf-nisar-dem-1) is a tiled collection of Cloud-Optimized GeoTIFF (COG) files representing the DEM used for processing NISAR products. 
 
-## DEM Overview
+## DEM for NISAR Overview
 
-The DEM used for NISAR product generation is derived from the [Copernicus DEM 30-m COP-DEM_GLO-30-DGED/2023_1](https://doi.org/10.5270/ESA-c5d3d65). Elevation values are re-referenced vertically to the WGS84 ellipsoid for use in Synthetic Aperture Radar (SAR) processing workflows, and areas over the ocean are filled, resulting in a DEM with complete global coverage. 
+The DEM used for NISAR product generation is derived from the [Copernicus DEM 30-m COP-DEM_GLO-30-DGED/2023_1](https://doi.org/10.5270/ESA-c5d3d65). Elevation values are re-referenced vertically from the EGM2008 geoid model to the WGS84 ellipsoid model, and areas over the ocean are filled, resulting in a DEM with complete global coverage. 
 
 :::{warning}Modified for SAR Applications
 Because this DEM has been re-referenced from a geoid model to an ellipsoid model, which is necessary for SAR processing, the elevation values will differ from the source DEM. It is generally not suitable for non-SAR applications, which typically require geoid-based elevations. 
@@ -28,11 +28,12 @@ The elevation values in most DEMs are calculated relative to a geoid model, and 
 This dataset allows SAR scientists to generate their own higher-level products from NISAR data using the same input DEM as the mission-generated products. 
 
 :::{important}Not Generated from NISAR Data
-It is important to note that this dataset is _not_ generated from NISAR-acquired data. It is modified from an existing DEM, and used in NISAR data processing workflows. 
+This dataset is _not_ generated from NISAR-acquired data. It is modified from an existing DEM, and used in NISAR data processing workflows. 
 :::
 
 The data are available from NASA's Alaska Satellite Facility Distributed Active Archive Center (ASF DAAC) through [Earthdata Search](https://search.earthdata.nasa.gov/search?q=NISAR_DEM) as well as through [direct S3 access](#aws-s3-access-overview) within the AWS us-west-2 region.
 
+(dem-datasets)=
 ## DEM Datasets
 
 The DEM is provided in three different projections: 
@@ -45,24 +46,24 @@ The DEM dataset in the WGS84 projection provides global coverage, while the DEM 
 
 ```{figure} ../../assets/dem-extent-4326.png
 :label: dem-extent-4326
-:alt: Visualization of the WGS84 DEM for NISAR.
+:alt: Visualization of the WGS84 DEM for NISAR. This dataset provides global coverage using the World Geodetic System 1984 (WGS84) geographic coordinate system ([EPSG 4326](https://epsg.io/4326)).
 :align: left
 
-Visualization of the WGS84 DEM for NISAR.
+Visualization of the WGS84 DEM for NISAR. This dataset provides global coverage using the World Geodetic System 1984 (WGS84) geographic coordinate system ([EPSG 4326](https://epsg.io/4326)).
 ```
 ```{figure} ../../assets/dem-extent-3413.png
 :label: dem-extent-3413
-:alt: Visualization of the North Polar Stereographic DEM for NISAR.
+:alt: Visualization of the North Polar Stereographic DEM for NISAR. This dataset provides coverage north of 60°N using the NSIDC Sea Ice Polar Stereographic North projected coordinate system ([EPSG 3413](https://epsg.io/3413)), based on the WGS84 coordinate reference system.
 :align: left
 
-Visualization of the North Polar Stereographic DEM for NISAR.
+Visualization of the North Polar Stereographic DEM for NISAR. This dataset provides coverage north of 60°N using the NSIDC Sea Ice Polar Stereographic North projected coordinate system ([EPSG 3413](https://epsg.io/3413)), based on the WGS84 coordinate reference system.
 ```
 ```{figure} ../../assets/dem-extent-3031.png
 :label: dem-extent-3031
-:alt: Visualization of the South Polar Stereographic DEM for NISAR.
+:alt: Visualization of the South Polar Stereographic DEM for NISAR. This dataset provides coverage south of 60°S using the Antarctic Polar Stereographic projected coordinate system ([EPSG 3031](https://epsg.io/3031)), based on the WGS84 coordinate reference system. 
 :align: left
 
-Visualization of the South Polar Stereographic DEM for NISAR.
+Visualization of the South Polar Stereographic DEM for NISAR. This dataset provides coverage south of 60°S using the Antarctic Polar Stereographic projected coordinate system ([EPSG 3031](https://epsg.io/3031)), based on the WGS84 coordinate reference system. 
 ```
 
 ### DEM Dataset Characteristics
@@ -91,15 +92,55 @@ The WGS84 files include the latitude and longitude of the lower left corner of t
 The Polar Stereographic files include a reference to the 100 x 100 km tile number. For example:
 `DEM_11_00_23_00_C01.tif`
 
-In Earthdata Search, each file is given a title that also includes the projection. These titles are based on the S3 path where the files are stored.
+In Earthdata Search, each file is given a title that also includes the projection. These titles are based on the [S3 path](#s3-file-organization) where the files are stored.
 
-## Finding DEMs
+### DEM File Types
+
+The actual DEM data is contained in tiled assemblages of Cloud Optimized GeoTIFF (COG) files, but the NISAR_DEM collection also includes [VRT](#vrt-reference-files) files. VRTs are virtual files that reference the tiled DEM COGs, allowing them to be visualized as a mosaic. <!-- #TODO: Add reference to the product spec -->
+
+#### Tiled DEM COG Files
+
+The DEM height values are contained in the COG files. The files are tiled to provide complete coverage for each of the [projection-based datasets](#dem-datasets) included in the DEM collection. The tiling scheme differs based on the projection, as indicated in @tbl:nisar-dem-characteristics.
+
+These files have an extension of `.tif`.
+
+(vrt-reference-files)=
+#### VRT Reference Files
+
+To facilitate visualization and subsetting of the tiled DEM COG files, [VRT](https://gdal.org/en/stable/drivers/vector/vrt.html) files are available for each polarization. These VRT files are just a metadata file, and require access to the associated DEM COG files to be useful. 
+
+These files have an extension of `.vrt`.
+
+There are multiple VRT files for each projection. Each projection has a dataset-wide VRT, with one or more layers of VRTs that organize smaller subsets of data:
+* The global WGS84 dataset includes a VRT for each latitude band, which each reference another layer of VRTs grouping smaller collections of COGs within each latitude band. 
+* The datasets with polar projections just have one layer of VRTs under the dataset-wide VRT, grouping together collections of COGs by spatial location.
+
+:::{warning}VRT Files Require Source DEM Files
+If you only download VRT files to your local compute environment, they will not display anything. The source DEM COG files referenced by the downloaded VRT must also be downloaded to the same location, and be arranged in the file structure expected by the VRT, in order to visualize mosaics locally. 
+:::
+
+The VRT files are more useful when interacting with the DEM files directly in the cloud, where they can be used to find the necessary DEM COGs for an area of interest in programmatic workflows. Refer to @vrt-subsetting for more guidance.
+
+## Finding DEM Files
 
 The DEM for NISAR files can be found in Earthdata Search by searching for "NISAR_DEM": [Find Data in Earthdata Search](https://search.earthdata.nasa.gov/search?q=NISAR_DEM)
 
-All three DEM datasets are included in one [NISAR_DEM](https://www.earthdata.nasa.gov/data/catalog/asf-nisar-dem-1) collection. They are accessible through [Earthdata Search](https://search.earthdata.nasa.gov/search?q=NISAR_DEM), but not currently discoverable in Vertex. The projection is included in the title for each DEM file in Earthdata Search, making it easy to restrict searches to a single projection.
+All three DEM datasets (with their tiled GeoTIFFs and associated VRT files) are included in one [NISAR_DEM](https://www.earthdata.nasa.gov/data/catalog/asf-nisar-dem-1) collection. They are accessible through [Earthdata Search](https://search.earthdata.nasa.gov/search?q=NISAR_DEM), but not currently discoverable in Vertex. The projection is included in the title for each DEM file in Earthdata Search, making it easy to restrict searches to a single projection.
 
 Each DEM filename gives an indication of its geographic location, which you can use to locate the tiles you need, but it is easiest to use Earthdata Search to find the necessary tiles for a specific geographic area of interest. To incorporate subsetting into a programmatic workflow, it is useful to leverage @vrt-subsetting.
+
+(s3-file-organization)=
+## S3 File Organization
+
+The DEM files are hosted in NASA's [Earthdata Cloud (EDC)](https://www.earthdata.nasa.gov/about/earthdata-cloud-evolution), in the [same S3 bucket](#nisar-s3-buckets) as the data products from the NISAR mission. While the DEM files for all three projections are included in a single Earthdata collection ([NISAR_DEM](https://www.earthdata.nasa.gov/data/catalog/asf-nisar-dem-1)), they are archived under projection-specific S3 prefixes in EDC. 
+
+When searching for DEM files [directly in S3](#aws-s3-access-overview), the path includes the DEM prefix, followed by a version prefix (v1.2), then a prefix specific to each different projection: 
+
+- `/DEM/v1.2/EPSG4326`
+- `/DEM/v1.2/EPSG3413`
+- `/DEM/v1.2/EPSG3031`
+
+Refer to @aws-s3-access-overview for more information on direct S3 access.
 
 (vrt-subsetting)=
 ## Subsetting via Global VRT Mosaics
@@ -144,24 +185,13 @@ s3://sds-n-cumulus-prod-nisar-products/DEM/v1.2/EPSG3031/EPSG3031.vrt
    gdalwarp /vsis3/sds-n-cumulus-prod-nisar-products/DEM/v1.2/EPSG4326/EPSG4326.vrt out.tif -te -116.7 35.9 -116.6 36.0
    ```
 
-## S3 File Organization
-
-The DEM files are hosted in NASA's [Earthdata Cloud (EDC)](https://www.earthdata.nasa.gov/about/earthdata-cloud-evolution), in the [same S3 bucket](#nisar-s3-buckets) as the data products from the NISAR mission. While the DEM files for all three projections are included in a single Earthdata collection ([NISAR_DEM](https://www.earthdata.nasa.gov/data/catalog/asf-nisar-dem-1)), they are archived under projection-specific S3 prefixes in EDC. 
-
-When searching for DEM files [directly in S3](#aws-s3-access-overview), the path includes the DEM prefix, followed by a version prefix (v1.2), then a prefix specific to each different projection: 
-
-- `/DEM/v1.2/EPSG4326`
-- `/DEM/v1.2/EPSG3413`
-- `/DEM/v1.2/EPSG3031`
-
-Refer to @aws-s3-access-overview for more information on direct S3 access.
-
-
 ## Acknowledging the DEM for NISAR
 
-Users, including those who redistribute, adapt, modify, or combine Copernicus DEM for NISAR data, must comply with the terms of the Copernicus DEM 30m License Agreement. For additional information, please refer to https://doi.org/10.5067/NIDEM-1 and https://doi.org/10.5270/ESA-c5d3d65.
+Users, including those who redistribute, adapt, modify, or combine Copernicus DEM for NISAR data, must comply with the terms of the Copernicus DEM 30m License Agreement. For additional information, please refer to [Modified Copernicus Digital Elevation Models used by the NASA-ISRO Synthetic Aperture Radar (NISAR) Mission](https://doi.org/10.5067/NIDEM-1) and [Copernicus DEM - Global and European Digital Elevation Model](https://doi.org/10.5270/ESA-c5d3d65).
 
 When distributing the Modified Copernicus DEM for NISAR, acknowledge the dataset using the following statement<!-- #TODO: add link to legal agreement -->: 
 
 > Produced using Copernicus WorldDEM-30 © DLR e.V. 2010-2014 and © Airbus Defence and Space GmbH 2014-2018 provided under COPERNICUS by the European Union and ESA; all rights reserved. The organisations in charge of the Copernicus programme by law or by delegation do not incur any liability for any use of the
 Copernicus WorldDEM-30.
+
+To cite the DEM, refer to the [Dataset Citation](https://www.earthdata.nasa.gov/data/catalog/asf-nisar-dem-1#toc-copy-citation) to select a citation from a variety of reference styles.
