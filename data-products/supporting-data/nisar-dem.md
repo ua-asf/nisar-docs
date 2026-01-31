@@ -2,18 +2,18 @@
 short_title: DEM for NISAR
 ---
 
-# Copernicus DEM for NISAR
+# Modified Copernicus DEM for NISAR
 
 {button}`Find Data <https://search.earthdata.nasa.gov/search?q=NISAR_DEM>`
 
-The modified Copernicus Digital Elevation Model used by the NISAR mission is a tiled collection of Cloud-Optimized GeoTIFF (COG) files representing the DEM used for processing NISAR products. 
+The [Modified Copernicus Digital Elevation Models used by the NISAR Mission](https://www.earthdata.nasa.gov/data/catalog/asf-nisar-dem-1) is a tiled collection of Cloud-Optimized GeoTIFF (COG) files representing the DEM used for processing NISAR products. 
 
 ## DEM Overview
 
-The DEM used for NISAR product generation is derived from the [Copernicus DEM 30-m COP-DEM_GLO-30-DGED/2023_1](https://doi.org/10.5270/ESA-c5d3d65). Areas over the ocean are filled using the EGM2008 geoid model, resulting in a DEM with complete global coverage. Elevation values are ellipsoid-corrected for use in Synthetic Aperture Radar (SAR) processing workflows.
+The DEM used for NISAR product generation is derived from the [Copernicus DEM 30-m COP-DEM_GLO-30-DGED/2023_1](https://doi.org/10.5270/ESA-c5d3d65). Elevation values are re-referenced vertically to the WGS84 ellipsoid for use in Synthetic Aperture Radar (SAR) processing workflows, and areas over the ocean are filled, resulting in a DEM with complete global coverage. 
 
 :::{warning}Modified for SAR Applications
-Because this DEM has had an ellipsoid correction applied, which is necessary for SAR processing, the elevation values will differ from the source DEM. It should not be used for non-SAR applications, which typically require geoid-based elevations. 
+Because this DEM has been re-referenced from a geoid model to an ellipsoid model, which is necessary for SAR processing, the elevation values will differ from the source DEM. It is generally not suitable for non-SAR applications, which typically require geoid-based elevations. 
 
 ```{figure} ../../assets/ellipsoid-geoid.png
 :label: ellipsoid-geoid
@@ -155,3 +155,13 @@ When searching for DEM files [directly in S3](#aws-s3-access-overview), the path
 - `/DEM/v1.2/EPSG3031`
 
 Refer to @aws-s3-access-overview for more information on direct S3 access.
+
+
+## Acknowledging the DEM for NISAR
+
+Users, including those who redistribute, adapt, modify, or combine Copernicus DEM for NISAR data, must comply with the terms of the Copernicus DEM 30m License Agreement. For additional information, please refer to https://doi.org/10.5067/NIDEM-1 and https://doi.org/10.5270/ESA-c5d3d65.
+
+When distributing the Modified Copernicus DEM for NISAR, acknowledge the dataset using the following statement<!-- #TODO: add link to legal agreement -->: 
+
+> Produced using Copernicus WorldDEM-30 © DLR e.V. 2010-2014 and © Airbus Defence and Space GmbH 2014-2018 provided under COPERNICUS by the European Union and ESA; all rights reserved. The organisations in charge of the Copernicus programme by law or by delegation do not incur any liability for any use of the
+Copernicus WorldDEM-30.
