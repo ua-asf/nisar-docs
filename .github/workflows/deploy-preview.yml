@@ -1,0 +1,60 @@
+name: Deploy site preview for PR
+
+on:
+  pull_request:
+    branches:
+      - main
+
+env:
+  BASE_URL: ${{ vars.PREVIEW_BASE_URL }}/${{ github.event.number }}
+  DOMAIN: ${{ vars.PREVIEW_DOMAIN }}
+
+permissions:
+  contents: read
+  pull-requests: write
+
+concurrency:
+  group:  preview-${{ github.event.number }}
+
+jobs:
+  deploy-preview:
+    if: ${{ ! github.event.repository.fork }}
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash -l {0}
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          path: main
+
+      - uses: actions/checkout@v6
+        with:
+          repository: ${{ vars.PREVIEW_REPOSITORY }}
+          path: preview
+          token: ${{ secrets.PREVIEW_TOKEN }}
+
+      - uses: mamba-org/setup-micromamba@v2
+        with:
+          environment-file: main/environment.yml
+
+      - run: |
+          cd main
+          myst build --html
+          sed -i -e "s|http://localhost:3000|$DOMAIN$BASE_URL|g" $(grep -RIl "http://localhost:3000" ./_build)
+          cd ..
+
+          rm -R preview/${{ github.event.number }}
+          mv main/_build/html preview/${{ github.event.number }}
+
+          cd preview
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add ${{ github.event.number }}
+          git commit -m "deploy preview for PR #${{ github.event.number }} commit ${{ github.sha }}"
+          git push
+
+      - if: github.event.action == 'opened'
+        uses: thollander/actions-comment-pull-request@v3
+        with:
+          message: Preview deployed to ${{ env.DOMAIN }}${{ env.BASE_URL }}

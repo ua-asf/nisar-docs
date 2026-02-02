@@ -12,26 +12,6 @@ Source for the public documentation of the NASA-ISRO Synthetic Aperture Radar (N
    mamba activate nisar-docs
     ```
 1. Run `myst start` to render the website on your local machine
-1. Configure previewing via GitHub Pages (optional)
-   1. Enable GitHub Actions for your fork
-      <details>
-      <summary>screenshot</summary>
-      <img alt="screenshot of enabling GitHub Actions" src="assets/readme_enable_actions.png" />
-      </details>
-   1. Enable GitHub Pages for your fork with Source = GitHub Actions
-      <details>
-      <summary>screenshot</summary>
-      <img alt="screenshot of enabling GitHub Pages" src="assets/readme_enable_pages.png" />
-      </details>
-   1. Create two GitHub Actions variables:
-      1. `BASE_URL` with a value of `/nisar-docs` (including the leading `/`)
-      2. `DOMAIN` with a value of `https://{github_user_id}.github.io`
-      <details>
-      <summary>screenshot</summary>
-      <img alt="screenshot of creating BASE_URL variable" src="assets/readme_variables.png" />
-      </details>
-   1. Push changes to your `main` branch
-   1. Preview the rendered site at `https://{github_user_id}.github.io/nisar-docs/`
 1. Make and commit your changes
 1. Push changes to your fork in GitHub
 1. Make sure your branch is synced and up to date with `ua-asf/nisar-docs:main`
