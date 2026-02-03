@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Page documenting the modified Copernicus DEM used for NISAR processing
 
+### Changed
+- Figure numbering now restarts at 1 on each page, rather than continuing across the entire site
+
 ## [0.2.2]
 
 ### Fixed
