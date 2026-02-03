@@ -134,9 +134,11 @@ Use care when downloading DEM files from both of the Polar Stereographic dataset
 
 ### Earthdata File Titles
 
-In Earthdata Search, each file is given a title that also includes the projection. These titles are based on the [S3 path](#s3-file-organization) where the files are stored, and results in a unique title for each file. While this is helpful during the search process, the filenames of the downloaded files will not match the titles displayed in Earthdata Search. 
+In Earthdata Search, each file is given a title that includes the coordinate system code (EPSG number). These titles are based on the [S3 path](#s3-file-organization) where the files are stored, and results in a unique title for each file. 
 
-Examples: 
+While these unique titles are helpful for finding specific DEM files during the search process, the actual filenames of the downloaded files only partially match these title. This is particularly important to know when working with the polar stereographic datasets, as the filenames used for the north and south polar datasets are identical. While the titles in Earthdata are all unique, the actual filenames can be the same.
+
+Examples comparing Earthdata titles to actual filenames: 
 
 - WGS84
   - Earthdata title:`v1-2-EPSG4326-N20-N20_E160-DEM_N23_00_E162_00_C01-tif`
