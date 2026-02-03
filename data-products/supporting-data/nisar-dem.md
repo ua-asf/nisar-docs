@@ -104,15 +104,23 @@ For example:
 - `11` refers to the bottom-to-top Y coordinate of the tile
 - `23` refers tp the left-to-right X coordinate of the tile
 
-In Earthdata Search, each file is given a title that also includes the projection. These titles are based on the [S3 path](#s3-file-organization) where the files are stored.
-
 ```{figure} ../../assets/north-polar-grid.png
 :label: north-polar-grid
-:alt: Visualization of the North Polar Stereographic DEM for NISAR. This dataset provides coverage north of 60°N using the NSIDC Sea Ice Polar Stereographic North projected coordinate system ([EPSG 3413](https://epsg.io/3413)), based on the WGS84 coordinate reference system.
+:alt: Gridding system for the North Polar Stereographic DEM dataset, highlighting an example tile location and its corresponding file name.
 :align: left
 
-Visualization of the North Polar Stereographic DEM for NISAR. This dataset provides coverage north of 60°N using the NSIDC Sea Ice Polar Stereographic North projected coordinate system ([EPSG 3413](https://epsg.io/3413)), based on the WGS84 coordinate reference system.
+Gridding system for the North Polar Stereographic DEM dataset. 
 ```
+
+```{figure} ../../assets/south-polar-grid.png
+:label: south-polar-grid
+:alt: Gridding system for the South Polar Stereographic DEM dataset, highlighting an example tile location and its corresponding file name.
+:align: left
+
+Gridding system for the South Polar Stereographic DEM dataset.
+```
+
+In Earthdata Search, each file is given a title that also includes the projection. These titles are based on the [S3 path](#s3-file-organization) where the files are stored.
 
 ### DEM File Types
 
