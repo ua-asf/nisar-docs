@@ -108,7 +108,7 @@ For example:
 `DEM_20_00_64_00_C01.tif`  
 
 - `20` refers to the bottom-to-top Y coordinate of the tile
-- `64` refers tp the left-to-right X coordinate of the tile
+- `64` refers to the left-to-right X coordinate of the tile
 
 ```{figure} ../../assets/north-polar-grid.png
 :label: north-polar-grid
