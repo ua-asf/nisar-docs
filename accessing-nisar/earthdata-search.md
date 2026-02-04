@@ -12,6 +12,10 @@ short_title: Earthdata Search
 ### 1. Go to https://search.earthdata.nasa.gov/ and log in using your Earthdata credentials
 Upon navigating to [Earthdata Search](https://search.earthdata.nasa.gov/ ), users can log in using their [Earthdata login credentials](https://urs.earthdata.nasa.gov/) to download data.  An EDL account is free to create and provides unified access to Earth science data distributed by [NASA'S Earth Observation System Data and Information System (EOSDIS)](https://www.earthdata.nasa.gov/about/esdis/eosdis), independent of the data provider.
 
+<a href="https://search.earthdata.nasa.gov/">
+<img id="earthdata-search-login" src="../assets/earthdata-search-login.png" alt="Image of the Earthdata Search web interface">
+</a>
+
 ### 2. Search for NISAR data products
 NISAR products can be discovered using either the search bar or filter selection.
 
@@ -75,7 +79,7 @@ Use the "Granule ID" filter to perform advanced searches, including wildcard mat
 :alt: Screenshot showing the "Filter Granules" bar for GCOV products.  
 :align: center
 
-Filter Earthdata Search results to refine the number of granules to your desired area of interest. 
+Filter Earthdata Search results to refine granule options. 
 ```
 
 ### 4. Download data
