@@ -62,7 +62,7 @@ To search for a specific geographic region, use the `Spatial Search` button. You
 Search by drawing a region of interest or entering coordinates using the "Spatial" search filter. This example shows a rectangular search, but users can also search using a polygon, circle, point, or geospatial file. 
 ```
 
-To search for products during a specific date range, use the `Temporal Search` button. This filter searches for products between a start date and end date, with the option to find products that occur on an annual basis by checking the "Use a recurring date range" button. 
+To search for products during a specific date range, use the `Temporal Search` button. This filter searches for products between a start and end date, with the option to find products that occur on an annual basis by checking the "Use a recurring date range" button. 
 ```{figure} ../assets/earthdata-search-temporal-search.png
 :label: earthdata-search-temporal-search
 :alt: Screenshot showing the temporal search of GCOV products. 
