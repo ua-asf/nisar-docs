@@ -17,6 +17,7 @@ HDF was originally developed by the University of Illinois' National Center for 
 At a high level, an HDF5 file functions as a container that organizes data into a hierarchy of objects, such as **{abbr}`groups(A folder within an HDF5 file)`**, **{abbr}`datasets(The actual data values stored in an HDF5 file)`**, and **{abbr}`datatypes(The type and format of data)`**. In general, radar layers are organized into two groups: **{abbr}`frequencyA(Lower portion of the radar bandwidth)`**/ and (potentially) **{abbr}`frequencyB(Higher portion of the radar signal)`**/. Note that nothing stored at the root `/`.
 
 ## Groups
+
 An HDF5 **{abbr}`group(A folder within an HDF5 file)`** is a folder within an HDF5 file. Groups can hold datasets, datatypes, and other groups (subfolders). In essence, groups act like directories on computers. In a NISAR product,  datasets are organized through nesting. For example, in a NISAR GCOV product, a dataset may be stored at a path such as:
 
 `/science/LSAR/GCOV/grids/frequencyA/HH`
@@ -24,9 +25,11 @@ An HDF5 **{abbr}`group(A folder within an HDF5 file)`** is a folder within an HD
 - In this path, `science`, `LSAR`, `GCOV`, `grids`, and `frequencyA` are groups, and `HH` is a dataset contained within the `frequencyA` group.
 
 ## Datasets
+
 An HDF5 **{abbr}`dataset(A collection of data values stored in an HDF5 file)`** is where the actual data lives. This might be an array or a table stored within the HDF5 file. Each dataset will include the data, a **{abbr}`dataspace(Describing the shape of the data)`**, a **{abbr}`datatype(What values are: integers, floats, etc)`**, and additional (optional) attributes such as units, range, time, and other descriptions. 
 
 ## Attributes
+
 An HDF5 **attribute** is a small piece of information that describes a **{abbr}`group(A folder within an HDF5 file)`** or **{abbr}`dataset(A collection of data values stored in an HDF5 file)`**. Note that an attribute does not store the data itself. Attributes provide important context that help correctly interpret values within a dataset. Common examples include:
 - Units of measurement
 - Descriptions of what the data represent
@@ -36,9 +39,11 @@ An HDF5 **attribute** is a small piece of information that describes a **{abbr}`
 Storing this information with the data helps ensure that datasets can be understood and used correctly without relying on external documentation.
 
 ## Datatypes
+
 An HDF5 datatype describes the kind of data that is being stored. A datatype explains both how to interpret a dataset and how it is stored. Datatypes fall into three categories: **{abbr}`atomic datatypes(Basic building blocks)`**, **{abbr}`composite datatypes(Combinations of atomic types)`**, and **{abbr}`named datatypes(Ways of storing and sharing datatypes)`**. 
     
 ### Atomic Datatypes
+
 **{abbr}`Atomic datatypes(Basic building blocks)`** are typically the simplest datatypes. They serve as building blocks for more complex datatypes. Common atomic datatypes include:
 - Time
 - Bitfield
@@ -54,6 +59,7 @@ An HDF5 datatype describes the kind of data that is being stored. A datatype exp
 - Preserve the original format in which the data were recorded
 
 ### Composite Datatypes
+
 **{abbr}`Array datatypes(Fixed-size, multi-dimensional arrays stored as a single element)`** have a fixed shape defined as part of the datatype itself. Each element has the same dimension and size.
 
   - *NISAR example:* a fixed-size array used to store a per-pixel covariance matrix in a GCOV product, where each pixel always contains the same number of polarization or frequency components.
@@ -74,6 +80,7 @@ For more details on HDF5 datatypes and their uses, see the official HDF5 documen
 <https://support.hdfgroup.org/documentation/hdf5/latest/_h5_t__u_g.html>.
 
 ### Named Datatypes
+
 **{abbr}`Named datatypes(Ways of storing and sharing datatypes)`** are stored as objects within an HDF5 file. Any datatype (atomic, derived, or composite) can be named or referenced throughout the file.
 Naming allows datatypes to be:
 - Shared across datasets and attributes
