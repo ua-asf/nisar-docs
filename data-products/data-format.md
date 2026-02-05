@@ -44,7 +44,7 @@ Storing this information with the data helps ensure that datasets can be underst
 
 An HDF5 datatype describes the kind of data that is being stored. A datatype explains both how to interpret a dataset and how it is stored. Datatypes fall into three categories: **{abbr}`atomic datatypes(Basic building blocks)`**, **{abbr}`composite datatypes(Combinations of atomic types)`**, and **{abbr}`named datatypes(Ways of storing and sharing datatypes)`**.
 
-For more details on HDF5 datatypes and their uses, see the official HDF5 documentation on datatypes:
+A summary of some important datatypes is given below. For more details on HDF5 datatypes and their uses, see the official HDF5 documentation on datatypes:
 <https://support.hdfgroup.org/documentation/hdf5/latest/_h5_t__u_g.html>.
 
 ### Atomic Datatypes
