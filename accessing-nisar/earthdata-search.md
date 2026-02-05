@@ -12,6 +12,14 @@ short_title: Earthdata Search
 ### 1. Filter by data product type
 Earthdata Search organizes data by product type (called a "collection" in Earthdata Search). A collection must be selected before doing any additional filtering. 
 
+```{figure} ../assets/earthdata-search-search-bar.png
+:label: earthdata-search-search-bar
+:alt: Image of the Earthdata Search web interface with the search bar highlighted.
+:align: center
+
+Search using the search bar. 
+```
+
 To search for a specific product type, input the corresponding short name from @tbl:earthdata-search-shortname-list into the search bar. For a description of the available data product types, see @data-products-overview. 
 
 :::{table} NISAR Data Product Earthdata Search Short Name List
