@@ -42,6 +42,9 @@ Storing this information with the data helps ensure that datasets can be underst
 
 An HDF5 datatype describes the kind of data that is being stored. A datatype explains both how to interpret a dataset and how it is stored. Datatypes fall into three categories: **{abbr}`atomic datatypes(Basic building blocks)`**, **{abbr}`composite datatypes(Combinations of atomic types)`**, and **{abbr}`named datatypes(Ways of storing and sharing datatypes)`**.
 
+For more details on HDF5 datatypes and their uses, see the official HDF5 documentation on datatypes:
+<https://support.hdfgroup.org/documentation/hdf5/latest/_h5_t__u_g.html>.
+
 ### Atomic Datatypes
 
 **{abbr}`Atomic datatypes(Basic building blocks)`** are typically the simplest datatypes. They serve as building blocks for more complex datatypes. Common atomic datatypes include:
@@ -60,24 +63,23 @@ An HDF5 datatype describes the kind of data that is being stored. A datatype exp
 
 ### Composite Datatypes
 
-**{abbr}`Array datatypes(Fixed-size, multi-dimensional arrays stored as a single element)`** have a fixed shape defined as part of the datatype itself. Each element has the same dimension and size.
+Some important **{abbr}`composite datatypes(Combinations of atomic types)`** are described below:
+
+**Array datatypes** represent multidimensional arrays with a fixed shape.
 
 - *NISAR example:* a fixed-size array used to store a per-pixel covariance matrix in a GCOV product, where each pixel always contains the same number of polarization or frequency components.
 
-**{abbr}`Variable-length datatypes(One-dimensional arrays whose length may differ for each element)`** store references to one-dimensional arrays, allowing each element to contain a different number of values.
+**Variable-length datatypes** represent variable-length, one-dimensional arrays of elements.
 
 - *NISAR example:* a variable-length array used to store lists of contributing looks, burst indices, or quality flags, where the number of entries may vary between pixels.
 
-**{abbr}`Compound datatypes(Collections of named fields, each with its own datatype)`** group multiple named fields into a single structured element.
+**Compound datatypes** represent collections of named fields, each with its own datatype.
 
 - *NISAR example:* storing several related per-pixel values together (e.g., coherence, incidence angle, and a validity flag) as one record instead of separate datasets.
 
-**{abbr}`Enumeration datatypes(Map integer values to named labels)`** map integer values to a predefined set of named labels, improving user readability and consistency.
+**Enumeration datatypes** map integer values to a predefined set of named labels, improving user readability and consistency.
 
 - *NISAR example:* using named labels such as `nominal`, `low_quality`, or `invalid` to represent processing or quality states instead of raw numeric codes.
-
-For more details on HDF5 datatypes and their uses, see the official HDF5 documentation on datatypes:
-<https://support.hdfgroup.org/documentation/hdf5/latest/_h5_t__u_g.html>.
 
 ### Named Datatypes
 
