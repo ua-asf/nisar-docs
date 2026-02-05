@@ -52,7 +52,7 @@ Setting the platform filter to NISAR and the processing level to 2 and 3 will fi
 ### 2. Filter for desired products
 After selecting a collection, use the available filters to refine the list of products. Individual data products are called "granules" in Earthdata Search.  
 
-To search for a specific geographic region, use the `Spatial Search` button. This will prompt you to enter coordinates or draw a rectangle, polygon, circle, or point or enter a geospatial file to search. 
+To search for a specific geographic region, use the `Spatial Search` button. You can search with a polygon, rectangle, circle, or point by either by drawing on the map or specifying coordinates.  You can also upload a ShapeFile, KML, GeoJSON, or GeoRSS file. 
 
 ```{figure} ../assets/earthdata-search-spatial-search.png
 :label: earthdata-search-spatial-search
