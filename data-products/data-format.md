@@ -18,7 +18,7 @@ At a high level, an HDF5 file functions as a container that organizes data into 
 
 ## Groups
 
-An HDF5 **{abbr}`group(A folder within an HDF5 file)`** is a folder within an HDF5 file. Groups can hold datasets, datatypes, and other groups (subfolders). In essence, groups act like directories on computers. In a NISAR product,  datasets are organized through nesting. For example, in a NISAR GCOV product, a dataset may be stored at a path such as:
+An HDF5 **{abbr}`group(A folder within an HDF5 file)`** is a folder within an HDF5 file. Groups can hold datasets, datatypes, and other groups (subfolders). In essence, groups act like directories on computers. In a NISAR product, datasets are organized through nesting. For example, in a NISAR GCOV product, a dataset may be stored at a path such as:
 
 `/science/LSAR/GCOV/grids/frequencyA/HH`
 
@@ -26,7 +26,7 @@ An HDF5 **{abbr}`group(A folder within an HDF5 file)`** is a folder within an HD
 
 ## Datasets
 
-An HDF5 **{abbr}`dataset(A collection of data values stored in an HDF5 file)`** is where the actual data lives. This might be an array or a table stored within the HDF5 file. Each dataset will include the data, a **{abbr}`dataspace(Describing the shape of the data)`**, a **{abbr}`datatype(What values are: integers, floats, etc)`**, and additional (optional) attributes such as units, range, time, and other descriptions. 
+An HDF5 **{abbr}`dataset(A collection of data values stored in an HDF5 file)`** is where the actual data lives. This might be an array or a table stored within the HDF5 file. Each dataset will include the data, a **{abbr}`dataspace(Describing the shape of the data)`**, a **{abbr}`datatype(What values are: integers, floats, etc)`**, and additional (optional) attributes such as units, range, time, and other descriptions.
 
 ## Attributes
 
@@ -35,13 +35,13 @@ An HDF5 **attribute** is a small piece of information that describes a **{abbr}`
 - Descriptions of what the data represent
 - Valid ranges, dates of acquisition
 - Processing details
-  
+
 Storing this information with the data helps ensure that datasets can be understood and used correctly without relying on external documentation.
 
 ## Datatypes
 
-An HDF5 datatype describes the kind of data that is being stored. A datatype explains both how to interpret a dataset and how it is stored. Datatypes fall into three categories: **{abbr}`atomic datatypes(Basic building blocks)`**, **{abbr}`composite datatypes(Combinations of atomic types)`**, and **{abbr}`named datatypes(Ways of storing and sharing datatypes)`**. 
-    
+An HDF5 datatype describes the kind of data that is being stored. A datatype explains both how to interpret a dataset and how it is stored. Datatypes fall into three categories: **{abbr}`atomic datatypes(Basic building blocks)`**, **{abbr}`composite datatypes(Combinations of atomic types)`**, and **{abbr}`named datatypes(Ways of storing and sharing datatypes)`**.
+
 ### Atomic Datatypes
 
 **{abbr}`Atomic datatypes(Basic building blocks)`** are typically the simplest datatypes. They serve as building blocks for more complex datatypes. Common atomic datatypes include:
@@ -53,7 +53,7 @@ An HDF5 datatype describes the kind of data that is being stored. A datatype exp
 - Integer
 - Float
 
-**{abbr}`Derived datatypes(Customized versions of atomic datatypes)`** are customized atomic types, commonly used for N-bit integers, floating-point formats, and other nonstandard data representations. They enable efficient and precise storage when data do not conform to standard numeric formats. Derived datatypes are useful because they: 
+**{abbr}`Derived datatypes(Customized versions of atomic datatypes)`** are customized atomic types, commonly used for N-bit integers, floating-point formats, and other nonstandard data representations. They enable efficient and precise storage when data do not conform to standard numeric formats. Derived datatypes are useful because they:
 - Allow custom storage with specific bit lengths
 - Support values that do not follow standard integer or floating-point formats
 - Preserve the original format in which the data were recorded
@@ -62,21 +62,21 @@ An HDF5 datatype describes the kind of data that is being stored. A datatype exp
 
 **{abbr}`Array datatypes(Fixed-size, multi-dimensional arrays stored as a single element)`** have a fixed shape defined as part of the datatype itself. Each element has the same dimension and size.
 
-  - *NISAR example:* a fixed-size array used to store a per-pixel covariance matrix in a GCOV product, where each pixel always contains the same number of polarization or frequency components.
-  
+- *NISAR example:* a fixed-size array used to store a per-pixel covariance matrix in a GCOV product, where each pixel always contains the same number of polarization or frequency components.
+
 **{abbr}`Variable-length datatypes(One-dimensional arrays whose length may differ for each element)`** store references to one-dimensional arrays, allowing each element to contain a different number of values.
 
-  - *NISAR example:* a variable-length array used to store lists of contributing looks, burst indices, or quality flags, where the number of entries may vary between pixels.
+- *NISAR example:* a variable-length array used to store lists of contributing looks, burst indices, or quality flags, where the number of entries may vary between pixels.
 
 **{abbr}`Compound datatypes(Collections of named fields, each with its own datatype)`** group multiple named fields into a single structured element.
 
-  - *NISAR example:* storing several related per-pixel values together (e.g., coherence, incidence angle, and a validity flag) as one record instead of separate datasets.
+- *NISAR example:* storing several related per-pixel values together (e.g., coherence, incidence angle, and a validity flag) as one record instead of separate datasets.
 
 **{abbr}`Enumeration datatypes(Map integer values to named labels)`** map integer values to a predefined set of named labels, improving user readability and consistency.
 
- -  *NISAR example:* using named labels such as `nominal`, `low_quality`, or `invalid` to represent processing or quality states instead of raw numeric codes.
+- *NISAR example:* using named labels such as `nominal`, `low_quality`, or `invalid` to represent processing or quality states instead of raw numeric codes.
 
-For more details on HDF5 datatypes and their uses, see the official HDF5 documentation on datatypes:  
+For more details on HDF5 datatypes and their uses, see the official HDF5 documentation on datatypes:
 <https://support.hdfgroup.org/documentation/hdf5/latest/_h5_t__u_g.html>.
 
 ### Named Datatypes
