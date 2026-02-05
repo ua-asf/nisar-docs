@@ -5,7 +5,7 @@ short_title: Earthdata Search
 
 (earthdata-search-overview)=
 ## Earthdata Search
-[Earthdata Search](https://search.earthdata.nasa.gov/ ) is a web application developed by [NASA'S Earth Science Data and Information System (ESDIS)](https://www.earthdata.nasa.gov/about/esdis) that allows users to search, compare, visualize, and access to NASA's Earth science data collections.  
+[Earthdata Search](https://search.earthdata.nasa.gov/ ) is a web application developed by [NASA'S Earth Science Data and Information System (ESDIS)](https://www.earthdata.nasa.gov/about/esdis) that allows users to search, compare, visualize, and access NASA's Earth science data collections.  
 
 ## Using Earthdata Search to Access NISAR Data 
 
