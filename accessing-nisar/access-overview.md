@@ -45,7 +45,6 @@ Refer to the [Vertex User Manual](https://docs.asf.alaska.edu/vertex/manual/) fo
 <img id="earthdata-search-page" src="../assets/earthdata-search-page.png" alt="Image of the Earthdata Search web interface">
 </a>
 
-
 [Learn more about using Earthdata Search to access NISAR data!](earthdata-search#earthdata-search-overview)
 
 ## Programmatic Access
