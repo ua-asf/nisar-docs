@@ -80,10 +80,7 @@ The [earthaccess Python package](https://earthaccess.readthedocs.io/en/stable/) 
 <img id="earthaccess-page" src="../assets/earthaccess-page.png" alt="Image of the earthaccess web page">
 </a>
 
---
-<!-- TODO: uncomment this line (and 2-dash separator above) once the earthaccess page is populated -->
-
-[//]: # ([Learn more about using earthaccess with NISAR datasets!]&#40;#earthaccess-package&#41;)
+[Learn more about using earthaccess with NISAR datasets!](#earthaccess-package)
 
 ## Direct AWS S3 Access
 

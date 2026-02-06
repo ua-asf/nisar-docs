@@ -46,7 +46,7 @@ project:
 #        - file: accessing-nisar/vertex.md
         - file: accessing-nisar/earthdata-search.md
         - file: accessing-nisar/asf-search.md
-#        - file: accessing-nisar/earthaccess.md
+        - file: accessing-nisar/earthaccess.md
         - file: accessing-nisar/aws-s3-access.md
     - file: using-nisar/using-overview.md
       children:
