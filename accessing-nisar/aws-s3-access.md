@@ -75,7 +75,7 @@ which will print, for example:
 }
 ```
 
-For more information about using the `earthaccess` package with NISAR, see []()
+For more information about using the `earthaccess` package with NISAR, see the [Earthaccess NISAR guide](earthaccess).
 
 ### 2. Configure your environment to use the temporary AWS credentials
 
