@@ -8,7 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - Page documenting searching for, downloading, and streaming NISAR products using `earthaccess`
-- A section to the `aws-s3-acess.md` detailing using `earthaccess` to get temporary S3 credentials
+- A section to `aws-s3-access.md` detailing using `earthaccess` to get temporary S3 credentials
 
 ## [0.2.4]
 
