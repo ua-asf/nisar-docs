@@ -26,7 +26,11 @@ There are three S3 buckets associated with the NISAR mission:
 Users can leverage direct S3 access from other AWS services, such as EC2 and Lambda, as long as the resources are in the us-west-2 (Oregon) region.
 
 (s3-creds-step-1)=
-### 1. Visit https://nisar.asf.earthdatacloud.nasa.gov/s3credentials 
+### 1. Obtain your temporary AWS Credentials
+
+You can either visit the NISAR S3 credentials endpoint directly, or use [`earthacess`](https://earthaccess.readthedocs.io/en/stable/) to programmatically retrieve your temporary credentials.
+
+#### 1.a. Visit https://nisar.asf.earthdatacloud.nasa.gov/s3credentials
 
 If prompted, sign in with your [Earthdata Login (EDL) credentials](https://urs.earthdata.nasa.gov/) to retrieve a set of temporary AWS credentials, which will allow you to list and download contents of the S3 bucket. If you are already signed in, the credentials will display immediately.
 
@@ -38,15 +42,42 @@ The text displayed at the site provides four pieces of information:
 
 For example: 
 ```shell
-{  
- accessKeyId: "ASIAIOSFODNN7EXAMPLE",  
- secretAccessKey: "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY",  
- sessionToken: "LONGSTRINGOFCHARACTERS...6XUxCYEwbjGVKkzSNQh/", 
+{
+ accessKeyId: "ASIAIOSFODNN7EXAMPLE",
+ secretAccessKey: "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY",
+ sessionToken: "LONGSTRINGOFCHARACTERS...6XUxCYEwbjGVKkzSNQh/",
  expiration: "2026-01-27 00:50:09+00:00"
 }
 ```
    
 More details about requesting temporary S3 credentials are [available here](https://nisar.asf.earthdatacloud.nasa.gov/s3credentialsREADME).
+
+#### 1.b. Use the `earthaccess` Python package
+
+:::{warning}`endpoint=` must be specified for NISAR
+For the time being, you must use the `endpoint=` parameter for NISAR data. Using `daac='ASF'` will result in errors when attempting to access NISAR data. See `earthaccess` issue [#1184](https://github.com/nsidc/earthaccess/issues/1184) for more details.
+:::
+
+```python
+import earthaccess
+
+auth = earthaccess.login()
+
+endpoint = 'https://nisar.asf.earthdatacloud.nasa.gov/s3credentials'
+s3_credentials = auth.get_s3_credentials(endpoint=endpoint)
+```
+
+which will print, for example:
+```shell
+{
+ "accessKeyId": "ASIAIOSFODNN7EXAMPLE",
+ "secretAccessKey": "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY",
+ "sessionToken": "LONGSTRINGOFCHARACTERS...6XUxCYEwbjGVKkzSNQh/",
+ "expiration": "2026-01-27 00:50:09+00:00",
+}
+```
+
+For more information about using the `earthaccess` package with NISAR, see the [Earthaccess NISAR guide](earthaccess).
 
 ### 2. Configure your environment to use the temporary AWS credentials
 
@@ -197,6 +228,7 @@ To copy S3 URLs from Vertex:
 1. In the right panel, click on the **link icon** next to the desired file
 1. Select **S3 URL** from the drop-down menu to copy the path to your clipboard
 
+(s3-paths-earthdata-search)=
 ### S3 Paths from Earthdata Search
 
 When you search for NISAR data products in [Earthdata Search](https://search.earthdata.nasa.gov/search?q=nisar%20beta&fpb0=Space-based%20Platforms&fpc0=Earth%20Observation%20Satellites&fps0=NISAR), S3 links are available to copy from the search results, as shown in @earthdata-s3-urls. 
