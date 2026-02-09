@@ -26,7 +26,11 @@ There are three S3 buckets associated with the NISAR mission:
 Users can leverage direct S3 access from other AWS services, such as EC2 and Lambda, as long as the resources are in the us-west-2 (Oregon) region.
 
 (s3-creds-step-1)=
-### 1. Visit https://nisar.asf.earthdatacloud.nasa.gov/s3credentials 
+### 1. Obtain your temporary AWS Credentials
+
+You can either visit the NISAR S3 credentials endpoint directly, or use [`earthacess`](https://earthaccess.readthedocs.io/en/stable/) to programmatically retrieve your temporary credentials.
+
+#### 1.a. Visit https://nisar.asf.earthdatacloud.nasa.gov/s3credentials
 
 If prompted, sign in with your [Earthdata Login (EDL) credentials](https://urs.earthdata.nasa.gov/) to retrieve a set of temporary AWS credentials, which will allow you to list and download contents of the S3 bucket. If you are already signed in, the credentials will display immediately.
 
@@ -38,15 +42,40 @@ The text displayed at the site provides four pieces of information:
 
 For example: 
 ```shell
-{  
- accessKeyId: "ASIAIOSFODNN7EXAMPLE",  
- secretAccessKey: "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY",  
- sessionToken: "LONGSTRINGOFCHARACTERS...6XUxCYEwbjGVKkzSNQh/", 
+{
+ accessKeyId: "ASIAIOSFODNN7EXAMPLE",
+ secretAccessKey: "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY",
+ sessionToken: "LONGSTRINGOFCHARACTERS...6XUxCYEwbjGVKkzSNQh/",
  expiration: "2026-01-27 00:50:09+00:00"
 }
 ```
    
 More details about requesting temporary S3 credentials are [available here](https://nisar.asf.earthdatacloud.nasa.gov/s3credentialsREADME).
+
+#### 1.b. Use the `earthaccess` Python package
+
+:::{warning}`endpoint=` must be specified for NISAR
+For the time being, you must use the `endpoint=` parameter for NISAR data. Using `daac='ASF'` will result in errors when attempting to access NISAR data. See earthaccess issue [#1184](https://github.com/nsidc/earthaccess/issues/1184) for more details.
+:::
+
+```python
+import earthaccess
+
+auth = earthaccess.login()
+s3_credentials = auth.get_s3_credentials(endpoint='https://nisar.asf.earthdatacloud.nasa.gov/s3credentials')
+```
+
+which will print, for example:
+```shell
+{
+ "accessKeyId": "ASIAIOSFODNN7EXAMPLE",
+ "secretAccessKey": "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY",
+ "sessionToken": "LONGSTRINGOFCHARACTERS...6XUxCYEwbjGVKkzSNQh/",
+ "expiration": "2026-01-27 00:50:09+00:00",
+}
+```
+
+For more information about using the `earthaccess` package with NISAR, see []()
 
 ### 2. Configure your environment to use the temporary AWS credentials
 
