@@ -162,5 +162,5 @@ ds = xr.open_datatree(
 ```
 
 :::{warning}`endpoint=` must be specified for NISAR
-For the time being, you must specify the `endpoint=` parameter when using functions like `get_s3_filesystem` for NISAR data. Using `daac='ASF'` will result in errors when attempting to access NISAR data. See earthaccess issue [#1184](https://github.com/nsidc/earthaccess/issues/1184) for more details.
+For the time being, you must specify the `endpoint=` parameter when using functions like `get_s3_filesystem` for NISAR data. Using `daac='ASF'` will result in errors when attempting to access NISAR data. See `earthaccess` issue [#1184](https://github.com/nsidc/earthaccess/issues/1184) for more details.
 :::

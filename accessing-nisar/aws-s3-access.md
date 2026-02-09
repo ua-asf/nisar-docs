@@ -55,7 +55,7 @@ More details about requesting temporary S3 credentials are [available here](http
 #### 1.b. Use the `earthaccess` Python package
 
 :::{warning}`endpoint=` must be specified for NISAR
-For the time being, you must use the `endpoint=` parameter for NISAR data. Using `daac='ASF'` will result in errors when attempting to access NISAR data. See earthaccess issue [#1184](https://github.com/nsidc/earthaccess/issues/1184) for more details.
+For the time being, you must use the `endpoint=` parameter for NISAR data. Using `daac='ASF'` will result in errors when attempting to access NISAR data. See `earthaccess` issue [#1184](https://github.com/nsidc/earthaccess/issues/1184) for more details.
 :::
 
 ```python
