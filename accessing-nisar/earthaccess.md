@@ -74,7 +74,7 @@ auth = earthaccess.login()
 files = earthaccess.download(results, local_path='.')
 ```
 
-## Streaming NISAR data
+## Stream NISAR data
 
 `earthaccess` also supports streaming data into memory. NISAR data is hosted in the AWS `us-west-2` region and typically served to users through HTTPS CloudFront URLs, or if you are access the data from the same region (e.g., a resource in AWS `us-west-2`), you may also use AWS S3 URIs if you obtain temporary S3 access keys. You can stream data through either HTTPS or S3 protocols, but S3 will be faster and will allow you to use AWS S3-aware tools (e.g., the [AWS CLI](https://aws.amazon.com/cli/), [`boto3`](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html), or [`s3fs`](https://s3fs.readthedocs.io/en/latest/)).
 
@@ -99,7 +99,7 @@ ds = xr.open_datatree(
 
 using `earthaccess.open` is the easiest way to start streaming NISAR data, and it will attempt to smartly pick the right protocol and defaults to provide good performance across all NASA data. However, you may be able to fine-tune steaming performance for your NISAR product(s) and access patterns. The next two example show you how to use a specific protocol and set `fsspec` options.
 
-### Example: Streaming via HTTPS
+### Example: Stream via HTTPS
 
 This end-to-end example gets searches for a single NISAR GCOV product, retrieves the HTTPS access URL, sets custom `fsspec` configuration, and opens the GCOV granule with `xarray` using the `h5netcdf` engine.
 
@@ -130,7 +130,7 @@ ds = xr.open_datatree(
 )
 ```
 
-### Example: Streaming via S3
+### Example: Stream via S3
 
 This end-to-end example gets searches for a single NISAR GCOV product, retrieves the S3 access URI, sets custom `fsspec` configuration, and opens the GCOV granule with `xarray` using the `h5netcdf` engine. Behind the scenes, `earthaccess` will request temporary AWS credentials for you, which is described on the [AWS S3 Access page](aws-s3-access). 
 
