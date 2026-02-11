@@ -5,13 +5,13 @@ short_title: Vertex Data Search
 # Finding NISAR Data with Vertex Data Search
 
 (vertex-overview)=
-# Vertex Data Search
-
-[Vertex](https://search.asf.alaska.edu/#/) was developed by ASF to facilitate search and discovery for NASA's SAR datasets. Refer to the [Vertex User Manual](https://docs.asf.alaska.edu/vertex/manual/) for more guidance on search capabilities. 
+## Vertex Data Search
+[Vertex](https://search.asf.alaska.edu/#/?dataset=NISAR&prodConfig=PR) is ASF's preferred web-based method to search for NISAR data products. Because search parameters of interest for SAR differ from other types of Earth observation data, it can be helpful to use a platform that is tailored to the parameters and characteristics of SAR data. This is particularly useful for those who are less familiar with SAR data products and may need more guidance to find the appropriate dataset for their use case. 
 
 ## Using Vertex to Access NISAR Data
 
-To search for NISAR datasets specifically, select `NISAR` from the **Dataset** menu. 
+### 1. Search for NISAR data
+Navigate to [Vertex](https://search.asf.alaska.edu/#/?dataset=NISAR&prodConfig=PR) to search for NISAR datasets specifically. If not already selected, make sure to select `NISAR` from the **Dataset** menu. 
 
 ```{figure} ../assets/vertex-dataset-selection.png
 :label: vertex-dataset-selection
@@ -22,13 +22,16 @@ Click on the "Dataset" button and select "NISAR" to search for NISAR products.
 ```
 
 Toggle on drawing mode to draw a region of interest to search for products that lie within that area. The left-most "Area of Interest" button offers selection between a point, line, polygon, box, circle, or by uploading a geospatial file. 
+
 ```{figure} ../assets/vertex-geographic-search.png
 :label: vertex-geographic-search
 :alt: Screenshot of Vertex highlighting the "Geographic Search" option to draw a region of interest to search for products. 
 :align: center
 
+```
 Click the **Filters** button to expose additional parameters that can be used to narrow your search. 
-Select a date range by entering a start and end date to search. Toggling on "Seasonal Search" allows to search for products produced annually within an overall date range.  
+
+The **Filters** panel enables date-based filtering. Specify a start and end date to define the search range. Toggling on "Seasonal Search" allows retrival of products generated annually within the selected overall date range.
 
 ```{figure} ../assets/vertex-date-filters.png
 :label: vertex-date-filters
@@ -38,12 +41,19 @@ Select a date range by entering a start and end date to search. Toggling on "Sea
 The option to filter by date pops up after clicking on "Filters"
 ```
 
-Because search parameters of interest for SAR differ from other types of Earth observation data, it can be helpful to use a platform that is tailored to the parameters and characteristics of SAR data. This is particularly useful for those who are less familiar with SAR data products and may need more guidance to find the appropriate dataset for their use case. 
+### 2. Select NISAR-specific filters to refine results
 
-Select the products you wish to search for by navigating to the product filter section. 
-Organized by product level
-For a list and descriptions of NISAR products, see @data-products-overview. 
-Product configuration is either production, urgent response, or custom configuration.  Production product configurations are acquired on a normal schedule, while urgent response products are acquired after a natural disaster or major event occurs. 
+To search for specific NISAR products, navigate to the Product Filter section.
+
+```{figure} ../assets/vertex-nisar-filters.png
+:label: vertex-date-filters
+:alt: Screenshot displaying the NISAR-specific filters in Vertex. 
+:align: center
+
+NISAR-specific filters in Vertex.
+```
+
+The options are listed in @tbl:vertex-product-filters. Science Products are organized by product level, and multiple selections are allowed. For a complete list of NISAR products, including detailed descriptions and specifications, refer to @data-products-overview.
 
 :::{table} Product Filters for NISAR Products
 :label: tbl:vertex-product-filters
@@ -55,9 +65,7 @@ Product configuration is either production, urgent response, or custom configura
 
 :::
 
-Refining down to different observational strategies, such as polarization, direction, instrument, frame coverage, and range bandwidth. 
-For information about these strategies, see @nisar-instrumentation. 
-Note that S-band data are available through [ISRO's Bhoonidhi](https://bhoonidhi.nrsc.gov.in/bhoonidhi/home.html).
+The "Observational Filter" options allow users to refine search results down by polarization, direction, instrument, frame coverage, and/or range bandwidth, as described in @tbl:vertex-observational-filters. For information about NISAR bands, frequencies, and polarization, see @nisar-instrumentation. Note that only L-band data are available through Vertex. S-band data are available through [ISRO's Bhoonidhi](https://bhoonidhi.nrsc.gov.in/bhoonidhi/home.html).
 
 :::{table} Observational Filters for NISAR Products
 :label: tbl:vertex-observational-filters
@@ -74,7 +82,9 @@ Note that S-band data are available through [ISRO's Bhoonidhi](https://bhoonidhi
 
 :::
 
-### Downloading files via Vertex
+Users can also search by Track and Frame. Note that Track is NISAR's convention for Path. To explore NISAR track frames, visit the [ArcGIS Online Map for NISAR track frames](https://www.arcgis.com/home/item.html?id=6d153395a11a4b6a9a81e4e1adaaa0cf). 
+
+### 3. Download files
 
 Data are free and available to download through Vertex. Once the desired scene is selected, click on the shopping cart icon in the scene listed. This will add the scene to your Downloads, which is the shopping cart icon on the top right hand of the screen. 
 ```{figure} ../assets/vertex-add-to-downloads.png
