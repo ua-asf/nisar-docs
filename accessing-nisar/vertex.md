@@ -41,9 +41,9 @@ The **Filters** panel enables date-based filtering. Specify a start and end date
 The option to filter by date pops up after clicking on "Filters"
 ```
 
-### 2. Select NISAR-specific filters to refine results
+### 2. Refine results with NISAR-specific filters
 
-To search for specific NISAR products, navigate to the Product Filter section.
+NISAR-specific filters are available to more precisely search for NISAR data products. 
 
 ```{figure} ../assets/vertex-nisar-filters.png
 :label: vertex-date-filters
@@ -53,7 +53,7 @@ To search for specific NISAR products, navigate to the Product Filter section.
 NISAR-specific filters in Vertex.
 ```
 
-The options are listed in @tbl:vertex-product-filters. Science Products are organized by product level, and multiple selections are allowed. For a complete list of NISAR products, including detailed descriptions and specifications, refer to @data-products-overview.
+Product filter options are listed in @tbl:vertex-product-filters. Science Products are organized by product level, and multiple selections are allowed. For a complete list of NISAR products, including detailed descriptions and specifications, refer to @data-products-overview.
 
 :::{table} Product Filters for NISAR Products
 :label: tbl:vertex-product-filters
@@ -84,7 +84,7 @@ The "Observational Filter" options allow users to refine search results down by 
 
 Users can also search by Track and Frame. Note that Track is NISAR's convention for Path. To explore NISAR track frames, visit the [ArcGIS Online Map for NISAR track frames](https://www.arcgis.com/home/item.html?id=6d153395a11a4b6a9a81e4e1adaaa0cf). 
 
-### 3. Download files
+### 3. Download data
 
 Data are free and available to download through Vertex. Once the desired scene is selected, click on the shopping cart icon in the scene listed. This will add the scene to your Downloads, which is the shopping cart icon on the top right hand of the screen. 
 ```{figure} ../assets/vertex-add-to-downloads.png
