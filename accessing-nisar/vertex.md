@@ -23,7 +23,7 @@ Click on the "Dataset" button and select "NISAR" to search for NISAR products.
 
 ### 2. Filter for desired products
 
-To search for a specific geographic region, click on the left-most **Area of Interest** button to choose to draw a point, line, polygon, box, circle, or upload to a geospatial file. Toggle on drawing mode to draw a region of interest, then press **Search** to update the search for the new region of interest.
+To search for a specific geographic region, click on the left-most **Area of Interest** button to choose to draw a point, line, polygon, box, circle, or to upload a geospatial file. Toggle on drawing mode to draw a region of interest, then press **Search** to update the search for the new region of interest.
 
 ```{figure} ../assets/vertex-geographic-search.png
 :label: vertex-geographic-search

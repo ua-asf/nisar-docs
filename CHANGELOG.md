@@ -8,8 +8,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - Page documenting searching for NISAR products using Vertex
-
-### Changed
 - Added Earthdata Login summary to accessing overview page 
 
 ## [0.2.6]
