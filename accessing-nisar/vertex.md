@@ -92,7 +92,7 @@ Click the download icon next to the HDF5 file name to save to your computer. You
 
 ```{figure} ../assets/vertex-download-files.png
 :label: vertex-download-files
-:alt: Screenshot of the list of products for a single GCOV product. 
+:alt: Screenshot of the list of files for a single GCOV product. 
 :align: center
 
 All product files associated with a GCOV product. The HDF5 file, listed first, contains the science data and imagery, and can be downloaded directly by clicking the download icon, circled in red.  
