@@ -34,6 +34,7 @@ project:
         - file: data-products/naming-conventions.md
         - file: data-products/supporting-products.md
           children:
+            - file: data-products/supporting-data/orbit-ephemeris.md
             - file: data-products/supporting-data/nisar-dem.md
         - file: data-products/data-format.md
         - file: data-products/metadata.md
@@ -78,6 +79,7 @@ project:
     EDL: Earthdata Login
     ESDIS: Earth Science Data and Information System
     GCOV: Geocoded Polarimetric Covariance
+    GNSS: Global Navigation Satellite System
     GOFF: Geocoded Pixel Offsets
     GSLC: Geocoded Single Look Complex
     GUNW: Geocoded Unwrapped Interferogram

@@ -167,9 +167,13 @@ To access a product, the S3 path must contain the NISAR [bucket name](#nisar-s3-
 :::{table} NISAR Supporting Data S3 Prefix List
 :label: tbl:s3-prefix-list-supporting
 
-| Product | S3 Prefix |
-|---------|-----------|
-| DEM     | DEM/      |
+| Product       | S3 Prefix |
+|---------------|-----------|
+| DEM for NISAR | DEM/      |
+| Forecast Orbit Ephemeris | FOE/ |
+| Near real-time Orbit Ephemeris | NOE/ |
+| Medium precision Orbit Ephemeris | MOE/ |
+| Precise Orbit Ephemeris | POE/ |
 
 :::
 
