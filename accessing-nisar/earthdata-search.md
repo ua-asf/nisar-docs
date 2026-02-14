@@ -84,8 +84,7 @@ Filter using the Granule ID filter set to `*_QP*` to find all quad-pol products.
 
 ### 3. Download data
 
-Downloading data via Earthdata Search requires logging in with your [Earthdata Login (EDL)](https://urs.earthdata.nasa.gov/) account.  An EDL account is free to create and provides unified access to Earth science data distributed by [NASA'S Earth Observation System Data and Information System (EOSDIS)](https://www.earthdata.nasa.gov/about/esdis/eosdis), independent of the data provider.
-
+Log in to Earthdata Search using your [Earthdata Login (EDL)](https://urs.earthdata.nasa.gov/) account. To learn more about EDL, see @earthdata-login.
 
 Individual granules can be downloaded directly from the Earthdata Search results. Select the download icon associated with the desired granule to save the file locally.
 

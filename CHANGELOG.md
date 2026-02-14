@@ -4,10 +4,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.2.7]
+## [0.2.8]
 
 ### Added
 - Page documenting the NISAR Orbit Ephemeris supporting product
+
+## [0.2.7]
+
+### Added
+- Page documenting searching for NISAR products using Vertex
+- Added Earthdata Login summary to accessing overview page 
 
 ## [0.2.6]
 

@@ -15,6 +15,11 @@ A small collection of NISAR sample data products is now available to the public!
 [Learn more about this dataset and the expected timeline for additional product releases](#nisar-sample-data-jan).
 :::
 
+(earthdata-login)=
+:::{important}Accessing Data Using EDL Accounts
+Downloading NISAR data requires logging in with your [Earthdata Login (EDL)](https://urs.earthdata.nasa.gov/) account.  An EDL account is free to create and provides unified access to Earth science data distributed by [NASA'S Earth Observation System Data and Information System (EOSDIS)](https://www.earthdata.nasa.gov/about/esdis/eosdis), independent of the data provider.
+:::
+
 (map-based-web-applications)=
 ## Map-based Web Applications
 
@@ -26,20 +31,13 @@ Map-based web interfaces make it easy to explore data available for a particular
 (vertex)=
 ### Vertex
 
-[Vertex](https://search.asf.alaska.edu/#/) was developed by ASF to facilitate search and discovery for NASA's SAR datasets. To search for NISAR datasets specifically, select `NISAR` from the **Dataset** menu. Click the **Filters** button to expose additional parameters that can be used to narrow your search.
+[Vertex](https://search.asf.alaska.edu/#/) was developed by ASF to facilitate search and discovery for NASA's SAR datasets. Refer to the [Vertex User Manual](https://docs.asf.alaska.edu/vertex/manual/) for more guidance on search capabilities. 
 
 <a href="https://search.asf.alaska.edu/#/?dataset=NISAR">
 <img id="vertex-nisar-screenshot" src="../assets/vertex-nisar-screenshot.png" alt="Searching for NISAR data on ASF's Vertex Data Search site">
 </a>
 
-Because search parameters of interest for SAR differ from other types of Earth observation data, it can be helpful to use a platform that is tailored to the parameters and characteristics of SAR data. This is particularly useful for those who are less familiar with SAR data products and may need more guidance to find the appropriate dataset for their use case. 
-
-Refer to the [Vertex User Manual](https://docs.asf.alaska.edu/vertex/manual/) for more guidance on search capabilities. 
-
---
-<!-- TODO: uncomment this line (and 2-dash separator above) once the Vertex page is populated -->
-
-[//]: # ([Learn more about using Vertex to search for NISAR data!]&#40;vertex#vertex-data-search&#41;)
+[Learn more about using Vertex to search for NISAR data!](vertex#vertex-overview)
 
 (earthdata-search)=
 ### Earthdata Search
@@ -49,7 +47,6 @@ Refer to the [Vertex User Manual](https://docs.asf.alaska.edu/vertex/manual/) fo
 <a href="https://search.earthdata.nasa.gov/">
 <img id="earthdata-search-page" src="../assets/earthdata-search-page.png" alt="Image of the Earthdata Search web interface">
 </a>
-
 
 [Learn more about using Earthdata Search to access NISAR data!](earthdata-search#earthdata-search-overview)
 

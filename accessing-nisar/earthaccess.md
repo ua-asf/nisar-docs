@@ -63,7 +63,7 @@ For a description of NISAR's data product types, see @data-products-overview. Yo
 
 ## Download NISAR data
 
-Downloading (or streaming) NISAR data requires logging in with your [Earthdata Login (EDL)](https://urs.earthdata.nasa.gov/) account. An EDL account is free to create and provides unified access to Earth science data distributed by [NASA'S Earth Observation System Data and Information System (EOSDIS)](https://www.earthdata.nasa.gov/about/esdis/eosdis), independent of the data provider.
+Downloading (or streaming) NISAR data requires logging in with your [Earthdata Login (EDL)](https://urs.earthdata.nasa.gov/) account. To learn more about EDL, see @earthdata-login.
 
 Use the `earthaccess.login` method to log in. By default, this will look for a `.netrc`, then for environment variables, and finally prompt you to enter your username and password. For more details and alternatives, please see the `earthaccess` [Authentication guide](https://earthaccess.readthedocs.io/en/stable/user_guide/authenticate/).
 
