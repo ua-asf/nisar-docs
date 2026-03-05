@@ -137,7 +137,7 @@ The subswath mask indicating the valid region of the fully focused imagery is no
 Misalignment of the subswath validity mask causes edge effects in many of the L2 geocoded products.
 ```
 
-#### Incomplete _Rubbersheeting_ Algorithm
+#### _Rubbersheeting_ Algorithm
 
 Interferograms with very strong deformation signals or ionospheric activity may contain artifacts because interferograms over solid earth regions do not yet use the full “rubbersheeting” algorithm to estimate local image distortions due to large, local, image pixel movements (@deformation-artifact-image). 
 
