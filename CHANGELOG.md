@@ -9,6 +9,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Changed references to product limitations to product known issues, which changes the destination URL for https://nisar-docs.asf.alaska.edu/product-limitations/ to https://nisar-docs.asf.alaska.edu/product-known-issues/
 
+## [0.2.13]
+
+### Fixed
+- Updated all links to the `earthaccess` GitHub Repository due to the [decision](https://earthaccess.readthedocs.io/en/latest/governance/decisions/929-move-repository/) to move from NSIDC's GitHub Org to the new `earthaccess-dev` GitHub org.
+
 ## [0.2.12]
 
 ### Added
