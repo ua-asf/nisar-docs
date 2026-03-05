@@ -12,7 +12,7 @@ The NISAR project is still in the calibration and validation phase, and currentl
 
 Nonetheless, the data are expected to be of sufficient quality that most users will benefit from an early look at the products. Fully calibrated and algorithmically improved global products are anticipated for release in the June 2026 timeframe.
 
-### Validity Mask
+### Valid Data Mask
 
 The mask that describes the fully-focused valid data region in all products is misaligned with the data. For example, as illustrated in @validity-mask-offset-image for the Range/Doppler single look complex image, on the left side of the image, the subswath mask correctly captures the invalid region (black band) whereas on the right side, the invalid region is not correctly captured. This propagates to higher-level products.
 
