@@ -125,7 +125,7 @@ Illustration of localized artifacts in the ionospheric phase screen, which can b
 Phase unwrapping errors caused by the transmit gaps.
 ```
 
-#### Validity Mask Alignment
+#### Valid Data Mask
 
 The subswath mask indicating the valid region of the fully focused imagery is not fully aligned. This mask layer is provided to mask out unreliable data. Artifacts on the edges of many L2 geocoded products (GSLC, GUNW and GCOV) are therefore exposed, as illustrated in @edge-artifact-image.
 
