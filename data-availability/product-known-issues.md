@@ -1,18 +1,18 @@
 ---
-short_title: Product Limitations
+short_title: Known Issues
 ---
 # Pre-Calibration Sample Products
 
 _Updated February 27, 2026_
 
-(pre-calibration-product-limitations)=
-## Pre-Calibration Product Limitations
+(product-known-issues)=
+## Pre-Calibration Product Known Issues
 
 The NISAR project is still in the calibration and validation phase, and currently available products are not yet fully calibrated. Through processing of the global data, the project has learned about some unique characteristics of this first-of-a-kind radar system and has identified required algorithm updates. As a result, pre-calibration products have a number of features that are known to limit their use as science products and others that would be considered artifacts and are to be improved in future product releases.
 
 Nonetheless, the data are expected to be of sufficient quality that most users will benefit from an early look at the products. Fully calibrated and algorithmically improved global products are anticipated for release in the June 2026 timeframe.
 
-### Validity Mask Offset
+### Validity Mask
 
 The mask that describes the fully-focused valid data region in all products is misaligned with the data. For example, as illustrated in @validity-mask-offset-image for the Range/Doppler single look complex image, on the left side of the image, the subswath mask correctly captures the invalid region (black band) whereas on the right side, the invalid region is not correctly captured. This propagates to higher-level products.
 
@@ -79,7 +79,7 @@ Changes in the radar acquisition mode within a frame will lead to multiple parti
 
 The noise floor for 77 MHz data appears higher than expected.  This issue is still being investigated, but is probably related to the calibration tone settings and how they impact quantization. 
 
-### Intereferometric Products
+### Interferometric Products
 
 #### Ionospheric Correction Layer
 
