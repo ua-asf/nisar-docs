@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.3.0]
 
 ### Changed
-- Changed references to product limitations to product known issues, which changes the destination URL for https://nisar-docs.asf.alaska.edu/product-limitations/ to https://nisar-docs.asf.alaska.edu/product-known-issues/
+- Changed references to product limitations to product known issues, and redirect https://nisar-docs.asf.alaska.edu/product-limitations/ to https://nisar-docs.asf.alaska.edu/product-known-issues/
 
 ## [0.2.13]
 
