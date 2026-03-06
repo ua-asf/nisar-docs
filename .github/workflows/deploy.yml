@@ -51,8 +51,8 @@ jobs:
 
           cp -v _build/html/404/index.html _build/html/404.html
 
-          mkdir _build/html/product-limitations
-          cp -v product-limitations.html _build/html/product-limitations/index.html
+          sed -i -e "s|BASE_URL|$BASE_URL|g" $(grep -rl BASE_URL redirects/)
+          cp -rv redirects/*/ _build/html/
 
           sed -i -e "s|http://localhost:3000|$DOMAIN$BASE_URL|g" $(grep -RIl "http://localhost:3000" ./_build)
 
