@@ -29,12 +29,13 @@ This release includes data acquired between October 17, 2025 and January 20, 202
 Spatial distribution of the pre-calibration NISAR data products, highlighted in green, included in the February 2026 data release.
 ```
 
+(known-issues)=
+## Known Issues
 (sample-product-limitations)=
-## Product Limitations
 
 A new instrument producing global data products for the first time will necessitate optimization of the products over time. In addition, the NISAR project is still in the calibration and validation phase, and these products are not yet fully calibrated. Nonetheless, the data are expected to be of sufficient quality that most users will benefit from an early look at the products.
 
-See @pre-calibration-product-limitations for a list of known issues reported for the current data release.
+See @product-known-issues for a list of known issues reported for the current data release.
 
 Fully calibrated and algorithmically improved global products are anticipated for release in the June 2026 timeframe.
 

@@ -1,28 +1,28 @@
 ---
-short_title: Product Limitations
+short_title: Known Issues
 ---
 # Pre-Calibration Sample Products
 
 _Updated February 27, 2026_
 
-(pre-calibration-product-limitations)=
-## Pre-Calibration Product Limitations
+(product-known-issues)=
+## Pre-Calibration Product Known Issues
 
 The NISAR project is still in the calibration and validation phase, and currently available products are not yet fully calibrated. Through processing of the global data, the project has learned about some unique characteristics of this first-of-a-kind radar system and has identified required algorithm updates. As a result, pre-calibration products have a number of features that are known to limit their use as science products and others that would be considered artifacts and are to be improved in future product releases.
 
 Nonetheless, the data are expected to be of sufficient quality that most users will benefit from an early look at the products. Fully calibrated and algorithmically improved global products are anticipated for release in the June 2026 timeframe.
 
-### Validity Mask Offset
+### Valid Data Mask
 
 The mask that describes the fully-focused valid data region in all products is misaligned with the data. For example, as illustrated in @validity-mask-offset-image for the Range/Doppler single look complex image, on the left side of the image, the subswath mask correctly captures the invalid region (black band) whereas on the right side, the invalid region is not correctly captured. This propagates to higher-level products.
 
 ```{figure} ../assets/lim_rslc_mask.png
 :label: validity-mask-offset-image
-:alt: Illustration of the validity mask offset
+:alt: Illustration of the valid data mask offset
 :align: center
 :width: 75%
 
-Illustration of the validity mask offset.
+Illustration of the valid data mask offset.
 ```
 
 ### Radiometric Banding
@@ -79,7 +79,7 @@ Changes in the radar acquisition mode within a frame will lead to multiple parti
 
 The noise floor for 77 MHz data appears higher than expected.  This issue is still being investigated, but is probably related to the calibration tone settings and how they impact quantization. 
 
-### Intereferometric Products
+### Interferometric Products
 
 #### Ionospheric Correction Layer
 
@@ -125,19 +125,20 @@ Illustration of localized artifacts in the ionospheric phase screen, which can b
 Phase unwrapping errors caused by the transmit gaps.
 ```
 
-#### Validity Mask Alignment
+(interferometric-valid-data-mask)=
+#### Valid Data Mask
 
 The subswath mask indicating the valid region of the fully focused imagery is not fully aligned. This mask layer is provided to mask out unreliable data. Artifacts on the edges of many L2 geocoded products (GSLC, GUNW and GCOV) are therefore exposed, as illustrated in @edge-artifact-image.
 
 ```{figure} ../assets/lim_edge_artifact.png
 :label: edge-artifact-image
-:alt: Illustration of the edge effects caused by misalignment of the subswath validity mask
+:alt: Illustration of the edge effects caused by misalignment of the subswath valid data mask
 :align: center
 
-Misalignment of the subswath validity mask causes edge effects in many of the L2 geocoded products.
+Misalignment of the subswath valid data mask causes edge effects in many of the L2 geocoded products.
 ```
 
-#### Incomplete _Rubbersheeting_ Algorithm
+#### _Rubbersheeting_ Algorithm
 
 Interferograms with very strong deformation signals or ionospheric activity may contain artifacts because interferograms over solid earth regions do not yet use the full “rubbersheeting” algorithm to estimate local image distortions due to large, local, image pixel movements (@deformation-artifact-image). 
 
