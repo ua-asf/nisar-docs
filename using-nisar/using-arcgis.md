@@ -151,12 +151,8 @@ Setting the Environment variables in the Subset tool to apply a spatial extent t
 
 Once you've adjusted the Environmental settings, return to the Parameters tab to verify that all other settings are correct before clicking the **OK** button to export the variable to a stand-alone raster format.
 
+### Export Raster
 
-(arcgis-subsetting-nisar-data)=
-### Subsetting
-
-(arcgis-converting-nisar-format)=
-### Converting Format
 
 
 
