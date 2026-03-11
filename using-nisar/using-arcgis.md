@@ -9,14 +9,14 @@ When using older versions of ArcGIS Pro, [refer to this documentation](https://w
 
 ## NISAR in ArcGIS Tutorials
 
-The [NISAR in GIS](https://www.earthdata.nasa.gov/learn/gis/storymaps/nisar-gis) tutorial provides step-by-step guidance for adding NISAR data to an ArcGIS Pro project, visualizing the data, and using standard and SAR-specific imagery and analysis tools, focusing on the [GCOV](gcov-product-overview) and [GUNW](gunw-product-overview) products. 
+The [NISAR in GIS](https://www.earthdata.nasa.gov/learn/gis/storymaps/nisar-gis) tutorial provides step-by-step guidance for adding NISAR data to an ArcGIS Pro project, visualizing the data, and using standard and SAR-specific imagery and analysis tools, focusing on the [GCOV](#gcov-product-overview) and [GUNW](#gunw-product-overview) products. 
 
 The [Spatial Subsetting for NISAR Data](https://storymaps.arcgis.com/stories/cac03522f82f420ab992316bb935a709) tutorial demonstrates workflows for subsetting NISAR products and transforming them to other data formats.
 
 (arcgis-adding-nisar-data)=
 ## Adding NISAR Data
 
-There are multiple options available for adding NISAR data to an ArcGIS Pro project. You can either use the [Add Multidimensional Raster](#arcgis-add-multidimensional-raster-tool) tool or simply [Drag and Drop](#arcgis-drag-and-drop) the HDF5 file from the table of contents. Step-by-step guidance for each method can be found in the [NISAR Data in ArcGIS Pro section of the NISAR in GIS](https://storymaps.arcgis.com/stories/c8f85d20b73c48fd8e89f8eef49bc60b#ref-n-4Bfbbu) tutorial. 
+There are multiple options available for adding NISAR data to an ArcGIS Pro project. You can use the [Add Multidimensional Raster](#arcgis-add-multidimensional-raster-tool) tool or simply [Drag and Drop](#arcgis-drag-and-drop) the HDF5 file from the table of contents. Step-by-step guidance for each method can be found in the [NISAR Data in ArcGIS Pro section of the NISAR in GIS](https://storymaps.arcgis.com/stories/c8f85d20b73c48fd8e89f8eef49bc60b#ref-n-4Bfbbu) tutorial. 
 
 (arcgis-add-multidimensional-raster-tool)=
 ### Add Multidimensional Raster Tool
@@ -74,7 +74,7 @@ You will not be able to work with complex-valued variables, such as wrapped inte
 - Navigate to a NISAR HDF5 file in the **Catalog** pane
 - Drag the file onto the map area
 - Cancel the **Calculating Statistics** function
-  - It is too time-consuming to run this function on the full HDF file; statistics are calculated when a [variable is extracted](#2-extract-variables)
+  - It is too time-consuming to run this function on the full HDF file; statistics can be calculated when a [variable is extracted using the subset tool](#subset-multidimensional-raster-tool)
 
 By default, the first variable in the HDF5 file is displayed, and any changes to symbology are applied to all variables in the file. 
 
@@ -100,6 +100,7 @@ There are many reasons for transforming NISAR variables. You may prefer working 
 
 There are a number of approaches for transforming NISAR variables in ArcGIS Pro.
 
+(subset-multidimensional-raster-tool)=
 ### Subset Multidimensional Raster Tool
 
 To extract variables from an HDF5 file, you can use the **Subset** tool in the **Data Management** menu to save individual variables to a stand-alone raster format. 
@@ -124,6 +125,7 @@ This tool can be used either with a full HDF5 layer that was added to the projec
 Using the Subset tool to extract variables from an HDF5 file added to ArcGIS Pro using the Drag-and-Drop method.
 ```
 
+(adjust-environment-settings)=
 #### Adjust Environment Settings
 
 The **Environment** tab of the **Subset Multidimensional Raster** Geoprocessing dialog provides a convenient method to transform the dataset as it is being exported. 
@@ -152,6 +154,7 @@ Setting the Environment variables in the Subset tool to apply a spatial extent t
 Once you've adjusted the Environmental settings, return to the Parameters tab to verify that all other settings are correct before clicking the **OK** button to export the variable to a stand-alone raster format.
 
 ### Export Raster
+
 
 
 
