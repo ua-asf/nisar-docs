@@ -69,12 +69,12 @@ The ability to adjust visualizations, use imagery tools, or perform analysis is 
 You will not be able to work with complex-valued variables, such as wrapped interferograms, using the drag-and-drop method. You would need to use the **Add Multidimensional Raster** tool, and select **Multiband Raster** as the layer format in order to access both the amplitude and phase components of the dataset.
 :::
 
-#### 1. Drag Desired File from Catalog Pane
+#### Add File from Catalog Pane
 
 - Navigate to a NISAR HDF5 file in the **Catalog** pane
 - Drag the file onto the map area
 - Cancel the **Calculating Statistics** function
-  - It is too time-consuming to run this function on the full HDF file; statistics can be calculated when a [variable is extracted using the subset tool](#subset-multidimensional-raster-tool)
+  - It is too time-consuming to run this function on the full HDF file; statistics can be calculated when a [variable is extracted using the subset tool](#arcgis-subset-multidim-raster-tool)
 
 By default, the first variable in the HDF5 file is displayed, and any changes to symbology are applied to all variables in the file. 
 
@@ -98,9 +98,9 @@ Using drag-and-drop functionality to add NISAR data to an ArcGIS Pro project.
 
 There are many reasons for transforming NISAR variables. You may prefer working with a particular raster file format, require a different coordinate system or projection, need to resample the data to match another dataset, or want to subset the dataset spatially to make analysis more manageable. 
 
-There are a number of approaches for transforming NISAR variables in ArcGIS Pro.
+There are a number of approaches for transforming NISAR variables in ArcGIS Pro. The [Subset Multidimensional Raster Tool](#arcgis-subset-multidim-raster-tool) and the [Export Raster]() function
 
-(subset-multidimensional-raster-tool)=
+(arcgis-subset-multidim-raster-tool)=
 ### Subset Multidimensional Raster Tool
 
 To extract variables from an HDF5 file, you can use the **Subset** tool in the **Data Management** menu to save individual variables to a stand-alone raster format. 
@@ -115,7 +115,7 @@ This tool can be used either with a full HDF5 layer that was added to the projec
    - The default output format is [Cloud Raster Format (CRF)](https://pro.arcgis.com/en/pro-app/latest/help/data/imagery/an-overview-of-multidimensional-raster-data.htm#ESRI_SECTION1_22F66BF74FAB42BAA35FD55E21A17201), but you can simply type `.tif` as the file extension to output the variable as a GeoTIFF
 6. If working with a full HDF5 layer, check the box next to the desired variable to export
    - If you've referenced an individual variable layer, only that one variable will be listed, and is checked by default
-7. If you want to export the variable using the [default environment settings](#adjust-environment-settings), click the **OK** button to export the variable
+7. If you want to export the variable using the [default environment settings](#arcgis-adjust-environment-settings), click the **OK** button to export the variable
 
 ```{figure} ../assets/arcgis-subset-tool.png
 :name: arcgis-subset-tool-screenshot
@@ -125,13 +125,14 @@ This tool can be used either with a full HDF5 layer that was added to the projec
 Using the Subset tool to extract variables from an HDF5 file added to ArcGIS Pro using the Drag-and-Drop method.
 ```
 
-(adjust-environment-settings)=
+(arcgis-adjust-environment-settings)=
 #### Adjust Environment Settings
 
-The **Environment** tab of the **Subset Multidimensional Raster** Geoprocessing dialog provides a convenient method to transform the dataset as it is being exported. 
+The **Environment** tab of the **Subset Multidimensional Raster** Geoprocessing dialog provides a convenient interface for applying dataset transformations as a variable is being extracted. 
 
 You can output the variable with a different coordinate system, apply spatial subsetting, change the pixel size, or adjust the raster storage characteristics (pyramid behavior, statistic calculation approach, compression, resampling method).
 
+(arcgis-spatial-subsetting)=
 #### Spatial Subsetting
 
 To extract a spatial subset of the variable using the subset tool: 
@@ -153,6 +154,7 @@ Setting the Environment variables in the Subset tool to apply a spatial extent t
 
 Once you've adjusted the Environmental settings, return to the Parameters tab to verify that all other settings are correct before clicking the **OK** button to export the variable to a stand-alone raster format.
 
+(arcgis-export-raster)=
 ### Export Raster
 
 
