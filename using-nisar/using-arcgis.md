@@ -98,7 +98,7 @@ Using drag-and-drop functionality to add NISAR data to an ArcGIS Pro project.
 
 There are many reasons for transforming NISAR variables. You may prefer working with a particular raster file format, require a different coordinate system or projection, need to resample the data to match another dataset, or want to subset the dataset spatially to make analysis more manageable. 
 
-There are a number of approaches for transforming NISAR variables in ArcGIS Pro. The [Subset Multidimensional Raster Tool](#arcgis-subset-multidim-raster-tool) and the [Export Raster](#arcgis-export-raster) function
+There are a number of approaches for transforming NISAR variables in ArcGIS Pro. The [Subset Multidimensional Raster Tool](#arcgis-subset-multidim-raster-tool) and the [Export Raster](#arcgis-export-raster) function are well suited for use with NISAR data. Both methods provide the ability to apply multiple transformations at the same time.
 
 (arcgis-subset-multidim-raster-tool)=
 ### Subset Multidimensional Raster Tool
