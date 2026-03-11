@@ -159,18 +159,18 @@ Once you've adjusted the settings in the **Environments** tab, return to the **P
 
 To export an HDF5 variable added as an individual layer using the @arcgis-add-multidimensional-raster-tool, you can simply use the **Export Raster** function. Access this function using one of these methods: 
 
-- Right-click the layer in the Contents pane, select **Data** from the menu, and click **Export Raster** (@arcgis-export-raster-screenshot)
+- Right-click the layer in the **Contents** pane, select **Data** from the menu, and click **Export Raster** (@arcgis-export-raster-screenshot)
 
 ```{figure} ../assets/arcgis-export-raster.png
 :name: arcgis-export-raster-screenshot
-:alt: Screenshot demonstrating accessing the Export Raster function from the context menu for an item in the Contents pane in ArcGIS Pro
+:alt: Screenshot demonstrating accessing the Export Raster function from the context menu for an item in the **Contents** pane in ArcGIS Pro
 :align: center
 :width: 90%
 
-Accessing **Export Raster** from the context menu for an item in the Contents pane. 
+Accessing **Export Raster** from the context menu for an item in the **Contents** pane. 
 ```
 
-- Select the layer in the Contents pane, and click the Export Raster button in the **Data** menu (@arcgis-export-raster-button-screenshot)
+- Select the layer in the **Contents** pane, and click the Export Raster button in the **Data** menu (@arcgis-export-raster-button-screenshot)
 
 ```{figure} ../assets/arcgis-export-raster-button.png
 :name: arcgis-export-raster-button-screenshot
@@ -178,7 +178,7 @@ Accessing **Export Raster** from the context menu for an item in the Contents pa
 :align: center
 :width: 90%
 
-Accessing **Export Raster** from the Data menu for an item in the Contents pane. 
+Accessing **Export Raster** from the Data menu for an item in the **Contents** pane. 
 ```
 
 In the Export Raster dialog window: 
