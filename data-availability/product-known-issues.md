@@ -105,7 +105,7 @@ Along-track pixel offset estimates (top), the interferometric correlation (middl
 Edge-effect artifacts at the boundary of the ionospheric phase layer.
 ```
 
-- Ionospheric phase layers may show localized artifacts due to Radio Frequency Interference (RFI), and decorrelation due to water bodies, vegetation, snow coverage or other factors. The algorithm refinement to mitigate or better mask such localized decorrelating regions and minimizing artifacts in the ionospheric phase is under development. 
+- Ionospheric phase layers may show localized artifacts due to Radio Frequency Interference (RFI), and decorrelation due to water bodies, vegetation, snow coverage or other factors. The algorithm refinement to mitigate or better mask such localized decorrelating regions and minimize artifacts in the ionospheric phase is under development. 
 
 ```{figure} ../assets/lim_rfi_decorr.png
 :label: rfi-decorrelation-image
@@ -157,7 +157,7 @@ Illustration of artifacts caused by not using the full rubbersheeting algorithm 
 Interferogram generation over cryosphere regions uses a rubbersheeting algorithm in which the coregistration is based on geometrical offsets refined with dense offsets computed from amplitude cross correlation. The ionosphere can introduce errors of a few pixels in the azimuth direction, which can yield an additional phase distortion beyond the direct effect of ionosphere on the phase.
 
 #### Banding in Interferograms
-Individual ionospheric phase screens contain banded phase artifacts oriented along the range direction due to mismatched ionosphere filtering. This banding is magnified in interferogram stacks, as illustrated in @ionosphere-corr-image. Further low-pass filtering of the provided ionospheric layer can mitigate this effect.
+Individual ionospheric phase screens contain banded phase artifacts oriented along the range direction due to mismatched ionosphere filtering. This banding is magnified in interferogram stacks, as illustrated in @ionosphere-corr-image. While this problem will be fixed in future releases, users can mitigate this effect in the pre-calibration data with further low-pass filtering of the provided ionospheric layer.
 
 ```{figure} ../assets/lim_ionosphere_corr.png
 :label: ionosphere-corr-image
