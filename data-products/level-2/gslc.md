@@ -15,6 +15,7 @@ The geocoding is performed by inverse mapping of the map coordinates with their 
 
 The phase of the GSLC product is flattened for the orbit used in the RSLC processing. The phase flattening removes the topographic phase contribution in the GSLC. Consequently, cross-multiplying two GSLC products will result in an interferometric phase flattened interferogram.
 
+(gslc-backscatter)=
 ### Backscatter
 
 The pixel values in the GSLC product are presented as complex Digital Numbers (DN). To convert these DNs to backscatter values, simply calculate the square of the absolute value of the DN of the desired frequency/polarization data from the GSLC product. The resulting backscatter values are in beta-nought (beta0) radiometry.
