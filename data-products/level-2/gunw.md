@@ -9,7 +9,7 @@ short_title: GUNW
 (gunw-product-overview)=
 ## Product Overview
 
-The GUNW product is an L2 product derived from the [RIFG](#rifg-product-overview) and [RUNW](#runw-product-overview) products by geocoding the unwrapped phase and associated data layers (i.e., coherence magnitude, ionospheric phase screen) on a geographical grid at 80 m posting. The NISAR mission generates co-polarized (HHHH or VVVV) nearest-neighbor (12-day) interferograms for every interferometric acquisition. <!-- #TODO: add figure. See figure x for the spatial extent of GUNW products currently in the archive. -->
+The GUNW product is an L2 product derived from the [RIFG](#rifg-product-overview) and [RUNW](#runw-product-overview) products by geocoding the unwrapped phase and associated data layers (i.e., coherence magnitude, ionospheric phase screen) on a geographical grid at 80 m posting. Only co-polarized (HHHH or VVVV) nearest-neighbor (12-day) GUNW products are generated as a part of the NISAR mission. <!-- #TODO: add figure. See figure x for the spatial extent of GUNW products currently in the archive. -->
 
 Geocoding is performed using the orbit of the reference RSLC product and a DEM to project the data onto a predefined Universal Transverse Mercator (UTM) or Polar stereographic projection system map grid. The geocoding algorithm uses a bilinear interpolation for interpolating data layers with floating-point data types, Sinc interpolation for the complex wrapped interferogram, and nearest-neighbor interpolation for unsigned integer datasets (e.g., connected components mask). 
 
