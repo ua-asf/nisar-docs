@@ -1,8 +1,10 @@
 # Amplitude
 
-The amplitude is the amount of the signal sent out by the sensor that returns to be measured, and is often referred to as radar backscatter. This part of the NISAR data is best represented in the [Geocoded Covariance (GCOV)](#gcov-product-overview) products. The individual covariance layers in the GCOV product can be used like Radiometric Terrain Corrected (RTC) products, as the backscatter has been normalized to account for the impacts of terrain. The pixel values represent the intensity of radar backscatter in gamma-nought power, with a different layer for each polarization.
+The amplitude component of a SAR acquisition is the amount of the signal sent out by the sensor that returns to be measured, often referred to as radar backscatter. These values represent the conditions of the scatterers on the earth’s surface in that area, and can indicate the degree of surface roughness, structural complexity, and relative moisture content. These values are impacted by changes to the physical structure of the earth’s surface, including processes that alter vegetation or built structures. 
 
-The values in the [GCOV](#gcov-product-overview) covariance layers represent the conditions of the scatterers on the earth’s surface in that area, and can indicate the degree of surface roughness, structural complexity, and relative moisture content. These values are impacted by changes to the physical structure of the earth’s surface, including processes that alter vegetation or built structures. Because the GCOV products have been radiometrically terrain corrected, they align well with other imagery and geospatial datasets.
+For NISAR data, the [Geocoded Covariance (GCOV)](#gcov-product-overview) are the most accessible amplitude-based products. The individual covariance layers in the GCOV product can be used like Radiometric Terrain Corrected (RTC) products, as the backscatter has been normalized to account for the impacts of terrain. The pixel values represent the intensity of radar backscatter in gamma-nought power, with a different layer for each polarization. <!-- talk about DEM use in the processing workflow -->
+
+
 
 The pixel values of [Geocoded Single Look Complex (GSLC)](#gslc-product-overview) products are encoded as complex Digital Numbers (DN), but the amplitude values can be [extracted and converted from beta-nought radiometry](#gslc-backscatter) to either gamma-nought or sigma-nought if desired. For users who do not want radiometrically terrain corrected data, this is an alternative source for amplitude values. 
 

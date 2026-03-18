@@ -3,23 +3,9 @@ short_title: ArcGIS
 ---
 # Using NISAR Data in ArcGIS
 
-## Working with NISAR Data in ArcGIS
+There are a number of Level 2 and 3 NISAR products that are suitable for use in GIS, as described in the [using GIS software overview](#using-gis-software). 
 
-The NISAR mission generates a number of [Level 2 and 3 products](#nisar-product-levels), which are projected to map coordinates and are suitable for use in GIS workflows. The @amplitude component of the SAR dataset is particularly well-suited to GIS analysis, as it presents an image of the Earth's surface, though any of the gridded variables in the Level 2 and 3 products can be added to ArcGIS Pro. 
-
-### Amplitude Products
-
-The [Geocoded Covariance (GCOV)](#gcov-product-overview) products present normalized radar backscatter. When these products are generated, a DEM is used to correct for terrain-based distortions caused by the side-looking nature of the SAR sensor. As a result, these products align well with other imagery and geospatial datasets. 
-
-Amplitude values can also be extracted from [Geocoded Single Look Complex (GSLC)](#gslc-product-overview) products, for users who are more interested in time-series analysis using consistent acquisition frames and are not as concerned about comparing the imagery to other datasets. 
-
-### Coherence 
-
-Among the non-amplitude datasets, the Coherence layer from the [Geocoded Unwrapped Interferogram (GUNW)](#gunw-product-overview) products may be of interest to GIS users. This data indicates the correlation of @phase measurements from one acquisition to the next, and can indicate areas that have undergone changes in surface structure. 
-
-The pixel values of a coherence layer range from 0 to 1, with 1 indicating complete correlation (no change in the phase), and 0 indicating complete decorrelation (no overlap in the phase spectra). As such, low coherence values often indicate areas that have undergone disturbance.
-
-### NISAR Support in ArcGIS Pro
+## NISAR Support in ArcGIS Pro
 
 Support for the NISAR file format was added to ArcGIS Pro at version 3.4 (November 2024). Those using version 3.4.0 or newer are able to use NISAR products as they would any other HDF5 file in ArcGIS Pro. 
 
@@ -83,8 +69,10 @@ You can simply drag and drop the entire file from the **Catalog** pane. This app
 
 The ability to adjust visualizations, use imagery tools, or perform analysis is limited when you add the entire HDF5 file to the map. 
 
-:::{note}Drag and Drop not supported for complex-valued variables
-You will not be able to work with complex-valued variables, such as wrapped interferograms, using the drag-and-drop method. You would need to use the **Add Multidimensional Raster** tool, and select **Multiband Raster** as the layer format in order to access both the amplitude and phase components of the dataset.
+:::{note}No Access to Phase with Drag and Drop
+You will not be able to access the phase values in complex-valued variables, such as wrapped interferograms, using the drag-and-drop method. 
+
+Use the **[Add Multidimensional Raster](#arcgis-add-multidimensional-raster-tool)** tool and select **Multiband Raster** as the layer format in order to access both the amplitude and phase components of the dataset.
 :::
 
 #### Add HDF5 File from Catalog Pane
