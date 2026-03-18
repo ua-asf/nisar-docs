@@ -35,7 +35,7 @@ The GSLC products are posted to a smaller pixel spacing than the GCOV products. 
 
 Among the non-amplitude datasets, the Coherence layers from the [Geocoded Unwrapped Interferogram (GUNW)](#gunw-product-overview) products may be of interest to GIS users. Coherence indicates the correlation of @sar-phase measurements from one acquisition to the next, and can indicate areas that have undergone changes in surface structure. 
 
-The pixel values of a coherence layer range from 0 to 1, with 1 indicating complete correlation (no change in the phase), and 0 indicating complete decorrelation (no overlap in the phase spectra). As such, low coherence values often indicate areas that have undergone disturbance.
+The pixel values of a coherence layer range from 0 to 1, with 0 indicating complete decorrelation (no overlap in the phase spectra) and 1 indicating complete correlation (no change in the phase). As such, low coherence values often indicate areas that have undergone disturbance, while high coherence values tend to indicate areas with more stable conditions.
 
 ### Soil Moisture
 
