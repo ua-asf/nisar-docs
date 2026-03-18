@@ -306,4 +306,3 @@ Set the raster extent in the **Export Raster** dialog window.
 ```
 
 Once all the other settings (in both the **General** and **Settings** tabs) are set as desired, click the **Export** button to export the variable to a stand-alone raster with the desired spatial extent.
-
