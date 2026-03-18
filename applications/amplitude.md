@@ -1,3 +1,4 @@
+(sar-amplitude)=
 # Amplitude
 
 The amplitude component of a SAR acquisition is the amount of the signal sent out by the sensor that returns to be measured, often referred to as radar backscatter. These values represent the conditions of the scatterers on the earth’s surface in that area, and can indicate the degree of surface roughness, structural complexity, and relative moisture content. These values are impacted by changes to the physical structure of the earth’s surface, including processes that alter vegetation or built structures. 

@@ -13,14 +13,16 @@ When using older versions of ArcGIS Pro, [refer to this documentation](https://w
 
 ## NISAR in ArcGIS Tutorials
 
-The [NISAR in GIS](https://www.earthdata.nasa.gov/learn/gis/storymaps/nisar-gis) tutorial provides step-by-step guidance for adding NISAR data to an ArcGIS Pro project, visualizing the data, and using standard and SAR-specific imagery and analysis tools, focusing on the [GCOV](#gcov-product-overview) and [GUNW](#gunw-product-overview) products. 
+This page provides a quick introduction to working with NISAR data in ArcGIS. More in-depth tutorials are also available:
 
-The [Spatial Subsetting for NISAR Data](https://storymaps.arcgis.com/stories/cac03522f82f420ab992316bb935a709) tutorial demonstrates workflows for subsetting NISAR products and transforming them to other data formats.
+- The [NISAR in GIS](https://www.earthdata.nasa.gov/learn/gis/storymaps/nisar-gis) tutorial provides step-by-step guidance for adding NISAR data to an ArcGIS Pro project, visualizing the data, and using standard and SAR-specific imagery and analysis tools, focusing on the [GCOV](#gcov-product-overview) and [GUNW](#gunw-product-overview) products. 
+
+- The [Spatial Subsetting for NISAR Data](https://storymaps.arcgis.com/stories/cac03522f82f420ab992316bb935a709) tutorial demonstrates workflows for subsetting NISAR products and transforming them to other data formats.
 
 (arcgis-adding-nisar-data)=
 ## Adding NISAR Data
 
-There are multiple options available for adding NISAR data to an ArcGIS Pro project. You can use the [Add Multidimensional Raster](#arcgis-add-multidimensional-raster-tool) tool or simply [Drag and Drop](#arcgis-drag-and-drop) the HDF5 file from the table of contents. Step-by-step guidance for each method can be found in the [NISAR Data in ArcGIS Pro section of the NISAR in GIS](https://storymaps.arcgis.com/stories/c8f85d20b73c48fd8e89f8eef49bc60b#ref-n-4Bfbbu) tutorial. 
+There are multiple options available for adding NISAR data to an ArcGIS Pro project. You can use the [Add Multidimensional Raster](#arcgis-add-multidimensional-raster-tool) tool or simply [Drag and Drop](#arcgis-drag-and-drop) the HDF5 file from the table of contents. Step-by-step guidance for each method can be found in the [NISAR Data in ArcGIS Pro](https://storymaps.arcgis.com/stories/c8f85d20b73c48fd8e89f8eef49bc60b#ref-n-4Bfbbu) section of the NISAR in GIS tutorial. 
 
 (arcgis-add-multidimensional-raster-tool)=
 ### Add Multidimensional Raster Tool
@@ -69,12 +71,6 @@ You can simply drag and drop the entire file from the **Catalog** pane. This app
 
 The ability to adjust visualizations, use imagery tools, or perform analysis is limited when you add the entire HDF5 file to the map. 
 
-:::{note}No Access to Phase with Drag and Drop
-You will not be able to access the phase values in complex-valued variables, such as wrapped interferograms, using the drag-and-drop method. 
-
-Use the **[Add Multidimensional Raster](#arcgis-add-multidimensional-raster-tool)** tool and select **Multiband Raster** as the layer format in order to access both the amplitude and phase components of the dataset.
-:::
-
 #### Add HDF5 File from Catalog Pane
 
 - Navigate to a NISAR HDF5 file in the **Catalog** pane
@@ -82,7 +78,7 @@ Use the **[Add Multidimensional Raster](#arcgis-add-multidimensional-raster-tool
 - Cancel the **Calculating Statistics** function
   - It is too time-consuming to run this function on the full HDF file; statistics can be calculated when a [variable is extracted using the subset tool](#arcgis-subset-multidim-raster-tool)
 
-By default, the first variable in the HDF5 file is displayed, and any changes to symbology are applied to all variables in the file. 
+By default, the first variable in the HDF5 file is displayed, and any changes to symbology are applied to all variables in the file.
 
 ```{figure} ../assets/arcgis-drag-and-drop.png
 :name: arcgis-drag-and-drop-screenshot
@@ -92,15 +88,84 @@ By default, the first variable in the HDF5 file is displayed, and any changes to
 Using drag-and-drop functionality to add NISAR data to an ArcGIS Pro project.
 ```
 
+:::{note}No Access to Phase with Drag and Drop
+You will not be able to access the phase values in complex-valued variables, such as wrapped interferograms, using the drag-and-drop method. 
+
+Use the **[Add Multidimensional Raster](#arcgis-add-multidimensional-raster-tool)** tool and select **Multiband Raster** as the layer format in order to access both the amplitude and phase components of the dataset.
+:::
 
 (arcgis-visualizing-nisar-data)=
 ## Visualizing NISAR Data
 
-Most NISAR data does not visualize well by default, and symbology adjustments need to be applied to view features of interest. Refer to the NISAR ins GIS StoryMap to learn how to apply symbology adjustments for [GCOV](https://storymaps.arcgis.com/stories/c8f85d20b73c48fd8e89f8eef49bc60b#ref-n-irIq6l) and [GUNW](https://storymaps.arcgis.com/stories/c8f85d20b73c48fd8e89f8eef49bc60b#ref-n-GR2AW1) products. 
+Most NISAR data does not visualize well by default, and symbology adjustments need to be applied to view features of interest. Refer to the [NISAR in GIS StoryMap](https://storymaps.arcgis.com/stories/c8f85d20b73c48fd8e89f8eef49bc60b) to learn more about adjusting symbology for [GCOV](https://storymaps.arcgis.com/stories/c8f85d20b73c48fd8e89f8eef49bc60b#ref-n-irIq6l) and [GUNW](https://storymaps.arcgis.com/stories/c8f85d20b73c48fd8e89f8eef49bc60b#ref-n-GR2AW1) product variables. 
 
 ### Symbology Settings
 
-Symbology adjustments can be made for NISAR variables as you would any other layer. Right-click the layer and select Symbology to open the Symbology panel. 
+Symbology adjustments can be made for NISAR variables as you would any other layer. Right-click the layer and select **Symbology** to open the Symbology panel. 
+
+```{figure} ../assets/arcgis-symbology.png
+:name: arcgis-symbology-screenshot
+:alt: Screenshot showing how to access the Symbology settings in ArcGIS Pro
+:align: left
+
+Right-click a layer and select **Symbology** to open the Symbology settings pane.
+```
+
+By default, ArcGIS displays NISAR variables using the `Spectrum - Full Bright` color scheme. SAR backscatter is traditionally displayed in grayscale, with lower values appearing darker than higher values, but you can apply whatever color scheme you prefer. If you do want to use the traditional grayscale rendering, make sure that the **Invert** check-box is cleared.
+
+```{figure} ../assets/arcgis-symbology-grayscale.png
+:name: arcgis-symbology-grayscale-screenshot
+:alt: Screenshot showing how to set the color scheme in ArcGIS Pro
+:align: center
+:width: 30%
+
+Change the color scheme for the layer. To use a traditional grayscale scheme, clear the check next to **Invert** when selecting the `Black-to-White` color scheme.
+```
+
+#### Viewing Amplitude Data
+
+When viewing [amplitude data](#gis-amplitude-products), the images tend to appear very dark when using the default symbology. Because most backscatter values are very close to 0, it's helpful to change the stretch settings to focus on the range of the majority of the pixel values. 
+
+A quick way to start is to apply a Standard Deviation stretch using Dynamic Range Adjustment (DRA). 
+
+Set the **Stretch type** to `Standard Deviation`. In the Statistics tab, set **Statistics** to `DRA`. You may want adjust the number of standard deviations to see what works best for your particular area. Values between 1 and 2 are often suitable for backscatter. 
+
+```{figure} ../assets/arcgis-symbology-std-dev-dra.png
+:name: arcgis-symbology-std-dev-dra-screenshot
+:alt: Screenshot showing how to set a standard deviation stretch symbology using dynamic range adjustment in ArcGIS Pro
+:align: left
+
+Set the **Stretch type** to `Standard Deviation`, and set the **Statistics** type to `DRA` in the Statistics tab.
+```
+
+Another option is to set a custom Minimum-Maximum value range. Experiment to find the values that work best to view the features you want to see in your area of interest. Keep in mind that cross-pol (HV or VH) backscatter values tend to be lower than co-pol (HH or VV) returns, so you may need to use different ranges depending on the polarization.
+
+Change the **Stretch** setting to `Minimum-Maximum` if necessary. In the Statistics tab, set **Statistics** to Custom, and enter the desired **Min** and **Max** values. 
+
+```{figure} ../assets/arcgis-symbology-min-max.png
+:name: arcgis-symbology-min-max-screenshot
+:alt: Screenshot showing how to set custom min-max values for stretch symbology in ArcGIS Pro
+:align: left
+
+For the Minimum-Maximum stretch, set the **Statistics** type to `Custom`, and enter the desired pixel values for **Min** and **Max**.
+```
+
+#### Viewing Coherence Data
+
+The [Coherence variables](#gis-coherence) included in the GUNW products are traditionally displayed in grayscale, and stretched from 0 to 1. You can use whatever color scheme you prefer, but by using the `Minimum-Maximum` **Stretch type** and setting the **Min** and **Max** values to `0` and `1`, you can render a consistent visualization across products, regardless of the range of actual values represented in each different coherence layer. 
+
+```{figure} ../assets/arcgis-symbology-coh.png
+:name: arcgis-symbology-coh-screenshot
+:alt: Screenshot showing a common approach for viewing coherence data in ArcGIS Pro
+:align: left
+
+To include the full range of potential coherence values, use a `Minimum-Maximum` **Stretch type** and set the **Statistics** type to `Custom` with a **Min** value of `0` and a **Max** value of `1`.
+```
+
+### Maintaining Symbology Settings
+Sometimes connections to the source HDF5 variable are broken, and symbology settings may not be preserved even if you use the **Set Data Source** dialog in the layer properties (under the **Source** tab) to re-set the variable path. 
+
+If you make symbology changes to a NISAR variable and you want them to persist, consider [exporting the variable](#arcgis-export-raster) as a stand-alone raster first, which provides a more stable source for ArcGIS projects. It also allows you to save the data as a layer, including the symbology settings, for use in other projects. 
 
 (arcgis-transforming-nisar-data)=
 ## Transforming NISAR Data

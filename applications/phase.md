@@ -1,3 +1,4 @@
+(sar-phase)=
 # Phase
 
 The phase measures the location of the SAR signal along its wave cycle when it returns to the sensor. This can be used as a proxy for distance, and is the basis of SAR Interferometry (InSAR). By differencing the phase values from one acquisition to another with the same footprint, InSAR allows users to identify and quantify surface deformation that occurred in the time between acquisitions. 
