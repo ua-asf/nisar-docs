@@ -17,7 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Expanded GSLC product page content
 - Expanded Amplitude and Phase page content
 - Expanded GIS Software section of the Using NISAR Data overview page
-- Minor edits to the Known Issues page
+- Edits to the Known Issues page
 
 ## [0.3.1]
 ### Added
