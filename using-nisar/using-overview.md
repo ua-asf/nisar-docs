@@ -22,7 +22,7 @@ The availability of NISAR [Level 2 (Geocoded)](#level-2-geocoded-products) and [
 
 The [HDF5 data format](#hdf5) of the NISAR products may be unfamiliar to some users, but there are workflows for adding NISAR layers to GIS projects and performing analysis leveraging existing raster analysis tools. 
 
-Refer to ASF's [NISAR in GIS](https://www.earthdata.nasa.gov/learn/gis/storymaps/nisar-gis) StoryMap tutorial to learn how to work with NISAR data in ArcGIS Pro, and the [QGIS Visualization/Exploration Tutorials](https://www.earthdata.nasa.gov/learn/tutorials/work-nisar-sample-data#QGISVE) section of the [Work with NISAR Sample Data](https://www.earthdata.nasa.gov/learn/tutorials/work-nisar-sample-data) tutorial for guidance on using NISAR data in QGIS.
+Refer to ASF's [NISAR in GIS](https://www.earthdata.nasa.gov/learn/gis/storymaps/nisar-gis) StoryMap tutorial to learn how to work with NISAR data in ArcGIS Pro, and @using-qgis for guidance on using NISAR data in QGIS.
 
 ## Programmatic Approaches
 

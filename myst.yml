@@ -55,6 +55,7 @@ project:
     - file: using-nisar/using-overview.md
       children:
 #        - file: using-nisar/software-support.md
+        - file: using-nisar/using-qgis.md
         - file: using-nisar/data-use-citation-guidance.md
     - file: tutorials/tutorials-overview.md
       children:
