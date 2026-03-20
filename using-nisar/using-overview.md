@@ -24,18 +24,16 @@ The NISAR mission generates a number of [Level 2 and 3 products](#nisar-product-
 (gis-amplitude-products)=
 ### Amplitude Products
 
-The [Geocoded Covariance (GCOV)](#gcov-product-overview) products present normalized radar backscatter in gamma-nought power. When these products are generated, a DEM is used to perform radiometric terrain correction, which adjusts for a number of terrain-based distortions caused by the side-looking nature of the SAR sensor. As a result, these products align well with other imagery and geospatial datasets. 
+Radar backscatter values can be extracted from either [Geocoded Covariance (GCOV)](#gcov-product-overview) or [Geocoded Single Look Complex (GSLC)](#gslc-product-overview). Refer to @nisar-amplitude-datasets to learn more about the differences, and determine which product may be better suited for your workflow.
 
-Amplitude values can also be extracted from [Geocoded Single Look Complex (GSLC)](#gslc-product-overview) products. These products are terrain corrected, as the topographic phase (calculated from a DEM) is removed. The key differences between the amplitude values in these products and the GCOV products is that they have not been radiometrically flattened (normalized for the surface area contributing to the backscatter), and they are in beta-nought radiometry. The values may need to be converted to either gamma-nought or sigma-nought before use in some analysis workflows. 
-
-The GSLC products are posted to a smaller pixel spacing than the GCOV products. While this can allow users to view finer detail in the images, it does mean that they are much larger files to work with. It can take a lot longer to load the data, adjust the symbology, or run analysis workflows when using GSLCs. 
+If you are new to NISAR data and just want to explore what amplitude data looks like, the GCOV products are more straightforward to use in GIS than the GSLCs.
 
 (gis-coherence)=
 ### Coherence 
 
-Among the non-amplitude datasets, the Coherence layers from the [Geocoded Unwrapped Interferogram (GUNW)](#gunw-product-overview) products may be of interest to GIS users. Coherence indicates the correlation of @sar-phase measurements from one acquisition to the next, and can indicate areas that have undergone changes in surface structure. 
+Among the non-amplitude datasets, the Coherence layers from the [Geocoded Unwrapped Interferogram (GUNW)](#gunw-product-overview) products may be of interest to GIS users. @nisar-coherence indicates the correlation of @sar-phase measurements from one acquisition to the next, and can indicate areas that have undergone changes in surface structure. 
 
-The pixel values of a coherence layer range from 0 to 1, with 0 indicating complete decorrelation (no overlap in the phase spectra) and 1 indicating complete correlation (no change in the phase). As such, low coherence values often indicate areas that have undergone disturbance, while high coherence values tend to indicate areas with more stable conditions.
+The pixel values of a @nisar-coherence layer range from 0 to 1. Low coherence values often indicate areas that have undergone disturbance, while high coherence values tend to indicate areas with more stable conditions.
 
 ### Soil Moisture
 

@@ -80,6 +80,7 @@ The L-band Synthetic Aperture Radar (L-SAR) instrument is the focus of the NASA-
 
 The S-band SAR (S-SAR) instrument, developed in a collaboration between NASA and the Indian Space Research Organization (ISRO), operates at a wavelength of 9.3 cm and is primarily used for acquisitions over India.
 
+(nisar-frequencies)=
 ### Frequencies
 
 NISAR is equipped to acquire data in two slightly different frequencies. @tbl:areas-html summarizes the frequency A and the frequency B settings that define the acquisition modes. For interferometric NISAR products, only frequency A data are used. All other NISAR products can be acquired in a combination of frequency A and frequency B. <!-- TODO: Clarify this statement -->

@@ -8,20 +8,29 @@ Backscatter values are impacted by changes to the physical structure of the eart
 
 The L-band sensor can penetrate through moderately complex vegetation and more deeply into the soil than C-band SAR sensors such as Sentinel-1. This provides insight into the conditions under the canopy, and at deeper levels in the soil column, and having observations using both wavelengths (and, in some areas, S-band data in addition) increases the ability to understand processes driving change on the landscape.
 
+(nisar-amplitude-datasets)=
 ## Amplitude Datasets
 
 ### GCOV
 
-For NISAR data, the [Geocoded Covariance (GCOV)](#gcov-product-overview) are the most accessible amplitude-based products. The individual covariance layers in the GCOV product have had Radiometric Terrain Correction (RTC) applied. This process uses a DEM to correct for distortions caused by the impacts of terrain on the side-looking acquisitions. 
+For NISAR data, the [Geocoded Covariance (GCOV)](#gcov-product-overview) are the most accessible amplitude-based products. The individual covariance layers in the GCOV product have had Radiometric Terrain Correction (RTC) applied. This process uses a DEM to correct for distortions caused by the impacts of terrain on the side-looking acquisitions.
 
 Not only is the output product aligned with the DEM topographically, but radiometric flattening is applied to normalize the radar backscatter based on the surface area contributing to the signal returns. The pixel values represent radar backscatter in gamma-nought power, with a different layer for each polarization. 
 
+The RTC results in products that align well with other imagery and geospatial datasets, and provide more consistent values regardless of the acquisition geometry. For areas with overlapping acquisitions, products from different path may be suitable for use in the same time-series analysis, allowing for denser time series than would be possible using only acquisitions for the same path and frame.
+
 ### GSLC
 
-The [Geocoded Single Look Complex (GSLC)](#gslc-product-overview) products are also terrain corrected, as the topographic phase is removed. They have not been radiometrically flattened, however, which differentiates them from the GCOV covariance layers. 
+The [Geocoded Single Look Complex (GSLC)](#gslc-product-overview) products are complex valued, including both the amplitude and the phase components of the SAR signal returns. The pixel values are encoded as complex Digital Numbers (DN), but the amplitude values can be [extracted and converted from beta-nought radiometry](#gslc-backscatter) to either gamma-nought or sigma-nought backscatter coefficients if desired. 
 
-The pixel values are encoded as complex Digital Numbers (DN), but the amplitude values can be [extracted and converted from beta-nought radiometry](#gslc-backscatter) to either gamma-nought or sigma-nought if desired. For users who do not want or need the backscatter values to be normalized to the area contributing to the signal returns, GSLC products are also a source for amplitude values.
+The topographic phase (calculated from a DEM) is removed during the generation of the GLSC products. As a result, the amplitude values are terrain-corrected. Unlike the GCOV product, they have not been radiometrically flattened, so should be used in amplitude workflows only if you do not want or need the backscatter values to be normalized to the area contributing to the signal returns.
 
-The pixel spacing of the GSLC products is smaller than the GCOV products. While this can allow users to see features in finer detail, it does mean that the files are also much larger. They can be more time-consuming to download, visualize, and analyze than the GCOV products. 
+### Pixel Spacing
+
+The pixel spacing of the GSLC products is always 5 meters in the north direction, but can vary from 2.5 to 40 meters in the east direction, depending on the acquisition mode and frequency. In contrast, most of the GCOV products have a cell size of either 10x10 or 20x20 meters for [Frequency A](#nisar-frequencies) layers (which are higher resolution than the Frequency B layers).
+
+While GSLC products can allow users to see features in finer detail than in the corresponding GCOV products, the smaller pixel size (and complex data format) results in products that are _much_ larger than the GCOV files. They are more time-consuming to download, visualize, and analyze than the GCOV products. 
+
+Note also that the cell sizes for GSLC rasters are not always square. While the 40 MHz acquisitions result in 5x5 meter pixels for Frequency A GSLC layers, all the other frequencies will have non-square pixels. 
 
 

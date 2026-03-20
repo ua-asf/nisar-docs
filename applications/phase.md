@@ -15,6 +15,7 @@ InSAR analysis can be used to detect and quantify surface movements or changes c
 
 Phase measurements, especially at L-band wavelengths, are sensitive to atmospheric changes from one acquisition to the next, so it is vital to consider how these changes can impact your interpretation of InSAR measurements. NISAR provides a number of resources packaged in with products such as the GUNWs that can be used for atmospheric corrections, and there are also time-series approaches that can help mitigate the impact of atmospheric conditions.
 
+(nisar-coherence)=
 ## Coherence
 
 Coherence indicates the level of correlation between the phase spectra of two SAR acquisitions. Values range from 0 to 1, with 0 being complete decorrelation and 1 being complete correlation. Areas with low correlation, where phase spectra from one acquisition to another have little to no overlap, may not generate reliable InSAR values. 
