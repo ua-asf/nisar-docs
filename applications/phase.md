@@ -11,6 +11,8 @@ InSAR analysis can quantify differences in the line-of-sight of the sensor to th
 
 InSAR analysis can be used to detect and quantify surface movements or changes caused by geophysical processes or human activities that result in the signal having to travel a different distance to interact with the scattering surface. This can be due to volcanic or tectonic activity, earth-moving for construction or extraction purposes, and subsidence or uplift due to changes in groundwater or underground reservoirs.
 
+<!-- #TODO: Add content on time series analysis -->
+
 ## Atmospheric Impacts
 
 Phase measurements, especially at L-band wavelengths, are sensitive to atmospheric changes from one acquisition to the next, so it is vital to consider how these changes can impact your interpretation of InSAR measurements. NISAR provides a number of resources packaged in with products such as the GUNWs that can be used for atmospheric corrections, and there are also time-series approaches that can help mitigate the impact of atmospheric conditions.

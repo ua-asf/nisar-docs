@@ -13,7 +13,7 @@ The L-band sensor can penetrate through moderately complex vegetation and more d
 
 ### GCOV
 
-For NISAR data, the [Geocoded Covariance (GCOV)](#gcov-product-overview) are the most accessible amplitude-based products. The individual covariance layers in the GCOV product have had Radiometric Terrain Correction (RTC) applied. This process uses a DEM to correct for distortions caused by the impacts of terrain on the side-looking acquisitions.
+[Geocoded Covariance (GCOV)](#gcov-product-overview) products are the most accessible amplitude-based NISAR products. The individual covariance layers in the GCOV product have had Radiometric Terrain Correction (RTC) applied. This process uses a DEM to correct for distortions caused by the impacts of terrain on the side-looking acquisitions.
 
 Not only is the output product aligned with the DEM topographically, but radiometric flattening is applied to normalize the radar backscatter based on the surface area contributing to the signal returns. The pixel values represent radar backscatter in gamma-nought power, with a different layer for each polarization. 
 
@@ -23,7 +23,7 @@ The RTC results in products that align well with other imagery and geospatial da
 
 The [Geocoded Single Look Complex (GSLC)](#gslc-product-overview) products are complex valued, including both the amplitude and the phase components of the SAR signal returns. The pixel values are encoded as complex Digital Numbers (DN), but the amplitude values can be [extracted and converted from beta-nought radiometry](#gslc-backscatter) to either gamma-nought or sigma-nought backscatter coefficients if desired. 
 
-The topographic phase (calculated from a DEM) is removed during the generation of the GLSC products. As a result, the amplitude values are terrain-corrected. Unlike the GCOV product, they have not been radiometrically flattened, so should be used in amplitude workflows only if you do not want or need the backscatter values to be normalized to the area contributing to the signal returns.
+The topographic phase (calculated from a DEM) is removed during the generation of the GLSC products. As a result, the amplitude values are terrain-corrected. Unlike the GCOV product, they have not been radiometrically flattened, so should be used in amplitude workflows only if you do not want or need the backscatter values to be normalized to the surface area contributing to the signal returns.
 
 ### Pixel Spacing
 
@@ -31,6 +31,6 @@ The pixel spacing of the GSLC products is always 5 meters in the north direction
 
 While GSLC products can allow users to see features in finer detail than in the corresponding GCOV products, the smaller pixel size (and complex data format) results in products that are _much_ larger than the GCOV files. They are more time-consuming to download, visualize, and analyze than the GCOV products. 
 
-Note also that the cell sizes for GSLC rasters are not always square. While the 40 MHz acquisitions result in 5x5 meter pixels for Frequency A GSLC layers, all the other frequencies will have non-square pixels. 
+Note also that the cell sizes for GSLC rasters are not always square. While 40 MHz acquisitions are processed to output 5x5 meter pixels for Frequency A GSLC layers, all the other frequencies will have non-square pixels. 
 
 

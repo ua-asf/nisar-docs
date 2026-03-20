@@ -23,10 +23,10 @@ This release includes data acquired between October 17, 2025 and January 20, 202
 
 ```{figure} ../assets/feb-26-data-release.png
 :label: feb-26-data-release
-:alt: Map of pre-calibration products included in the February 2026 data release.
+:alt: Map of the spatial extent of archived pre-calibration products included in the February 2026 data release.
 :align: center
 
-Spatial distribution of the pre-calibration NISAR data products, highlighted in green, included in the February 2026 data release.  
+Spatial distribution of the archived pre-calibration NISAR data products, highlighted in green, included in the February 2026 data release.  
 <span style="font-size: 12px;">_Basemap credits: Esri, TomTom, Garmin, FAO, NOAA, USGS, (c) OpenStreetMap contributors, and the GIS User Community._</span>
 ```
 
