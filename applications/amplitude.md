@@ -23,7 +23,7 @@ The RTC results in products that align well with other imagery and geospatial da
 
 The [Geocoded Single Look Complex (GSLC)](#gslc-product-overview) products are complex valued, including both the amplitude and the phase components of the SAR signal returns. The pixel values are encoded as complex Digital Numbers (DN), but the amplitude values can be [extracted and converted from beta-nought radiometry](#gslc-backscatter) to either gamma-nought or sigma-nought backscatter coefficients if desired. 
 
-The topographic phase (calculated from a DEM) is removed during the generation of the GLSC products. As a result, the amplitude values are terrain-corrected. Unlike the GCOV product, they have not been radiometrically flattened, so should be used in amplitude workflows only if you do not want or need the backscatter values to be normalized to the area contributing to the signal returns.
+The topographic phase (calculated from a DEM) is removed during the generation of the GLSC products. As a result, the amplitude values are terrain-corrected. Unlike the GCOV product, they have not been radiometrically flattened, so should be used in amplitude workflows only if you do not want or need the backscatter values to be normalized to the surface area contributing to the signal returns.
 
 ### Pixel Spacing
 
