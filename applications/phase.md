@@ -9,7 +9,7 @@ The phase component of the SAR dataset indicates the location of the SAR signal 
 
 InSAR analysis can quantify differences in the line-of-sight of the sensor to the centimeter scale, making it a powerful tool for monitoring deformation over large areas. It can be used in conjunction with GNSS measurements, surveys, and LiDAR measurements to expand these high-accuracy measurements to a much broader scale. 
 
-InSAR analysis can be used to detect and quantify surface movements or changes caused by geophysical processes or human activities that result in the signal having to travel a different distance to interact with the scattering surface. This can be due to volcanic or tectonic activity, earth-moving for construction or extraction purposes, and subsidence or uplift due to changes in groundwater or underground reservoirs.
+InSAR analysis can be used to detect and quantify surface movements or changes that cause the SAR signal to travel a different distance to interact with the scattering surface. This can be due to geophysical processes, such as volcanic or tectonic activity, or human activities, such as earth-moving for construction or extraction or subsidence or uplift due to changes in groundwater or underground reservoirs.
 
 <!-- #TODO: Add content on time series analysis -->
 
