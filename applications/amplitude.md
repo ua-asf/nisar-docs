@@ -13,7 +13,7 @@ The L-band sensor can penetrate through moderately complex vegetation and more d
 
 ### GCOV
 
-For NISAR data, the [Geocoded Covariance (GCOV)](#gcov-product-overview) are the most accessible amplitude-based products. The individual covariance layers in the GCOV product have had Radiometric Terrain Correction (RTC) applied. This process uses a DEM to correct for distortions caused by the impacts of terrain on the side-looking acquisitions.
+[Geocoded Covariance (GCOV)](#gcov-product-overview) products are the most accessible amplitude-based NISAR products. The individual covariance layers in the GCOV product have had Radiometric Terrain Correction (RTC) applied. This process uses a DEM to correct for distortions caused by the impacts of terrain on the side-looking acquisitions.
 
 Not only is the output product aligned with the DEM topographically, but radiometric flattening is applied to normalize the radar backscatter based on the surface area contributing to the signal returns. The pixel values represent radar backscatter in gamma-nought power, with a different layer for each polarization. 
 
