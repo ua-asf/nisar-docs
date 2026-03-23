@@ -50,7 +50,8 @@ NISAR has continually collected L-band data over nearly all global land mass sin
 :alt: Map of the spatial extent of NISAR data collection.
 :align: center
 
-Spatial extent of L-band data collection.
+Spatial extent of NISAR L-band data collection, highlighted in green.
+<span style="font-size: 12px;">_Basemap credits: Esri, TomTom, Garmin, FAO, NOAA, USGS, (c) OpenStreetMap contributors, and the GIS User Community._</span>
 ```
 
 The NISAR project will generate Level 0-3 data products from all L-band data acquired since September 23, 2025. All L-band data products will be available to the public through the Alaska Satellite Facility.
@@ -61,7 +62,7 @@ The nominal data release timeline as of March 2026 is described below.
 An [initial release](https://www.earthdata.nasa.gov/news/nisar-sample-data-products-available) of 25 pre-calibration sample data products were made available on January 23, 2026. This release included one or more products of each of the nine Level 1-3 product types.
 
 ### Feb 2026: Pre-calibration products
-A [larger volume](https://www.earthdata.nasa.gov/news/nisar-release-over-100000-new-data-product-files) of pre-calibration global data products were made available on Feb 27, 2026. This release included over 100,000 Level 1-3 products totaling over 500 TB of science data.
+A [larger volume](https://www.earthdata.nasa.gov/news/nisar-release-over-100000-new-data-product-files) of pre-calibration global data products were made available on February 27, 2026. This release included over 100,000 Level 1-3 products totaling over 500 TB of science data.
 
 ### Jun 2026: Calibrated forward processing
 After the calibration phase concludes and planned software improvements are completed, the NISAR project will begin forward processing of newly-acquired data. Forward processing is targeted to begin in the June 2026 timeframe.
