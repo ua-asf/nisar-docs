@@ -87,6 +87,7 @@ project:
     GOFF: Geocoded Pixel Offsets
     GSLC: Geocoded Single Look Complex
     GUNW: Geocoded Unwrapped Interferogram
+    LUT: Lookup Table
     NISAR: NASA-ISRO Synthetic Aperture Radar
     NRB: Normalized Radar Backscatter
     RTC: Radiometric Terrain Correction; Radiometrically Terrain-Corrected

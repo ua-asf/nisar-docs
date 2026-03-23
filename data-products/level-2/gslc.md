@@ -26,7 +26,7 @@ The pixel values in the GSLC product are presented as complex Digital Numbers (D
 
 $$\text{beta0 backscatter} = |\text{GSLC DN}|^2$$
 
-For users who prefer backscatter values in either gamma-nought (gamma0) or sigma-nought (sigma0) radiometry, look-up tables (LUTs) are provided in the GSLC product to help convert the values. The LUTs are found in the `metadata/calibrationInformation/geometry` subgroup of the GSLC products, as illustrated in @gslc_coefficient_luts_image.
+For users who prefer backscatter values in either gamma-nought (gamma0) or sigma-nought (sigma0) radiometry, Lookup Tables (LUTs) are provided in the GSLC product to help convert the values. The LUTs are found in the `metadata/calibrationInformation/geometry` subgroup of the GSLC products, as illustrated in @gslc_coefficient_luts_image.
 
 ```{figure} ../../assets/gslc_coefficient_luts.png
 :name: gslc_coefficient_luts_image
