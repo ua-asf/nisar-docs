@@ -19,14 +19,14 @@ The NISAR Mission is using ISCE3 functionality to generate the products that are
 (using-gis-software)=
 ## GIS Software
 
-The NISAR mission generates a number of [Level 2 and 3 products](#nisar-product-levels), which are projected to map coordinates and are suitable for use in GIS workflows. The @sar-amplitude component of the SAR dataset is particularly well-suited to GIS analysis, as it presents an image of the Earth's surface, though any of the gridded variables in the Level 2 and 3 products can be added to ArcGIS Pro or QGIS. 
+The NISAR mission generates a number of [Level 2 and 3 products](#nisar-product-levels), which are projected to map coordinates and are suitable for use in GIS workflows. Any of the gridded variables in the Level 2 and 3 products can be added to ArcGIS Pro or QGIS. The [amplitude](#sar-amplitude) component of the SAR dataset is particularly well-suited to GIS analysis, as it presents an image of the Earth's surface.
 
 (gis-amplitude-products)=
 ### Amplitude Products
 
 Radar backscatter values can be extracted from either [Geocoded Covariance (GCOV)](#gcov-product-overview) or [Geocoded Single Look Complex (GSLC)](#gslc-product-overview). Refer to @nisar-amplitude-datasets to learn more about the differences and determine which product may be better suited for your workflow.
 
-If you are new to NISAR data and just want to explore what amplitude data looks like, the GCOV products are more straightforward to use in GIS than the GSLCs.
+If you are new to NISAR data and want to explore what amplitude data looks like, the GCOV products are more straightforward to use in GIS than the GSLCs.
 
 (gis-coherence)=
 ### Coherence 
