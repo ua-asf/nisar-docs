@@ -189,7 +189,7 @@ This tool can be used either with a full HDF5 layer that was added to the projec
    - The default output format is [Cloud Raster Format (CRF)](https://pro.arcgis.com/en/pro-app/latest/help/data/imagery/an-overview-of-multidimensional-raster-data.htm#ESRI_SECTION1_22F66BF74FAB42BAA35FD55E21A17201), but you can simply type `.tif` as the file extension to output the variable as a GeoTIFF
 6. If working with a full HDF5 layer, check the box next to the desired variable to export
    - If you've referenced an individual variable layer, only that one variable will be listed, and is checked by default
-7. If you want to export the variable using the [default environment settings](#arcgis-adjust-environment-settings), click the **OK** button to export the variable
+7. If you want to export the variable using the default [environment settings](#arcgis-environment-settings), click the **OK** button to export the variable
 
 ```{figure} ../assets/arcgis-subset-tool.png
 :name: arcgis-subset-tool-screenshot
@@ -199,8 +199,8 @@ This tool can be used either with a full HDF5 layer that was added to the projec
 Using the Subset tool to extract variables from an HDF5 file added to ArcGIS Pro using the Drag-and-Drop method.
 ```
 
-(arcgis-adjust-environment-settings)=
-#### Adjust Environment Settings
+(arcgis-environment-settings)=
+#### Environment Settings
 
 The **Environment** tab of the **Subset Multidimensional Raster** Geoprocessing dialog provides a convenient interface for applying dataset transformations as a variable is being extracted. 
 
@@ -259,7 +259,7 @@ In the Export Raster dialog window:
 
 1. Set the path and filename for the output raster
 2. Select the raster format to use
-3. If you want to export the variable using the [default settings](#arcgis-export-raster-settings), click the **Export** button
+3. If you want to export the variable using the default [settings](#arcgis-export-raster-settings), click the **Export** button
 
 ```{figure} ../assets/arcgis-export-raster-dialog.png
 :name: arcgis-export-raster-dialog-screenshot

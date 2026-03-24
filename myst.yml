@@ -66,10 +66,11 @@ project:
       children:
         - file: applications/amplitude.md
         - file: applications/phase.md
-    - title: User Support
+    - title: Resources
       children:
-        - file: user-support/documents.md
-        - file: user-support/earthdata-forum.md
+        - file: resources/webinars.md
+        - file: resources/documents.md
+        - file: resources/earthdata-forum.md
     - title: Appendices
       children:
         - file: appendices/acronyms.md
@@ -83,10 +84,12 @@ project:
     EDL: Earthdata Login
     ESDIS: Earth Science Data and Information System
     GCOV: Geocoded Polarimetric Covariance
+    GIS: Geographic Information System
     GNSS: Global Navigation Satellite System
     GOFF: Geocoded Pixel Offsets
     GSLC: Geocoded Single Look Complex
     GUNW: Geocoded Unwrapped Interferogram
+    LUT: Lookup Table
     NISAR: NASA-ISRO Synthetic Aperture Radar
     NRB: Normalized Radar Backscatter
     RTC: Radiometric Terrain Correction; Radiometrically Terrain-Corrected

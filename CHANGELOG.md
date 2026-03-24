@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Guidance page for working with NISAR data in QGIS
 - Guidance page for working with NISAR data in ArcGIS Pro
 - Links to NISAR ATBD GitLab site
+- Link to the NISAR Science Team Meeting Data Access Webinar
 
 ### Changed
 - Added NISAR summary article to White Papers and Documents page and rearranged order of contents
@@ -18,6 +19,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Expanded Amplitude and Phase page content
 - Expanded GIS Software section of the Using NISAR Data overview page
 - Edits to the Known Issues page
+- Changed the name of the `User Support` section to `Resources`
 
 ## [0.3.2]
 
