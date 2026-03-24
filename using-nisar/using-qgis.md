@@ -105,10 +105,9 @@ Raster data can be subset spatially in QGIS using the **Clip Raster by Extent** 
 Select **Raster** from the menu bar, then select **Extraction** to open the **Clip Raster by Extent** raster tool.
 ```
 
-1. Ensure the correct layer is selected under **Input layer** before subsetting. 
-2. Set the extent of the desired subset using one of the available options. You can zoom to the extent of the desired subset and use the **Use Current Map Canvas Extent** option, select **Draw on Map Canvas** to draw a custom rectangle directly on the map, use the extent of another layer/bookmark/layout in your project, or type in the min/max XY coordinates and projection manually. 
-3. If you want to save the output raster to a file for use in other projects, set the path for the output file under the **Clipped (extent)** field in place of `[Save to temporary file]`.
-4. Click **Run** in the **Raster Extraction** window to generate the subset.
+Ensure the correct layer is selected under **Input layer** before subsetting. Set the extent of the desired subset using one of the available options. You can zoom to the extent of the desired subset and use the **Use Current Map Canvas Extent** option, select **Draw on Map Canvas** to draw a custom rectangle directly on the map, use the extent of another layer/bookmark/layout in your project, or type in the min/max XY coordinates and projection manually. 
+
+If you want to save the output raster to a file for use in other projects, set the path for the output file under the **Clipped (extent)** field in place of `[Save to temporary file]`. Click **Run** in the **Raster Extraction** window to generate the subset.
 
 ```{figure} ../assets/qgis-clip-extent.png
 :name: qgis-clip-extent
