@@ -11,7 +11,7 @@ The L-band sensor can penetrate through moderately complex vegetation and more d
 (nisar-amplitude-datasets)=
 ## Amplitude Datasets
 
-Radar backscatter values can be extracted from either [Geocoded Covariance (GCOV)](#gcov-product-overview) or [Geocoded Single Look Complex (GSLC)](#gslc-product-overview).
+Radar backscatter values can be extracted from either [Geocoded Covariance (GCOV)](#gcov-product-overview) or [Geocoded Single Look Complex (GSLC)](#gslc-product-overview) products.
 
 ### GCOV
 
