@@ -37,7 +37,7 @@ Add data to QGIS using the **Open Data Source Manger** button and selecting the 
 :alt: Screenshot highlighting the **Open Data Source Manger** button and the Raster data type to select when adding NISAR data.
 :align: left
 
-Click on **Open Data Source Manger** and select the Raster data type to add NISAR data to QGIS.
+Click on **Open Data Source Manger** and select the **Raster** data type to add NISAR data to QGIS.
 ```
 After clicking the **Add** button, another window will pop up showing the groups within the NISAR data file that can be added as individual layers. All groups are selected for addition as a default, but individual groups can be selected to avoid adding too much data to your project. For more information about the HDF Files and NISAR data groups, see @hdf5.
 
