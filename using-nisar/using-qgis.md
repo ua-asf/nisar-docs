@@ -21,7 +21,7 @@ Occasionally, data files with an `.nc` extension may crash QGIS, but this can us
 
 QGIS cannot display complex-valued data such as the signal returns in NISAR [GSLC](#gslc-product-overview) products. The [amplitude](#sar-amplitude) and [phase](#sar-phase) components can be extracted into separate real-valued rasters using [gdal_translate](https://gdal.org/en/stable/programs/gdal_translate.html) in conjunction with the [derived subdatasets driver](https://gdal.org/en/stable/drivers/raster/derived.html), which can then be visualized in QGIS. Amplitude data is typically more relevant than phase data for GIS applications. 
 
-Run the following example to extract the amplitude from a GLSC file:
+Run the following example to extract the amplitude from a GSLC file:
 
 `gdal_translate -of GTiff DERIVED_SUBDATASET:AMPLITUDE:NETCDF:/path/to/nisar.nc:/science/LSAR/GSLC/grids/frequencyA/HH amplitude.tif`
 
