@@ -68,6 +68,7 @@ project:
         - file: applications/phase.md
     - title: Resources
       children:
+        - file: resources/webinars.md
         - file: resources/documents.md
         - file: resources/earthdata-forum.md
     - title: Appendices
