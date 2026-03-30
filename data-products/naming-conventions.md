@@ -19,7 +19,7 @@ This naming convention is used for products that take a single NISAR acquisition
   * L2 [GSLC](#gslc-product-overview)
   * L2 [GCOV](#gcov-product-overview)
 
-This naming convention is also used for L3 [SME2](#sme2-product-overview) products, which are not truly a single-acquisition products, as they use time-series data. 
+This naming convention is also used for L3 [SME2](#sme2-product-overview) products, which are not truly single-acquisition products, as they leverage time-series data. 
 
 -----
 
