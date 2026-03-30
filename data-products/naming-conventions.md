@@ -5,9 +5,9 @@
 ## Naming Convention Overview
 
 There are three different patterns used for naming NISAR data products, depending on the product type:
+1. [Products Generated from a Single Acquisition](#products-generated-from-a-single-acquisition)
+1. [Products Generated from Pairs of Acquisitions](#products-generated-from-a-pair-of-acquisitions)
 1. [Raw Data Products](#raw-data-products)
-2. [Products Generated from a Single Acquisition](#products-generated-from-a-single-acquisition)
-3. [Products Generated from Pairs of Acquisitions](#products-generated-from-a-pair-of-acquisitions)
 
 A detailed description of these naming conventions is available in @product_file_naming_conventions. A summary is presented below.
 
