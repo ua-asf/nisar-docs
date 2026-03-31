@@ -5,28 +5,11 @@
 ## Naming Convention Overview
 
 There are three different patterns used for naming NISAR data products, depending on the product type:
+1. [Products Generated from a Single Acquisition](#products-generated-from-a-single-acquisition)
+1. [Products Generated from Pairs of Acquisitions](#products-generated-from-a-pair-of-acquisitions)
 1. [Raw Data Products](#raw-data-products)
-2. [Products Generated from a Single Acquisition](#products-generated-from-a-single-acquisition)
-3. [Products Generated from Pairs of Acquisitions](#products-generated-from-a-pair-of-acquisitions)
 
 A detailed description of these naming conventions is available in @product_file_naming_conventions. A summary is presented below.
-
-(raw-data-products)=
-## Raw Data Products
-
-This naming convention is only used for Level 0 products, such as the Level 0B [RRSD](#rrsd-product-overview) products. 
-
------
-
-```{figure} ../assets/nisar-naming-conventions-rrsd.png
-:label: naming_convention_raw_data
-:alt: NISAR naming convention for raw data
-:align: center
-
-NISAR naming convention for raw (L0B) data products
-```
-
------
 
 (products-generated-from-a-single-acquisition)=
 ## Products Generated from a Single Acquisition
@@ -35,7 +18,8 @@ This naming convention is used for products that take a single NISAR acquisition
   * L1 [RSLC](#rslc-product-overview)
   * L2 [GSLC](#gslc-product-overview)
   * L2 [GCOV](#gcov-product-overview)
-  * L3 [SME2](#sme2-product-overview)
+
+This naming convention is also used for L3 [SME2](#sme2-product-overview) products, which are not truly single-acquisition products, as they leverage time-series data. 
 
 -----
 
@@ -44,7 +28,7 @@ This naming convention is used for products that take a single NISAR acquisition
 :alt: NISAR naming convention for processed data
 :align: center
 
-NISAR naming convention for data products generated from a single acquisition
+NISAR naming convention for data products generated from a single acquisition ([RSLC](#rslc-product-overview), [GSLC](#gslc-product-overview), [GCOV](#gcov-product-overview)) and [SME2](#sme2-product-overview) products.
 ```
 
 -----
@@ -66,7 +50,24 @@ This naming convention is used for products that require pairs of NISAR acquisit
 :alt: NISAR naming convention for interferometric data
 :align: center
 
-NISAR naming convention for data products generated from pairs of acquisitions
+NISAR naming convention for data products generated from pairs of acquisitions ([RIFG](#rifg-product-overview), [RUNW](#runw-product-overview), [GUNW](#gunw-product-overview), [ROFF](#roff-product-overview), [GOFF](#goff-product-overview)).
+```
+
+-----
+
+(raw-data-products)=
+## Raw Data Products
+
+This naming convention is only used for Level 0 products, such as the Level 0B [RRSD](#rrsd-product-overview) products. 
+
+-----
+
+```{figure} ../assets/nisar-naming-conventions-rrsd.png
+:label: naming_convention_raw_data
+:alt: NISAR naming convention for raw data
+:align: center
+
+NISAR naming convention for raw (L0B) data products ([RRSD](#rrsd-product-overview)).
 ```
 
 -----
