@@ -100,7 +100,7 @@ import xarray as xr
 results = asf.search(dataset='NISAR', processingLevel='RSLC', maxResults=1)
 
 s3_links = results[0].properties["s3Urls"]
-s3_link = [link for link in s3_links if link.endswith(f'{results[0].properties["sceneName"]}.h5')]
+s3_h5_link = [link for link in s3_links if link.endswith(f'{results[0].properties["sceneName"]}.h5')]
 
 fsspec_config = {
     'cache_type': 'background',
@@ -109,7 +109,7 @@ fsspec_config = {
 
 s3 = s3fs.S3FileSystem(anon=False)
 ds = xr.open_datatree(
-   s3.open(s3_link[0], **fsspec_config),
+   s3.open(s3_h5_link[0], **fsspec_config),
    engine='h5netcdf',
    decode_timedelta=False,
    phony_dims="access"
