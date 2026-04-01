@@ -47,3 +47,70 @@ Alternatively, users may [configure a local `.netrc` file](https://nsidc.org/dat
 ```python
 results.download(path='path/to/data/')
 ```
+
+## Stream data
+
+* stream data into memory
+* typically served to users through HTTPS CloudFront URLs
+* hosted on us-west-2
+* Access from a resource in the same region (us-west-2)
+* Stream data through https or S3 protocols
+
+### Example: Stream via HTTPS
+* similar to downloading data, streaming requires entering your EDL credentials using a Bearer Token
+* This example searches for a single RSLC product. 
+* Retrieves its HTTPS access url, sets a fsspec configuration, and opens with xarray using the h5netcdf engine. 
+* If not already installed, Might need to install h5netcdf and aiohttp to run
+```python
+import asf_search as asf
+import fsspec
+import xarray as xr
+
+results = asf.search(dataset='NISAR', processingLevel='RSLC', maxResults=1)
+
+token = ... # Requires Earthdata Login Bearer Token :https://urs.earthdata.nasa.gov/documentation/for_users/user_token
+fs = fsspec.filesystem('https', client_kwargs={'headers': {'Authorization': f'Bearer {token}'}, 'trust_env': False})
+
+fsspec_config = {
+    'cache_type': 'background',
+    'block_size': 16*1024*1024,  # 16 MB
+}
+
+ds = xr.open_datatree(
+    fs.open(results[0].get_urls()[0], **fsspec_config),
+    engine='h5netcdf',
+    decode_timedelta=False,
+    phony_dims='access',
+)
+
+print(ds.science.LSAR.identification.isDithered.values) 
+```
+
+### Example: Stream via S3
+
+* Prior to running, get the S3 credentials and export. Ensure you run the code within 60 minutes of obtaining the credentials
+* Ensure s3fs and h5netcdf are installed
+* Ensure the s3 link is a h5 file
+
+```python 
+import asf_search as asf
+import s3fs
+import xarray as xr
+
+results = asf.search(dataset='NISAR', processingLevel='RSLC', maxResults=1)
+
+s3_links = results[0].properties["s3Urls"]
+
+fsspec_config = {
+    'cache_type': 'background',
+    'block_size': 16*1024*1024,  # 16 MB
+}
+
+fs = s3fs.S3FileSystem()
+ds = xr.open_datatree(
+   fs.open(s3_links[0], **fsspec_config),
+   engine='h5netcdf',
+   decode_timedelta=False,
+   phony_dims="access"
+)
+```
