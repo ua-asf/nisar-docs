@@ -79,6 +79,7 @@ access_url = results[0].get_urls()[0]
 
 fs = fsspec.filesystem(
     protocol='https',
+    # replace 'username' and 'password' with your actual EDL credentials
     client_kwargs={'auth': aiohttp.BasicAuth('username', 'password')},
 )
 
