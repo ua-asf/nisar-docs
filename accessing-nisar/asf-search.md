@@ -50,71 +50,45 @@ results.download(path='path/to/data/')
 
 ## Stream data
 
-NISAR data can also be streamed into memory using `asf_search` when accessed on a resource in the `us-west-2` region.  AWS `us-west-2` NISAR data is typically served to users through HTTPS CloudFront URLs. 
+NISAR data can be streamed into memory using `asf_search` combined with other libraries such as `fsspec` and `xarray`. This allows specific data from a NISAR product to be accessed without downloading the entire data file.
 
-Data streaming can be done using `https` or S3 protocols, both of which are described in the examples below. 
+Like all data access, streaming requires an [EDL account](https://urs.earthdata.nasa.gov/).
 
 ### Example: Stream via HTTPS
 
-Similar to downloading data, streaming requires user obtain an [EDL account](https://urs.earthdata.nasa.gov/). However, rather than passing a `username` and `password`, a EDL login token is required. For step-by-step guidance on generating an EDL token, see the [User Token Management](https://urs.earthdata.nasa.gov/documentation/for_users/user_token) document. After generating the token, it is valid for 60 days. 
+This example uses streaming to retrieve a specific byte of information from a 30 GB RSLC product.
 
-This example streams data for a single RSLC product. First, the code snippet uses `asf_search` to retrieve an HTTPS access url, then sets a [`fsspec`](https://filesystem-spec.readthedocs.io/en/latest/) configuration, and then opens the data with [`xarray`](https://docs.xarray.dev/en/stable/) using the `h5netcdf` engine. 
+Run the following command to install the required Python packages:
+```
+conda install aiohttp asf_search fsspec h5netcdf xarray
+```
 
-The code below will also require the python packages [`h5netcdf`](https://h5netcdf.org/index.html) and [`aiohttp`](https://docs.aiohttp.org/en/stable/) be installed before running. 
+`asf_search` is used to retrieve an HTTPS access url, then the data is opened with [`fsspec`](https://filesystem-spec.readthedocs.io/en/latest/) and [`xarray`](https://docs.xarray.dev/en/stable/) using the `h5netcdf` engine.
 
 ```python
+import aiohttp
 import asf_search as asf
 import fsspec
 import xarray as xr
 
-results = asf.search(dataset='NISAR', processingLevel='RSLC', maxResults=1)
+results = asf.search(
+    dataset='NISAR',
+    granule_list=['NISAR_L1_PR_RSLC_004_122_D_067_4005_DHDH_A_20251106T160541_20251106T160622_X05009_N_F_J_001'],
+)
+access_url = results[0].get_urls()[0]
 
-token = ... # Requires Earthdata Login Token :https://urs.earthdata.nasa.gov/documentation/for_users/user_token
-fs = fsspec.filesystem('https', client_kwargs={'headers': {'Authorization': f'Bearer {token}'}, 'trust_env': False})
-
-fsspec_config = {
-    'cache_type': 'background',
-    'block_size': 16*1024*1024,  # 16 MB
-}
+fs = fsspec.filesystem(protocol='https', client_kwargs={'auth': aiohttp.BasicAuth('username', 'password')})
 
 ds = xr.open_datatree(
-    fs.open(results[0].get_urls()[0], **fsspec_config),
+    fs.open(
+        path=access_url,
+        cache_type='background',
+        block_size=16*1024*1024,  # 16 MB
+    ),
     engine='h5netcdf',
     decode_timedelta=False,
     phony_dims='access',
 )
 
-print(ds.science.LSAR.identification.isDithered.values) 
-```
-
-### Example: Stream via S3
-
-Prior to running, obtain [credentials from the NISAR s3 credentials endpoint](nisar-s3-credentials-endpoint) and [configure your environment to use temporary AWS credentials](export-s3-credentials). These credentials are valid for 60 minutes after generation. 
-
-This example streams data for a single RSLC product. First, we use `asf_search` to retrieve a URL for `h5` file. Then, we use `s3fs` to pass the AWS credentials in our environment to stream the data. 
-
-Ensure that the [`h5netcdf`](https://h5netcdf.org/index.html) python package is installed before running. 
-
-```python 
-import asf_search as asf
-import s3fs
-import xarray as xr
-
-results = asf.search(dataset='NISAR', processingLevel='RSLC', maxResults=1)
-
-s3_links = results[0].properties["s3Urls"]
-s3_h5_link = [link for link in s3_links if link.endswith(f'{results[0].properties["sceneName"]}.h5')]
-
-fsspec_config = {
-    'cache_type': 'background',
-    'block_size': 16*1024*1024,  # 16 MB
-} 
-
-s3 = s3fs.S3FileSystem()
-ds = xr.open_datatree(
-   s3.open(s3_h5_link[0], **fsspec_config),
-   engine='h5netcdf',
-   decode_timedelta=False,
-   phony_dims="access"
-)
+print(ds.science.LSAR.identification.isDithered.values)
 ```
