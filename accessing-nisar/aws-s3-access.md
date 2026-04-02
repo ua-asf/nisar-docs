@@ -81,7 +81,6 @@ which will print, for example:
 
 For more information about using the `earthaccess` package with NISAR, see the [Earthaccess NISAR guide](#earthaccess-package).
 
-(export-s3-credentials)=
 ### 2. Configure environment to use temporary AWS credentials
 
 You will need to set the environment variables in your terminal. 
