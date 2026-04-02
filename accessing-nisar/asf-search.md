@@ -47,3 +47,52 @@ Alternatively, users may [configure a local `.netrc` file](https://nsidc.org/dat
 ```python
 results.download(path='path/to/data/')
 ```
+
+## Stream data
+
+NISAR data can be streamed into memory using `asf_search` combined with other libraries such as `fsspec` and `xarray`. This allows specific data from a NISAR product to be accessed without downloading the entire data file.
+
+Like all data access, streaming requires an [EDL account](https://urs.earthdata.nasa.gov/).
+
+### Example: Stream via HTTPS
+
+This example uses streaming to retrieve a specific byte of information from a 30 GB RSLC product.
+
+Run the following command to install the required Python packages:
+```
+conda install aiohttp asf_search fsspec h5netcdf xarray
+```
+
+`asf_search` is used to retrieve an HTTPS access url, then the data is opened with [`fsspec`](https://filesystem-spec.readthedocs.io/en/latest/) and [`xarray`](https://docs.xarray.dev/en/stable/) using the `h5netcdf` engine.
+
+```python
+import aiohttp
+import asf_search as asf
+import fsspec
+import xarray as xr
+
+results = asf.search(
+    dataset='NISAR',
+    granule_list=['NISAR_L1_PR_RSLC_004_122_D_067_4005_DHDH_A_20251106T160541_20251106T160622_X05009_N_F_J_001'],
+)
+access_url = results[0].get_urls()[0]
+
+fs = fsspec.filesystem(
+    protocol='https',
+    # replace 'username' and 'password' with your actual EDL credentials
+    client_kwargs={'auth': aiohttp.BasicAuth('username', 'password')},
+)
+
+ds = xr.open_datatree(
+    fs.open(
+        path=access_url,
+        cache_type='background',
+        block_size=16*1024*1024,  # 16 MB
+    ),
+    engine='h5netcdf',
+    decode_timedelta=False,
+    phony_dims='access',
+)
+
+print(ds.science.LSAR.identification.isDithered.values)
+```
