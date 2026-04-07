@@ -1,6 +1,6 @@
 # Data Processing Algorithms
 
-( algorithm-theoretical-basis-documents)=
+(algorithm-theoretical-basis-documents)=
 ## Algorithm Theoretical Basis Documents
 
 Two algorithm theoretical basis documents (ATBDs) summarize how the data is processed at various processing levels:
