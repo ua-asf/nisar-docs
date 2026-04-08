@@ -60,10 +60,11 @@ project:
     - file: tutorials/tutorials-overview.md
       children:
         - file: tutorials/storymaps.md
-#        - file: tutorials/python-cookbooks.md
+        - file: tutorials/python-cookbooks.md
+          children:
+          - url: https://asfopensarlab.github.io/NISAR_Cookbook/
+            title: NISAR Cookbook
         - file: tutorials/mission-homepage-tutorials.md
-        - url: https://asfopensarlab.github.io/NISAR_Cookbook/
-          title: NISAR Cookbook
     - file: applications/applications-overview.md
       children:
         - file: applications/amplitude.md
