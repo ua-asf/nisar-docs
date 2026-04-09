@@ -60,16 +60,17 @@ project:
     - file: tutorials/tutorials-overview.md
       children:
         - file: tutorials/storymaps.md
-#        - file: tutorials/python-cookbooks.md
-        - file: tutorials/mission-homepage-tutorials.md
-        - url: https://asfopensarlab.github.io/NISAR_Cookbook/
-          title: NISAR Cookbook
+        - file: tutorials/python-tutorials.md
+          children:
+          - url: https://asfopensarlab.github.io/NISAR_Cookbook/
+            title: NISAR Cookbook
     - file: applications/applications-overview.md
       children:
         - file: applications/amplitude.md
         - file: applications/phase.md
     - title: Resources
       children:
+        - file: tutorials/mission-homepage-tutorials.md
         - file: resources/documents.md
         - file: resources/webinars.md
         - file: resources/earthdata-forum.md
