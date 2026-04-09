@@ -7,9 +7,12 @@ short_title: Python Tutorials
 (nisar-python-cookbook)=
 ## NISAR Python Cookbook
 
-ASF has developed a Python Cookbook for NISAR
+ASF has developed a Python Cookbook for accessing and working with NISAR data
 
-https://asfopensarlab.github.io/NISAR_Cookbook/
+- [NISAR Cookbook Website](https://asfopensarlab.github.io/NISAR_Cookbook/): View notebooks
+- [NISAR Cookbook GitHub Repository](https://github.com/ASFOpenSARlab/NISAR_Cookbook): Download and execute notebooks
+
+User who wish to work with the NISAR Cookbook alongside the archive in the AWS Cloud can sign up for an [OpenScienceLab](https://opensciencelab.asf.alaska.edu/) account apply for OpenSARLab access. 
 
 (nisar-mission-algorithms)=
 ## NISAR Mission Algorithms
