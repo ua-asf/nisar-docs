@@ -9,7 +9,7 @@ There are a range of tutorials available for working with NISAR data.
 
 For those interested in learning more about potential applications and GIS-based workflows, check out the [StoryMap tutorials](#nisar-storymaps) published by ASF and JPL. 
 
-There are a number of Python-based resources available for those working with the data programmatically. ASF has published a [NISAR Cookbook](#nisar-python-cookbook), and [Python notebooks](#nisar-mission-algorithms) are available from the NISAR Science Team for a number of higher-level products. 
+Python-based resources are available for those working with NISAR data programmatically. ASF has published a [NISAR Cookbook](#nisar-python-cookbook), and [Python notebooks](#nisar-science-algorithms) are available from the NISAR Science Team for a number of higher-level products. 
 
 <!-- TODO: uncomment this section once there is content -->
 

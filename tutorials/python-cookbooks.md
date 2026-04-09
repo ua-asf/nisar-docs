@@ -14,7 +14,7 @@ ASF has developed a Python Cookbook for accessing and working with NISAR data
 
 User who wish to work with the NISAR Cookbook alongside the archive in the AWS Cloud can sign up for an [OpenScienceLab](https://opensciencelab.asf.alaska.edu/) account apply for OpenSARLab access. 
 
-(nisar-mission-algorithms)=
-## NISAR Mission Algorithms
+(nisar-science-algorithms)=
+## NISAR Science Algorithms
  
-The NISAR Science team has developed algorithms for a number of higher-level products. These algorithms are available as executable Python notebooks. These notebooks are available in the [NISAR Science Team GitLab](https://gitlab.com/nisar-science-algorithms).
+The NISAR Science Team has developed algorithms for a number of higher-level products. These algorithms are available as executable [Python notebooks](https://gitlab.com/nisar-science-algorithms).
