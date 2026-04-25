@@ -12,7 +12,7 @@ project:
     - file: data-availability/availability-overview.md
       children:
         - file: data-availability/product-known-issues.md
-#        - file: data-availability/observation-scenario.md
+        - file: data-availability/observation-plan.md
     - file: data-products/products-overview.md
       children:
         - title: Geophysical Products (Level 3)
