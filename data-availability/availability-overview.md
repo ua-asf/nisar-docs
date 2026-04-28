@@ -64,6 +64,7 @@ An [initial release](https://www.earthdata.nasa.gov/news/nisar-sample-data-produ
 ### Feb 2026: Pre-calibration products
 A [larger volume](https://www.earthdata.nasa.gov/news/nisar-release-over-100000-new-data-product-files) of pre-calibration global data products were made available on February 27, 2026. This release included over 100,000 Level 1-3 products totaling over 500 TB of science data.
 
+(timeline-calibrated-forward-processing)=
 ### Jul 2026: Calibrated forward processing
 After the calibration phase concludes and planned software improvements are completed, the NISAR project will begin forward processing of newly-acquired data. Forward processing is targeted to begin in early July 2026.
 
