@@ -77,7 +77,7 @@ The S-band mnemonic scheme is similar to L-band:
 | BB                  | Bandwidth                                                                                                                                                  |
 | P                   | Pulse width  (W = wide, M = medium, N = narrow)                                                                                                            |        
 | DD                  | Bit depth (B4 = 4 bit quantization, B3 = 3 bit quantization)                                                                                               |
-| FFF                 | Pulse repetition frequency scheme. For joint modes, the PRF scheme is left off the mnemonic because it is the same as for L-band.                          |
+| FFF                 | Pulse repetition frequency scheme. For joint modes, the PRF scheme is left off the mnemonic because it is the same as the L-band PRF.                      |
 
 :::
 
