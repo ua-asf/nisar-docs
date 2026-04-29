@@ -36,7 +36,7 @@ The mnemonic scheme for L-band radar modes is the following:
 
 @tbl:l-band-mnemonic-scheme describes each component in the L-band mnemonic scheme. 
 
-:::{table} L-band Mode Mnemonic Scheme
+:::{table} L-band Mode Mnemonic Scheme (after Table 4-1 in the [NISAR Mission Handbook](https://doi.org/10.48577/jpl.UD4HV3))
 :label: tbl:l-band-mnemonic-scheme
 :align: center
 
