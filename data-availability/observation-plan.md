@@ -20,7 +20,7 @@ NISAR Reference Observation Plan coverage maps for global ascending (a) and desc
 
 - The project plans to review and adjust the plan every six months, depending on science team input, available resources, and other programmatic factors. 
 - The legend describes the modes that will be employed, including the [mode mnemonic](#mnemonic-scheme).
-- There are some variations in coverage seasonally, for example over the poles as sea ice comes and goes, but largely the acquisition plan is intended to be static geographically to allow generation of consistent time series over the life of the mission. 
+- There are some variations in coverage seasonally (i.e. over the poles as sea ice comes and goes), but largely the acquisition plan is intended to be static geographically to allow generation of consistent time series over the life of the mission. 
 ```
 
 (mnemonic-scheme)=
@@ -62,6 +62,8 @@ The S-band mnemonic scheme is similar to L-band:
 
 **S:XX:MM:BBP:WW:DD:FFF**
 
+@tbl:s-band-mnemonic-scheme describes each component in the S-band mnemonic scheme. 
+
 :::{table} S-band Mode Mnemonic Scheme
 :label: tbl:s-band-mnemonic-scheme
 :widths: auto
@@ -70,7 +72,7 @@ The S-band mnemonic scheme is similar to L-band:
 | **Attribute**&emsp; | **Meaning**                                                                                                                                                |
 |---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | S                   | S-band                                                                                                                                                     |
-| XX-                 | Beam-forming mode (DB = beamform; DR = raw channels of the beamformer; NR = no beamforming)                                                                |
+| XX                  | Beam-forming mode (DB = beamform; DR = raw channels of the beamformer; NR = no beamforming)                                                                |
 | MM                  | Mode name (QP = quad pol; DH = dual pol HH/HV; SH = single pol HH; QD = HH in lower band, VV in upper band; QQ = HH/HV in lower band, VV/VH in upper band) |
 | BB                  | Bandwidth                                                                                                                                                  |
 | P                   | Pulse width  (W = wide, M = medium, N = narrow)                                                                                                            |
