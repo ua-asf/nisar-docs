@@ -87,7 +87,12 @@ For joint modes, the PRF scheme (**FFF** in @tbl:s-band-mnemonic-scheme) is left
 (observation-plan-apps)=
 ## Interactive Apps
 
-The NISAR Reference Observation Plan can be explored interactively using a series of web applications. Apply filters to view the spatial extent of planned L-band acquisitions based on flight direction, track/frame, polarization, bandwidth, frequency, date, mode changes, or product type. Zoom or pan to view your area of interest, and click on a footprint to learn about the acquisition information for that frame. 
+The NISAR Reference Observation Plan can be explored interactively using a series of web applications. 
+
+- Apply filters to view the spatial extent of planned L-band acquisitions based on flight direction, track/frame, polarization, bandwidth, frequency, date, mode changes, or product type
+- Zoom or pan to view your area of interest
+- Click on a footprint to learn about the acquisition information for that frame
+- Export geospatial files containing information about selected frames 
 
 There are different applications available, one displaying the currently available set of [pre-calibration data](#feb-2026-obs-plan-app), and the other for the full [reference observation plan](#ref-obs-plan-app) once calibrated data is available. Refer to @availability-overview to view the release timeline for the different collections of data. 
 
