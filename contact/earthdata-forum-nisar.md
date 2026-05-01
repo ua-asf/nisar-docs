@@ -1,6 +1,3 @@
----
-short_title: Earthdata Forum
----
 # Earthdata Forum
 
 (nisar-in-earthdata-forum)=
