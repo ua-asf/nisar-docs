@@ -4,7 +4,6 @@
 (nisar-in-earthdata-forum)=
 ## NISAR in the Earthdata Forum
 
-(earthdata-forum-summary)=
 NASA's [Earthdata Forum](https://forum.earthdata.nasa.gov/) is the best venue for asking questions and engaging in dialog about NISAR data. Subject-matter experts are able to view and reply to your post, and users are able to reference the validated answers to previously asked questions.
 
 Users can search for NISAR-related content by [entering ***NISAR*** in the search bar](https://forum.earthdata.nasa.gov/viewforum.php?f=7&&keywords=nisar).
