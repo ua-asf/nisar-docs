@@ -1,8 +1,6 @@
 # StoryMap Tutorials
 
-StoryMaps are an interactive web content format, hosted by [Esri](https://www.esri.com/en-us/arcgis/products/arcgis-storymaps/overview), which support interactive geospatial components, making them an engaging tool for presenting and demonstrating geospatial data capabilities. 
-
-<!-- TODO: Differentiate ASF content vs. Mission team content, and potentially embed content or cards for a more visually appealing presentation -->
+StoryMaps are an interactive web content format, hosted by [Esri](https://www.esri.com/en-us/arcgis/products/arcgis-storymaps/overview), which support interactive geospatial components, making them an engaging tool for presenting and demonstrating geospatial data capabilities.
 
 (nisar-storymaps)=
 ## NISAR StoryMaps

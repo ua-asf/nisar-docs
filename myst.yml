@@ -78,6 +78,9 @@ project:
       children:
         - file: appendices/acronyms.md
         - file: appendices/glossary.md
+    - file: contact/contact.md
+      children:
+        - file: contact/earthdata-forum-nisar.md
   abbreviations:
     ASF: Alaska Satellite Facility
     AWS: Amazon Web Services
