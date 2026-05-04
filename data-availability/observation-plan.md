@@ -23,6 +23,15 @@ NISAR Reference Observation Plan coverage maps for global ascending (a) and desc
 - There are some variations in coverage seasonally (e.g. over the poles as sea ice comes and goes), but largely the acquisition plan is intended to be static geographically to allow generation of consistent time series over the life of the mission. 
 ```
 
+## Observation Plan KMZ Files
+
+KMZ files for the observation plan are available for download from the [NISAR Data Overview](https://science.nasa.gov/mission/nisar/data/) page, including files for:
+
+- The extent of the [currently available pre-calibration data](#nisar-sample-data-feb) 
+- The most recent reference observation plan, indicating the coverage that will be available once [calibrated data](#timeline-calibrated-forward-processing) has been released
+
+<!-- #TODO: update this to remove the pre-calibration content once it's been replaced by the calibrated data. Also remove pre-calibration resources in the apps section -->
+
 (mnemonic-scheme)=
 ## Mnemonic Scheme
 
@@ -59,7 +68,7 @@ The mnemonic scheme for L-band radar modes is the following:
 
 The S-band mnemonic scheme is similar to L-band: 
 
-**S:XX:MM:BBP:DD:FFF**
+**S:XX:MM:BBP:WW:DD:FFF**
 
 @tbl:s-band-mnemonic-scheme describes each component in the S-band mnemonic scheme. 
 
@@ -73,9 +82,10 @@ The S-band mnemonic scheme is similar to L-band:
 | XX                  | Beam-forming mode (DB = beamform; DR = raw channels of the beamformer; NR = no beamforming)                                                                |
 | MM                  | Mode name (QP = quad pol; DH = dual pol HH/HV; SH = single pol HH; QD = HH in lower band, VV in upper band; QQ = HH/HV in lower band, VV/VH in upper band) |
 | BB                  | Bandwidth                                                                                                                                                  |
-| P                   | Pulse width  (W = wide, M = medium, N = narrow)                                                                                                            |        
+| P                   | Pulse width  (W = wide, M = medium, N = narrow)                                                                                                            |
+| WW                  | Swath width. **S-band acquisitions are always full swath, so this term is left off the mnemonic.**                                                         |
 | DD                  | Bit depth (B4 = 4 bit quantization, B3 = 3 bit quantization)                                                                                               |
-| FFF                 | Pulse repetition frequency scheme. For joint modes, the PRF scheme is left off the mnemonic because it is the same as the L-band PRF.                      |
+| FFF                 | Pulse repetition frequency scheme. **For joint modes, the PRF scheme is left off the mnemonic because it is the same as the L-band PRF.**                  |
 
 :::
 
