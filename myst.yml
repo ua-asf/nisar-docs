@@ -118,3 +118,4 @@ site:
     # analytics_google: G-F5XFWH0KYR
   parts:
     primary_sidebar_footer: ''
+    footer: footer.md
