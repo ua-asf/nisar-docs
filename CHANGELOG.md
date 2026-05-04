@@ -10,6 +10,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Site footer with contact information
 - Contact section with additional content on using the Earthdata Forum as the primary venue for asking questions about NISAR
+- Swath width description in the S-band mnemonic schema section
+- References to the observation plan kmz files available for download
 
 ## [0.4.6]
 
