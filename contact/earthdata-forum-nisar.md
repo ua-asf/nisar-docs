@@ -14,7 +14,9 @@ Users can search for NISAR-related content by [entering ***NISAR*** in the searc
 
 ## Posting on the Forum
 
-When you [post a new question](https://forum.earthdata.nasa.gov/posting.php?mode=post&f=7), make sure to add filter tags to ensure that the appropriate subject-matter experts are alerted of your post.
+To post to the Earthdata Forum, you will need to sign in with your [Earthdata Login](#earthdata-login) credentials.
+
+When you [post a new question](https://forum.earthdata.nasa.gov/posting.php?mode=post&f=7&), make sure to add filter tags to ensure that the appropriate subject-matter experts are alerted of your post.
 
 - Click on the **Major Projects** drop-down menu and select `NISAR` from the options. 
 - You may also want to select `ASF` from the **DAAC** drop-down menu, and any other tags that are appropriate to your post. 
