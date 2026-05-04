@@ -39,20 +39,21 @@ Source for the public documentation of the NASA-ISRO Synthetic Aperture Radar (N
 
 ### Page redirects
 
+Renaming the markdown file for an existing content page in nisar-docs changes the URL for that content, which can
+result in broken links. Myst does not have a builtin page redirect feature, so we implemented our own solution.
+
 > [!IMPORTANT]
 > These steps may change in the future, per https://github.com/ua-asf/nisar-docs/issues/93.
-> Please update this section as needed.
+> This section will be updated if a new approach is implemented.
 
-You may want to redirect one page to another, e.g. if you rename a page.
-Because Myst does not have a builtin page redirect feature, we created our own solution.
 To add a new page redirect, follow the steps below (for example, to redirect page `/foo` to `/bar`):
 
 1. Create a new subdirectory in [`redirects`](./redirects/) with the same name as the old page, e.g. `redirects/foo`.
 1. Copy the `index.html` file from one of the existing subdirectories into your new subdirectory,
    then edit the file to update all occurrences of the redirect URL.
-   For example, copy [`redirects/product-limitations/index.html`](./redirects/product-limitations/index.html)
-   to `redirects/foo/index.html` and then replace all `/product-known-issues` with `/bar`.
+   - For example, copy [`redirects/product-limitations/index.html`](./redirects/product-limitations/index.html)
+   to `redirects/foo/index.html`, then replace all references to `/product-known-issues` in the new file with `/bar`.
 1. Because the redirect feature depends on some custom build steps in the [deploy workflow](./.github/workflows/deploy.yml),
-   you won't be able to test your new redirect locally,
-   so you'll need to push to a fork with GitHub Pages enabled (see [Contributing](#contributing)).
-1. After deploying to your fork, confirm that `/foo` redirects to `/bar`.
+   you won't be able to test your new redirect locally.
+   You'll need to push to a fork with GitHub Pages enabled (see [Contributing](#contributing)) to verify redirect behavior.
+1. After the site for your fork has successfully rendered, confirm that `/foo` redirects to `/bar`.
