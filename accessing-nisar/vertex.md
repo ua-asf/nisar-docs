@@ -8,7 +8,7 @@ short_title: Vertex
 
 (vertex-overview)=
 ## Vertex
-[Vertex](https://search.asf.alaska.edu/#/?dataset=NISAR&prodConfig=PR) is ASF's web-based method to search for NISAR data products. Because search parameters for SAR differ from other types of Earth observation data, it can be helpful to use a platform that is tailored specifically for SAR data. This is useful for those who are less familiar with SAR data products and may need more guidance to find the appropriate data products for their use case. 
+[Vertex](https://search.asf.alaska.edu/#/?dataset=NISAR&prodConfig=PR) is ASF's web-based data search interface. It is optimized for searching NASA's SAR holdings, including NISAR. Because search parameters for SAR differ from other types of Earth observation data, it can be helpful to use a search platform tailored specifically for SAR data.
 
 ## Using Vertex to Access NISAR Data
 
