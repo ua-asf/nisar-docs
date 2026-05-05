@@ -38,7 +38,11 @@ Click on the **Map View** button and select `Antarctic Map View` to set the map 
 
 ### 2. Filter for desired products
 
-To search for a specific geographic region, click on the left-most **Area of Interest** button to choose to draw a point, line, polygon, box, circle, or to upload a geospatial file. Toggle on drawing mode to draw a region of interest, then press **Search** to update the search for the new region of interest.
+#### Geographic Extent
+
+To search for a specific geographic region, click on the left-most **Area of Interest** button to choose to draw a point, line, polygon, box, circle, or to upload a geospatial file. 
+
+Select a drawing mode to draw a region of interest on the map, then press **Search** to update the search results for the new region of interest.
 
 ```{figure} ../assets/vertex-geographic-search.png
 :label: vertex-geographic-search
@@ -61,6 +65,8 @@ To search for products in a specific date range, open the **Filters** panel and 
 
 The option to filter by date pops up after clicking on "Filters"
 ```
+
+#### NISAR Filters
 
 NISAR-specific filters are available to more precisely search for NISAR data products. Refer to the [Vertex Getting Started User Guide](https://docs.asf.alaska.edu/vertex/manual/#product-filters) for a comprehensive list of filters and search options. 
 
