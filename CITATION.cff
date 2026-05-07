@@ -1,0 +1,79 @@
+cff-version: 1.2.0
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+
+title: NISAR Data User Guide
+# doi: 10.5281/zenodo.XXXXXXX
+contact:
+  - name: NASA Earthdata Forum
+    website: https://forum.earthdata.nasa.gov/viewforum.php?f=7&keywords=NISAR
+  - name: ASF User Services
+    email: uso@asf.alaska.edu
+type: software
+license: CC0-1.0
+url: https://nisar-docs.asf.alaska.edu/
+repository-code: https://github.com/ua-asf/nisar-docs
+keywords:
+  - NISAR
+  - data
+  - remote sensing
+  - earth science
+  - land surface
+  - geomorphic landforms
+  - geomorphic processes
+  - solid earth
+  - tectonics
+  - agriculture
+  - forest science
+  - cryosphere
+  - glaciers
+  - ice sheets
+  - frozen ground
+authors:
+  - family-names: Kristenson
+    given-names: Heidi
+    affiliation: Alaska Satellite Facility, Geophysical Institute, University of Alaska Fairbanks, Fairbanks, AK USA
+    orcid: https://orcid.org/0000-0002-2130-4527
+    alias: hjkristenson
+  - given-names: Jacquelyn
+    family-names: Smale
+    affiliation: Alaska Satellite Facility, Geophysical Institute, University of Alaska Fairbanks, Fairbanks, AK USA
+    orcid: https://orcid.org/0000-0002-2749-5010
+    alias: jacquelynsmale
+  - given-names: Andrew
+    family-names: Johnston
+    affiliation: Alaska Satellite Facility, Geophysical Institute, University of Alaska Fairbanks, Fairbanks, AK USA
+    alias: asjohnston-asf
+  - given-names: Jake
+    family-names: Herrmann
+    affiliation: Alaska Satellite Facility, Geophysical Institute, University of Alaska Fairbanks, Fairbanks, AK USA
+    alias: jtherrmann
+  - given-names: Rudi
+    family-names: Gens
+    affiliation: Alaska Satellite Facility, Geophysical Institute, University of Alaska Fairbanks, Fairbanks, AK USA
+    orcid: https://orcid.org/0000-0002-1962-9787
+    alias: rudigens
+  - given-names: Joseph H
+    family-names: Kennedy
+    affiliation: Alaska Satellite Facility, Geophysical Institute, University of Alaska Fairbanks, Fairbanks, AK USA
+    orcid: https://orcid.org/0000-0002-9348-693X
+    alias: jhkennedy
+  - given-names: Jules
+    family-names: White
+    affiliation: Alaska Satellite Facility, Geophysical Institute, University of Alaska Fairbanks, Fairbanks, AK USA
+    alias: jwhite124
+  - given-names: Alex
+    family-names: Lewandowski
+    affiliation: Alaska Satellite Facility, Geophysical Institute, University of Alaska Fairbanks, Fairbanks, AK USA
+    orcid: https://orcid.org/0009-0006-9584-0687
+    alias: Alex-Lewandowski
+  - given-names: William
+    family-names: Horn
+    affiliation: Alaska Satellite Facility, Geophysical Institute, University of Alaska Fairbanks, Fairbanks, AK USA
+    alias: williamh890
+  - given-names: Heresh
+    family-names: Fattahi
+    affiliation: Jet Propulsion Laboratory, California Institute of Technology, Pasadena, CA, USA
+    orcid: https://orcid.org/0000-0001-6926-4387
+    alias: hfattahi
