@@ -15,28 +15,30 @@ We will update this page as efforts are released and new work is undertaken. If 
 :label: tbl:scheduled-work
 :align: center
 
-| Tool or Service                                | Type                   | Description                                                                                                 | Development Status |
-|------------------------------------------------|------------------------|-------------------------------------------------------------------------------------------------------------|--------------------|
-| NISAR GCOV Variable Subsetting                 | [Harmony](#ed-harmony) | Extract variable(s) from an HDF5 file, and save as Cloud-Optimized GeoTIFF(s)                               | In Progress        |
-| NISAR GCOV Worldview Visualization             | [GIBS](#ed-worldview)  | Daily RGB Decomposition mosaics of GCOV acquisitions available in NASA Worldview                            | In Progress        |
-| NISAR GCOV Image Service                       | [EGIS](#ed-egis)       | Image service of GCOV acquisitions published to Earthdata GIS                                               | Pending            |
-| NISAR GCOV Spatial Subsetting and Reprojection | [Harmony](#ed-harmony) | Clip full HDF5 file to specified spatial extent and optionally change the output projection and file format | Pending            |
-|                                                |                        |                                                                                                             |                    |
+| Tool or Service                                         | Type                       | Description                                                                               | Development Status |
+|---------------------------------------------------------|----------------------------|-------------------------------------------------------------------------------------------|--------------------|
+| NISAR GCOV Variable Subsetting                          | [Harmony](#ed-harmony)     | Extract variable(s) from an HDF5 file, and save as Cloud-Optimized GeoTIFF(s)             | In Progress        |
+| NISAR GCOV Worldview Visualization                      | [Worldview](#ed-worldview) | Daily RGB Decomposition mosaics of GCOV acquisitions available in NASA Worldview          | In Progress        |
+| NISAR GCOV Image Service                                | [EGIS](#ed-egis)           | Image service of GCOV acquisitions published to Earthdata GIS                             | Pending            |
+| NISAR GCOV Variable Spatial Subsetting and Reprojection | [Harmony](#ed-harmony)     | Clip variable COG to specified spatial extent and optionally change the output projection | Pending            |
+| NISAR GCOV Spatial Subsetting                           | [Harmony](#ed-harmony)     | Clip full HDF5 file to specified spatial extent                                           | Pending            |
 
 :::
 
 ### Unscheduled Development
 
-@tbl:unscheduled-work presents development efforts that we plan to undertake in the longer term.
+@tbl:unscheduled-work presents development efforts that we intend to undertake in the longer term. 
 
 :::{table} Tools and Services Development List
 :label: tbl:unscheduled-work
 :align: center
 
-| Tool or Service                | Type                   | Description                                                                   |
-|--------------------------------|------------------------|-------------------------------------------------------------------------------|
-| NISAR RSLC Variable Subsetting | [Harmony](#ed-harmony) | Extract variable(s) from an HDF5 file, and save as Cloud-Optimized GeoTIFF(s) |
-| NISAR RSLC Spatial Subsetting  | [Harmony](#ed-harmony) | Clip full HDF5 file or individual variable COG(s) to specified spatial extent |
+| Tool or Service                              | Type                       | Description                                                                   |
+|----------------------------------------------|----------------------------|-------------------------------------------------------------------------------|
+| Variable Subsetting for other NISAR products | [Harmony](#ed-harmony)     | Extract variable(s) from an HDF5 file, and save as Cloud-Optimized GeoTIFF(s) |
+| Spatial Subsetting for other NISAR products  | [Harmony](#ed-harmony)     | Clip full HDF5 file or individual variable COG(s) to specified spatial extent |
+| Additional Worldview visualizations          | [Worldview](#ed-worldview) | Publish additional visualization layers for display in Worldview              |
+
 
 :::
 
@@ -48,7 +50,7 @@ We will update this page as efforts are released and new work is undertaken. If 
 :label: tbl:unfunded-work
 :align: center
 
-| Tool or Service      | Type | Description                                                                                      |
-|----------------------|------|--------------------------------------------------------------------------------------------------|
-| Custom GUNW products | HyP3 | On-demand generation of GUNW products commensurate with mission products using custom date pairs |
-|                      |      |                                                                                                  |
+| Tool or Service      | Type                                      | Description                                                                                      |
+|----------------------|-------------------------------------------|--------------------------------------------------------------------------------------------------|
+| Custom GUNW products | [HyP3](https://hyp3-docs.asf.alaska.edu/) | On-demand generation of GUNW products commensurate with mission products using custom date pairs |
+|                      |                                           |                                                                                                  |
