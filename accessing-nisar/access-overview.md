@@ -17,7 +17,10 @@ A global collection of NISAR uncalibrated data products is now available to the 
 
 (earthdata-login)=
 :::{important}Accessing Data Using EDL Accounts
-Downloading NISAR data requires logging in with your [Earthdata Login (EDL)](https://urs.earthdata.nasa.gov/) account.  An EDL account is free to create and provides unified access to Earth science data distributed by [NASA'S Earth Observation System Data and Information System (EOSDIS)](https://www.earthdata.nasa.gov/about/esdis/eosdis), independent of the data provider.
+Downloading NISAR data requires logging in with your [Earthdata Login (EDL)](https://urs.earthdata.nasa.gov/) account.  An EDL account is free to create and provides unified access to Earth science data distributed by [NASA'S Earth Observation System Data and Information System (EOSDIS)](https://www.earthdata.nasa.gov/about/esdis/eosdis), independent of the data provider. 
+
+{button}`Earthdata Login Documentation <https://www.earthdata.nasa.gov/data/earthdata-login>`
+
 :::
 
 (map-based-web-applications)=
