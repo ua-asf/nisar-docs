@@ -8,7 +8,7 @@ short_title: Vertex
 
 (vertex-overview)=
 ## Vertex
-[Vertex](https://search.asf.alaska.edu/#/?dataset=NISAR&prodConfig=PR) is ASF's web-based method to search for NISAR data products. Because search parameters for SAR differ from other types of Earth observation data, it can be helpful to use a platform that is tailored specifically for SAR data. This is useful for those who are less familiar with SAR data products and may need more guidance to find the appropriate data products for their use case. 
+[Vertex](https://search.asf.alaska.edu/#/?dataset=NISAR&prodConfig=PR) is ASF's web-based data search interface. It is optimized for searching NASA's SAR holdings, including NISAR. Because search parameters for SAR differ from other types of Earth observation data, it can be helpful to use a search platform tailored specifically for SAR data.
 
 ## Using Vertex to Access NISAR Data
 
@@ -17,15 +17,34 @@ Navigate to [Vertex](https://search.asf.alaska.edu/#/?dataset=NISAR&prodConfig=P
 
 ```{figure} ../assets/vertex-dataset-selection.png
 :label: vertex-dataset-selection
-:alt: Image depicting the option to select "NISAR" from the "Datset" options. 
+:alt: Image depicting the option to select NISAR from the Datset options. 
 :align: center
 
-Click on the "Dataset" button and select "NISAR" to search for NISAR products. 
+Click on the **Dataset** field and select `NISAR` from the drop-down menu to search for NISAR products. 
 ```
+
+(vertex-antarctica)=
+#### Antarctica
+
+NISAR has great coverage over Antarctica. Users interested in this area may find it helpful to use the **Antarctic map projection** in Vertex, which renders acquisition footprints at high latitudes much better than the default global view.
+
+```{figure} ../assets/vertex-antarctic-map.png
+:label: vertex-antarctic-map-view
+:alt: Image illustrating how to use the Antarctic Map View in Vertex. 
+:align: center
+
+Click the **Antarctic map projection** button in the **Map View** section of the Vertex map toolbar to set the map to a south polar stereographic projection.
+```
+
+Note that the [**Layers**](https://docs.asf.alaska.edu/vertex/manual/#other-vertex-options) button in the toolbar is not available when using a polar map view, as only one basemap layer is available for each polar view.
 
 ### 2. Filter for desired products
 
-To search for a specific geographic region, click on the left-most **Area of Interest** button to choose to draw a point, line, polygon, box, circle, or to upload a geospatial file. Toggle on drawing mode to draw a region of interest, then press **Search** to update the search for the new region of interest.
+#### Geographic Extent
+
+To search for a specific geographic region, click on the left-most **Area of Interest** button to choose to draw a point, line, polygon, box, circle, or to upload a geospatial file. 
+
+Select a drawing mode to draw a region of interest on the map, then press **Search** to update the search results for the new region of interest.
 
 ```{figure} ../assets/vertex-geographic-search.png
 :label: vertex-geographic-search
@@ -34,6 +53,10 @@ To search for a specific geographic region, click on the left-most **Area of Int
 
 Choose a shape and draw an area of interest for a geographic search. 
 ```
+
+_Take care when drawing an AOI while in the [Antarctic Map View](#vertex-antarctica). Rectangular AOIs drawn over the South Pole can sometimes be translated into an unexpected polygon, resulting in either no results or many more (orders of magnitude) results than expected. If this occurs, try drawing an AOI to one side or the other of the pole._
+
+#### Date Range
 
 To search for products in a specific date range, open the **Filters** panel and specify a start and end date to define the search range. 
 
@@ -44,6 +67,8 @@ To search for products in a specific date range, open the **Filters** panel and 
 
 The option to filter by date pops up after clicking on "Filters"
 ```
+
+#### NISAR Filters
 
 NISAR-specific filters are available to more precisely search for NISAR data products. Refer to the [Vertex Getting Started User Guide](https://docs.asf.alaska.edu/vertex/manual/#product-filters) for a comprehensive list of filters and search options. 
 
@@ -90,7 +115,7 @@ Users can also search by **Track and Frame**. Note that "Track" is also known as
 
 Data are free and available to download through Vertex. Once the desired scene is selected, a list of files will appear on the right-hand side of the screen (or below the scene details on a narrow browser window). The HDF5 file, listed first, contains the science data and imagery. To learn more about HDF5 files, see @hdf5. 
 
-Click the download icon next to the HDF5 file name to save to your computer. You will be prompted to sign in with your [Earthdata Login (EDL)](https://urs.earthdata.nasa.gov/) account if you have not already. For more information about EDL accounts, see @earthdata-login. 
+Click the download icon next to the HDF5 file name to save to your computer. You will be prompted to sign in with your [Earthdata Login (EDL)](https://www.earthdata.nasa.gov/data/earthdata-login) account if you have not already.
 
 ```{figure} ../assets/vertex-download-files.png
 :label: vertex-download-files
