@@ -1,0 +1,22 @@
+name: Contributor Check
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+permissions:
+  contents: read
+  pull-requests: write # allows posting comments on PRs
+
+jobs:
+  contrib-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Contrib metadata check
+        uses: vuillaut/contrib-checker@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          mode: warn  # or 'fail' to make the workflow fail when contributors are missing
+          ignore_emails: "dependabot[bot]@users.noreply.github.com"
+          ignore_logins: "dependabot[bot],github-actions[bot]"

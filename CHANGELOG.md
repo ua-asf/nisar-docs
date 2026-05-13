@@ -4,6 +4,24 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.4.11]
+
+### Added
+- A GitHub Actions workflow to ensure all (git) contributors have been added to the `citation.cff` file
+- A `.mailmap` file to connect the varying ways contributors represent their names and emails to their entry in `citation.cff`
+
+## [0.4.10]
+
+### Added
+- A `citation.cff` file to provide citation metadata for this guide.
+- A GitHub action to validate chages to the `citation.cff` file.
+- Add Zenodo "project" DOI to README that will always resolve to the latest version on Zenodo. 
+
+## [0.4.9]
+
+### Added
+- Guidance for searching for products in Antarctica
+- More links to [Earthdata Login documentation](https://www.earthdata.nasa.gov/data/earthdata-login)
 
 ## [0.4.9] 
 
