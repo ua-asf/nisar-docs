@@ -69,18 +69,16 @@ project:
             title: NISAR Cookbook
     - title: Resources
       children:
+        - file: resources/earthdata-forum.md
+        - file: resources/webinars.md
         - file: tutorials/mission-homepage-tutorials.md
         - file: resources/documents.md
-        - file: resources/webinars.md
-        - file: resources/earthdata-forum.md
+        - file: appendices/acronyms.md
+        - file: appendices/glossary.md
     - file: applications/applications-overview.md
       children:
         - file: applications/amplitude.md
         - file: applications/phase.md
-    - title: Appendices
-      children:
-        - file: appendices/acronyms.md
-        - file: appendices/glossary.md
     - file: contact/contact.md
       children:
         - file: contact/earthdata-forum-nisar.md
