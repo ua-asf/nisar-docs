@@ -26,6 +26,7 @@ An HDF5 **group** is a folder within an HDF5 file. Groups can hold datasets, dat
 
 In this path, `science`, `LSAR`, `GCOV`, `grids`, and `frequencyA` are groups, and `HH` is a dataset contained within the `frequencyA` group.
 
+(h5-datasets)=
 ## Datasets
 
 An HDF5 **{abbr}`dataset(A collection of data values stored in an HDF5 file)`** is where the actual data lives. This might be an array or a table stored within the HDF5 file. Each dataset will include the data, a **{abbr}`dataspace(Describing the shape of the data)`**, a **{abbr}`datatype(What values are: integers, floats, etc)`**, and additional (optional) attributes such as units, range, time, and other descriptions.

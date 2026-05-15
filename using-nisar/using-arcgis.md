@@ -9,7 +9,9 @@ There are a number of Level 2 and 3 NISAR products that are suitable for use in 
 
 Support for the NISAR file format was added to ArcGIS Pro at version 3.4 (November 2024). Those using version 3.4.0 or newer are able to use NISAR products as they would any other HDF5 file in ArcGIS Pro. 
 
-When using older versions of ArcGIS Pro, [refer to this documentation](https://www.earthdata.nasa.gov/learn/tutorials/work-nisar-sample-data#ArcEarly) for guidance. 
+When using older versions of ArcGIS Pro, [refer to this documentation](https://www.earthdata.nasa.gov/learn/tutorials/work-nisar-sample-data#ArcEarly) for guidance.
+
+ArcGIS Pro refers to HDF5 [datasets](#h5-datasets) as variables, and this documentation page will use that term.
 
 ## NISAR in ArcGIS Tutorials
 
