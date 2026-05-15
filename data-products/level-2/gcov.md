@@ -13,7 +13,7 @@ Geocoded Polarimetric Covariance (GCOV) products provide calibrated backscatter 
 
 Due to the side-looking nature of NISAR, topography can significantly affect the magnitude of backscatter, with areas facing the sensor becoming artificially “brighter” (returning higher backscatter) than expected, which biases covariance measurements. To mitigate the effect of topography, an area-based RTC is applied to the covariance terms, normalizing the backscatter. The reference digital elevation model (DEM) for processing and RTC is based on the [Copernicus 30-m and 90-m DEM](https://dataspace.copernicus.eu/explore-data/data-collections/copernicus-contributing-missions/collections-description/COP-DEM). These normalized terms are then geocoded to the output grid using area-based adaptive multi-looking.
 
-GCOV products are projected to the appropriate UTM zone for their location and have a pixel spacing of 10 or 20 meters, depending on the acquisition location. They can be used directly in geospatial analysis platforms and workflows. Each product includes a covariance variable for each polarization available from the acquisition.
+GCOV products are projected to the appropriate UTM zone for their location and have a pixel spacing of 10 or 20 meters, depending on the acquisition location. They can be used directly in geospatial analysis platforms and workflows. Each product includes a covariance [dataset](#h5-datasets) for each polarization available from the acquisition.
 
 ## Product Specification
 
@@ -21,7 +21,7 @@ A complete description of NISAR GCOV products is available in @l2_gcov_product_s
 
 ## Data Layers
 
-A GCOV data product includes the following raster data sets. Complete descriptions of these data layers are available in @l2_gcov_product_specs2025 [Section 4.3].
+A GCOV data product includes the following raster datasets. Complete descriptions of these dataset layers are available in @l2_gcov_product_specs2025 [Section 4.3].
 
 ### Geocoded Polarimetric Covariance Terms
 

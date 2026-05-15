@@ -57,6 +57,9 @@ project:
         - file: using-nisar/using-arcgis.md
         - file: using-nisar/using-qgis.md
         - file: using-nisar/data-use-citation-guidance.md
+    - file: tools-services/tools-services-overview.md
+      children:
+        - file: tools-services/roadmap.md
     - file: tutorials/tutorials-overview.md
       children:
         - file: tutorials/storymaps.md
@@ -64,20 +67,18 @@ project:
           children:
           - url: https://asfopensarlab.github.io/NISAR_Cookbook/
             title: NISAR Cookbook
+    - title: Resources
+      children:
+        - file: resources/earthdata-forum.md
+        - file: resources/webinars.md
+        - file: tutorials/mission-homepage-tutorials.md
+        - file: resources/documents.md
+        - file: appendices/acronyms.md
+        - file: appendices/glossary.md
     - file: applications/applications-overview.md
       children:
         - file: applications/amplitude.md
         - file: applications/phase.md
-    - title: Resources
-      children:
-        - file: tutorials/mission-homepage-tutorials.md
-        - file: resources/documents.md
-        - file: resources/webinars.md
-        - file: resources/earthdata-forum.md
-    - title: Appendices
-      children:
-        - file: appendices/acronyms.md
-        - file: appendices/glossary.md
     - file: contact/contact.md
       children:
         - file: contact/earthdata-forum-nisar.md
@@ -88,19 +89,28 @@ project:
     DEM: Digital Elevation Model
     EDC: Earthdata Cloud
     EDL: Earthdata Login
+    EGIS: Earthdata GIS
     ESDIS: Earth Science Data and Information System
     GCOV: Geocoded Polarimetric Covariance
+    GIBS: Global Imagery Browse Services
     GIS: Geographic Information System
     GNSS: Global Navigation Satellite System
     GOFF: Geocoded Pixel Offsets
     GSLC: Geocoded Single Look Complex
     GUNW: Geocoded Unwrapped Interferogram
+    LOS: Line of Sight
     LUT: Lookup Table
     NISAR: NASA-ISRO Synthetic Aperture Radar
     NRB: Normalized Radar Backscatter
+    Q1: Jan/Feb/Mar
+    Q2: Apr/May/Jun
+    Q3: Jul/Aug/Sep
+    Q4: Oct/Nov/Dec
     RTC: Radiometric Terrain Correction; Radiometrically Terrain-Corrected
     SAR: Synthetic Aperture Radar
+    SET: Solid Earth Tides
     SNR: Signal-to-Noise Ratio
+    TEC: Total Electron Content
     UTM: Universal Transverse Mercator
     RFI: Radio Frequency Interference
     RIFG: Range Doppler Wrapped Interferogram

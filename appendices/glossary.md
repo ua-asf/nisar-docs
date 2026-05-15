@@ -21,20 +21,18 @@ Geolocation accuracy
 : The NISAR geolocation accuracy can be potentially affected by {term}`tropospheric delay`, {term}`solid earth tides (SET)` and {term}`ionospheric delay` [@yunjun2022].
 
 Ionospheric delay
-: At altitudes above ∼50 km, radiation (mainly from the Sun) ionizes atmospheric atoms and molecules forming the ionosphere. Its refractivity is mainly controlled by the {term}`total electron content`. The propagation of the microwave signal traveling through the ionosphere results in a group delay and a phase advance.
+: At altitudes above ∼50 km, radiation (mainly from the Sun) ionizes atmospheric atoms and molecules forming the ionosphere. Its refractivity is mainly controlled by the {term}`total electron content (TEC)`. The propagation of the microwave signal traveling through the ionosphere results in a group delay and a phase advance.
 
 Radio Frequency Interference (RFI)
 : The undesired signal in the form of wideband or narrowband interference that overlaps with the in-band frequency spectrum of NISAR. The main sources of high-power RFI are electromagnetic signals from civilian and military ground-based communication or radar platforms. RFI detection is performed on L0B raw data before focusing.
 
 Radiometric Terrain Correction (RTC)
-: The NISAR geocoded covariance (GCOV) product is radiometrically terrain
-corrected to normalize the SAR backscatter to gamma-naught $\gamma^0$. The GCOV algorithm is using an area-projection algorithm [@shiroma2022] to compute RTC correction factor and to geocode the data.
+: The NISAR geocoded covariance (GCOV) product is radiometrically terrain corrected to normalize the SAR backscatter to gamma-naught $\gamma^0$. The GCOV algorithm is using an area-projection algorithm [@shiroma2022] to compute RTC correction factor and to geocode the data.
 
 Solid Earth Tides (SET)
-: The motion of the Earth’s surface is driven by the gravitational pull from the Sun and the Moon (solid Earth tides), the change of the rotational axis (pole tides), the loading
-effects from the ocean tides (OTL), the atmospheric and hydrological loading as well as the surface deformation. Displacements from tidal and loading effects are periodic with different time scales and amplitudes [@yunjun2022]. SET often reaches 40 and 10 cm in vertical and horizontal directions, respectively [@iersConventions2010].
+: The motion of the Earth’s surface is driven by the gravitational pull from the Sun and the Moon (solid Earth tides), the change of the rotational axis (pole tides), the loading effects from the ocean tides (OTL), the atmospheric and hydrological loading as well as the surface deformation. Displacements from tidal and loading effects are periodic with different time scales and amplitudes [@yunjun2022]. SET often reaches 40 and 10 cm in vertical and horizontal directions, respectively [@iersConventions2010].
 
-Total Electron Content
+Total Electron Content (TEC)
 : Two components of the Total Electron Content (TEC) data from the Global Navigation Satellite System (GNSS) are sampled every 10 seconds along the NISAR orbit: the integrated TEC from surface to the GNSS orbit and the top-side TEC. The difference of the two results in sub-orbital TEC is used to estimate range delay and the azimuth shifts.
 
 Tropospheric delay
