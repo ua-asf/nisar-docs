@@ -21,7 +21,7 @@ Geolocation accuracy
 : The NISAR geolocation accuracy can be potentially affected by {term}`tropospheric delay`, {term}`solid earth tides (SET)` and {term}`ionospheric delay` [@yunjun2022].
 
 Ionospheric delay
-: At altitudes above ∼50 km, radiation (mainly from the Sun) ionizes atmospheric atoms and molecules forming the ionosphere. Its refractivity is mainly controlled by the {term}`total electron content`. The propagation of the microwave signal traveling through the ionosphere results in a group delay and a phase advance.
+: At altitudes above ∼50 km, radiation (mainly from the Sun) ionizes atmospheric atoms and molecules forming the ionosphere. Its refractivity is mainly controlled by the {term}`total electron content (TEC)`. The propagation of the microwave signal traveling through the ionosphere results in a group delay and a phase advance.
 
 Radio Frequency Interference (RFI)
 : The undesired signal in the form of wideband or narrowband interference that overlaps with the in-band frequency spectrum of NISAR. The main sources of high-power RFI are electromagnetic signals from civilian and military ground-based communication or radar platforms. RFI detection is performed on L0B raw data before focusing.
