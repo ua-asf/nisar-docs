@@ -108,7 +108,9 @@ project:
     Q4: Oct/Nov/Dec
     RTC: Radiometric Terrain Correction; Radiometrically Terrain-Corrected
     SAR: Synthetic Aperture Radar
+    SET: Solid Earth Tides
     SNR: Signal-to-Noise Ratio
+    TEC: Total Electron Content
     UTM: Universal Transverse Mercator
     RFI: Radio Frequency Interference
     RIFG: Range Doppler Wrapped Interferogram
