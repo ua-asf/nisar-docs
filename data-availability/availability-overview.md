@@ -56,7 +56,7 @@ Spatial extent of NISAR L-band data collection, highlighted in green.
 
 The NISAR project will generate Level 0-3 data products from all L-band data acquired since September 23, 2025. All L-band data products will be available to the public through the Alaska Satellite Facility.
 
-The nominal data release timeline as of April 2026 is described below.
+The nominal data release timeline as of May 2026 is described below.
 
 ### Jan 2026: Sample products
 An [initial release](https://www.earthdata.nasa.gov/news/nisar-sample-data-products-available) of 25 pre-calibration sample data products were made available on January 23, 2026. This release included one or more products of each of the nine Level 1-3 product types.
