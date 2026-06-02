@@ -13,7 +13,7 @@ NISAR launched July 30, 2025, and has been successfully collecting data through 
 
 A selection of pre-calibration NISAR Level-1 to Level-3 L-band products are available through the ASF DAAC. This large volume of global data allows users to develop workflows to access the data and metadata for each product type, to become familiar with the characteristics of the L-band products, and to begin working with the data in a substantive way.
 
-The user community can prepare for managing NISAR’s large data volumes and refine their processing pipelines in anticipation of full global production and release of calibrated data in the June 2026 timeframe. Users will find a rich and unprecedented collection of polarimetric and interferometric products to explore, with fine resolution, accurate geolocation, and full of bio/geophysical features.
+The user community can prepare for managing NISAR’s large data volumes and refine their processing pipelines in anticipation of full global production and release of calibrated data in [July 2026](#timeline-calibrated-forward-processing). Users will find a rich and unprecedented collection of polarimetric and interferometric products to explore, with fine resolution, accurate geolocation, and full of bio/geophysical features.
 
 ## Product Availability
 
@@ -38,7 +38,7 @@ A new instrument producing global data products for the first time will necessit
 
 See @product-known-issues for a list of known issues reported for the current data release.
 
-Fully calibrated and algorithmically improved global products are anticipated for release in the June 2026 timeframe.
+Fully calibrated and algorithmically improved global products are expected to be available starting [July 2026](#timeline-calibrated-forward-processing).
 
 (data-release-timeline)=
 ## Data Release Timeline

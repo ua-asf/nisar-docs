@@ -10,7 +10,7 @@ _Updated February 27, 2026_
 
 The NISAR project is still in the calibration and validation phase, and currently available products are not yet fully calibrated. Through processing of the global data, the project has learned about some unique characteristics of this first-of-a-kind radar system and has identified required algorithm updates. As a result, pre-calibration products have a number of features that are known to limit their use as science products and others that would be considered artifacts and are to be improved in future product releases.
 
-Nonetheless, the data are expected to be of sufficient quality that most users will benefit from an early look at the products. Fully calibrated and algorithmically improved global products are anticipated for release in the June 2026 timeframe.
+Nonetheless, the data are expected to be of sufficient quality that most users will benefit from an early look at the products. Fully calibrated and algorithmically improved global products are expected to be available starting [July 2026](#timeline-calibrated-forward-processing).
 
 ### Valid Data Mask
 

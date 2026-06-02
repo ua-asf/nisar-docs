@@ -14,4 +14,6 @@ This guide aims to help those who research and monitor the Earth find all the in
 
 _NISAR Satellite in Earth Orbit (Artist's Concept). Credit: NASA/JPL-Caltech_ 
 
+## Citation
 
+To cite content from this user guide, use the reference below or refer to https://doi.org/10.5281/zenodo.20218145 for more citation formats.
