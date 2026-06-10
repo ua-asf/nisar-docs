@@ -112,6 +112,7 @@ project:
     SNR: Signal-to-Noise Ratio
     TEC: Total Electron Content
     UTM: Universal Transverse Mercator
+    UR: Urgent Response
     RFI: Radio Frequency Interference
     RIFG: Range Doppler Wrapped Interferogram
     ROFF: Range Doppler Pixel Offsets
