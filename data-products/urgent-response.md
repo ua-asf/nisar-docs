@@ -18,7 +18,7 @@ Within 6 hours of acquisition, data should be processed to Level-2 productions. 
 
 :::
 
-Urgent Response requests are managed through a Smark Tasking Tool, where automated UR requests are triggered by earthquakes and volcanic events. UR products can also be manually requested by authorized users at US government agencies such as USGS and NOAA. Note that NISAR will not acquire data that would not have otherwise been acquired and that UR designation only prioritizes downlinking and processing for acquisitions already in the NISAR acquisition plan. 
+UR requests are managed through a Smark Tasking Tool, where automated UR requests are triggered by earthquakes and volcanic events. UR products can also be manually requested by authorized users at US government agencies such as USGS and NOAA. Note that NISAR will not acquire data that would not have otherwise been acquired and that UR designation only prioritizes downlinking and processing for acquisitions already in the NISAR acquisition plan. 
 
 ### Naming Convention
 UR products use the same naming convention as standard @naming-conventions, but the `Product Identifier` parameter will be `UR` and the `Location` will be `J`, since these products are processed at the Jet Propulsion Laboratory.  For example, a RSLC UR product would have the name: 
