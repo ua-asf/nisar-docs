@@ -70,7 +70,7 @@ After the calibration phase concludes and planned software improvements are comp
 
 Fully-calibrated Level 0-3 products will be continuously generated from all data acquired from the start of forward processing into the future. This includes data for all areas shown in @data-acquisition-extent and in the [NISAR Reference Observation Plan](#nisar-reference-observation-plan).
 
-New data will be continuously published to ASF and made publicly available. Level 1-3 products will have a nominal latency of 1-3 days from data acquisition to availability. This will also include the initial public release of [L0B RRSD](#rrsd-product-overview) products, which will have a nominal latency of 6-12 hours.
+New data will be continuously published to ASF and made publicly available. Level 1-3 products will have a nominal latency of 36-72 hours from data acquisition to availability. This will also include the initial public release of [L0B RRSD](#rrsd-product-overview) products, which will have a nominal latency of 1-12 hours.
 
 ### Q3-4 2026: Calibrated back processing
 
