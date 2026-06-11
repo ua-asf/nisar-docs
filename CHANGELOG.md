@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.4.16]
 
 ### Added
-- - [Urgent Response product page](data-products/urgent-response.md)
+- [Urgent Response product page](data-products/urgent-response.md)
 
 ## [0.4.15]
 
