@@ -90,7 +90,7 @@ NISAR is equipped to acquire data in two slightly different frequencies. @tbl:ar
 
 <table style="border: 2px solid #000">
     <tr>
-        <td rowspan="2" align="center" style="vertical-align: bottom; border: 1px solid #000"><strong>L-band bandwdith [MHz]</strong></td>
+        <td rowspan="2" align="center" style="vertical-align: bottom; border: 1px solid #000"><strong>L-band bandwidth [MHz]</strong></td>
         <td colspan="2" align="center" style="border: 1px solid #000"><strong>Center frequency [MHz]</strong></td>
     </tr>
     <tr>

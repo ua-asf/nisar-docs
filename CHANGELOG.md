@@ -4,10 +4,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.4.16]
+## [0.4.18]
 
 ### Added
 - [Urgent Response product page](data-products/urgent-response.md)
+
+## [0.4.17]
+
+## Changed
+- Updated development status of the Harmony GCOV dataset extraction service (released June 2026)
+
+## [0.4.16]
+
+## Changed
+- Updated data release timeline with more precise latency estimates for forward processing.
 
 ## [0.4.15]
 
