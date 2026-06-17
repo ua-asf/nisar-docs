@@ -5,7 +5,7 @@ short_title: Urgent Response
 # NISAR Urgent Response Products
 
 (urgent-response-product-overview)=
-##  Urgent Response Product Overview
+## Urgent Response Product Overview
 
 NISAR is a powerful tool for monitoring surface dynamics, but most NISAR products are not made available until 36-72 hours after data acquisition.
 
@@ -44,8 +44,6 @@ Example RSLC UR product filename:
 
 NISAR_L1_**UR**_RSLC_001_005_A_219_4020_SVNA_A_20220104T182346_20220104T183426_P01101_M_F_J_001.h5
 
-
-
 ### Ancillary Data 
 
 UR products include lower precision orbit files and have fewer ancillary data layers than PR products. UR products are processed using Forecast Orbit Ephemera (FOE), which are preliminary predicted and lowest data quality of the @orbit-ephemeris-datasets. A comparison of ancillary data layers in Production and UR products is described in @tbl:ur-ancillary-data-layers. 
@@ -80,6 +78,7 @@ To search for UR products in [Vertex](#vertex-overview), select `Urgent Response
 Search for Urgent Response products in Vertex by selecting `Urgent Response` in the **Product Configuration** dropdown menu in the **Product Filters** section.  
 ```
 
+(ur-earthdata-search)=
 ### Earthdata Search
 
 The easiest way to search for UR datasets in [Earthdata Search](#earthdata-search-overview) is to type `nisar_ur` into the search bar. This will return only the NISAR UR collections in your search results. 
@@ -93,4 +92,3 @@ Search for Urgent Response products in Earthdata Search by typing `nisar_ur` int
 ```
 
 Unlike the PR products, there is one NISAR UR collection for each [product level](#nisar-product-levels), rather than a collection for each product type. As such, different product types may be included in each UR collection.
-
