@@ -1,3 +1,7 @@
+---
+short_title: Naming Conventions
+---
+
 (nisar-naming-conventions)=
 # NISAR Naming Conventions
 
