@@ -9,7 +9,7 @@ short_title: Urgent Response
 
 NISAR is a powerful tool for monitoring surface dynamics, but most standard NISAR products are not made available until 36-72 hours after data acquisition.
 
-NISAR Urgent Response (UR) products provide expedited processing in response to major events or natural disasters, such as earthquakes, volcanic activity, flooding, or wildfires. Acquisitions designated for UR data delivery will be flagged for rapid downlink and processing to provide [lower-latency](#ur-latency) data in support of response efforts.
+NISAR Urgent Response (UR) products provide expedited processing in response to major events or natural disasters, such as earthquakes, volcanic activity, flooding, or wildfires. Acquisitions designated for UR data delivery will be flagged for rapid downlink and expedited processing to provide [lower-latency](#ur-latency) data in support of response efforts.
 
 UR products use lower-quality orbit ephemeris files for product processing than are used to process standard Production (PR) products, and do not have all atmospheric corrections applied. This may impact data quality, but allows the UR products to be made available much more quickly than PR products. Users should consider whether these tradeoffs are acceptable for their use case. 
 
@@ -34,9 +34,9 @@ Refer to @tbl:ur-processing-estimates for a comparison of data processing latenc
 
 ### Tasking
 
-NISAR's Smart Tasking Tool triggers UR requests automatically in response to earthquakes greater than 7.0 magnitude and less than 50 km deep, and volcanic events that trigger volcano observatory notices. UR products can also be manually requested by authorized users at government agencies such as USGS and NOAA. 
+The NISAR mission system is capable of providing revised scheduling for new acquisitions in response to an event or an event forecast notification, and delivering data on an expedited timeline. This capability will be used when possible, providing that it does not interfere with the base [NISAR observation plan](#nisar-reference-observation-plan).
 
-The UR designation only prioritizes expedited downlinking and processing for acquisitions already in the [NISAR acquisition plan](#nisar-reference-observation-plan). It is not designed to support requests for acquisitions that deviate from the existing plan.
+NISAR's Smart Tasking Tool triggers UR requests automatically in response to earthquakes greater than 7.0 magnitude and less than 50 km deep, and volcanic events that trigger volcano observatory notices. UR products can also be manually requested by authorized users at government agencies such as USGS and NOAA.
 
 ### Naming Convention
 
