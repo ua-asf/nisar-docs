@@ -7,7 +7,7 @@ short_title: Urgent Response
 (urgent-response-product-overview)=
 ## Urgent Response Product Overview
 
-NISAR is a powerful tool for monitoring surface dynamics, but most NISAR products are not made available until 36-72 hours after data acquisition.
+NISAR is a powerful tool for monitoring surface dynamics, but most standard NISAR products are not made available until 36-72 hours after data acquisition.
 
 NISAR Urgent Response (UR) products provide expedited processing in response to major events or natural disasters, such as earthquakes, volcanic activity, flooding, or wildfires. Acquisitions designated for UR data delivery will be flagged for rapid downlink and processing to provide [lower-latency](#ur-latency) data in support of response efforts.
 
