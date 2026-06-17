@@ -67,12 +67,12 @@ UR products include lower precision orbit files and have fewer ancillary data la
 
 :::
 
-### Finding UR Products 
+## Finding UR Products 
 
 UR products can be found using the same [search and discovery mechanisms](#nisar-access-overview) as PR products.
 
 (ur-vertex)=
-#### Vertex
+### Vertex
 
 To filter for UR products in [Vertex](#vertex-overview), select `Urgent Response` under the **Product Configuration** filter in the **Product Filters** section, as shown in @vertex-urgent-response-filter. 
 
