@@ -13,7 +13,7 @@ NISAR Urgent Response (UR) products provide expedited processing in response to 
 
 UR products use lower-quality orbit ephemeris files for product processing than are used to process standard Production (PR) products, and do not have all atmospheric corrections applied. This may impact data quality, but allows the UR products to be made available much more quickly than PR products. Users should consider whether these tradeoffs are acceptable for their use case. 
 
-PR products will still be generated at the usual [latency](#ur-latency) for acquisitions flagged for UR processing. UR products are retained in the archive for 30 days, after which only the PR products will be available.
+Acquisitions flagged for UR processing will still have PR products generated at the usual [latency](#ur-latency). UR products are retained in the archive for 30 days, after which only the PR products will be available.
 
 (ur-latency)=
 ### Latency
