@@ -38,6 +38,8 @@ The NISAR mission system is capable of providing revised scheduling for new acqu
 
 NISAR's Smart Tasking Tool triggers UR requests automatically in response to earthquakes greater than 7.0 magnitude and less than 50 km deep, and volcanic events that trigger volcano observatory notices. UR products can also be manually requested by authorized users at government agencies such as USGS and NOAA.
 
+In most cases, UR products will be generated for acquisitions that are already in the reference observation plan. The acquisitions will simply be prioritized for downlink and flagged for expedited processing. Only in rare circumstances would additional acquisitions be considered.
+
 ### Naming Convention
 
 UR products use the same [naming conventions](#naming-convention-overview) as standard NISAR products. They can be identified by the **Product Identifier** component, which is `UR` for Urgent Response instead of `PR` for Production.
