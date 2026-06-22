@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - [Urgent Response product page](data-products/urgent-response.md)
 
+## Changed
+- Added trailing slash to URLs in sitemap.xml when deploying to GitHub pages. Fixes https://github.com/ua-asf/nisar-docs/issues/144.
+
 ## [0.4.17]
 
 ## Changed

@@ -55,6 +55,7 @@ jobs:
           cp -rv redirects/*/ _build/html/
 
           sed -i -e "s|http://localhost:3000|$DOMAIN$BASE_URL|g" $(grep -RIl "http://localhost:3000" ./_build)
+          sed -i "s|</loc>|/</loc>|g" ./_build/html/sitemap.xml
 
       - uses: actions/upload-pages-artifact@v4
         with:
