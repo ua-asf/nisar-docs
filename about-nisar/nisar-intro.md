@@ -6,7 +6,7 @@
 
 NISAR is a joint Earth-observing mission between the [National Aeronautics and Space Administration (NASA)](https://www.nasa.gov/) and the [Indian Space Research Organization (ISRO)](https://www.isro.gov.in/), with the goal to make global measurements of the causes and consequences of land surface changes using advanced radar imaging. Access to NISAR mission data is free and open.
 
-The NISAR platform collects data using both L-band and S-band SAR sensors. L-band data is collected globally, providing acquisitions over most landmasses and sea ice on a regular repeat cycle, while S-band data is collected over select areas, as described in the [mission observation plan](#nisar-reference-observation-plan). NASA hosts the data acquired by the L-band sensor, and ISRO hosts the data collected by the S-band sensor.
+The NISAR platform collects data using both [L-band](#l-band) and [S-band](#s-band) SAR sensors. L-band data is collected globally, providing acquisitions over most landmasses and sea ice on a regular repeat cycle, while S-band data is collected over select areas, as described in the [mission observation plan](#nisar-reference-observation-plan). NASA hosts the data acquired by the L-band sensor, and ISRO hosts the data collected by the S-band sensor.
 
 The mission concept and the resulting partnership were in response to the [National Academy of Science's 2007 Decadal Survey](https://doi.org/10.17226/11820) [@decadalSurvey2007] of Earth observational priorities for the next decade. 
 
@@ -77,7 +77,13 @@ A more detailed description of the NISAR instrument design is in section 4.7 of 
 
 ### Bands
 
+(l-band)=
+#### L-Band
+
 The L-band Synthetic Aperture Radar (L-SAR) instrument is the focus of the NASA-chartered science goals for NISAR, and provides global coverage. The L-SAR is a side-looking, fully polarimetric, interferometric SAR at a wavelength of 24 cm. Most acquisitions have a swath width of about 240 km, an along-track resolution of 7 m, and a cross-track resolution of 2 to 8 m (depending on mode).
+
+(s-band)=
+#### S-Band
 
 The S-band SAR (S-SAR) instrument, developed in a collaboration between NASA and the Indian Space Research Organization (ISRO), operates at a wavelength of 9.3 cm and is primarily used for acquisitions over India.
 
