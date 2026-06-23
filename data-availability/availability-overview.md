@@ -4,16 +4,16 @@ short_title: Available Data
 
 # Available NISAR Data
 
-NISAR launched July 30, 2025, and has been successfully collecting data through its Commissioning phase and into the Science phase. The calibration-validation process is underway, and a selection of pre-calibration L-band data generated from NISAR acquisitions is available to the public.
+NISAR launched July 30, 2025, and has been successfully collecting data through its Commissioning phase and into the Science phase. The calibration-validation process is underway, and a selection of [pre-calibration L-band data](#nisar-sample-data-feb) generated from NISAR acquisitions is available to the public.
 
-A limited set of [NISAR S-band sample data products](https://bhoonidhi.nrsc.gov.in/NISAR/NisarProducts.html) is now also available through ISRO's [Bhoonidhi data hub](https://bhoonidhi.nrsc.gov.in/bhoonidhi/home.html. This product release includes RSLC, GSLC, and GCOV products generated from NISAR acquisitions in January and February 2026. Refer to the [Bhoonidhi NISAR Mission site](https://bhoonidhi.nrsc.gov.in/NISAR/) for more information.
+In addition, a limited set of [NISAR S-band sample data products](https://bhoonidhi.nrsc.gov.in/NISAR/NisarProducts.html) can now be accessed through ISRO's [Bhoonidhi data hub](https://bhoonidhi.nrsc.gov.in/bhoonidhi/home.html). This S-band product release includes RSLC, GSLC, and GCOV products generated from NISAR acquisitions in January and February 2026. Refer to the [Bhoonidhi NISAR Mission site](https://bhoonidhi.nrsc.gov.in/NISAR/) for more information.
 
 (nisar-sample-data-feb)=
-## NISAR L-Band Pre-Calibration Data: February 2026
+## NISAR Pre-Calibration Data: February 2026
 
 {button}`Find NISAR L-Band Data <https://search.asf.alaska.edu/#/?dataset=NISAR&prodConfig=PR&resultsLoaded=true>`
 
-A selection of pre-calibration NISAR Level-1 to Level-3 L-band products are available through the ASF DAAC. This large volume of global data allows users to develop workflows to access the data and metadata for each product type, to become familiar with the characteristics of the L-band products, and to begin working with the data in a substantive way.
+A selection of pre-calibration NISAR L-band Level-1 to Level-3 products are available through the ASF DAAC. This large volume of global data allows users to develop workflows to access the data and metadata for each product type, to become familiar with the characteristics of the L-band products, and to begin working with the data in a substantive way.
 
 The user community can prepare for managing NISAR’s large data volumes and refine their processing pipelines in anticipation of full global production and release of calibrated data in [July 2026](#timeline-calibrated-forward-processing). Users will find a rich and unprecedented collection of polarimetric and interferometric products to explore, with fine resolution, accurate geolocation, and full of bio/geophysical features.
 
