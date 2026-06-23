@@ -6,7 +6,10 @@
 
 NISAR is a joint Earth-observing mission between the [National Aeronautics and Space Administration (NASA)](https://www.nasa.gov/) and the [Indian Space Research Organization (ISRO)](https://www.isro.gov.in/), with the goal to make global measurements of the causes and consequences of land surface changes using advanced radar imaging. Access to NISAR mission data is free and open.
 
-The NISAR platform collects data using both [L-band](#l-band) and [S-band](#s-band) SAR sensors. L-band data is collected globally, providing acquisitions over most landmasses and sea ice on a regular repeat cycle, while S-band data is collected over select areas, as described in the [mission observation plan](#nisar-reference-observation-plan). NASA hosts the data acquired by the L-band sensor, and ISRO hosts the data collected by the S-band sensor.
+The NISAR platform collects data using both [L-band](#l-band) and [S-band](#s-band) SAR sensors. NASA hosts the data acquired by the L-band sensor, and ISRO hosts the data collected by the S-band sensor.
+
+- L-band data is collected globally, providing acquisitions over most landmasses and sea ice on a regular repeat cycle.
+- S-band data is collected over select areas, as described in the [mission observation plan](#nisar-reference-observation-plan). 
 
 The mission concept and the resulting partnership were in response to the [National Academy of Science's 2007 Decadal Survey](https://doi.org/10.17226/11820) [@decadalSurvey2007] of Earth observational priorities for the next decade. 
 
@@ -75,12 +78,28 @@ SweepSAR technique, which allows full-resolution, multipolarimetric observations
 
 A more detailed description of the NISAR instrument design is in section 4.7 of the [NISAR Mission Handbook](https://doi.org/10.48577/jpl.UD4HV3) [@nisarMissionHandbook2025].
 
+### Look Direction
+
+NISAR is a left-looking mission, which allows complete coverage over Antarctica. The tradeoff is an area without coverage in the Arctic around the north pole (@arctic-gap). 
+
+```{figure} ../assets/north-pole-hole.png
+:label: arctic-gap
+:alt: Figure illustrating the area around the north pole where NISAR acquisitions are not available
+:align: center
+
+Area around the north pole where NISAR aquisitions are not available, as visualized in the [NISAR Reference Observation Plan app](http://localhost:3000/observation-plan#ref-obs-plan-app).
+```
+
 ### Bands
+
+The NISAR mission collects data using two different SAR sensors, each acquiring data in a different [band](https://www.earthdata.nasa.gov/learn/earth-observation-data-basics/sar#toc-the-roles-of-frequency-and-wavelength), or range of wavelengths.
 
 (l-band)=
 #### L-Band
 
-The L-band Synthetic Aperture Radar (L-SAR) instrument is the focus of the NASA-chartered science goals for NISAR, and provides global coverage. The L-SAR is a side-looking, fully polarimetric, interferometric SAR at a wavelength of 24 cm. Most acquisitions have a swath width of about 240 km, an along-track resolution of 7 m, and a cross-track resolution of 2 to 8 m (depending on mode).
+The L-band Synthetic Aperture Radar (L-SAR) instrument is the focus of the NASA-chartered science goals for NISAR, and provides global coverage. The L-SAR instrument operates at a wavelength of 24 cm. 
+
+Most L-band acquisitions have a swath width of about 240 km, an along-track resolution of 7 m, and a cross-track resolution of 2 to 8 m (depending on mode).
 
 (s-band)=
 #### S-Band
