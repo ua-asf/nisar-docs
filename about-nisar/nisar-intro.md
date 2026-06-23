@@ -6,7 +6,7 @@
 
 NISAR is a joint Earth-observing mission between the [National Aeronautics and Space Administration (NASA)](https://www.nasa.gov/) and the [Indian Space Research Organization (ISRO)](https://www.isro.gov.in/), with the goal to make global measurements of the causes and consequences of land surface changes using advanced radar imaging. Access to NISAR mission data is free and open.
 
-<!-- TODO: add basic content about the SAR sensor (L-band, etc.) -->
+The NISAR platform collects data using both L-band and S-band SAR sensors. L-band data is collected globally, providing acquisitions over most landmasses and sea ice on a regular repeat cycle, while S-band data is collected over select areas, as described in the [mission observation plan](#nisar-reference-observation-plan). NASA hosts the data acquired by the L-band sensor, and ISRO hosts the data collected by the S-band sensor.
 
 The mission concept and the resulting partnership were in response to the [National Academy of Science's 2007 Decadal Survey](https://doi.org/10.17226/11820) [@decadalSurvey2007] of Earth observational priorities for the next decade. 
 
