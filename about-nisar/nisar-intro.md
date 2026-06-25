@@ -61,7 +61,7 @@ JPL generates a suite of products from NISAR mission data, ranging from Level 0 
 
 The [Alaska Satellite Facility (ASF)](https://asf.alaska.edu/) Distributed Active Archive Center (DAAC) has been selected to archive the data from the NISAR mission. ASF maintains the NASA archive of Synthetic Aperture Radar (SAR) data from various satellites and aircraft, providing these data and associated services to the public in support of NASA’s Earth Science Data and Information System ([ESDIS](https://earthdata.nasa.gov/about/esdis-project?_ga=2.174193322.963840534.1558367114-1499519562.1541105389)) project.
 
-ASF will utilize NASA's [Earthdata Cloud](https://www.earthdata.nasa.gov/about/earthdata-cloud-evolution) for processing, storage and distribution of the data. This environment leverages Amazon Web Service (AWS) infrastructure, allowing datasets to be accessed directly and efficiently in cloud computing workflows. 
+ASF utilizes NASA's [Earthdata Cloud](https://www.earthdata.nasa.gov/about/earthdata-cloud-evolution) for processing, storage and distribution of the data. This environment leverages Amazon Web Service (AWS) infrastructure, allowing datasets to be accessed directly and efficiently in cloud computing workflows. 
 
 (nisar-instrumentation)=
 ## NISAR Instrumentation
