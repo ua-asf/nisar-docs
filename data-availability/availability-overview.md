@@ -56,7 +56,7 @@ Spatial extent of NISAR L-band data collection, highlighted in green.
 <span style="font-size: 12px;">_Basemap credits: Esri, TomTom, Garmin, FAO, NOAA, USGS, (c) OpenStreetMap contributors, and the GIS User Community._</span>
 ```
 
-The NISAR project will generate Level 0-3 data products from all L-band data acquired since September 23, 2025. All L-band data products will be available to the public through the Alaska Satellite Facility.
+All L-band data products processed by the mission will be available to the public through the Alaska Satellite Facility.
 
 The nominal data release timeline as of June 2026 is described below.
 
