@@ -85,10 +85,10 @@ NISAR-specific filters in Vertex.
 :::{table} Product Filters for NISAR Products
 :label: tbl:vertex-product-filters
 
-| Product Filters       | Description                                                                                           |
-|-----------------------|-------------------------------------------------------------------------------------------------------|
-| Science Product       | Specific product type, grouped by product level. Multiple selections allowed.                         |
-| Product Configuration | Specific processing pipelines, including Production and Urgent Response. Multiple selections allowed. |
+| Product Filters       | Description                                                                                                                                |
+|-----------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
+| Science Product       | Specific product type, grouped by product level. Multiple selections allowed.                                                              |
+| Product Configuration | Specific processing pipelines, including Production and [Urgent Response](#urgent-response-product-overview). Multiple selections allowed. |
 
 :::
 
