@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - [Urgent Response product page](data-products/urgent-response.md)
 - Information about S-band data availability and access through [Bhoonidhi](https://bhoonidhi.nrsc.gov.in/bhoonidhi/index.html)
+- Additional information about look direction and polarizations on the [About NISAR page](https://nisar-docs.asf.alaska.edu/nisar-intro/)
 
 ## Changed
 - Added trailing slash to URLs in sitemap.xml when deploying to GitHub pages. Fixes https://github.com/ua-asf/nisar-docs/issues/144.
