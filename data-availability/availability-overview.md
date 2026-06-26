@@ -68,14 +68,13 @@ A [larger volume](https://www.earthdata.nasa.gov/news/nisar-release-over-100000-
 
 (timeline-calibrated-forward-processing)=
 ### Jul 2026: Provisional forward processing
-After the calibration phase concludes and planned software improvements are completed, the NISAR project will begin forward processing of newly-acquired data. These datasets will be marked as PROVISIONAL, indicating that they are calibrated and partially validated, but processing improvements are still underway. Provisional datasets will be released in the second half of July 2026.
+After the calibration phase concludes and planned software improvements are completed, the NISAR project will begin forward processing of newly-acquired data. These datasets will be marked as PROVISIONAL, indicating that they are calibrated and partially validated, but processing improvements are still underway. Provisional datasets will be released in the second half of July 2026, including all acquisitions starting from June 17, 2026.
 
-Fully-calibrated Level 0-3 products will be continuously generated and made publicly available for all acquisitions starting June 19, 2026. This includes data for all areas shown in @data-acquisition-extent and in the [NISAR Reference Observation Plan](#nisar-reference-observation-plan). 
+This release will be the first to include [L0B RRSD](#rrsd-product-overview) products, which will have a nominal latency of 2-10 hours from data acquisition to availability. Level 1-3 products will have a nominal latency of 36-72 hours. Products will be continuously generated and made publicly available for all areas shown in @data-acquisition-extent and in the [NISAR Reference Observation Plan](#nisar-reference-observation-plan). 
 
-This release will also serve as the first public release of [L0B RRSD](#rrsd-product-overview) products, which will have a nominal latency of 2-10 hours from data acquisition to availability. Level 1-3 products will have a nominal latency of 36-72 hours.
-
+(validated-reprocessing)=
 ### Q4 2026: Validated reprocessing
 
-After the start of forward processing, additional validation and algorithm improvements will be made using the provisional data. Once the products are fully validated, the NISAR project will transition to generating validated products and begin a reprocessing campaign. These validated products will supersede any earlier versions of the data in the archive.
+After the start of forward processing, additional validation will take place using the provisional data, resulting in algorithm improvements. Once the products are fully validated, the NISAR project will transition to generating validated products with a new version of the processor and begin a reprocessing campaign. These validated products will supersede any earlier versions of the data in the archive.
 
 This reprocessing campaign will generate new versions of Level 0-3 products from the global backlog of all L-band data collected during the science phase of the mission. Data products will be continually published to ASF and made publicly available as they are generated during the reprocessing effort, which is expected to be complete by the end of 2026.
