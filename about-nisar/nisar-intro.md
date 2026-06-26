@@ -158,7 +158,7 @@ Frequency B data is collected primarily for use in atmospheric corrections, but 
 
 The polarization refers to the direction that an electromagnetic wave travels. This can be horizontal, vertical, or circular. Circular polarizations, where the wave is rotating in a constant plane to the left or right, are much less commonly used for SAR sensors than linear (horizontal or vertical) polarizations. 
 
-<!-- Add figure or link to polarization section in hyp3-docs -->
+<!-- Add figure or link to polarization section in hyp3-docs or reference https://www.earthdata.nasa.gov/learn/earth-observation-data-basics/sar#toc-polarization-and-scattering-mechanisms -->
 
 The antennas of a SAR system can be configured to transmit and receive electromagnetic waves using various combinations of these polarizations. The polarimetric properties of the observed surface can reveal the structure, orientation and environmental conditions of the surface elements.
 
