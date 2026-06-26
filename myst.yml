@@ -102,24 +102,26 @@ project:
     LUT: Lookup Table
     NISAR: NASA-ISRO Synthetic Aperture Radar
     NRB: Normalized Radar Backscatter
+    PAGER: Prompt Assessment of Global Earthquakes for Response
     PR: Production
     Q1: Jan/Feb/Mar
     Q2: Apr/May/Jun
     Q3: Jul/Aug/Sep
     Q4: Oct/Nov/Dec
+    RFI: Radio Frequency Interference
+    RIFG: Range Doppler Wrapped Interferogram
+    ROFF: Range Doppler Pixel Offsets
+    RRSD: Radar Raw Signal Data
+    RSLC: Range Doppler Single Look Complex
     RTC: Radiometric Terrain Correction; Radiometrically Terrain-Corrected
+    RUNW: Range Doppler Unwrapped Interferogram
     SAR: Synthetic Aperture Radar
     SET: Solid Earth Tides
     SNR: Signal-to-Noise Ratio
     TEC: Total Electron Content
     UTM: Universal Transverse Mercator
     UR: Urgent Response
-    RFI: Radio Frequency Interference
-    RIFG: Range Doppler Wrapped Interferogram
-    ROFF: Range Doppler Pixel Offsets
-    RRSD: Radar Raw Signal Data
-    RSLC: Range Doppler Single Look Complex
-    RUNW: Range Doppler Unwrapped Interferogram
+
 site:
   template: book-theme
   options:

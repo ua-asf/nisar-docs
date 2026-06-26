@@ -36,19 +36,23 @@ Refer to @tbl:ur-processing-estimates for a comparison of data processing latenc
 
 ### Tasking
 
-The NISAR mission system is capable of providing revised scheduling for new acquisitions in response to an event or an event forecast notification, and delivering data on an expedited timeline. This capability will be used when possible, providing that it does not interfere with the base [NISAR observation plan](#nisar-reference-observation-plan).
-
-In most cases, UR products will be generated for acquisitions that are already in the reference observation plan. The acquisitions will simply be prioritized for downlink and flagged for expedited processing. Only in rare circumstances would additional acquisitions be considered.
+NISAR UR tasking is initiated through a combination of automatic and manual requests. In most cases, UR products will be generated for acquisitions that are already in the [reference observation plan](#nisar-reference-observation-plan). The acquisitions will simply be prioritized for downlink and flagged for expedited processing. 
 
 NISAR's Smart Tasking Tool triggers UR requests automatically in response to:
 
 - Significant earthquakes 
     - Earthquake with USGS [Prompt Assessment of Global Earthquakes for Response (PAGER)](https://earthquake.usgs.gov/data/pager/background.php) level of Orange or Red
-    - Earthquake is in U.S. or India and has a PAGER level of Yellow
-    - Earthquake is in U.S. or India and is greater than 7.0 magnitude and less than 50 km deep
+    - The epicenter of the earthquake is in the U.S. or India (or within 240 km of any border of these two countries) and has a PAGER level of Yellow
+    - The epicenter of the earthquake is in the U.S. or India (or within 240 km of any border of these two countries) and is greater than 7.0 magnitude and less than 50 km deep
 - Volcanic events that trigger [USGS Volcano Notifications for Aviation](https://volcanoes.usgs.gov/hans-public/vonas/) levels of Orange or Red
 
-UR products can also be manually requested by authorized users at government agencies such as USGS and NOAA.
+UR products can also be manually requested by authorized users at government agencies including USGS, NOAA, and NASA.
+
+#### Non-Standard Acquisitions
+
+The NISAR mission system is capable of providing revised scheduling for new acquisitions in response to an event or an event forecast notification, and delivering data on an expedited timeline. 
+
+This enables UR acquisitions over areas not covered by the standard observation plan (e.g., over the ocean), but this capability is expected to be exercised rarely. This option will be used when possible provided it does not interfere with planned maintenance or the base [observation plan](#nisar-reference-observation-plan).
 
 ### Naming Convention
 

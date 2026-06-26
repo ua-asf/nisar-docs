@@ -121,7 +121,9 @@ The S-band SAR (S-SAR) instrument, developed in a collaboration between NASA and
 (nisar-frequencies)=
 ### Frequencies
 
-NISAR is equipped to acquire data in two slightly different frequencies. @tbl:areas-html summarizes the frequency A and the frequency B settings that define the acquisition modes. For interferometric NISAR products, only frequency A data are used. All other NISAR products can be acquired in a combination of frequency A and frequency B. <!-- TODO: Clarify this statement -->
+NISAR is equipped to acquire data in two slightly different frequencies. @tbl:areas-html summarizes the Frequency A and the Frequency B settings that define the acquisition modes. 
+
+Frequency B data is collected primarily for use in atmospheric corrections, but many NISAR products include datasets for both Frequency A and Frequency B data. Frequency B datasets are generally posted at a coarser pixel spacing than Frequency A datasets.
 
 :::{table} NISAR acquisition modes
 :label: tbl:areas-html
@@ -163,11 +165,12 @@ NISAR is equipped to acquire data in two slightly different frequencies. @tbl:ar
 </table>
 :::
 
+(nisar-polarization)=
 ### Polarization
 
 The polarization refers to the direction that an electromagnetic wave travels. This can be horizontal, vertical, or circular. Circular polarizations, where the wave is rotating in a constant plane to the left or right, are much less commonly used for SAR sensors than linear (horizontal or vertical) polarizations. 
 
-<!-- Add figure or link to polarization section in hyp3-docs -->
+<!-- Add figure or link to polarization section in hyp3-docs or reference https://www.earthdata.nasa.gov/learn/earth-observation-data-basics/sar#toc-polarization-and-scattering-mechanisms -->
 
 The antennas of a SAR system can be configured to transmit and receive electromagnetic waves using various combinations of these polarizations. The polarimetric properties of the observed surface can reveal the structure, orientation and environmental conditions of the surface elements.
 
