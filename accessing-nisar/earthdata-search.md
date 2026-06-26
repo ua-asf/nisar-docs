@@ -238,3 +238,7 @@ Click the **download icon** for an item in your search results, select the **Dow
 ```
 
 To learn more about using direct AWS S3 Access, refer to @aws-s3-access-overview.
+
+## Urgent Response Products
+
+[Urgent Response](#urgent-response-product-overview) (UR) products can be found by entering `nisar_ur` in the [Earthdata Search search bar](#earthdata-search-bar). Refer to [Urgent Response: Earthdata Search](#ur-earthdata-search) for more guidance.
