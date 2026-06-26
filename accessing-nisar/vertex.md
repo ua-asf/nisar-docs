@@ -8,7 +8,7 @@ short_title: Vertex
 
 (vertex-overview)=
 ## Vertex
-[Vertex](https://search.asf.alaska.edu/#/?dataset=NISAR&prodConfig=PR) is ASF's web-based data search interface. It is optimized for searching NASA's SAR holdings, including NISAR. Because search parameters for SAR differ from other types of Earth observation data, it can be helpful to use a search platform tailored specifically for SAR data.
+[Vertex](https://search.asf.alaska.edu/#/?dataset=NISAR&prodConfig=PR) is ASF's web-based data search interface. It is optimized for searching NASA's SAR holdings, including NISAR. Because search parameters for SAR differ from other types of Earth observation data, it can be helpful to use a search platform tailored specifically for SAR datasets.
 
 ## Using Vertex to Access NISAR Data
 
@@ -85,10 +85,10 @@ NISAR-specific filters in Vertex.
 :::{table} Product Filters for NISAR Products
 :label: tbl:vertex-product-filters
 
-| Product Filters       | Description                                                                   |
-|-----------------------|-------------------------------------------------------------------------------|
-| Science Product       | Specific product type, grouped by product level. Multiple selections allowed. |
-| Product Configuration | Specific processing pipelines. Multiple selections allowed.                   |
+| Product Filters       | Description                                                                                           |
+|-----------------------|-------------------------------------------------------------------------------------------------------|
+| Science Product       | Specific product type, grouped by product level. Multiple selections allowed.                         |
+| Product Configuration | Specific processing pipelines, including Production and Urgent Response. Multiple selections allowed. |
 
 :::
 
@@ -97,15 +97,15 @@ NISAR-specific filters in Vertex.
 :::{table} Observational Filters for NISAR Products
 :label: tbl:vertex-observational-filters
 
-| Observational Filters  | Description                                             |
-|------------------------|---------------------------------------------------------|
-| Main Band Polarization | Frequency A polarizations. Multiple selections allowed. |
-| Side Band Polarization | Frequency B polarizations. Multiple selections allowed. |
-| Direction              | Orbit direction (ascending, descending).                |
-| Instrument             | Currently, only L-Band SAR available.                   |
-| Frame Coverage         | Full or Partial frame coverage.                         |
-| Range Bandwidth        | Range bandwidth in MHz. Multiple selections allowed.    |
-| Joint Observation Only | Toggle on for simultaneous L- and S-Band acquisitions.  |
+| Observational Filters  | Description                                                                                   |
+|------------------------|-----------------------------------------------------------------------------------------------|
+| Main Band Polarization | Frequency A polarizations. Multiple selections allowed.                                       |
+| Side Band Polarization | Frequency B polarizations. Multiple selections allowed.                                       |
+| Direction              | Orbit direction (ascending, descending).                                                      |
+| Instrument             | Only L-Band SAR is currently available.                                                       |
+| Frame Coverage         | Full or Partial frame coverage.                                                               |
+| Range Bandwidth        | Range bandwidth in MHz. Multiple selections allowed.                                          |
+| Joint Observation Only | Toggle on to restrict search to acquisitions with simultaneous L- and S-Band data collection. |
 
 :::
 

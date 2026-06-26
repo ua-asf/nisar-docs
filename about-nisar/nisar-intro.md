@@ -1,12 +1,15 @@
 # About NISAR
 
-## Introduction
-
-### The NISAR Mission
+## The NISAR Mission
 
 NISAR is a joint Earth-observing mission between the [National Aeronautics and Space Administration (NASA)](https://www.nasa.gov/) and the [Indian Space Research Organization (ISRO)](https://www.isro.gov.in/), with the goal to make global measurements of the causes and consequences of land surface changes using advanced radar imaging. Access to NISAR mission data is free and open.
 
-<!-- TODO: add basic content about the SAR sensor (L-band, etc.) -->
+The NISAR platform collects data using both [L-band](#l-band) and [S-band](#s-band) SAR sensors. NASA hosts the data acquired by the L-band sensor, and ISRO hosts the data collected by the S-band sensor.
+
+- L-band data is collected globally, providing acquisitions over most landmasses and sea ice on a regular repeat cycle.
+- S-band data is collected over select areas, as described in the [mission observation plan](#nisar-reference-observation-plan). 
+
+### NISAR Mission Concept
 
 The mission concept and the resulting partnership were in response to the [National Academy of Science's 2007 Decadal Survey](https://doi.org/10.17226/11820) [@decadalSurvey2007] of Earth observational priorities for the next decade. 
 
@@ -53,11 +56,12 @@ JPL leads the U.S. portion of the NISAR project on behalf of NASA, including pro
 
 JPL generates a suite of products from NISAR mission data, ranging from Level 0 to Level 3, which ASF makes available to the public. Refer to the [data products](#data-products-overview) section of this site for more information on NISAR data products. 
 
+(alaska-satellite-facility)=
 ### Alaska Satellite Facility
 
 The [Alaska Satellite Facility (ASF)](https://asf.alaska.edu/) Distributed Active Archive Center (DAAC) has been selected to archive the data from the NISAR mission. ASF maintains the NASA archive of Synthetic Aperture Radar (SAR) data from various satellites and aircraft, providing these data and associated services to the public in support of NASA’s Earth Science Data and Information System ([ESDIS](https://earthdata.nasa.gov/about/esdis-project?_ga=2.174193322.963840534.1558367114-1499519562.1541105389)) project.
 
-ASF will utilize NASA's [Earthdata Cloud](https://www.earthdata.nasa.gov/about/earthdata-cloud-evolution) for processing, storage and distribution of the data. This environment leverages Amazon Web Service (AWS) infrastructure, allowing datasets to be accessed directly and efficiently in cloud computing workflows. 
+ASF utilizes NASA's [Earthdata Cloud](https://www.earthdata.nasa.gov/about/earthdata-cloud-evolution) for processing, storage and distribution of the data. This environment leverages Amazon Web Service (AWS) infrastructure, allowing datasets to be accessed directly and efficiently in cloud computing workflows. 
 
 (nisar-instrumentation)=
 ## NISAR Instrumentation
@@ -74,16 +78,52 @@ SweepSAR technique, which allows full-resolution, multipolarimetric observations
 
 A more detailed description of the NISAR instrument design is in section 4.7 of the [NISAR Mission Handbook](https://doi.org/10.48577/jpl.UD4HV3) [@nisarMissionHandbook2025].
 
+### Look Direction
+
+SAR sensors are always [side looking](https://www.earthdata.nasa.gov/learn/earth-observation-data-basics/sar#toc-flight-and-directional-terminology), with data being collected at an angle from the nadir (@observation-geometry-diagram). 
+
+```{figure} ../assets/observation-geometry.png
+:label: observation-geometry-diagram
+:alt: Figure illustrating the observation geometry of the NISAR platform
+:align: center
+:width: 30%
+
+The observing geometry of the NISAR platform, showing the area imaged by the 240 km NISAR swath relative to the nadir. _Diagram modified from the [Harnessing NISAR: Next-Generation Radar Observations for Earth Applications](https://www.earthdata.nasa.gov/learn/trainings/harnessing-nisar-next-generation-radar-observations-earth-applications) course from the NASA Applied Remote Sensing Training Program (ARSET), 2026._
+```
+
+NISAR is a left-looking mission, which allows for complete coverage over Antarctica. The tradeoff is an area around the North Pole where coverage is not available (@arctic-gap). 
+
+```{figure} ../assets/north-pole-hole.png
+:label: arctic-gap
+:alt: Figure illustrating the area around the North Pole where NISAR acquisitions are not available
+:align: center
+:width: 75%
+
+Area around the North Pole where NISAR aquisitions are not available, as visualized in the [NISAR Reference Observation Plan app](#ref-obs-plan-app).
+```
+
 ### Bands
 
-The L-band Synthetic Aperture Radar (L-SAR) instrument is the focus of the NASA-chartered science goals for NISAR, and provides global coverage. The L-SAR is a side-looking, fully polarimetric, interferometric SAR at a wavelength of 24 cm. Most acquisitions have a swath width of about 240 km, an along-track resolution of 7 m, and a cross-track resolution of 2 to 8 m (depending on mode).
+The NISAR mission collects data using two different SAR sensors, each acquiring data in a different [band](https://www.earthdata.nasa.gov/learn/earth-observation-data-basics/sar#toc-the-roles-of-frequency-and-wavelength), or range of wavelengths.
+
+(l-band)=
+#### L-Band
+
+The L-band Synthetic Aperture Radar (L-SAR) instrument is the focus of the NASA-chartered science goals for NISAR, and provides global coverage. The L-SAR instrument operates at a wavelength of 24 cm. 
+
+Most L-band acquisitions have a swath width of about 240 km, an along-track resolution of 7 m, and a cross-track resolution of 2 to 8 m (depending on mode).
+
+(s-band)=
+#### S-Band
 
 The S-band SAR (S-SAR) instrument, developed in a collaboration between NASA and the Indian Space Research Organization (ISRO), operates at a wavelength of 9.3 cm and is primarily used for acquisitions over India.
 
 (nisar-frequencies)=
 ### Frequencies
 
-NISAR is equipped to acquire data in two slightly different frequencies. @tbl:areas-html summarizes the frequency A and the frequency B settings that define the acquisition modes. For interferometric NISAR products, only frequency A data are used. All other NISAR products can be acquired in a combination of frequency A and frequency B. <!-- TODO: Clarify this statement -->
+NISAR is equipped to acquire data in two slightly different frequencies. @tbl:areas-html summarizes the Frequency A and the Frequency B settings that define the acquisition modes. 
+
+Frequency B data is collected primarily for use in atmospheric corrections, but many NISAR products include datasets for both Frequency A and Frequency B data. Frequency B datasets are generally posted at a coarser pixel spacing than Frequency A datasets.
 
 :::{table} NISAR acquisition modes
 :label: tbl:areas-html
@@ -125,15 +165,18 @@ NISAR is equipped to acquire data in two slightly different frequencies. @tbl:ar
 </table>
 :::
 
+(nisar-polarization)=
 ### Polarization
 
 The polarization refers to the direction that an electromagnetic wave travels. This can be horizontal, vertical, or circular. Circular polarizations, where the wave is rotating in a constant plane to the left or right, are much less commonly used for SAR sensors than linear (horizontal or vertical) polarizations. 
 
-<!-- Add figure or link to polarization section in hyp3-docs -->
+<!-- Add figure or link to polarization section in hyp3-docs or reference https://www.earthdata.nasa.gov/learn/earth-observation-data-basics/sar#toc-polarization-and-scattering-mechanisms -->
 
 The antennas of a SAR system can be configured to transmit and receive electromagnetic waves using various combinations of these polarizations. The polarimetric properties of the observed surface can reveal the structure, orientation and environmental conditions of the surface elements.
 
-For the NISAR mission, the combination of polarizations varies based on the acquisition mode, and the 2-digit polarization code is indicated as part of the filename for each data product. Refer to [NISAR Naming Conventions](#naming-convention-overview) to see where the polarization is indicated in the filename. 
+Signals that are transmitted and received in the same polarization are called co-polarized (co-pol). Signals that are received in a different polarization from the transmitted polarization are called cross-polarized (cross-pol). 
+
+For the NISAR mission, the combination of polarizations varies based on the acquisition mode. The 2-digit polarization code, which indicates the transmit polarization followed by the receive polarization, is indicated as part of the filename for each data product. Refer to [NISAR Naming Conventions](#naming-convention-overview) to see where the polarization is indicated in the filename. 
 
 The potential polarization configurations for NISAR products are as follows:
 - Single polarization

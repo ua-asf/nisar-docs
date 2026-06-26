@@ -16,6 +16,7 @@ Earthdata Search organizes data by product type. Each of these data types is cal
 
 The NISAR mission generates many data product types of varying processing levels, as described in the @data-products-overview. Each one of these product types has its own collection in Earthdata Search. You can search for multiple NISAR collections at once to explore the available data types, or restrict your search to a specific NISAR collection. 
 
+(earthdata-search-bar)=
 ### Earthdata Search Landing Page
 
 Get started searching for NISAR data quickly by using the search bar on the [Earthdata Search landing page](https://search.earthdata.nasa.gov/). To search for all available NISAR data products, enter `NISAR Beta` into the search bar. 

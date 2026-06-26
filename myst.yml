@@ -33,12 +33,11 @@ project:
         - title: Unfocused Raw Products (Level 0)
           children:
             - file: data-products/level-0/rrsd.md
-#        - file: data-products/urgent-response.md
-        - file: data-products/naming-conventions.md
         - file: data-products/supporting-products.md
           children:
             - file: data-products/supporting-data/orbit-ephemeris.md
             - file: data-products/supporting-data/nisar-dem.md
+        - file: data-products/naming-conventions.md
         - file: data-products/data-format.md
         - file: data-products/metadata.md
         - title: Documentation
@@ -85,6 +84,7 @@ project:
   abbreviations:
     ASF: Alaska Satellite Facility
     AWS: Amazon Web Services
+    BETA: Pre-calibration datasets
     DAAC: Distributed Active Archive Center
     DEM: Digital Elevation Model
     EDC: Earthdata Cloud
@@ -102,22 +102,27 @@ project:
     LUT: Lookup Table
     NISAR: NASA-ISRO Synthetic Aperture Radar
     NRB: Normalized Radar Backscatter
+    PAGER: Prompt Assessment of Global Earthquakes for Response
+    PR: Production
+    PROVISIONAL: Datasets that are calibrated but not fully validated
     Q1: Jan/Feb/Mar
     Q2: Apr/May/Jun
     Q3: Jul/Aug/Sep
     Q4: Oct/Nov/Dec
-    RTC: Radiometric Terrain Correction; Radiometrically Terrain-Corrected
-    SAR: Synthetic Aperture Radar
-    SET: Solid Earth Tides
-    SNR: Signal-to-Noise Ratio
-    TEC: Total Electron Content
-    UTM: Universal Transverse Mercator
     RFI: Radio Frequency Interference
     RIFG: Range Doppler Wrapped Interferogram
     ROFF: Range Doppler Pixel Offsets
     RRSD: Radar Raw Signal Data
     RSLC: Range Doppler Single Look Complex
+    RTC: Radiometric Terrain Correction; Radiometrically Terrain-Corrected
     RUNW: Range Doppler Unwrapped Interferogram
+    SAR: Synthetic Aperture Radar
+    SET: Solid Earth Tides
+    SNR: Signal-to-Noise Ratio
+    TEC: Total Electron Content
+    UTM: Universal Transverse Mercator
+    UR: Urgent Response
+
 site:
   template: book-theme
   options:
