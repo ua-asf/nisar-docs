@@ -86,9 +86,9 @@ SAR sensors are always [side looking](https://www.earthdata.nasa.gov/learn/earth
 :label: observation-geometry-diagram
 :alt: Figure illustrating the observation geometry of the NISAR platform
 :align: left
-:width: 50%
+:width: 30%
 
-The observing geometry of the NISAR platform.
+The observing geometry of the NISAR platform. Diagram modified from the [Harnessing NISAR: Next-Generation Radar Observations for Earth Applications](https://www.earthdata.nasa.gov/learn/trainings/harnessing-nisar-next-generation-radar-observations-earth-applications) course from the NASA Applied Remote Sensing Training Program (ARSET), 2026.
 ```
 
 NISAR is a left-looking mission, which allows for complete coverage over Antarctica. The tradeoff is an area around the North Pole where coverage is not available (@arctic-gap). 
@@ -96,7 +96,8 @@ NISAR is a left-looking mission, which allows for complete coverage over Antarct
 ```{figure} ../assets/north-pole-hole.png
 :label: arctic-gap
 :alt: Figure illustrating the area around the North Pole where NISAR acquisitions are not available
-:align: center
+:align: left
+:width: 75%
 
 Area around the North Pole where NISAR aquisitions are not available, as visualized in the [NISAR Reference Observation Plan app](#ref-obs-plan-app).
 ```
@@ -170,7 +171,9 @@ The polarization refers to the direction that an electromagnetic wave travels. T
 
 The antennas of a SAR system can be configured to transmit and receive electromagnetic waves using various combinations of these polarizations. The polarimetric properties of the observed surface can reveal the structure, orientation and environmental conditions of the surface elements.
 
-For the NISAR mission, the combination of polarizations varies based on the acquisition mode, and the 2-digit polarization code is indicated as part of the filename for each data product. Refer to [NISAR Naming Conventions](#naming-convention-overview) to see where the polarization is indicated in the filename. 
+Signals that are transmitted and received in the same polarization are called co-polarized (co-pol). Signals that are received in a different polarization from the transmitted polarization are called cross-polarized (cross-pol). 
+
+For the NISAR mission, the combination of polarizations varies based on the acquisition mode. The 2-digit polarization code, which indicates the transmit polarization followed by the receive polarization, is indicated as part of the filename for each data product. Refer to [NISAR Naming Conventions](#naming-convention-overview) to see where the polarization is indicated in the filename. 
 
 The potential polarization configurations for NISAR products are as follows:
 - Single polarization
