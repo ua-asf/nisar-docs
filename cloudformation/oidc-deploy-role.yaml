@@ -1,0 +1,90 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: >
+  GitHub Actions OIDC deploy role for ua-asf/nisar-docs. Trusts only that repo
+  (on AllowedBranch), but grants S3 object read/write/delete and CloudFront
+  invalidation across the whole account rather than a single bucket/distribution.
+
+Parameters:
+  GitHubOrg:
+    Type: String
+    Default: ua-asf
+    Description: GitHub org or username, e.g. asfadmin
+
+  GitHubRepo:
+    Type: String
+    Default: nisar-docs
+    Description: Repo name only (no org prefix), e.g. myst-site
+
+  CreateOidcProvider:
+    Type: String
+    Default: "false"
+    AllowedValues: ["true", "false"]
+    Description: >
+      Set to true only if this AWS account does not already have a GitHub OIDC
+      provider registered (token.actions.githubusercontent.com). Most accounts
+      that have used GitHub Actions OIDC before already have one — creating a
+      second one for the same URL fails.
+
+Conditions:
+  ShouldCreateOidcProvider: !Equals [!Ref CreateOidcProvider, "true"]
+
+Resources:
+  GitHubOidcProvider:
+    Type: AWS::IAM::OIDCProvider
+    Condition: ShouldCreateOidcProvider
+    Properties:
+      Url: https://token.actions.githubusercontent.com
+      ClientIdList:
+        - sts.amazonaws.com
+      ThumbprintList:
+        # GitHub's OIDC thumbprint is verified by AWS at request time, but this
+        # field is still required. Current value per AWS docs as of 2026:
+        - 6938fd4d98bab03faadb97b34396831e3780aea1
+
+  DeployRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: !Sub "${GitHubRepo}-gha-deploy-role"
+      MaxSessionDuration: 3600
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal:
+              Federated: !If
+                - ShouldCreateOidcProvider
+                - !Ref GitHubOidcProvider
+                - !Sub "arn:aws:iam::${AWS::AccountId}:oidc-provider/token.actions.githubusercontent.com"
+            Action: sts:AssumeRoleWithWebIdentity
+            Condition:
+              StringEquals:
+                token.actions.githubusercontent.com:aud: sts.amazonaws.com
+              StringLike:
+                token.actions.githubusercontent.com:sub: !Sub "repo:${GitHubOrg}/${GitHubRepo}:ref:refs/heads/*"
+      Policies:
+        - PolicyName: SiteDeployAccess
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Sid: S3SyncAnyBucket
+                Effect: Allow
+                Action:
+                  - s3:PutObject
+                  - s3:GetObject
+                  - s3:DeleteObject
+                Resource: "arn:aws:s3:::*/*"
+              - Sid: S3ListAnyBucket
+                Effect: Allow
+                Action:
+                  - s3:ListBucket
+                Resource: "arn:aws:s3:::*"
+              - Sid: CloudFrontInvalidationAnyDistribution
+                Effect: Allow
+                Action:
+                  - cloudfront:CreateInvalidation
+                  - cloudfront:GetInvalidation
+                Resource: "*"
+
+Outputs:
+  DeployRoleArn:
+    Value: !GetAtt DeployRole.Arn
