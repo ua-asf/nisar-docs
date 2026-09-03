@@ -1,0 +1,186 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: >
+  Static website hosting via S3 + CloudFront with Origin Access Control (OAC).
+  Optionally provisions an ACM certificate + Route53 alias records for a custom domain.
+
+Parameters:
+  DomainName:
+    Type: String
+    Default: ""
+    Description: >
+      (Optional) Custom domain for the site, e.g. www.example.com.
+      Leave blank to use only the default *.cloudfront.net domain.
+
+  HostedZoneId:
+    Type: String
+    Default: ""
+    Description: >
+      (Optional) Route53 Hosted Zone ID for DomainName, used for the alias record.
+
+  CertificateArn:
+    Type: String
+    Default: ""
+    Description: >
+      (Optional) ARN of an ACM certificate for DomainName. Must already exist in
+      us-east-1 (CloudFront requirement) — deploy cert-us-east-1.yaml there first
+      and pass its CertificateArn output here. Required if DomainName is set.
+
+  IndexDocument:
+    Type: String
+    Default: index.html
+
+  ErrorDocument:
+    Type: String
+    Default: index.html
+    Description: Also used as the 403/404 response document (useful for SPA routing).
+
+  PriceClass:
+    Type: String
+    Default: PriceClass_All
+    AllowedValues:
+      - PriceClass_100
+      - PriceClass_200
+      - PriceClass_All
+
+Conditions:
+  HasCustomDomain: !Not [!Equals [!Ref DomainName, ""]]
+  HasCertificate: !And
+    - !Condition HasCustomDomain
+    - !Not [!Equals [!Ref CertificateArn, ""]]
+  HasHostedZone: !And
+    - !Condition HasCustomDomain
+    - !Not [!Equals [!Ref HostedZoneId, ""]]
+
+Resources:
+  # -----------------------------
+  # S3 bucket holding site assets
+  # -----------------------------
+  SiteBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: AES256
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
+      VersioningConfiguration:
+        Status: Enabled
+      OwnershipControls:
+        Rules:
+          - ObjectOwnership: BucketOwnerEnforced
+
+  SiteBucketPolicy:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket: !Ref SiteBucket
+      PolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Sid: AllowCloudFrontServicePrincipalReadOnly
+            Effect: Allow
+            Principal:
+              Service: cloudfront.amazonaws.com
+            Action: s3:GetObject
+            Resource: !Sub "${SiteBucket.Arn}/*"
+            Condition:
+              StringEquals:
+                AWS:SourceArn: !Sub "arn:aws:cloudfront::${AWS::AccountId}:distribution/${Distribution}"
+
+  # -----------------------------
+  # Origin Access Control (replaces legacy OAI)
+  # -----------------------------
+  OriginAccessControl:
+    Type: AWS::CloudFront::OriginAccessControl
+    Properties:
+      OriginAccessControlConfig:
+        Name: !Sub "${AWS::StackName}-oac"
+        OriginAccessControlOriginType: s3
+        SigningBehavior: always
+        SigningProtocol: sigv4
+
+  # -----------------------------
+  # CloudFront distribution
+  # -----------------------------
+  Distribution:
+    Type: AWS::CloudFront::Distribution
+    Properties:
+      DistributionConfig:
+        Enabled: true
+        DefaultRootObject: !Ref IndexDocument
+        PriceClass: !Ref PriceClass
+        HttpVersion: http2
+        Aliases: !If
+          - HasCustomDomain
+          - [!Ref DomainName]
+          - !Ref AWS::NoValue
+        ViewerCertificate: !If
+          - HasCertificate
+          - AcmCertificateArn: !Ref CertificateArn
+            SslSupportMethod: sni-only
+            MinimumProtocolVersion: TLSv1.2_2021
+          - CloudFrontDefaultCertificate: true
+        Origins:
+          - Id: SiteBucketOrigin
+            DomainName: !GetAtt SiteBucket.RegionalDomainName
+            OriginAccessControlId: !Ref OriginAccessControl
+            S3OriginConfig:
+              OriginAccessIdentity: ""
+        DefaultCacheBehavior:
+          TargetOriginId: SiteBucketOrigin
+          ViewerProtocolPolicy: redirect-to-https
+          AllowedMethods: [GET, HEAD]
+          CachedMethods: [GET, HEAD]
+          Compress: true
+          # Managed-CachingOptimized policy
+          CachePolicyId: 658327ea-f89d-4fab-a63d-7e88639e58f6
+        CustomErrorResponses:
+          - ErrorCode: 403
+            ResponseCode: 200
+            ResponsePagePath: !Sub "/${ErrorDocument}"
+          - ErrorCode: 404
+            ResponseCode: 200
+            ResponsePagePath: !Sub "/${ErrorDocument}"
+
+  # -----------------------------
+  # Route53 alias records (only if hosted zone provided)
+  # -----------------------------
+  DnsRecordIPv4:
+    Type: AWS::Route53::RecordSet
+    Condition: HasHostedZone
+    Properties:
+      HostedZoneId: !Ref HostedZoneId
+      Name: !Ref DomainName
+      Type: A
+      AliasTarget:
+        DNSName: !GetAtt Distribution.DomainName
+        HostedZoneId: Z2FDTNDATAQYW2 # fixed CloudFront hosted zone ID
+        EvaluateTargetHealth: false
+
+  DnsRecordIPv6:
+    Type: AWS::Route53::RecordSet
+    Condition: HasHostedZone
+    Properties:
+      HostedZoneId: !Ref HostedZoneId
+      Name: !Ref DomainName
+      Type: AAAA
+      AliasTarget:
+        DNSName: !GetAtt Distribution.DomainName
+        HostedZoneId: Z2FDTNDATAQYW2
+        EvaluateTargetHealth: false
+
+Outputs:
+  BucketName:
+    Value: !Ref SiteBucket
+  DistributionId:
+    Value: !Ref Distribution
+  DistributionDomainName:
+    Value: !GetAtt Distribution.DomainName
+  SiteURL:
+    Value: !If
+      - HasCustomDomain
+      - !Sub "https://${DomainName}"
+      - !Sub "https://${Distribution.DomainName}"
