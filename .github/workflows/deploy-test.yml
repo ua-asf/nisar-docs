@@ -20,6 +20,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v7
 
+      - name: Configure AWS credentials via OIDC
+        uses: aws-actions/configure-aws-credentials@v6.2.4
+        with:
+          role-to-assume: ${{ secrets.AWS_DEPLOY_ROLE }}
+          aws-region: ${{ env.AWS_REGION }}
+
+
       - name: Set up Node
         uses: actions/setup-node@v7
         with:
@@ -30,12 +37,6 @@ jobs:
 
       - name: Build site
         run: myst build --html
-
-      - name: Configure AWS credentials via OIDC
-        uses: aws-actions/configure-aws-credentials@v6.2.4
-        with:
-          role-to-assume: ${{ secrets.AWS_DEPLOY_ROLE }}
-          aws-region: ${{ env.AWS_REGION }}
 
       - name: Sync to S3
         run: |

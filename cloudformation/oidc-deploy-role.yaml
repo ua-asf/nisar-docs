@@ -60,7 +60,9 @@ Resources:
               StringEquals:
                 token.actions.githubusercontent.com:aud: sts.amazonaws.com
               StringLike:
-                token.actions.githubusercontent.com:sub: !Sub "repo:${GitHubOrg}/${GitHubRepo}:ref:refs/heads/*"
+                token.actions.githubusercontent.com:sub:
+                  - !Sub "repo:${GitHubOrg}/${GitHubRepo}:ref:refs/heads/*"
+                  - !Sub "repo:${GitHubOrg}/${GitHubRepo}:environment:*"
       Policies:
         - PolicyName: SiteDeployAccess
           PolicyDocument:
