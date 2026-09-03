@@ -1,0 +1,65 @@
+name: Deploy docs
+description: Build a MyST site and deploy it to S3, then invalidate CloudFront.
+
+inputs:
+  role-to-assume:
+    description: ARN of the IAM role to assume via OIDC
+    required: true
+  s3-bucket:
+    description: Name of the S3 bucket to sync the built site to
+    required: true
+  distribution-id:
+    description: CloudFront distribution ID to invalidate after sync
+    required: true
+  environment-file:
+    description: Path to the conda/mamba environment file
+    required: false
+    default: environment.yml
+  base-url:
+    description: >
+      Path prefix the site is served from (e.g. /myproject), or '' if served
+      from the domain root. Used to rewrite BASE_URL placeholders in redirects.
+    required: false
+    default: ''
+  domain:
+    description: >
+      Public domain the site is served from (e.g. https://nisar-docs-test.asf.alaska.edu),
+      used to replace localhost:3000 references left by myst build.
+    required: false
+    default: ''
+
+runs:
+  using: composite
+  steps:
+    - name: Set up micromamba environment
+      uses: mamba-org/setup-micromamba@v3
+      with:
+        environment-file: ${{ inputs.environment-file }}
+
+    - name: Build site
+      shell: bash -l {0}
+      run: |
+        myst build --html
+        cp -v _build/html/404/index.html _build/html/404.html
+        sed -i -e "s|BASE_URL|${{ inputs.base-url }}|g" $(grep -rl BASE_URL redirects/)
+        cp -rv redirects/*/ _build/html/
+        sed -i -e "s|http://localhost:3000|${{ inputs.domain }}${{ inputs.base-url }}|g" $(grep -RIl "http://localhost:3000" ./_build)
+        sed -i "s|</loc>|/</loc>|g" ./_build/html/sitemap.xml
+
+    - name: Configure AWS credentials via OIDC
+      uses: aws-actions/configure-aws-credentials@v6.2.4
+      with:
+        role-to-assume: ${{ inputs.role-to-assume }}
+        aws-region: us-west-2
+
+    - name: Sync to S3
+      shell: bash
+      run: |
+        aws s3 sync ./_build/html s3://${{ inputs.s3-bucket }} --delete
+
+    - name: Invalidate CloudFront cache
+      shell: bash
+      run: |
+        aws cloudfront create-invalidation \
+          --distribution-id ${{ inputs.distribution-id }} \
+          --paths "/*"
