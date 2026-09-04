@@ -9,9 +9,6 @@ permissions:
   id-token: write
   contents: read
 
-env:
-  AWS_REGION: us-west-2
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -20,30 +17,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v7
 
-      - name: Configure AWS credentials via OIDC
-        uses: aws-actions/configure-aws-credentials@v6.2.4
+      - name: Deploy docs site
+        uses: ./.github/actions/deploy-docs
         with:
           role-to-assume: ${{ secrets.AWS_DEPLOY_ROLE }}
-          aws-region: ${{ env.AWS_REGION }}
-
-
-      - name: Set up Node
-        uses: actions/setup-node@v7
-        with:
-          node-version: '24'
-
-      - name: Install MyST
-        run: npm install -g mystmd
-
-      - name: Build site
-        run: myst build --html
-
-      - name: Sync to S3
-        run: |
-          aws s3 sync ./_build/html s3://${{ secrets.S3_BUCKET }} --delete
-
-      - name: Invalidate CloudFront cache
-        run: |
-          aws cloudfront create-invalidation \
-            --distribution-id ${{ secrets.DISTRIBUTION_ID }} \
-            --paths "/*"
+          s3-bucket: ${{ secrets.S3_BUCKET }}
+          distribution-id: ${{ secrets.DISTRIBUTION_ID }}
+          domain: ${{ vars.DEPLOYMENT_DOMAIN }}
