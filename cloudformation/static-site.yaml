@@ -29,11 +29,6 @@ Parameters:
     Type: String
     Default: index.html
 
-  ErrorDocument:
-    Type: String
-    Default: index.html
-    Description: Also used as the 403/404 response document (useful for SPA routing).
-
   PriceClass:
     Type: String
     Default: PriceClass_All
@@ -103,6 +98,37 @@ Resources:
         SigningProtocol: sigv4
 
   # -----------------------------
+  # CloudFront Function: resolve directory-style requests to their index.html
+  # (needed because S3 REST-origin + OAC does not auto-append index.html for
+  # nested paths the way the DefaultRootObject does for "/")
+  # -----------------------------
+  AppendIndexFunction:
+    Type: AWS::CloudFront::Function
+    Properties:
+      Name: !Sub "${AWS::StackName}-append-index"
+      AutoPublish: true
+      FunctionConfig:
+        Comment: Append index.html to directory-style request URIs
+        Runtime: cloudfront-js-2.0
+      FunctionCode: |
+        function handler(event) {
+          var request = event.request;
+          var uri = request.uri;
+
+          if (uri.includes('.', uri.lastIndexOf('/'))) {
+            return request;
+          }
+
+          if (uri.endsWith('/')) {
+            request.uri = uri + 'index.html';
+          } else {
+            request.uri = uri + '/index.html';
+          }
+
+          return request;
+        }
+
+  # -----------------------------
   # CloudFront distribution
   # -----------------------------
   Distribution:
@@ -137,13 +163,16 @@ Resources:
           Compress: true
           # Managed-CachingOptimized policy
           CachePolicyId: 658327ea-f89d-4fab-a63d-7e88639e58f6
+          FunctionAssociations:
+            - EventType: viewer-request
+              FunctionARN: !GetAtt AppendIndexFunction.FunctionARN
         CustomErrorResponses:
           - ErrorCode: 403
-            ResponseCode: 200
-            ResponsePagePath: !Sub "/${ErrorDocument}"
+            ResponseCode: 404
+            ResponsePagePath: /404/index.html
           - ErrorCode: 404
-            ResponseCode: 200
-            ResponsePagePath: !Sub "/${ErrorDocument}"
+            ResponseCode: 404
+            ResponsePagePath: /404/index.html
 
   # -----------------------------
   # Route53 alias records (only if hosted zone provided)
