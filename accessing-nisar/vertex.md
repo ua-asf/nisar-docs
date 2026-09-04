@@ -72,6 +72,18 @@ To search for products in a specific date range, click the **Filters** button to
 Click the **Filters** button to open the **Search Filters** panel and enter a date range.
 ```
 
+### Scene Name Patterns
+
+Vertex supports [wildcard queries](https://docs.asf.alaska.edu/datasets/wildcard_usage/#vertex), which can be used to filter by [data maturity](https://docs.asf.alaska.edu/datasets/wildcard_usage/#crid-version-number), [polarization](https://docs.asf.alaska.edu/datasets/wildcard_usage/#freq-a-b-polarizations), [cycle](https://docs.asf.alaska.edu/datasets/wildcard_usage/#cycles), or [Stack ID](https://docs.asf.alaska.edu/datasets/wildcard_usage/#stack-ids). To search for NISAR data using scene name patterns, click on **Filters** to open the **Search Filters** panel and input your string in the **Scene Name Patterns** field.
+
+```{figure} ../assets/vertex-scene-name-patterns.png
+:label: vertex-scene-name-patterns
+:alt: Screenshot highlighting the scene name pattern filter. 
+:align: center
+
+Click the **Filters** button to open the **Search Filters** panel and enter a scene name pattern.
+```
+
 ### NISAR Filters
 
 NISAR-specific filters are available to more precisely search for NISAR data products. Refer to the [Vertex Getting Started User Guide](https://docs.asf.alaska.edu/vertex/manual/#product-filters) for a comprehensive list of filters and search options.
