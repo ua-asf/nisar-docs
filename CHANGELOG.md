@@ -8,7 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.4.37]
 
 ### Changed
-- Updated links to [RSLC](data-products/level-1/rslc.md), [GSLC](data-products/level-2/gslc.md), and [GCOV](data-products/level-2/gcov.md) product specifications
+- Updated links to [RRSD](data-products/level-0/rrsd.md), [RSLC](data-products/level-1/rslc.md), [GSLC](data-products/level-2/gslc.md), and [GCOV](data-products/level-2/gcov.md) product specifications
 
 ## [0.4.36]
 
