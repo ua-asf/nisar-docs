@@ -5,6 +5,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 
+## [0.4.37]
+
+### Changed
+- Updated links to [RSLC](data-products/level-1/rslc.md), [GSLC](data-products/level-2/gslc.md), and [GCOV](data-products/level-2/gcov.md) product specifications
+
 ## [0.4.36]
 
 ### Added
