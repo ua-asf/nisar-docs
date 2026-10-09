@@ -3,7 +3,7 @@ short_title: RSLC
 ---
 # Range Doppler Single Look Complex (RSLC)
 
-{button}`Product Specification <https://nisar.asf.earthdatacloud.nasa.gov/NISAR-SAMPLE-DATA/DOCS/NISAR_D-102268_RevE_NASA_SDS_Product_Specification_L1_RSLC_clean_w-sigs.pdf>`
+{button}`Product Specification <https://cumulus.asf.earthdatacloud.nasa.gov/PUBLIC/DATA/NISAR/NISAR_D-102268_RevF_NASA_SDS_Product_Specification_L1_RSLC_w-esigs.pdf>`
 {button}`Find Data <https://search.asf.alaska.edu/#/?dataset=NISAR&sciProducts=RSLC>`
 
 (rslc-product-overview)=

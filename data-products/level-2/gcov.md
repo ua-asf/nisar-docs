@@ -3,7 +3,7 @@ short_title: GCOV
 ---
 # Geocoded Polarimetric Covariance (GCOV)
 
-{button}`Product Specification <https://nisar.asf.earthdatacloud.nasa.gov/NISAR-SAMPLE-DATA/DOCS/NISAR_D-102274_RevE_NASA_SDS_Product_Specification_L2_GCOV_Nov8_2024_w-sigs.pdf>`
+{button}`Product Specification <https://cumulus.asf.earthdatacloud.nasa.gov/PUBLIC/DATA/NISAR/NISAR_D-102274_RevF_NASA_SDS_Product_Specification_L2_GCOV_w-esigs.pdf>`
 {button}`Find Data <https://search.asf.alaska.edu/#/?dataset=NISAR&sciProducts=GCOV>`
 
 (gcov-product-overview)=
@@ -17,11 +17,11 @@ GCOV products are projected to the appropriate UTM zone for their location and h
 
 ## Product Specification
 
-A complete description of NISAR GCOV products is available in @l2_gcov_product_specs2025.
+A complete description of NISAR GCOV products is available in @l2_gcov_product_specs2026.
 
 ## Data Layers
 
-The primary datasets of interest in the GCOV data products are the covariance terms. Complete descriptions of these dataset layers are available in @l2_gcov_product_specs2025 [Section 4.3]. The frequencies and polarizations available in a particular GCOV data product will vary based on the acquisition mode used to collect the data.
+The primary datasets of interest in the GCOV data products are the covariance terms. Complete descriptions of these dataset layers are available in @l2_gcov_product_specs2026 [Section 4.3]. The frequencies and polarizations available in a particular GCOV data product will vary based on the acquisition mode used to collect the data.
 
 (gcov-covariance-terms)=
 ### Geocoded Polarimetric Covariance Terms
