@@ -17,11 +17,11 @@ GCOV products are projected to the appropriate UTM zone for their location and h
 
 ## Product Specification
 
-A complete description of NISAR GCOV products is available in @l2_gcov_product_specs2025.
+A complete description of NISAR GCOV products is available in @l2_gcov_product_specs2026.
 
 ## Data Layers
 
-The primary datasets of interest in the GCOV data products are the covariance terms. Complete descriptions of these dataset layers are available in @l2_gcov_product_specs2025 [Section 4.3]. The frequencies and polarizations available in a particular GCOV data product will vary based on the acquisition mode used to collect the data.
+The primary datasets of interest in the GCOV data products are the covariance terms. Complete descriptions of these dataset layers are available in @l2_gcov_product_specs2026 [Section 4.3]. The frequencies and polarizations available in a particular GCOV data product will vary based on the acquisition mode used to collect the data.
 
 (gcov-covariance-terms)=
 ### Geocoded Polarimetric Covariance Terms
