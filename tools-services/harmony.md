@@ -5,30 +5,38 @@
 
 [Harmony](https://www.earthdata.nasa.gov/data/tools/nasa-harmony) is Earthdata's data transformation service for customizing NASA datasets. It is seamlessly integrated into the [Earthdata Search](#earthdata-search-overview) platform, but users can also leverage the [Harmony APIs](https://harmony.earthdata.nasa.gov/docs) or the [Harmony-py](https://github.com/nasa/harmony-py) Python library to interact with the data programmatically. 
 
-ASF is working with the Harmony team to develop subsetting functionality, starting with a service that [extracts individual datasets](#harmony-supported-products-extract) from NISAR HDF5 products and exports them as GeoTIFFs. 
+ASF and the Harmony team developed options for NISAR customization, with services that [extracts individual datasets](#harmony-supported-products-extract), spatially subset, and reproject NISAR HDF5 products and export them as GeoTIFFs. 
 
 Refer to the @tools-services-roadmap to see the development plan for additional Harmony services supporting NISAR.
 
 (harmony-supported-products-extract)=
-### Dataset Extraction Service
+### Dataset Customization Service
 
-Users can use Harmony to extract individual datasets as GeoTIFFs from NISAR HDF5 files for the following products: 
+Users can use Harmony to customize NISAR products for the following products: 
 
 - Geocoded Polarimetric Covariance ([GCOV](#gcov-product-overview))
 - Geocoded Unwrapped Interferogram ([GUNW](#gunw-product-overview))
 - Geocoded Pixel Offsets ([GOFF](#goff-product-overview))
 - Soil Moisture ([SME2](#sme2-product-overview))
 
+#### Spatial Subsetting
+This service subsets 2-dimensional datasets to the spatial filter. Note that option is only enabled when using the [Spatial Filter](#earthdata-search-spatial-filters) during your search.  
+
+(harmony-variable-subsetting)=
+#### Variable Subsetting
 This service extracts two-dimensional datasets from the `/science/LSAR/$product-type/grids/` group as stand-alone GeoTIFFs. This is particularly useful for those users only interested in one or two layers in a product. 
 
 Because the HDF5 files are more compressed, users interested in several layers will be better served by [downloading the full HD5 file](#download-nisar-data-earthdata-search), as they are more efficient to download than extracted GeoTIFF files.
 
+#### Output Projection Selection
+This service reprojects output files to the selected EPSG code. Supported projections include Geographic (EPSG:4326), Antarctic Polar Stereographic (EPSG:), NSIDC Sea Ice Polar Stereographic North (EPSG:), and multiple UTM Zone North (EPSG:32601-EPSG:32660) and UTM Zone South (EPSG:32701-32760) projections. For more information on supported NISAR projects, see @nisar-l2-projections.
+
 (harmony-extract-datasets)=
-## Extract Datasets in Earthdata Search
+## Customize Downloads in Earthdata Search
 
 Harmony services are available directly in [Earthdata Search](#earthdata-search-overview), which is a map-based web browser interface for data search and access. This makes it easy to find NISAR products for your area and time period of interest and extract just the datasets of interest from the HDF5 file. Each selected dataset is output as a GeoTIFF file.
 
-1. Search for one of the [supported product types](#harmony-supported-products-extract) in [Earthdata Search](#earthdata-search-overview) and [select the desired collection](#find-nisar-collections).
+1. Search for one of the [supported product types](#harmony-supported-products-extract) in [Earthdata Search](#earthdata-search-overview) and [select the desired collection](#find-nisar-collections). If looking to spatially subset your downloaded products, make sure to [use Spatial Filters](#earthdata-search-spatial-filters) and filter to your desired AOI.  
 
     ```{figure} ../assets/harmony-search-gcov.png
     :label: harmony-search-gcov-image
@@ -63,7 +71,7 @@ Harmony services are available directly in [Earthdata Search](#earthdata-search-
     Click the **My Project** button to view the list of granules you've added.
     ```
 
-4. Select the **Customize Download** option, then click the **Edit Variables** button.
+4. Select the **Customize Download** option to select the customization options that suit your needs.
    
     ```{figure} ../assets/harmony-customize-download.png
     :label: harmony-customize-download-image
@@ -96,12 +104,13 @@ Harmony services are available directly in [Earthdata Search](#earthdata-search-
     Expand the directory structure and select the datasets to be extracted to GeoTIFF format, then click the **Download Data** button.
     ```
 
-   - Not all products will contain all the listed variables. This list includes all possible variables that _may_ be present in a product of that type. As long as at least one of the selected datasets is available in the product, the Harmony job will run. 
-     - GeoTIFFs will be generated for any selected variables that are present in the granule, and any datasets that are not present will be ignored.
-     - If you do not see a download link for a variable you selected, refer to the file [naming convention](#naming-convention-overview) to determine which polarizations and frequencies would be expected for that product. 
-   - If multiple collections are included in the Project, you will need to define the download options for each one. You can either: 
-     - Click the **Edit Options** link for each collection, as illustrated in @harmony-multiple-collections-image.
-     - Click the **Back to Edit Options** link at the top of the panel once you have made your variable selections and click the **Next** button to progress through each collection. 
+When using the [Variable Subsetting customization](#harmony-variable-subsetting), note that not all products will contain all the listed variables. This list includes all possible variables that _may_ be present in a product of that type. As long as at least one of the selected datasets is available in the product, the Harmony job will run. 
+   - GeoTIFFs will be generated for any selected variables that are present in the granule, and any datasets that are not present will be ignored.
+   - If you do not see a download link for a variable you selected, refer to the file [naming convention](#naming-convention-overview) to determine which polarizations and frequencies would be expected for that product.
+
+If multiple collections are included in the Project, you will need to define the download options for each one. You can either: 
+   - Click the **Edit Options** link for each collection, as illustrated in @harmony-multiple-collections-image.
+   - Click the **Back to Edit Options** link at the top of the panel once you have made your variable selections and click the **Next** button to progress through each collection. 
 
         ```{figure} ../assets/harmony-multiple-edit.png
         :label: harmony-multiple-edit-image
@@ -112,9 +121,9 @@ Harmony services are available directly in [Earthdata Search](#earthdata-search-
         To set download options when multiple collections are included in the project, click the **Next** button at the bottom of the Edit Options panel to move to the next collection.
         ```
 
-   - The **Download Data** button will launch the Harmony jobs for all collections in the project that have extraction options defined. 
+   - The **Download Data** button will launch the Harmony jobs for all collections in the project that have customization options defined. 
    
-6. Harmony will process your extraction request and indicate its progress on the status page. You may need to refresh the status page to see updated progress.
+6. Harmony will process your request and indicate its progress on the status page. You may need to refresh the status page to see updated progress.
 
     ```{figure} ../assets/harmony-status-page.png
     :label: harmony-status-page-image
@@ -125,7 +134,7 @@ Harmony services are available directly in [Earthdata Search](#earthdata-search-
     Once you click the **Download Data** button, the Harmony Status page will open and indicate progress.
     ```
 
-7. Once the extraction process is complete, the download links for the individual GeoTIFFs will be displayed. Click each link to download the products through the web browser, or click the **Download Files** button to leverage the Earthdata bulk download app.
+7. Once processing is complete, the download links for the individual GeoTIFFs will be displayed. Click each link to download the products through the web browser, or click the **Download Files** button to leverage the Earthdata bulk download app.
 
     ```{figure} ../assets/harmony-status-complete.png
     :label: harmony-status-complete-image
@@ -133,5 +142,5 @@ Harmony services are available directly in [Earthdata Search](#earthdata-search-
     :align: center
     :class: framed
     
-    Once the extraction process is complete, the Harmony Status page will display the download links for the extracted GeoTIFFs. 
+    Once processing is complete, the Harmony Status page will display the download links for the extracted GeoTIFFs. 
     ```
