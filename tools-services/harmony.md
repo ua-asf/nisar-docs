@@ -110,7 +110,7 @@ If you are subsetting variables, expand the HDF5 group structure by clicking on 
 5. Once customization options are defined, press the **Download Data** button to submit your data for processing.
 
     ```{figure} ../assets/harmony-download-data.png
-    :label: harmony-multiple-collections-image
+    :label: harmony-download-data-image
     :alt: Screenshot highlighting the **Download Data** button
     :align: center
     :class: framed
