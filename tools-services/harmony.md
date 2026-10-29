@@ -25,6 +25,8 @@ This service extracts two-dimensional datasets from the `/science/LSAR/$product-
 
 Because the HDF5 files are more compressed, users who want access to multiple layers for the full file extent may be better served by [downloading the full HD5 file](#download-nisar-data-earthdata-search), as they are more efficient to download than extracted GeoTIFF files.
 
+Note that in the Harmony interface, HDF5 datasets are referred to as 'variables'.
+
 (harmony-dataset-spatial-subsetting)=
 #### Spatial Subsetting
 This option subsets extracted datasets to the spatial filter used in Earthdata Search. Note that this option is only enabled when a [Spatial Filter](#earthdata-search-spatial-filters) is applied during the search. 
@@ -86,11 +88,11 @@ Harmony services are available directly in [Earthdata Search](#earthdata-search-
     Select the **Customize Download** option and select your desired customization options. 
     ```
    
-To select datasets to extract, click the Edit Variables button and expand the HDF5 group structure by clicking on the directory icons to see their contents. Then, select the individual datasets to extract. 
+To select datasets to extract, click the **Edit Variables** button and expand the HDF5 group structure by clicking on the directory icons to see their contents. Then, select the individual datasets to extract. 
 
-- When selecting [datasets to extract](#harmony-dataset-extraction), note that a product may not contain all of the listed variables. This list includes all possible variables that _may_ be present in a product of that type. As long as at least one of the selected datasets is available in the product, the Harmony job will run. 
-   - GeoTIFFs will be generated for any selected variables that are present in the granule, and any datasets that are not present will be ignored.
-   - If you do not see a download link for a variable you selected, refer to the file [naming convention](#naming-convention-overview) to determine which polarizations and frequencies would be expected for that product.
+- When selecting [datasets to extract](#harmony-dataset-extraction), note that a product may not contain all of the datasets listed in the interface. This list includes all possible datasets that _may_ be present in a product of that type. As long as at least one of the selected datasets is available in the product, the Harmony job will run. 
+   - GeoTIFFs will be generated for any selected datasets that are present in the granule, and any datasets that are not present will be ignored.
+   - If you do not see a download link for a dataset you selected, refer to the file [naming convention](#naming-convention-overview) to determine which polarizations and frequencies would be expected for that product.
 
     ```{figure} ../assets/harmony-select-variables.png
     :label: harmony-select-variables-image
@@ -123,7 +125,7 @@ To select datasets to extract, click the Edit Variables button and expand the HD
     ```
 If multiple collections are included in the Project, you will need to define the download options for each one. You can either: 
    - Click the **Edit Options** link for each collection, as illustrated in @harmony-multiple-collections-image.
-   - Click the **Back to Edit Options** link at the top of the panel once you have made your variable selections and click the **Next** button to progress through each collection. 
+   - Click the **Back to Edit Options** link at the top of the panel once you have selected the desired datasets and click the **Next** button to progress through each collection. 
 
         ```{figure} ../assets/harmony-multiple-edit.png
         :label: harmony-multiple-edit-image
