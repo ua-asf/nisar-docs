@@ -5,38 +5,42 @@
 
 [Harmony](https://www.earthdata.nasa.gov/data/tools/nasa-harmony) is Earthdata's data transformation service for customizing NASA datasets. It is seamlessly integrated into the [Earthdata Search](#earthdata-search-overview) platform, but users can also leverage the [Harmony APIs](https://harmony.earthdata.nasa.gov/docs) or the [Harmony-py](https://github.com/nasa/harmony-py) Python library to interact with the data programmatically. 
 
-ASF and the Harmony team developed options for NISAR customization, with services that [extracts individual datasets](#harmony-supported-products-extract), spatially subset, and reproject NISAR HDF5 products and export them as GeoTIFFs. 
+ASF and the Harmony team have developed a service for NISAR file customization, allowing users to [extract individual datasets](#harmony-dataset-extraction) from NISAR HDF5 files as GeoTIFFs and optionally [spatially subset](#harmony-dataset-spatial-subsetting) and/or [reproject]() them. 
 
 Refer to the @tools-services-roadmap to see the development plan for additional Harmony services supporting NISAR.
 
 (harmony-supported-products-extract)=
 ### Dataset Customization Service
 
-Users can use Harmony to customize NISAR products for the following products: 
+The Harmony service can be used to customize datasets from the following NISAR products:
 
 - Geocoded Polarimetric Covariance ([GCOV](#gcov-product-overview))
 - Geocoded Unwrapped Interferogram ([GUNW](#gunw-product-overview))
 - Geocoded Pixel Offsets ([GOFF](#goff-product-overview))
 - Soil Moisture ([SME2](#sme2-product-overview))
 
+(harmony-dataset-extraction)=
+#### Dataset Extraction
+This service extracts two-dimensional datasets from the `/science/LSAR/$product-type/grids/` group as stand-alone GeoTIFFs. This is particularly useful for users who are interested in accessing only one or two of the datasets in a NISAR HDF5 product, or spatially subsetting datasets to a portion of the full product extent. 
+
+Because the HDF5 files are more compressed, users who want access to multiple layers for the full file extent may be better served by [downloading the full HD5 file](#download-nisar-data-earthdata-search), as they are more efficient to download than extracted GeoTIFF files.
+
+(harmony-dataset-spatial-subsetting)=
 #### Spatial Subsetting
-This service subsets two-dimensional datasets to the spatial filter used in Earthdata Search. Note that option is only enabled when using the [Spatial Filter](#earthdata-search-spatial-filters). 
+This option subsets extracted datasets to the spatial filter used in Earthdata Search. Note that this option is only enabled when a [Spatial Filter](#earthdata-search-spatial-filters) is applied during the search. 
 
-(harmony-variable-subsetting)=
-#### Variable Subsetting
-This service extracts two-dimensional datasets from the `/science/LSAR/$product-type/grids/` group as stand-alone GeoTIFFs. This is particularly useful for those users only interested in one or two layers in a product. 
-
-Because the HDF5 files are more compressed, users interested in several layers will be better served by [downloading the full HD5 file](#download-nisar-data-earthdata-search), as they are more efficient to download than extracted GeoTIFF files.
-
+(harmony-dataset-projection)=
 #### Output Projection Selection
-This service reprojects output files to the selected EPSG code. Supported projections include Geographic (EPSG:4326), Antarctic Polar Stereographic (EPSG:), NSIDC Sea Ice Polar Stereographic North (EPSG:), and UTM Zone North (EPSG:32601-EPSG:32660) and UTM Zone South (EPSG:32701-32760) projections. For more information on supported NISAR projects, see @nisar-l2-projections.
+This option reprojects the output GeoTIFFs to the selected EPSG code. Supported output coordinate systems include WGS84 geographic (EPSG:4326), Antarctic Polar Stereographic projected (EPSG:3031), NSIDC Sea Ice Polar Stereographic North projected (EPSG:3413), and WGS84 UTM Zone projections for North (EPSG:32601-EPSG:32660) and South (EPSG:32701-32760). For more information on supported NISAR projections, see @nisar-l2-projections.
+
+<!-- #TODO: verify that users can't select projections other than those already used for NISAR -->
 
 (harmony-extract-datasets)=
 ## Customize Downloads in Earthdata Search
 
 Harmony services are available directly in [Earthdata Search](#earthdata-search-overview), which is a map-based web browser interface for data search and access. This makes it easy to find NISAR products for your area and time period of interest and extract just the datasets of interest from the HDF5 file. Each selected dataset is output as a GeoTIFF file.
 
-1. Search for one of the [supported product types](#harmony-supported-products-extract) in [Earthdata Search](#earthdata-search-overview) and [select the desired collection](#find-nisar-collections). If looking to spatially subset NISAR products, make sure to [use Spatial Filters](#earthdata-search-spatial-filters) and filter to your desired AOI.  
+1. Search for one of the [supported product types](#harmony-supported-products-extract) in [Earthdata Search](#earthdata-search-overview) and [select the desired collection](#find-nisar-collections). To spatially subset NISAR products, make sure to [use Spatial Filters](#earthdata-search-spatial-filters) to define your desired AOI.  
 
     ```{figure} ../assets/harmony-search-gcov.png
     :label: harmony-search-gcov-image
@@ -82,9 +86,9 @@ Harmony services are available directly in [Earthdata Search](#earthdata-search-
     Select the **Customize Download** option and select your desired customization options. 
     ```
    
-If you are subsetting variables, expand the HDF5 group structure by clicking on the directory icons to see their contents.Then, select the individual datasets to extract. 
+To select datasets to extract, click the Edit Variables button and expand the HDF5 group structure by clicking on the directory icons to see their contents. Then, select the individual datasets to extract. 
 
-- When using the [Variable Subsetting customization](#harmony-variable-subsetting), note that not all products will contain all the listed variables. This list includes all possible variables that _may_ be present in a product of that type. As long as at least one of the selected datasets is available in the product, the Harmony job will run. 
+- When selecting [datasets to extract](#harmony-dataset-extraction), note that a product may not contain all of the listed variables. This list includes all possible variables that _may_ be present in a product of that type. As long as at least one of the selected datasets is available in the product, the Harmony job will run. 
    - GeoTIFFs will be generated for any selected variables that are present in the granule, and any datasets that are not present will be ignored.
    - If you do not see a download link for a variable you selected, refer to the file [naming convention](#naming-convention-overview) to determine which polarizations and frequencies would be expected for that product.
 
