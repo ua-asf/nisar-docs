@@ -33,9 +33,7 @@ This option subsets extracted datasets to the spatial filter used in Earthdata S
 
 (harmony-dataset-projection)=
 #### Output Projection Selection
-This option reprojects the output GeoTIFFs to the selected EPSG code. Supported output coordinate systems include WGS84 geographic (EPSG:4326), Antarctic Polar Stereographic projected (EPSG:3031), NSIDC Sea Ice Polar Stereographic North projected (EPSG:3413), and WGS84 UTM Zone projections for North (EPSG:32601-EPSG:32660) and South (EPSG:32701-32760). For more information on supported NISAR projections, see @nisar-l2-projections.
-
-<!-- #TODO: verify that users can't select projections other than those already used for NISAR -->
+This option reprojects the output GeoTIFFs to the selected EPSG code. Supported outputs include the WGS84 Geographic Coordinate System (EPSG:4326), the Antarctic Polar Stereographic projection (EPSG:3031), the NSIDC Sea Ice Polar Stereographic North projection (EPSG:3413), and WGS84 UTM Zone projections for the Northern (EPSG:32601-EPSG:32660) and Southern (EPSG:32701-32760) hemispheres. For more information on supported NISAR projections, see @nisar-l2-projections.
 
 (harmony-extract-datasets)=
 ## Customize Downloads in Earthdata Search
