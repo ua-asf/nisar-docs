@@ -5,7 +5,7 @@
 
 [Harmony](https://www.earthdata.nasa.gov/data/tools/nasa-harmony) is Earthdata's data transformation service for customizing NASA datasets. It is seamlessly integrated into the [Earthdata Search](#earthdata-search-overview) platform, but users can also leverage the [Harmony APIs](https://harmony.earthdata.nasa.gov/docs) or the [Harmony-py](https://github.com/nasa/harmony-py) Python library to interact with the data programmatically. 
 
-ASF and the Harmony team have developed a service for NISAR file customization, allowing users to [extract individual datasets](#harmony-dataset-extraction) from NISAR HDF5 files as GeoTIFFs and optionally [spatially subset](#harmony-dataset-spatial-subsetting) and/or [reproject]() them. 
+ASF and the Harmony team have developed a service for NISAR file customization, allowing users to [extract individual datasets](#harmony-dataset-extraction) from NISAR HDF5 files as GeoTIFFs and optionally [spatially subset](#harmony-dataset-spatial-subsetting) and/or [reproject](#harmony-dataset-projection) them. 
 
 Refer to the @tools-services-roadmap to see the development plan for additional Harmony services supporting NISAR.
 
