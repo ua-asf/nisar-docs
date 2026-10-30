@@ -5,10 +5,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [0.4.39]
+
 ### Changed
 - Updated Contributing in README.md to clarify the new contribution workflow introduced in v0.4.36.
-
-## [0.4.39]
 
 ### Added
 - Information about spatial subsetting and reprojecting to the [Harmony](tools-services/harmony.md) page. 
