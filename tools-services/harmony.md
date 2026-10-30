@@ -20,7 +20,7 @@ The Harmony service can be used to customize datasets from the following NISAR p
 - Soil Moisture ([SME2](#sme2-product-overview))
 
 (harmony-dataset-extraction)=
-#### Dataset Extraction
+#### Dataset Extraction (Variable Subsetting)
 This service extracts two-dimensional datasets from the `/science/LSAR/$product-type/grids/` group as stand-alone GeoTIFFs. This is particularly useful for users who are interested in accessing only one or two of the datasets in a NISAR HDF5 product, or spatially subsetting datasets to a portion of the full product extent. 
 
 Because the HDF5 files are more compressed, users who want access to multiple layers for the full file extent may be better served by [downloading the full HD5 file](#download-nisar-data-earthdata-search), as they are more efficient to download than extracted GeoTIFF files.
@@ -107,7 +107,7 @@ Harmony services are available directly in [Earthdata Search](#earthdata-search-
 
     #### Spatial Subsetting
     
-    If a spatial filter has been defined, the spatial constraint will be listed in the Spatial Subsetting box. Check the box next to the ***Trim output granules to the selecte spatial constraint*** option to clip the datasets to the indicated extent.
+    If a spatial filter has been defined, the spatial constraint will be listed in the **Spatial Subsetting** section. Check the box next to the ***Trim output granules to the selecte spatial constraint*** option to clip the datasets to the indicated extent.
 
     #### Variable Subsetting
     
@@ -132,7 +132,7 @@ Harmony services are available directly in [Earthdata Search](#earthdata-search-
 
     #### Output Projection Selection
 
-    Select the desired coordinate system from the list of options. Refer to the list of available systems in the @harmony-dataset-projection section.
+    Select the desired coordinate system from the list of options in the **Output Projection Selection** section. Refer to the list of available systems in the @harmony-dataset-projection description.
 
 5. Once customization options are defined, press the **Download Data** button to submit your data for processing.
 
