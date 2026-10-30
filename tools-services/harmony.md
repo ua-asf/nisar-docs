@@ -85,7 +85,7 @@ Harmony services are available directly in [Earthdata Search](#earthdata-search-
     Click the **My Project** button to view the list of granules you've added.
     ```
  
-4. If necessary, click the **Edit Options** button for the project to access the customization service options. 
+4. If necessary, click the **Edit Options** button for the project to view the download and customization options.
 
    - If you add datasets for multiple collections to the same project, each collection will be listed in the left panel. You can switch collections by clicking the **Edit Options** link for the desired collection.
 
@@ -100,7 +100,7 @@ Harmony services are available directly in [Earthdata Search](#earthdata-search-
 
 ### Set Customization Options
 
-5. In the **Edit Options** menu, check the circle next to **Customize Download** to set customization options.
+5. In the **Edit Options** menu, check the circle next to **Customize Download** to display the customization options.
    
     ```{figure} ../assets/harmony-customize-download.png
     :label: harmony-customize-download-image
