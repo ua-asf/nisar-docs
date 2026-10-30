@@ -84,7 +84,9 @@ Harmony services are available directly in [Earthdata Search](#earthdata-search-
     
     Click the **My Project** button to view the list of granules you've added.
     ```
-   
+ 
+4. Click the **Edit Options** button for the project to access the customization service options.
+
    - If you add datasets for multiple collections to the same project, each collection will be listed in the left panel. You can switch collections by clicking the **Edit Options** link for the desired collection.
 
     ```{figure} ../assets/harmony-multiple-collections.png
@@ -98,7 +100,7 @@ Harmony services are available directly in [Earthdata Search](#earthdata-search-
 
 ### Set Customization Options
 
-4. Select the **Customize Download** option to select the customization options that suit your needs.
+5. Click the **Edit Options** button and select **Customize Download** to set your customization options.
    
     ```{figure} ../assets/harmony-customize-download.png
     :label: harmony-customize-download-image
@@ -140,7 +142,7 @@ Harmony services are available directly in [Earthdata Search](#earthdata-search-
 
 ### Download Extracted Datasets
 
-5. Once customization options are defined, press the **Download Data** button to submit your data for processing.
+6. Once customization options are defined, press the **Download Data** button to submit your data for processing.
 
     ```{figure} ../assets/harmony-download-data.png
     :label: harmony-download-data-image
@@ -166,7 +168,7 @@ Harmony services are available directly in [Earthdata Search](#earthdata-search-
 
     - The **Download Data** button will launch the Harmony jobs for all collections in the project that have customization options defined.
    
-6. Harmony will process your request and indicate its progress on the status page. You may need to refresh the status page to see updated progress.
+7. Harmony will process your request and indicate its progress on the status page. You may need to refresh the status page to see updated progress.
 
     ```{figure} ../assets/harmony-status-page.png
     :label: harmony-status-page-image
@@ -177,7 +179,7 @@ Harmony services are available directly in [Earthdata Search](#earthdata-search-
     Once you click the **Download Data** button, the Harmony Status page will open and indicate progress.
     ```
 
-7. Once processing is complete, the download links for the individual GeoTIFFs will be displayed. Click each link to download the products through the web browser, or click the **Download Files** button to leverage the Earthdata bulk download app.
+8. Once processing is complete, the download links for the individual GeoTIFFs will be displayed. Click each link to download the products through the web browser, or click the **Download Files** button to leverage the Earthdata bulk download app.
 
     ```{figure} ../assets/harmony-status-complete.png
     :label: harmony-status-complete-image
