@@ -74,6 +74,17 @@ Harmony services are available directly in [Earthdata Search](#earthdata-search-
     
     Click the **My Project** button to view the list of granules you've added.
     ```
+   
+   - If you add datasets for multiple collections to the same project, each collection will be listed in the left panel. You can switch collections by clicking the **Edit Options** link for the desired collection.
+
+    ```{figure} ../assets/harmony-multiple-collections.png
+    :label: harmony-multiple-collections-image
+    :alt: Screenshot of accessing the download options for each collection when multiple collections are added to the same project
+    :align: center
+    :class: framed
+      
+    When multiple collections are included in the project, click the **Edit Options** link for each collection to set the variables to extract.
+    ```
 
 4. Select the **Customize Download** option to select the customization options that suit your needs.
    
@@ -85,12 +96,14 @@ Harmony services are available directly in [Earthdata Search](#earthdata-search-
     
     Select the **Customize Download** option and select your desired customization options. 
     ```
-   
-To select datasets to extract, click the **Edit Variables** button and expand the HDF5 group structure by clicking on the directory icons to see their contents. Then, select the individual datasets to extract. 
 
-- When selecting [datasets to extract](#harmony-dataset-extraction), note that a product may not contain all of the datasets listed in the interface. This list includes all possible datasets that _may_ be present in a product of that type. As long as at least one of the selected datasets is available in the product, the Harmony job will run. 
-   - GeoTIFFs will be generated for any selected datasets that are present in the granule, and any datasets that are not present will be ignored.
-   - If you do not see a download link for a dataset you selected, refer to the file [naming convention](#naming-convention-overview) to determine which polarizations and frequencies would be expected for that product.
+    #### Spatial Subsetting
+    
+    If a spatial filter has been defined, the spatial constraint will be listed in the Spatial Subsetting box. Check the box next to the ***Trim output granules to the selecte spatial constraint*** option to clip the datasets to the indicated extent.
+
+    #### Variable Subsetting
+    
+    To select datasets to extract, click the **Edit Variables** button in the **Variable Subsetting** section and expand the HDF5 group structure by clicking on the directory icons to see their contents, as shown in @harmony-select-variables-image. Check the boxes next to the datasets to extract.
 
     ```{figure} ../assets/harmony-select-variables.png
     :label: harmony-select-variables-image
@@ -100,16 +113,18 @@ To select datasets to extract, click the **Edit Variables** button and expand th
     
     Expand the directory structure and select the datasets to be extracted to GeoTIFF format.
     ```
-- If you add datasets for multiple collections to the same project, each collection will be listed in the left panel. You can switch collections by clicking the **Edit Options** link for the desired collection.
 
-    ```{figure} ../assets/harmony-multiple-collections.png
-    :label: harmony-multiple-collections-image
-    :alt: Screenshot of accessing the download options for each collection when multiple collections are added to the same project
-    :align: center
-    :class: framed
-      
-    When multiple collections are included in the project, click the **Edit Options** link for each collection to set the variables to extract.
-    ```
+    - When selecting [datasets to extract](#harmony-dataset-extraction), note that a product may not contain all of the datasets listed in the interface. This list includes all possible datasets that _may_ be present in a product of that type. As long as at least one of the selected datasets is available in the product, the Harmony job will run. 
+       - GeoTIFFs will be generated for any selected datasets that are present in the granule, and any datasets that are not present will be ignored.
+       - If you do not see a download link for a dataset you selected, refer to the file [naming convention](#naming-convention-overview) to determine which polarizations and frequencies would be expected for that product.
+
+    #### Output Format Conversion
+
+    The default output format is also the only option currently available for the extracted products: Cloud Optimized GeoTIFF (COG).
+
+    #### Output Projection Selection
+
+    Select the desired coordinate system from the list of options. Refer to the list of available systems in the @harmony-dataset-projection section.
 
 5. Once customization options are defined, press the **Download Data** button to submit your data for processing.
 
@@ -134,7 +149,7 @@ If multiple collections are included in the Project, you will need to define the
         To set download options when multiple collections are included in the project, click the **Next** button at the bottom of the Edit Options panel to move to the next collection.
         ```
 
-   - The **Download Data** button will launch the Harmony jobs for all collections in the project that have customization options defined. 
+   - The **Download Data** button will launch the Harmony jobs for all collections in the project that have customization options defined.
    
 6. Harmony will process your request and indicate its progress on the status page. You may need to refresh the status page to see updated progress.
 
