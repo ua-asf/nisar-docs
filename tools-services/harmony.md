@@ -48,7 +48,9 @@ For more information on supported NISAR projections, see @nisar-l2-projections.
 
 Harmony services are available directly in [Earthdata Search](#earthdata-search-overview), which is a map-based web browser interface for data search and access. This makes it easy to find NISAR products for your area and time period of interest and extract just the datasets of interest from the HDF5 file. Each selected dataset is output as a GeoTIFF file.
 
-1. Search for one of the [supported product types](#harmony-supported-products-extract) in [Earthdata Search](#earthdata-search-overview) and [select the desired collection](#find-nisar-collections). To spatially subset NISAR products, make sure to [use Spatial Filters](#earthdata-search-spatial-filters) to define your desired AOI.  
+### Select Products
+
+1. Search for one of the [supported product types](#harmony-supported-products-extract) in [Earthdata Search](#earthdata-search-overview) and [select the desired collection](#find-nisar-collections). To spatially subset NISAR products, make sure to use [Spatial Filters](#earthdata-search-spatial-filters) to define your desired AOI.  
 
     ```{figure} ../assets/harmony-search-gcov.png
     :label: harmony-search-gcov-image
@@ -94,6 +96,8 @@ Harmony services are available directly in [Earthdata Search](#earthdata-search-
     When multiple collections are included in the project, click the **Edit Options** link for each collection to set the variables to extract.
     ```
 
+### Set Customization Options
+
 4. Select the **Customize Download** option to select the customization options that suit your needs.
    
     ```{figure} ../assets/harmony-customize-download.png
@@ -133,6 +137,8 @@ Harmony services are available directly in [Earthdata Search](#earthdata-search-
     #### Output Projection Selection
 
     Select the desired coordinate system from the list of options in the **Output Projection Selection** section. Refer to the list of available systems in the @harmony-dataset-projection description.
+
+### Download Extracted Datasets
 
 5. Once customization options are defined, press the **Download Data** button to submit your data for processing.
 
