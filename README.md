@@ -42,3 +42,27 @@ To add a new page redirect, follow the steps below (for example, to redirect pag
    you won't be able to test your new redirect locally.
    You'll need to push to a fork with GitHub Pages enabled (see [Contributing](#contributing)) to verify redirect behavior.
 1. After the site for your fork has successfully rendered, confirm that `/foo` redirects to `/bar`.
+
+### Rendering fork content in a GitHub page
+
+If desired, GitHub pages can be leveraged to share a rendered version of the main branch of your fork for others to view.
+
+   1. Enable GitHub Actions for your fork
+      <details>
+      <summary>screenshot</summary>
+      <img alt="screenshot of enabling GitHub Actions" src="assets/readme_enable_actions.png" />
+      </details>
+   1. Enable GitHub Pages for your fork with Source = GitHub Actions
+      <details>
+      <summary>screenshot</summary>
+      <img alt="screenshot of enabling GitHub Pages" src="assets/readme_enable_pages.png" />
+      </details>
+   1. Create two GitHub Actions variables:
+      1. `BASE_URL` with a value of `/nisar-docs` (including the leading `/`)
+      2. `DOMAIN` with a value of `https://{github_user_id}.github.io`
+      <details>
+      <summary>screenshot</summary>
+      <img alt="screenshot of creating BASE_URL variable" src="assets/readme_variables.png" />
+      </details>
+   1. Push changes to your `main` branch
+   1. Preview the rendered site at `https://{github_user_id}.github.io/nisar-docs/`
