@@ -100,7 +100,7 @@ Harmony services are available directly in [Earthdata Search](#earthdata-search-
 
 ### Set Customization Options
 
-5. Click the **Edit Options** button and select **Customize Download** to set your customization options.
+5. After clicking the **Edit Options** button for the desired project, select **Customize Download** to set your customization options.
    
     ```{figure} ../assets/harmony-customize-download.png
     :label: harmony-customize-download-image
