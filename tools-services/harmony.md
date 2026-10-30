@@ -144,9 +144,10 @@ Harmony services are available directly in [Earthdata Search](#earthdata-search-
       
     Click the **Download Data** button to submit your data for processing.
     ```
-If multiple collections are included in the Project, you will need to define the download options for each one. You can either: 
-   - Click the **Edit Options** link for each collection, as illustrated in @harmony-multiple-collections-image.
-   - Click the **Back to Edit Options** link at the top of the panel once you have selected the desired datasets and click the **Next** button to progress through each collection. 
+
+    - If multiple collections are included in the Project, you will need to define the download options for each one. You can either: 
+      - Click the **Edit Options** link for each collection, as illustrated in @harmony-multiple-collections-image.
+      - Click the **Back to Edit Options** link at the top of the panel once you have selected the desired datasets and click the **Next** button to progress through each collection. 
 
         ```{figure} ../assets/harmony-multiple-edit.png
         :label: harmony-multiple-edit-image
@@ -157,7 +158,7 @@ If multiple collections are included in the Project, you will need to define the
         To set download options when multiple collections are included in the project, click the **Next** button at the bottom of the Edit Options panel to move to the next collection.
         ```
 
-   - The **Download Data** button will launch the Harmony jobs for all collections in the project that have customization options defined.
+    - The **Download Data** button will launch the Harmony jobs for all collections in the project that have customization options defined.
    
 6. Harmony will process your request and indicate its progress on the status page. You may need to refresh the status page to see updated progress.
 
