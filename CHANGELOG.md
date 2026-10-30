@@ -8,6 +8,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Updated Contributing in README.md to clarify the new contribution workflow introduced in v0.4.36.
 
+## [0.4.39]
+
+### Added
+- Information about spatial subsetting and reprojecting to the [Harmony](tools-services/harmony.md) page. 
+
 ## [0.4.38]
 
 ### Added
