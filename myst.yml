@@ -11,7 +11,9 @@ project:
     - file: about-nisar/nisar-intro.md
     - file: data-availability/availability-overview.md
       children:
+        - file: data-availability/nisar-known-issues.md
         - file: data-availability/provisional-known-issues.md
+          hidden: true
         - file: data-availability/product-known-issues.md
           hidden: true
         - file: data-availability/observation-plan.md
@@ -135,6 +137,7 @@ project:
     TEC: Total Electron Content
     UTM: Universal Transverse Mercator
     UR: Urgent Response
+    VALIDATED: Fully calibrated and validated datasets
 
 site:
   template: book-theme

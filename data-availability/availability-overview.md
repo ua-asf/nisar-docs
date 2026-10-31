@@ -34,7 +34,7 @@ NISAR PROVISIONAL datasets were released July 20, 2026. These products are fully
 NISAR PROVISIONAL collections are available for all mission products from Level 0 to Level 3, including raw Level-0B [RRSD](#rrsd-product-overview) products. Prior data releases did not include RRSD products.
 
 (known-issues)=
-Most of the known issues with the BETA products have been resolved in this release, and the PROVISIONAL products generally meet radiometric and geolocation requirements in lower-latitude areas where ionospheric variability is low, but there are still a few [known issues](#provisional-known-issues) users should be aware of when working with the PROVISIONAL products. 
+Most of the known issues with the BETA products have been resolved in this release, and the PROVISIONAL products generally meet radiometric and geolocation requirements in lower-latitude areas where ionospheric variability is low, but there are still a few [known issues](./provisional-known-issues.md) users should be aware of when working with the PROVISIONAL products. 
 
 :::{important}NISAR Data Gap
 Permanent NISAR instrument data gap exists between `2026-07-27T22:03:25Z` and `2026-08-10T00:55:27Z`.
