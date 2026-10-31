@@ -10,9 +10,9 @@ ASF and the Harmony team have developed a service for NISAR file customization, 
 Refer to the @tools-services-roadmap to see the development plan for additional Harmony services supporting NISAR.
 
 (harmony-supported-products-extract)=
-### Dataset Customization Service
+### Download Customization Service
 
-The Harmony service can be used to customize datasets from the following NISAR products:
+The Harmony service can be used to customize downloads for the following NISAR products:
 
 - Geocoded Polarimetric Covariance ([GCOV](#gcov-product-overview))
 - Geocoded Unwrapped Interferogram ([GUNW](#gunw-product-overview))
@@ -20,20 +20,20 @@ The Harmony service can be used to customize datasets from the following NISAR p
 - Soil Moisture ([SME2](#sme2-product-overview))
 
 (harmony-dataset-extraction)=
-#### Dataset Extraction (Variable Subsetting)
-This service extracts two-dimensional datasets from the `/science/LSAR/$product-type/grids/` group as stand-alone GeoTIFFs. This is particularly useful for users who are interested in accessing only one or two of the datasets in a NISAR HDF5 product, or spatially subsetting datasets to a portion of the full product extent. 
+#### Dataset Extraction
+This service provides [Variable Subsetting](#eds-harmony-variable-subsetting), which extracts two-dimensional datasets from the `/science/LSAR/$product-type/grids/` group as stand-alone Cloud-Optimized GeoTIFF (COG) files. This is particularly useful for users who are interested in accessing only one or two of the datasets in a NISAR HDF5 product or spatially subsetting datasets to a portion of the full product extent. 
 
 Because the HDF5 files are more compressed, users who want access to multiple layers for the full file extent may be better served by [downloading the full HD5 file](#download-nisar-data-earthdata-search), as they are more efficient to download than extracted GeoTIFF files.
 
 Note that in the Harmony interface, HDF5 datasets are referred to as 'variables'.
 
 (harmony-dataset-spatial-subsetting)=
-#### Spatial Subsetting
-This option subsets extracted datasets to the spatial filter used in Earthdata Search. Note that this option is only enabled when a [Spatial Filter](#earthdata-search-spatial-filters) is applied during the search. 
+#### Option: Extract a Spatial Subset
+The [Spatial Subsetting](#eds-harmony-spatial-subsetting) option subsets extracted datasets to the spatial filter used in Earthdata Search. Note that this option is only enabled when a [Spatial Filter](#earthdata-search-spatial-filters) is applied during the search. 
 
 (harmony-dataset-projection)=
-#### Output Projection Selection
-This option reprojects the output GeoTIFFs to the selected EPSG code. Supported coordinate systems include: 
+#### Option: Reproject Extracted Datasets
+The [Output Projection Selection](#eds-harmony-output-projection-selection) option reprojects the output COGs to the selected coordinate system. Supported coordinate systems include: 
 
 - WGS84 Geographic Coordinate System (EPSG:4326)
 - Antarctic Polar Stereographic projection (EPSG:3031)
@@ -46,7 +46,7 @@ For more information on supported NISAR projections, see @nisar-l2-projections.
 (harmony-extract-datasets)=
 ## Customize Downloads in Earthdata Search
 
-Harmony services are available directly in [Earthdata Search](#earthdata-search-overview), which is a map-based web browser interface for data search and access. This makes it easy to find NISAR products for your area and time period of interest and extract just the datasets of interest from the HDF5 file. Each selected dataset is output as a GeoTIFF file.
+Harmony services are available directly in [Earthdata Search](#earthdata-search-overview), which is a map-based web browser interface for data search and access. This makes it easy to find NISAR products for your area and time period of interest and extract just the datasets of interest from the HDF5 file. Each selected dataset is output as a Cloud Optimized GeoTIFF (COG) file.
 
 ### Select Products
 
@@ -85,7 +85,7 @@ Harmony services are available directly in [Earthdata Search](#earthdata-search-
     Click the **My Project** button to view the list of granules you've added.
     ```
  
-4. Click the **Edit Options** button for the project to access the customization service options.
+4. If necessary, click the **Edit Options** button for the project to view the download and customization options.
 
    - If you add datasets for multiple collections to the same project, each collection will be listed in the left panel. You can switch collections by clicking the **Edit Options** link for the desired collection.
 
@@ -100,7 +100,7 @@ Harmony services are available directly in [Earthdata Search](#earthdata-search-
 
 ### Set Customization Options
 
-5. After clicking the **Edit Options** button for the desired project, select **Customize Download** to set your customization options.
+5. In the **Edit Options** menu, check the circle next to **Customize Download** to display the customization options.
    
     ```{figure} ../assets/harmony-customize-download.png
     :label: harmony-customize-download-image
@@ -111,13 +111,37 @@ Harmony services are available directly in [Earthdata Search](#earthdata-search-
     Select the **Customize Download** option and select your desired customization options. 
     ```
 
+   (eds-harmony-spatial-subsetting)=
     #### Spatial Subsetting
     
-    If a spatial filter has been defined, the spatial constraint will be listed in the **Spatial Subsetting** section. Check the box next to the ***Trim output granules to the selecte spatial constraint*** option to clip the datasets to the indicated extent.
+    If a [spatial filter](#earthdata-search-spatial-filters) has been defined, the spatial constraint will be listed in the **Spatial Subsetting** section. Check the box next to the ***Trim output granules to the selected spatial constraint*** option to clip the datasets to the indicated extent.
 
+    ```{figure} ../assets/harmony-spatial-subsetting.png
+    :label: harmony-spatial-subsetting-image
+    :alt: Screenshot of the Spatial Subsetting options section
+    :align: center
+    :width: 75%
+    :class: framed
+    
+    Check the box to clip the output datasets to the spatial extent defined with the Spatial Filter tool in the Earthdata Search interface.
+    ```
+
+   (eds-harmony-variable-subsetting)=
     #### Variable Subsetting
     
-    To select datasets to extract, click the **Edit Variables** button in the **Variable Subsetting** section and expand the HDF5 group structure by clicking on the directory icons to see their contents, as shown in @harmony-select-variables-image. Check the boxes next to the datasets to extract.
+    To select datasets to extract, click the **Edit Variables** button in the **Variable Subsetting** section. If no datasets are selected, every gridded dataset available in the list of variables will be extracted to individual GeoTIFFs, which will increase processing time.
+
+    ```{figure} ../assets/harmony-variable-subsetting.png
+    :label: harmony-variable-subsetting-image
+    :alt: Screenshot of the Variable Subsetting section
+    :align: center
+    :width: 75%
+    :class: framed
+    
+    Click the **Edit Variables** button to choose which datasets to extract from the HDF5 file.
+    ``` 
+
+    Expand the HDF5 group structure by clicking on the directory icons to see their contents, as shown in @harmony-select-variables-image. Check the boxes next to the datasets you want to extract, then click the **Back to Edit Options** link near the top of the window.
 
     ```{figure} ../assets/harmony-select-variables.png
     :label: harmony-select-variables-image
@@ -132,13 +156,39 @@ Harmony services are available directly in [Earthdata Search](#earthdata-search-
        - GeoTIFFs will be generated for any selected datasets that are present in the granule, and any datasets that are not present will be ignored.
        - If you do not see a download link for a dataset you selected, refer to the file [naming convention](#naming-convention-overview) to determine which polarizations and frequencies would be expected for that product.
 
+   (eds-harmony-output-format-conversion)=
     #### Output Format Conversion
 
-    The default output format is also the only option currently available for the extracted products: Cloud Optimized GeoTIFF (COG).
+    The only output file format currently available for extracted NISAR datasets is Cloud Optimized GeoTIFF (COG). The drop-down menu in the **Output Format Conversion** section provides output options of `Default Format` and `GEOTIFF`. Choosing either of these options will export the selected NISAR datasets as COGs. 
 
+    ```{figure} ../assets/harmony-output-format-conversion.png
+    :label: harmony-output-format-conversion-image
+    :alt: Screenshot of selecting the output file format for extracted NISAR datasets
+    :align: center
+    :width: 75%
+    :class: framed
+    
+    Either leave the setting as `Default Format` or select `GEOTIFF` from the menu to output the extracted NISAR datasets in Cloud Optimized GeoTIFF (COG) format.
+    ```
+
+    When working with GCOV products, the drop-down menu may also include a PNG option. Selecting this format would trigger a different Harmony transformation service that would not perform the dataset extraction. The PNG menu item will be greyed out and non-selectable for most users. 
+
+   (eds-harmony-output-projection-selection)=
     #### Output Projection Selection
 
-    Select the desired coordinate system from the list of options in the **Output Projection Selection** section. Refer to the list of available systems in the @harmony-dataset-projection description.
+    By default, the **Output Projection Selection** option is set to `No Reprojection` and the output files are in the same coordinate system as the source HDF5 file. Refer to @nisar-l2-projections for more information on the projections used by the NISAR project. 
+
+    ```{figure} ../assets/harmony-output-projection-selection.png
+    :label: harmony-output-projection-selection-image
+    :alt: Screenshot of the options in the Output Projection Selection section
+    :align: center
+    :width: 75%
+    :class: framed
+    
+    Leave the **Output Projection Selection** as the default `No Projection` option to output the extracted datasets in the same projection as the source HDF5 file, or select a different projection from the available options in the drop-down menu.
+    ```
+
+    If you would like to reproject the extracted datasets, select the desired output coordinate system from the list of options in the drop-down menu. This function currently only supports reprojection to the WGS84 Geographic Coordinate system or any of the projections used by the NISAR project, as listed in @harmony-dataset-projection. 
 
 ### Download Extracted Datasets
 
