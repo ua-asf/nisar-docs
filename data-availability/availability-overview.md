@@ -8,6 +8,22 @@ NISAR launched July 30, 2025, and has been successfully collecting data through 
 
 In addition, a limited set of [NISAR S-band sample data products](https://bhoonidhi.nrsc.gov.in/NISAR/NisarProducts.html) can now be accessed through ISRO's [Bhoonidhi data hub](https://bhoonidhi.nrsc.gov.in/bhoonidhi/home.html). This S-band product release includes RSLC, GSLC, and GCOV products generated from NISAR acquisitions in January and February 2026. Refer to the [Bhoonidhi NISAR Mission site](https://bhoonidhi.nrsc.gov.in/NISAR/) for more information.
 
+(nisar-validated-data-nov)=
+## NISAR VALIDATED Data: November 2026
+
+{button}`Find NISAR VALIDATED L-Band Data <https://search.asf.alaska.edu/#/?prodConfig=PR&dataMaturity=VALIDATED>`
+
+NISAR VALIDATED datasets were released November 4, 2026. These products are fully calibrated and validated, and acquisitions prior to the release date have been reprocessed. NISAR VALIDATED collections are available for all mission products from Level 0 through Level 2, and include products globally from [#TODO: add date] onward.
+
+VALIDATED Level 3 [Soil Moisture (SME2)](#sme2-product-overview) products are not yet available, as additional validation efforts using the PROVISIONAL and VALIDATED GCOV datasets are still underway. 
+
+(validated-known-issues)=
+Most of the known issues identified in the [BETA](./product-known-issues.md) and [PROVISIONAL](./provisional-known-issues.md) products have been resolved in the VALIDATED products, but there are still some [known issues](#nisar-validated-known-issues) in the VALIDATED data products.
+
+There are no plans for another full-archive reprocessing campaign, but updates to the processing software may be released periodically as algorithms are further refined, resulting in products that are generated using different NISAR Composite Release ID (CRID) versions. 
+
+CRID version updates, including descriptions of the changes introduced with each version, are tracked on the [NISAR CRID page](https://www.earthdata.nasa.gov/data/platforms/space-based-platforms/nisar/nisar-composite-release-id-crid).
+
 (nisar-provisional-data-july)=
 ## NISAR PROVISIONAL Data: July 2026
 
@@ -29,7 +45,7 @@ The PROVISIONAL products are generated using the [NISAR Composite Release ID (CR
 
 ### Supplemental Provisional Products
 
-The science team has identified a limited set of NISAR frames that will be used to produce deeper time series backward in time to continue with time-series validation work. These products will also enable community access to longer NISAR time series for tool development, as they will extend back in time further than June 17. These products will be included in the PROVISIONAL collections as they are processed.
+The PROVISIONAL collections also include longer time series for specific frames that were selected by the science team for use in time-series validation work.
 
 (nisar-sample-data-feb)=
 ## NISAR BETA Data: February 2026
@@ -80,13 +96,17 @@ A [larger volume](https://www.earthdata.nasa.gov/news/nisar-release-over-100000-
 
 (timeline-calibrated-forward-processing)=
 ### Jul 2026: Provisional products
-Global L-band NISAR Provisional products were released on July 20, 2026. These datasets are marked as PROVISIONAL, indicating that they are calibrated and partially validated, but processing improvements are still underway. Provisional datasets are available for all acquisitions starting from June 17, 2026, and forward processing will continue until fully validated products are released.
+Global L-band NISAR Provisional products were released on July 20, 2026. These datasets are marked as PROVISIONAL, indicating that they are calibrated and partially validated, but processing improvements are still underway. Provisional datasets are available for all acquisitions starting from June 17, 2026, through [#TODO: add end date].
 
-This release is the first to include [L0B RRSD](#rrsd-product-overview) products, which have a nominal latency of 2-10 hours from data acquisition to availability. Level 1-3 products have a nominal latency of 36-72 hours. Products are continuously generated and made publicly available for all areas shown in @data-acquisition-extent and in the [NISAR Reference Observation Plan](#nisar-reference-observation-plan). 
+This release was the first to include [L0B RRSD](#rrsd-product-overview) products, which have a nominal latency of 2-10 hours from data acquisition to availability. Level 1-3 products have a nominal latency of 36-72 hours. Products are continuously generated and made publicly available for all areas shown in @data-acquisition-extent and in the [NISAR Reference Observation Plan](#nisar-reference-observation-plan). 
 
 (validated-reprocessing)=
-### Q4 2026: Validated reprocessing
+### Nov 2026: Validated reprocessing
 
-Additional validation will take place using the provisional data, resulting in algorithm improvements. Once the products are fully validated, the NISAR project will transition to generating validated products with a new version of the processor and begin a reprocessing campaign. These validated products will supersede any earlier versions of the data in the archive.
+Validated NISAR Level 0-2 products were released on November 4, 2026. This release included reprocessed products going back to [#TODO: add reprocessing start date], providing consistent products globally from the start of the science phase of the NISAR mission.
 
-This reprocessing campaign will generate new versions of Level 0-3 products from the global backlog of all L-band data collected during the science phase of the mission. Data products will be continually published to ASF and made publicly available as they are generated during the reprocessing effort, which is expected to be complete by the end of 2026.
+### 2027: Validated SME2 products
+
+Once there are sufficiently long time series of validated GCOV products available to validate and refine the Level 3 Soil Moisture (SME2) products, there will be a VALIDATED SME2 collection added to the archive. Until that time, the PROVISIONAL SME2 collection will include products generated using multiple CRIDs. 
+
+
