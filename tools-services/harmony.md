@@ -1,26 +1,24 @@
 # Harmony
 
 (harmony-overview)=
-## Harmony Services for NISAR
-
 [Harmony](https://www.earthdata.nasa.gov/data/tools/nasa-harmony) is Earthdata's data transformation service for customizing NASA datasets. It is seamlessly integrated into the [Earthdata Search](#earthdata-search-overview) platform, but users can also leverage the [Harmony APIs](https://harmony.earthdata.nasa.gov/docs) or the [Harmony-py](https://github.com/nasa/harmony-py) Python library to interact with the data programmatically. 
+
+(harmony-supported-products-extract)=
+## Download Customization Service
 
 ASF and the Harmony team have developed a service for NISAR file customization, allowing users to [extract individual datasets](#harmony-dataset-extraction) from NISAR HDF5 files as GeoTIFFs and optionally [spatially subset](#harmony-dataset-spatial-subsetting) and/or [reproject](#harmony-dataset-projection) them. 
 
-Refer to the @tools-services-roadmap to see the development plan for additional Harmony services supporting NISAR.
-
-(harmony-supported-products-extract)=
-### Download Customization Service
-
-The Harmony service can be used to customize downloads for the following NISAR products:
+This Harmony service can be used to customize downloads for the following NISAR products:
 
 - Geocoded Polarimetric Covariance ([GCOV](#gcov-product-overview))
 - Geocoded Unwrapped Interferogram ([GUNW](#gunw-product-overview))
 - Geocoded Pixel Offsets ([GOFF](#goff-product-overview))
 - Soil Moisture ([SME2](#sme2-product-overview))
 
+Refer to the @tools-services-roadmap to see the development plan for additional Harmony services supporting NISAR.
+
 (harmony-dataset-extraction)=
-#### Dataset Extraction
+### Dataset Extraction
 This service provides [Variable Subsetting](#eds-harmony-variable-subsetting), which extracts two-dimensional datasets from the `/science/LSAR/$product-type/grids/` group as stand-alone Cloud-Optimized GeoTIFF (COG) files. This is particularly useful for users who are interested in accessing only one or two of the datasets in a NISAR HDF5 product or spatially subsetting datasets to a portion of the full product extent. 
 
 Because the HDF5 files are more compressed, users who want access to multiple layers for the full file extent may be better served by [downloading the full HD5 file](#download-nisar-data-earthdata-search), as they are more efficient to download than extracted GeoTIFF files.
