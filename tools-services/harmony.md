@@ -15,7 +15,7 @@ This Harmony service can be used to customize downloads for the following NISAR 
 - Geocoded Pixel Offsets ([GOFF](#goff-product-overview))
 - Soil Moisture ([SME2](#sme2-product-overview))
 
-Refer to the @tools-services-roadmap to see the development plan for additional Harmony services supporting NISAR.
+Refer to the @tools-services-roadmap to see the plan for additional Harmony service development in support of NISAR.
 
 (harmony-dataset-extraction)=
 ### Dataset Extraction
