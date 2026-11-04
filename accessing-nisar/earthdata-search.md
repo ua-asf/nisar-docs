@@ -15,13 +15,14 @@ Earthdata Search organizes data by product type. Each of these data types is cal
 (find-nisar-collections)=
 ## 1. Find NISAR collections
 
-The NISAR mission generates many data product types of varying processing levels, as described in the @data-products-overview. Each one of these product types has its own collection in Earthdata Search. You can search for multiple NISAR collections at once to explore the available data types, or restrict your search to a specific NISAR collection. 
+The NISAR mission generates many data product types of varying processing levels at multiple maturity levels, as described in the @data-products-overview. Each one of these product types has its own collection in Earthdata Search for each maturity. You can search for multiple NISAR collections at once to explore the available data types, or restrict your search to a specific NISAR collection. 
 
 (earthdata-search-bar)=
 ### Earthdata Search Landing Page
 
 Get started searching for NISAR data quickly by using the search bar on the [Earthdata Search landing page](https://search.earthdata.nasa.gov/). 
 - Enter `nisar_` to search for all available NISAR collections, including ancillary datasets
+- Enter `nisar validated` to search for [NISAR VALIDATED collections](#nisar-validated-data-nov)
 - Enter `nisar provisional` to search for [NISAR PROVISIONAL collections](#nisar-provisional-data-july) 
 - Enter `nisar*beta` to search for pre-calibration [NISAR BETA collections](#nisar-sample-data-feb)
 
@@ -36,7 +37,24 @@ Search using the search bar on the Earthdata Search landing page.
 (collection-short-names)=
 #### Collection Short Names 
 
-To search for a specific product type, input the corresponding short name from either @tbl:earthdata-search-shortname-list-provisional for calibrated [PROVISIONAL datasets](#nisar-provisional-data-july) or @tbl:earthdata-search-shortname-list-beta for pre-calibration [BETA datasets](#nisar-sample-data-feb) into the search bar. For ancillary datasets such as orbit ephemeris files, refer to @tbl:earthdata-search-supporting-shortname-list for the short names.
+To search for a specific product type, input the corresponding short name from @tbl:earthdata-search-shortname-list-validated for [VALIDATED datasets](#nisar-validated-data-nov), @tbl:earthdata-search-shortname-list-provisional for calibrated but not fully validated [PROVISIONAL datasets](#nisar-provisional-data-july), or @tbl:earthdata-search-shortname-list-beta for pre-calibration [BETA datasets](#nisar-sample-data-feb) into the search bar. For ancillary datasets such as orbit ephemeris files, refer to @tbl:earthdata-search-supporting-shortname-list for the short names.
+
+:::{table} NISAR VALIDATED Data Product Short Names
+:label: tbl:earthdata-search-shortname-list-validated
+
+| Product | Short Name                   |
+|---------|------------------------------|
+| SME2    | NISAR_L3_SME2_VALIDATED_V1   |
+| GCOV    | NISAR_L2_GCOV_VALIDATED_V1 |
+| GUNW    | NISAR_L2_GUNW_VALIDATED_V1 |
+| GOFF    | NISAR_L2_GOFF_VALIDATED_V1 |
+| GSLC    | NISAR_L2_GSLC_VALIDATED_V1 |
+| RUNW    | NISAR_L1_RUNW_VALIDATED_V1 |
+| RIFG    | NISAR_L1_RIFG_VALIDATED_V1 |
+| ROFF    | NISAR_L1_ROFF_VALIDATED_V1 |
+| RSLC    | NISAR_L1_RSLC_VALIDATED_V1 |
+
+:::
 
 :::{table} NISAR PROVISIONAL Data Product Short Names
 :label: tbl:earthdata-search-shortname-list-provisional
@@ -99,9 +117,9 @@ Typing `NISAR` in the **Search Bar** and setting the **Platforms** filter to `NI
 ```
 
 You can also enter more specific keywords into the search bar, but they may not narrow your search completely. For example:
-- Entering `NISAR GCOV` returns just the NISAR_L2_GCOV collections for PROVISIONAL, BETA, and UR products.
-- Entering `NISAR RSLC` returns not only the NISAR_L1_RSLC collections for PROVISIONAL and BETA products, but other NISAR collections that use RSLC products as input during processing. It does not include the UR Level 1 collection in the results, however.
-  - Using an asterisk between the search terms limits the search to just the collections with both terms in the same field (such as the collection name). Entering `NISAR*RSLC` only returns the NISAR_L1_RSLC collections for PROVISIONAL and BETA products. It will still not include the UR Level 1 collection in the results.
+- Entering `NISAR GCOV` returns just the NISAR_L2_GCOV collections for VALIDATED, PROVISIONAL, BETA, and UR products.
+- Entering `NISAR RSLC` returns not only the NISAR_L1_RSLC collections for VALIDATED, PROVISIONAL, and BETA products, but other NISAR collections that use RSLC products as input during processing. It does not include the UR Level 1 collection in the results, however.
+  - Using an asterisk between the search terms limits the search to just the collections with both terms in the same field (such as the collection name). Entering `NISAR*RSLC` only returns the NISAR_L1_RSLC collections for VALIDATED, PROVISIONAL, and BETA products. It will still not include the UR Level 1 collection in the results.
 - To search for a specific collection, input the corresponding [short name](#collection-short-names).
 
 Beneath the search bar are many filter options organized by category. The categories most useful for refining NISAR search results are [Platforms](#eds-platforms) and [Processing Levels](#eds-processing-levels).
@@ -223,7 +241,7 @@ For example, searching for `*_QP*` in the `NISAR_L2_GCOV_PROVISIONAL_V1` collect
 
 ```{figure} ../assets/earthdata-search-granule-search.png
 :label: earthdata-search-granule-search
-:alt: Screenshot showing a Granule ID search using `*_QP*` to find quad-pol GCOV products.   
+:alt: Screenshot showing a Granule ID search using `*_QP*` to find quad-pol GCOV products in the PROVISIONAL collection.   
 :align: center
 
 Filter using the Granule ID filter set to `*_QP*` to find all quad-pol products. 
