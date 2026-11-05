@@ -13,7 +13,9 @@ In addition, a limited set of [NISAR S-band sample data products](https://bhooni
 
 {button}`Find NISAR VALIDATED L-Band Data <https://search.asf.alaska.edu/#/?prodConfig=PR&dataMaturity=VALIDATED>`
 
-NISAR VALIDATED datasets were released November 4, 2026. These products are fully calibrated and validated, and acquisitions prior to the release date have been reprocessed. NISAR VALIDATED collections are available for all mission products from Level 0 through Level 2, and include products globally from [#TODO: add date] onward.
+NISAR VALIDATED datasets were released November 6, 2026. These products are fully calibrated and validated, and acquisitions prior to the release date have been reprocessed. Validated NISAR collections are available for all mission products from Level 0 through Level 2, and include products globally from [#TODO: add date] onward.
+
+While the [maturity levels](#nisar-maturity-levels) for PROVISIONAL and BETA products are included in the collection names, VALIDATED collections are distinguished by not indicating a maturity level. 
 
 VALIDATED Level 3 [Soil Moisture (SME2)](#sme2-product-overview) products are not yet available, as additional validation efforts using the PROVISIONAL and VALIDATED GCOV datasets are still underway. 
 
@@ -103,7 +105,7 @@ This release was the first to include [L0B RRSD](#rrsd-product-overview) product
 (validated-reprocessing)=
 ### Nov 2026: Validated reprocessing
 
-Validated NISAR Level 0-2 products were released on November 4, 2026. This release included reprocessed products going back to [#TODO: add reprocessing start date], providing consistent products globally from the start of the science phase of the NISAR mission.
+Validated NISAR Level 0-2 products were released on November 6, 2026. This release included reprocessed products going back to [#TODO: add reprocessing start date], providing consistent products globally from the start of the science phase of the NISAR mission.
 
 ### 2027: Validated SME2 products
 
