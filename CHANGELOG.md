@@ -5,6 +5,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [0.4.39]
+
+### Added
+- Guidance on using JPL's NISAR HDF5 GDAL Plugin, including the option available in the Vertex GDAL Snippet Exporter
+
 ### Changed
 - Updated Contributing in README.md to clarify the new contribution workflow introduced in v0.4.36.
 
