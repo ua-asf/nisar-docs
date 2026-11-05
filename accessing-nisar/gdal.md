@@ -528,7 +528,7 @@ gdalwarp -of GTiff ^
 (jpl-nisar-hdf5-gdal-plugin)=
 ## JPL's NISAR HDF5 GDAL Plugin
 
-JPL developed a GDAL plugin that provides streaming capabilities and block-optimized reading for NISAR HDF5 products. While it has not yet been integrated into the main GDAL distribution, Unix users can install it as a plugin. Installation on Windows operating systems is not yet supported. 
+JPL developed a GDAL plugin that provides streaming capabilities and block-optimized reading for NISAR HDF5 products. While it has not yet been integrated into the main GDAL distribution, Unix users can install it as a GDAL plugin. Installation on Windows operating systems is not yet supported. 
 
 The NISAR HDF5 GDAL Plugin provides substantial performance improvements over using the standard GDAL CLI when extracting datasets from cloud-hosted NISAR HDF5 files. It also provides a range of NISAR-specific functionality, including the ability to read single pixel values, view the full HDF5 structure, or apply a validity mask to an extracted dataset.
 
