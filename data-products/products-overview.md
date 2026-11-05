@@ -22,7 +22,7 @@ Fully calibrated PROVISIONAL NISAR data products are now available to the public
 (nisar-maturity-levels)=
 ### NISAR Maturity Levels
 
-NASA uses different [data maturity levels](https://www.earthdata.nasa.gov/learn/earth-observation-data-basics/data-maturity-levels) for data generated over the duration of a mission. There are currently NISAR datasets available for two different maturity levels:
+NASA uses different [data maturity levels](https://www.earthdata.nasa.gov/learn/earth-observation-data-basics/data-maturity-levels) for data generated over the duration of a mission. There are currently NISAR datasets available for three different maturity levels:
 
 - The BETA collections include products from the first two releases of NISAR data in [January 2026](#timeline-january) and [February 2026](#timeline-february). These products are not fully calibrated, and exhibit a number of [known issues](../data-availability/product-known-issues.md), but are still useful for those who would like to access products from earlier in the mission.
 
@@ -30,7 +30,9 @@ NASA uses different [data maturity levels](https://www.earthdata.nasa.gov/learn/
    - Provisional products will be continuously added to the archive as new data is acquired, until the validation period is complete and the [reprocessing campaign](#validated-reprocessing) is launched to generate validated products from the start of the science phase of the mission onwards. 
    - These provisional products are available for acquisitions starting June 17, 2026.
 
-The BETA products and PROVISIONAL products do not overlap temporally, so some users who want to access the data from earlier in the mission may still find the BETA products useful. Because of updates to the processing software to improve product quality, use caution when including both BETA and PROVISIONAL products in analysis workflows. Differences between products from the different maturities may be due to differences in the processing workflow rather than actual changes on the landscape.
+- VALIDATED collections were released [November 6, 2026](#validated-reprocessing) for Level 0-2 products, and include products from [#TODO: Add backprocessing start date] onwards. These products are fully calibrated and validated. Unlike the PROVISIONAL and BETA datasets, the VALIDATED collections do not include the data maturity in the collection name. For example, the PROVISIONAL GCOV collection is `NISAR_L2_GCOV_PROVISIONAL_V1`, while the VALIDATED collection is simply `NISAR_L2_GCOV_V1`.
+
+The BETA products and PROVISIONAL products do not generally overlap temporally, so some users who want to access the data from earlier in the mission may still find the BETA products useful. Because of updates to the processing software to improve product quality, use caution when including both BETA and PROVISIONAL products in analysis workflows. Differences between products from the different maturities may be due to differences in the processing workflow rather than actual changes on the landscape.
 
 (nisar-product-levels)=
 ## NISAR Product Levels
