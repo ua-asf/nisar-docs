@@ -42,17 +42,17 @@ To search for a specific product type, input the corresponding short name from @
 :::{table} NISAR VALIDATED Data Product Short Names
 :label: tbl:earthdata-search-shortname-list-validated
 
-| Product | Short Name                   |
-|---------|------------------------------|
-| SME2    | NISAR_L3_SME2_VALIDATED_V1   |
-| GCOV    | NISAR_L2_GCOV_VALIDATED_V1 |
-| GUNW    | NISAR_L2_GUNW_VALIDATED_V1 |
-| GOFF    | NISAR_L2_GOFF_VALIDATED_V1 |
-| GSLC    | NISAR_L2_GSLC_VALIDATED_V1 |
-| RUNW    | NISAR_L1_RUNW_VALIDATED_V1 |
-| RIFG    | NISAR_L1_RIFG_VALIDATED_V1 |
-| ROFF    | NISAR_L1_ROFF_VALIDATED_V1 |
-| RSLC    | NISAR_L1_RSLC_VALIDATED_V1 |
+| Product | Short Name       |
+|---------|------------------|
+| SME2    | NISAR_L3_SME2_V1 |
+| GCOV    | NISAR_L2_GCOV_V1 |
+| GUNW    | NISAR_L2_GUNW_V1 |
+| GOFF    | NISAR_L2_GOFF_V1 |
+| GSLC    | NISAR_L2_GSLC_V1 |
+| RUNW    | NISAR_L1_RUNW_V1 |
+| RIFG    | NISAR_L1_RIFG_V1 |
+| ROFF    | NISAR_L1_ROFF_V1 |
+| RSLC    | NISAR_L1_RSLC_V1 |
 
 :::
 
