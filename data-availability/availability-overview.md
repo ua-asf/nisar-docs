@@ -13,7 +13,7 @@ In addition, a limited set of [NISAR S-band sample data products](https://bhooni
 
 {button}`Find NISAR VALIDATED L-Band Data <https://search.asf.alaska.edu/#/?prodConfig=PR&dataMaturity=VALIDATED>`
 
-NISAR VALIDATED datasets were released November 6, 2026. These products are fully calibrated and validated, and acquisitions prior to the release date have been reprocessed. Validated NISAR collections are available for all mission products from Level 0 through Level 2, and include products globally from [#TODO: add date] onward.
+NISAR VALIDATED datasets were released November 6, 2026. These products are fully calibrated and validated, and acquisitions prior to the release date have been reprocessed. Validated NISAR collections are available for all mission products from Level 0 through Level 2, and include products globally from October 23, 2026,[#TODO: verify date] onward.
 
 While the [maturity levels](#nisar-maturity-levels) for PROVISIONAL and BETA products are included in the collection names, VALIDATED collections are distinguished by not indicating a maturity level. 
 
@@ -102,10 +102,17 @@ Global L-band NISAR Provisional products were released on July 20, 2026. These d
 
 This release was the first to include [L0B RRSD](#rrsd-product-overview) products, which have a nominal latency of 2-10 hours from data acquisition to availability. Level 1-3 products have a nominal latency of 36-72 hours. Products are continuously generated and made publicly available for all areas shown in @data-acquisition-extent and in the [NISAR Reference Observation Plan](#nisar-reference-observation-plan). 
 
-(validated-reprocessing)=
-### Nov 2026: Validated reprocessing
+(timeline-validated products)
+### Nov 2026: Validated products
 
-Validated NISAR Level 0-2 products were released on November 6, 2026. This release included reprocessed products going back to [#TODO: add reprocessing start date], providing consistent products globally from the start of the science phase of the NISAR mission.
+Validated NISAR Level 0-2 products were released on November 6, 2026. This release includes products from NISAR acquisitions starting October 23, 2026[#TODO: verify date].
+
+(validated-reprocessing)=
+### Q4 2026: Validated reprocessing
+
+Once forward processing of validated products is underway, the NISAR project will transition to a reprocessing campaign for data acquired before October 23, 2026. These validated products will supersede any earlier versions of the data in the archive.
+
+This reprocessing campaign will generate new versions of Level 0-3 products from the global backlog of all L-band data collected during the science phase of the mission. Data products will be continually published to ASF and made publicly available as they are generated during the reprocessing effort.
 
 ### 2027: Validated SME2 products
 
