@@ -153,7 +153,7 @@ All product files associated with a GCOV product. The HDF5 file, listed first, c
 
 ### Subset Geocoded Products with the GDAL Snippet Exporter
 
-[GDAL](https://gdal.org/en/stable/) is a command-line interface (CLI) utility and library that enables the transformation of geographic data. The GDAL snippet exporter allows generating GDAL CLI snippets to extract datasets as a GeoTIFF, spatially subset, or reproject all geocoded ([Level 1](#level-1-range-doppler-products) and [Level 2](#level-2-geocoded-products)) NISAR HDF5 products without downloading the entire HDF5 file.
+[GDAL](https://gdal.org/en/stable/) is a command-line interface (CLI) utility and library that enables the transformation of geographic data. The GDAL snippet exporter allows generating GDAL CLI snippets to extract datasets as a GeoTIFF, spatially subset, or reproject all geocoded ([Level 2](#level-2-geocoded-products) and [Level 3](#level-3-geophysical-products)) NISAR HDF5 products without downloading the entire HDF5 file.
 
 Users can generate a GDAL CLI code snippet using the [simple dataset extraction](#simple-dataset-extraction) option to download a single dataset or the [detailed dataset extraction](#detailed-dataset-extraction) option to reproject and/or spatially subset before downloading. To learn more about the use of GDAL with NISAR data in general, visit the [NISAR Data User Guide page on GDAL](#gdal-nisar).
 
