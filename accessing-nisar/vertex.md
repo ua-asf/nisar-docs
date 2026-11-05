@@ -199,7 +199,11 @@ Then, select a dataset in the GDAL snippet dialog.
 :align: center
 ```
 
-To perform a spatial subsetting operation, ensure you have an area of interest selected on the map view, then check the "Crop to current AOI" box. To perform reprojection enter a EPSG code (ie: EPSG:3857) or WGS84 into the "Output Projection" box.
+Configure export options as desired:
+
+- To extract a spatial subset of the dataset(s), ensure you have an area of interest selected in the map view, then check the "Crop to current AOI" option. 
+- To reproject the output dataset to a different projection than the source product, enter an EPSG code (i.e.: `EPSG:3857`) or `WGS84` into the "Output Projection" box. 
+- Unix users also have the option to configure the snippet for use with [JPL's NISAR HDF5 GDAL Plugin] rather than the GDAL CLI. [Learn more about this option](#jpl-nisar-hdf5-gdal-plugin), which can significantly decrease download times. 
 
 ```{figure} ../assets/vertex-gdal-dialog-options
 :label: vertex-gdal-dialog-options
@@ -217,9 +221,11 @@ Once you have configured the output options, copy the final output snippet by cl
 
 ### Running GDAL Snippets
 
+To run the GDAL code snippets, you must have GDAL installed on your computer. Refer to [installation guidance](installing-gdal) if you do not already have access to a GDAL Command Line Interface (CLI). 
+
 To run GDAL snippets on Windows, open the OSGeo4W shell and paste the command into the shell. If asked if you are sure you want to paste your clipboard into the shell, click yes. Then, hit enter to run the command.
 
-To run GDAL snippets on Unix open your system shell or terminal, paste the command into the shell, and hit enter.
+To run GDAL snippets on Unix, open your system shell or terminal, paste the command into the shell, and hit enter.
 
 ## Urgent Response Products
 
