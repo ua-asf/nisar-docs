@@ -17,7 +17,7 @@ short_title: Vertex
 Navigate to [Vertex](https://search.asf.alaska.edu/#/?dataset=NISAR&prodConfig=PR) and set the **Search Type** to `Geographic Search` and select `NISAR` from the **Dataset** menu. Press **Search** to explore search results.
 
 ```{figure} ../assets/vertex-dataset-selection.png
-:label: vertex-dataset-selection
+:label: vertex-dataset-selection-image
 :alt: Image depicting the option to select NISAR from the Dataset options.
 :align: center
 
@@ -31,7 +31,7 @@ Click on the **Dataset** field and select `NISAR` from the drop-down menu to sea
 NISAR has great coverage over Antarctica. Users interested in this area may find it helpful to use the **Antarctic map projection** in Vertex, which renders acquisition footprints at high latitudes much better than the default global view.
 
 ```{figure} ../assets/vertex-antarctic-map.png
-:label: vertex-antarctic-map-view
+:label: vertex-antarctic-map-view-image
 :alt: Image illustrating how to use the Antarctic Map View in Vertex.
 :align: center
 
@@ -51,7 +51,7 @@ To search for a specific geographic region, click on the left-most **Area of Int
 Select a drawing mode to draw a region of interest on the map, then press **Search** to update the search results for the new region of interest.
 
 ```{figure} ../assets/vertex-geographic-search.png
-:label: vertex-geographic-search
+:label: vertex-geographic-search-image
 :alt: Screenshot of Vertex highlighting the Geographic Search option to draw a region of interest to search for products.
 :align: center
 
@@ -65,7 +65,7 @@ _Take care when drawing an AOI while in the [Antarctic Map View](#vertex-antarct
 To search for products in a specific date range, click the **Filters** button to open the **Search Filters** panel and specify a start and end date in the **Date Filters** section. On larger screens, the date range filter will be displayed directly in the top search bar.
 
 ```{figure} ../assets/vertex-date-filters.png
-:label: vertex-date-filters
+:label: vertex-date-filters-image
 :alt: Screenshot displaying the date filters option.
 :align: center
 
@@ -78,7 +78,7 @@ Click the **Filters** button to open the **Search Filters** panel and enter a da
 Vertex supports [wildcard queries](https://docs.asf.alaska.edu/datasets/wildcard_usage/#vertex), which can be used to filter by [data maturity](https://docs.asf.alaska.edu/datasets/wildcard_usage/#crid-version-number), [polarization](https://docs.asf.alaska.edu/datasets/wildcard_usage/#freq-a-b-polarizations), [cycle](https://docs.asf.alaska.edu/datasets/wildcard_usage/#cycles), or [Stack ID](https://docs.asf.alaska.edu/datasets/wildcard_usage/#stack-ids). To search for NISAR data using scene name patterns, click on **Filters** to open the **Search Filters** panel and input your string in the **Scene Name Patterns** field.
 
 ```{figure} ../assets/vertex-scene-name-patterns.png
-:label: vertex-scene-name-patterns
+:label: vertex-scene-name-patterns-image
 :alt: Screenshot highlighting the scene name pattern filter. 
 :align: center
 
@@ -90,7 +90,7 @@ Click the **Filters** button to open the **Search Filters** panel and enter a sc
 NISAR-specific filters are available to more precisely search for NISAR data products. Refer to the [Vertex Getting Started User Guide](https://docs.asf.alaska.edu/vertex/manual/#product-filters) for a comprehensive list of filters and search options.
 
 ```{figure} ../assets/vertex-nisar-filters.png
-:label: vertex-nisar-filters
+:label: vertex-nisar-filters-image
 :alt: Screenshot displaying the NISAR-specific filters in Vertex.
 :align: center
 
@@ -116,7 +116,7 @@ NISAR-specific filters in Vertex.
 :label: tbl:vertex-observational-filters
 
 | Observational Filters  | Description                                                                                   |
-| ---------------------- | --------------------------------------------------------------------------------------------- |
+|------------------------|-----------------------------------------------------------------------------------------------|
 | Main Band Polarization | Frequency A polarizations. Multiple selections allowed.                                       |
 | Side Band Polarization | Frequency B polarizations. Multiple selections allowed.                                       |
 | Direction              | Orbit direction (ascending, descending).                                                      |
