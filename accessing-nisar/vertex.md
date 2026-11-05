@@ -223,7 +223,11 @@ Once you have configured the output options, copy the final output snippet by cl
 
 To run the GDAL code snippets, you must have GDAL installed on your computer. Refer to [installation guidance](installing-gdal) if you do not already have access to a GDAL Command Line Interface (CLI). 
 
+#### Windows Operating Systems
+
 To run GDAL snippets on Windows, open the OSGeo4W shell and paste the command into the shell. If asked if you are sure you want to paste your clipboard into the shell, click yes. Then, hit enter to run the command.
+
+#### Unix Operating Systems
 
 To run GDAL snippets on Unix, open your system shell or terminal, paste the command into the shell, and hit enter.
 
