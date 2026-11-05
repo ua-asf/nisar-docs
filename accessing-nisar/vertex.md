@@ -102,7 +102,7 @@ NISAR-specific filters in Vertex.
 :label: tbl:vertex-product-filters
 
 | Product Filters       | Description                                                                                                                                |
-| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+|-----------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
 | Science Product       | Specific product type, grouped by product level. Multiple selections allowed.                                                              |
 | Product Configuration | Specific processing pipelines, including Production and [Urgent Response](#urgent-response-product-overview). Multiple selections allowed. |
 | Data Maturity         | Specific product validation/calibration status between beta and provisional data. Multiple selections allowed.                             |
