@@ -15,17 +15,18 @@ Soil moisture estimates are provided over areas with dense vegetation (VWC great
 
 The NISAR soil moisture has an accuracy goal of 0.06 m3/m3 over unflagged areas with vegetation water content below 5 kg/m2. The 5+5 MHz product will be aggregated to 400 meters but will still be posted to the 200-m EASE-Grid 2.0.
 
+(sme2-product-maturity-level)=
 ### Product Maturity Level
 
 Soil moisture products are generated from a time series analysis using Level 2 [GCOV](#gcov-product-overview) products as input. 
 
-:::{warning}PROVISIONAL Soil Moisture Products Not Fully Calibrated
+:::{warning}Soil Moisture Products Not Fully Calibrated or Validated
 
-Because long time series of PROVISIONAL GCOV products are not yet available for use in the Soil Moisture processing workflow, the SME2 products in the PROVISIONAL collection are not yet fully calibrated. 
+The algorithms used to generate SME2 products rely on long time series of GCOV products. Due to insufficient availability of validated GCOV time series data, there is not yet a collection of VALIDATED SME2 products. 
 
-Refer to [PROVISIONAL Known Issues](#provisional-known-issues-sme2) for more information.
+The SME2 products in the PROVISIONAL collection should also not be considered fully calibrated. Refer to [PROVISIONAL Known Issues](#provisional-known-issues-sme2) for more information.
 :::
 
-The release of VALIDATED collections in November 2026 did not include a collection for SME2 products. Because these products are not yet fully validated, pending the availability of longer time series of VALIDATED GCOV products, products generated with CRID [#TODO: Verify CRID number] P05032 are currently still being added to the [PROVISIONAL SME2 collection](https://www.earthdata.nasa.gov/data/catalog/asf-nisar-l3-sme2-provisional-v1-1). 
+The release of VALIDATED collections in November 2026 did not include a collection for SME2 products. Because these products are not yet fully validated, pending the availability of longer time series of VALIDATED GCOV products, products generated with CRID P05036<!--[#TODO: Verify CRID number]--> are currently still being added to the [PROVISIONAL SME2 collection](https://www.earthdata.nasa.gov/data/catalog/asf-nisar-l3-sme2-provisional-v1-1). 
 
-To differentiate between products generated with CRID PO5032 and the original CRID used for the PROVISIONAL collection (P05023), use a wildcard search in either [Earthdata Search](#earthdata-search-advanced-filters) or [Vertex](#vertex-scene-name-patterns) to select only products with the desired CRID. 
+To differentiate between products generated with CRID PO5036<!--[#TODO: Verify CRID]--> and the original CRID used for the PROVISIONAL collection (P05023), use a wildcard search in either [Earthdata Search](#earthdata-search-advanced-filters) or [Vertex](#vertex-scene-name-patterns) to select only products with the desired CRID. 
