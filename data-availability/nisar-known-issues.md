@@ -13,7 +13,9 @@ The VALIDATED products [released in November 2026](#nisar-validated-data-nov) ar
 
 While these products can be used without reservation for scientific analysis, there are some known issues that users should be aware of. Some of these issues are inherent to the dataset, while others may be addressed using novel approaches that are currently under development. 
 
-These known issues, including additional issues that emerge as NISAR data is used more widely, will be documented on this page. If you encounter issues with NISAR products that are not addressed here, please post them to [NASA's Earthdata Forum](#nisar-in-earthdata-forum).
+Known issues impacting VALIDATED products will be documented on this page (we expect documentation of the known issues to be available by mid-November). Additional issues that surface as NISAR data is used more widely will be added as information becomes available, and entries will be updated as issues are resolved or determined to be permanent. 
+
+If you encounter issues with NISAR products that are not addressed here, please post them to [NASA's Earthdata Forum](#nisar-in-earthdata-forum).
 
 ### Known Issues Table
 
@@ -23,36 +25,32 @@ These known issues, including additional issues that emerge as NISAR data is use
 :label: tbl:known-issues
 :align: center
 
-| Issue Summary                                                                                       | Date Added      | Status                      |
-|-----------------------------------------------------------------------------------------------------|-----------------|-----------------------------|
-| [Permanent NISAR instrument data gap between 2026-07-27 and 2026-08-10](#permanent-data-gap-july26) | 10 August 2026  | Permanent issue             |
-| [Something unexpected happens in this product](#issue-something-interesting-1)                      | 4 November 2026 | Fix expected with next CRID |
-| [Something else unexpected happens in this product](#issue-something-interesting-2)                 | 4 November 2026 | Resolved with CRID XXXXX    |
+| Issue Summary                                                                                       | Date Added  | Status                                                                                 |
+|-----------------------------------------------------------------------------------------------------|-------------|----------------------------------------------------------------------------------------|
+| [Incomplete L0B Products](#issue-timestamp-incomplete-l0b)                                          | 05 Nov 2026 | Resolved with CRID P0503X <!--[#TODO: add link to CRID on NIAR page once available]--> |
+| [Permanent NISAR instrument data gap between 2026-07-27 and 2026-08-10](#permanent-data-gap-july26) | 10 Aug 2026 | Permanent issue                                                                        |
+
 
 :::
 
 
 ### Current Known Issues
 
+These issues are currently impacting VALIDATED products. Some issues are unresolvable, but others may be mitigated in future updates to the NISAR processing software.
+
 (permanent-data-gap-july26)=
 #### Permanent data gap
 
-No data was collected by the NISAR platform between 2026-07-27T22:03:25Z and 2026-08-10T00:55:27Z.
-
-(issue-something-interesting-1)=
-#### Something Interesting 1
-
-This is a description of the issue and any relevant guidance for mitigation or use
-
+No data was collected by the NISAR platform between 2026-07-27T22:03:25Z and 2026-08-10T00:55:27Z. There are not currently any VALIDATED products available for this time range, but once the [reprocessing campaign](#validated-reprocessing) is complete, this data gap will be present in the VALIDATED collections, as well.
 
 
 ### Resolved Known Issues
 
 These issues have been resolved in newer CRID versions, but may still impact VALIDATED products processed with older CRIDs.
 
-(issue-something-interesting-2)=
-#### Something Interesting 2
+(issue-timestamp-incomplete-l0b)=
+#### Incomplete L0B Products
 
-***Resolved with CRID XXXXX***
+***Resolved with CRID P0503X*** <!--[#TODO: add link to CRID on NIAR page once available]-->
 
-This is a description of the issue and any relevant guidance for mitigation or use
+One of the most critical issues with the PROVISIONAL products was a [timestamp issue that resulted in incomplete L0B products](#provisional-issue-incomplete-l0b-products). This manifested in downstream product types as a range of artifacts, including defocused RSLC images, missing data, and decorrelation in InSAR products. The majority of issues with PROVISIONAL products reported to the Earthdata Forum were caused by this issue, but it was resolved before VALIDATED data products were processed. 
