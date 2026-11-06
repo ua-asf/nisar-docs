@@ -11,9 +11,9 @@ To learn about the known issues for PROVISIONAL or BETA products, click the butt
 
 The VALIDATED products [released in November 2026](#nisar-validated-data-nov) are fully calibrated and validated.
 
-While these products can be used without reservation for scientific analysis, there are some known issues that users should be aware of. Some of these issues are inherent to the dataset, while others may be addressed using novel approaches that are currently under development. 
+While these products meet calibration and validation requirements for the mission, there are some known issues that users should be aware of. Some of these issues are inherent to the mission data, while others have the potential to be addressed in the future using new processing approaches. 
 
-Known issues impacting VALIDATED products will be documented on this page (we expect documentation of the known issues to be available by mid-November). Additional issues that surface as NISAR data is used more widely will be added as information becomes available, and entries will be updated as issues are resolved or determined to be permanent. 
+Known issues with the NISAR data are tracked here, and additional issues that surface over time will be added as information becomes available. Entries will be updated as issues are resolved or determined to be permanent. 
 
 If you encounter issues with NISAR products that are not addressed here, please post them to [NASA's Earthdata Forum](#nisar-in-earthdata-forum).
 
