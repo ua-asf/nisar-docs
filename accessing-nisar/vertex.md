@@ -102,7 +102,7 @@ NISAR-specific filters in Vertex.
 :label: tbl:vertex-product-filters
 
 | Product Filters       | Description                                                                                                                                |
-| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+|-----------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
 | Science Product       | Specific product type, grouped by product level. Multiple selections allowed.                                                              |
 | Product Configuration | Specific processing pipelines, including Production and [Urgent Response](#urgent-response-product-overview). Multiple selections allowed. |
 | Data Maturity         | Specific product validation/calibration status between beta and provisional data. Multiple selections allowed.                             |
@@ -115,7 +115,7 @@ NISAR-specific filters in Vertex.
 :label: tbl:vertex-observational-filters
 
 | Observational Filters  | Description                                                                                   |
-| ---------------------- | --------------------------------------------------------------------------------------------- |
+|------------------------|-----------------------------------------------------------------------------------------------|
 | Main Band Polarization | Frequency A polarizations. Multiple selections allowed.                                       |
 | Side Band Polarization | Frequency B polarizations. Multiple selections allowed.                                       |
 | Direction              | Orbit direction (ascending, descending).                                                      |
@@ -153,9 +153,9 @@ All product files associated with a GCOV product. The HDF5 file, listed first, c
 
 ### Subset Geocoded Products with the GDAL Snippet Exporter
 
-[GDAL](https://gdal.org/en/stable/) is a command-line interface (CLI) utility and library that enables the transformation of geographic data. The GDAL snippet exporter allows generating GDAL CLI snippets to extract datasets as a GeoTIFF, spatially subset, or reproject all geocoded ([Level 1](#level-1-range-doppler-products) and [Level 2](#level-2-geocoded-products)) NISAR HDF5 products without downloading the entire HDF5 file.
+[GDAL](https://gdal.org/en/stable/) is a command-line interface (CLI) utility and library that enables the transformation of geographic data. The GDAL snippet exporter allows generating GDAL CLI snippets to extract datasets as a GeoTIFF, spatially subset, or reproject all geocoded ([Level 2](#level-2-geocoded-products) and [Level 3](#level-3-geophysical-products)) NISAR HDF5 products without downloading the entire HDF5 file.
 
-Users can generate a GDAL CLI code snippet using the [simple dataset extraction](#simple-dataset-extraction) option to download a single dataset or the [detailed dataset extraction](#detailed-dataset-extraction) option to reproject and/or spatially subset before downloading. To learn more about the use of GDAL with NISAR data in general, visit the [NISAR Data User Guide page on GDAL](#gdal-nisar).
+Users can generate a GDAL CLI code snippet using the [simple dataset extraction](#simple-dataset-extraction) option to download a single dataset or the [detailed dataset extraction](#detailed-dataset-extraction) option to reproject and/or spatially subset before downloading. To learn more about using GDAL with NISAR data, visit @gdal-nisar.
 
 The Vertex GDAL snippet export generates CLI snippets which stream products directly from NASA's [Earthdata Cloud (EDC)](https://www.earthdata.nasa.gov/about/earthdata-cloud-evolution) without downloading them first. Ensure that [GDAL is installed](#installing-gdal) and you have [a `.netrc` file with your EDL credentials configured](#netrc-setup) before running output GDAL CLI code snippets.
 
@@ -199,7 +199,11 @@ Then, select a dataset in the GDAL snippet dialog.
 :align: center
 ```
 
-To perform a spatial subsetting operation, ensure you have an area of interest selected on the map view, then check the "Crop to current AOI" box. To perform reprojection enter a EPSG code (ie: EPSG:3857) or WGS84 into the "Output Projection" box.
+Configure export options as desired:
+
+- To extract a spatial subset of the dataset(s), ensure you have an area of interest selected in the map view, then check the "Crop to current AOI" option. 
+- To reproject the output dataset to a different projection than the source product, enter an EPSG code (i.e.: `EPSG:3857`) or `WGS84` into the "Output Projection" box. 
+- Unix users also have the option to configure the snippet for use with [JPL's NISAR HDF5 GDAL Plugin] rather than the GDAL CLI. [Learn more about this option](#jpl-nisar-hdf5-gdal-plugin), which can significantly decrease download times. 
 
 ```{figure} ../assets/vertex-gdal-dialog-options
 :label: vertex-gdal-dialog-options
@@ -217,9 +221,15 @@ Once you have configured the output options, copy the final output snippet by cl
 
 ### Running GDAL Snippets
 
+To run the GDAL code snippets, you must have GDAL installed on your computer. Refer to [installation guidance](installing-gdal) if you do not already have access to a GDAL Command Line Interface (CLI). 
+
+#### Windows Operating Systems
+
 To run GDAL snippets on Windows, open the OSGeo4W shell and paste the command into the shell. If asked if you are sure you want to paste your clipboard into the shell, click yes. Then, hit enter to run the command.
 
-To run GDAL snippets on Unix open your system shell or terminal, paste the command into the shell, and hit enter.
+#### Unix Operating Systems
+
+To run GDAL snippets on Unix, open your system shell or terminal, paste the command into the shell, and hit enter.
 
 ## Urgent Response Products
 
