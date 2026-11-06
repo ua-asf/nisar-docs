@@ -34,7 +34,7 @@ NASA uses different [data maturity levels](https://www.earthdata.nasa.gov/learn/
 - VALIDATED collections were released [November 6, 2026](#validated-reprocessing) for Level 0-2 products, and include products for all NISAR L-band acquisitions starting from October 21, 2026. These products are fully calibrated and validated. 
    - Unlike the PROVISIONAL and BETA datasets, the VALIDATED collections do not include the data maturity in the collection name. For example, the PROVISIONAL GCOV collection is `NISAR_L2_GCOV_PROVISIONAL_V1`, while the VALIDATED collection is simply `NISAR_L2_GCOV_V1`.
 
-The BETA products do not generally overlap temporally with the PROVISIONAL or VALIDATED products, and until the [reprocessing campaign](#validated-reprocessing) is complete, BETA and PROVISIONAL data do not overlap temporally with VALIDATED data. Users who want to access the data from earlier in the mission may still find the BETA and/or PROVISIONAL products useful. 
+The BETA products do not generally overlap temporally with the PROVISIONAL products, and, until the [reprocessing campaign](#validated-reprocessing) is complete, BETA and PROVISIONAL data do not overlap temporally with VALIDATED data. Users who want to access the data from earlier in the mission may still find the BETA and/or PROVISIONAL products useful. 
 
 Because of updates to the processing software to improve product quality, use caution when including multiple data maturities in the same analysis workflow. Differences between products from the different maturities may be due to differences in the processing workflow rather than actual changes on the landscape.
 
