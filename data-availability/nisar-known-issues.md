@@ -27,7 +27,7 @@ If you encounter issues with NISAR products that are not addressed here, please 
 
 | Issue Summary                                                                                       | Date Added  | Status                                                                                 |
 |-----------------------------------------------------------------------------------------------------|-------------|----------------------------------------------------------------------------------------|
-| [Incomplete L0B Products](#issue-timestamp-incomplete-l0b)                                          | 05 Nov 2026 | Resolved with CRID P0503X <!--[#TODO: add link to CRID on NIAR page once available]--> |
+| [Incomplete L0B Products](#issue-timestamp-incomplete-l0b)                                          | 05 Nov 2026 | Resolved with CRID P05036 <!--[#TODO: add link to CRID on NIAR page once available]--> |
 | [Permanent NISAR instrument data gap between 2026-07-27 and 2026-08-10](#permanent-data-gap-july26) | 10 Aug 2026 | Permanent issue                                                                        |
 
 
