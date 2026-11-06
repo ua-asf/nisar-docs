@@ -222,7 +222,7 @@ Once you have configured the output options, copy the final output snippet by cl
 
 ### Running GDAL Snippets
 
-To run the GDAL code snippets, you must have GDAL installed on your computer. Refer to [installation guidance](installing-gdal) if you do not already have access to a GDAL Command Line Interface (CLI). 
+To run the GDAL code snippets, you must have GDAL installed on your computer. Refer to [installation guidance](#installing-gdal) if you do not already have access to a GDAL Command Line Interface (CLI). 
 
 #### Windows Operating Systems
 

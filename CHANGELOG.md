@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.4.39]
 
 ### Added
+- Information on the validated data release
 - Guidance on using JPL's NISAR HDF5 GDAL Plugin, including the option available in the Vertex GDAL Snippet Exporter
 
 ### Changed
