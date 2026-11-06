@@ -13,7 +13,7 @@ In addition, [NISAR S-band sample data products](https://bhoonidhi.nrsc.gov.in/N
 
 {button}`Find NISAR VALIDATED L-Band Data <https://search.asf.alaska.edu/#/?prodConfig=PR&dataMaturity=VALIDATED>`
 
-NISAR VALIDATED datasets were released November 6, 2026. These products are fully calibrated and validated, and collections are available for all mission products from Level 0 through Level 2. Validated collections include products from all NISAR acquisitions starting October 21, 2026.
+NISAR VALIDATED datasets were released November 6, 2026. These products are fully calibrated and validated, and collections are available for all mission products from Level 0 through Level 2. VALIDATED collections include products from all L-band NISAR acquisitions starting October 21, 2026.
 
 While the [maturity levels](#nisar-maturity-levels) for PROVISIONAL and BETA products are included in the collection names, VALIDATED collections are distinguished by not indicating a maturity level. 
 
@@ -91,7 +91,7 @@ Spatial extent of NISAR L-band data collection, highlighted in green.
 
 All L-band data products processed by the mission will be available to the public through the Alaska Satellite Facility.
 
-The nominal data release timeline as of July 2026 is described below.
+The nominal data release timeline as of November 2026 is described below.
 
 (timeline-january)=
 ### Jan 2026: Sample products
