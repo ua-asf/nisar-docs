@@ -3,7 +3,6 @@
 The [Geospatial Data Abstraction Library (GDAL)](https://gdal.org/en/stable) is an open-source software library used to work with raster and vector geospatial data. There are a number of GDAL command-line interface (CLI) utilities that we can leverage to transform NISAR data.
 
 (gdal-nisar)=
-
 ## Using GDAL to Transform NISAR Data
 
 NISAR products are distributed in HDF5 format, and the files can be very large. Many users may want to transform the data by extracting just the datasets of interest from the HDF5 files and/or subsetting the data to a defined spatial extent.
@@ -11,7 +10,6 @@ NISAR products are distributed in HDF5 format, and the files can be very large. 
 We can use command-line utilities from the GDAL software library to transform these files. Leveraging GDAL's ability to stream data from Earthdata Cloud directly allows us to download only the data we need in the desired format.
 
 (installing-gdal)=
-
 ### Installing GDAL
 
 To use GDAL CLI commands, you must install GDAL locally. The process for installing GDAL differs based on the operating system installed on your computer, or the compute environment in which you wish to run the exported GDAL snippets.
@@ -524,6 +522,13 @@ gdalwarp -of GTiff ^
 ::::
 
 :::::
+
+
+## GDAL Snippet Exporter
+Vertex provides a user interface for generating GDAL snippets to extract (and optionally spatially subset and reproject) datasets from NISAR HDF5 products, leveraging some of the commands described above.
+
+<!--[#TODO: Add screenshot once the interface is a bit more stable]-->
+[Learn more about using the GDAL Snippet Exporter in Vertex](#vertex-gdal-snippet-exporter)
 
 (jpl-nisar-hdf5-gdal-plugin)=
 ## JPL's NISAR HDF5 GDAL Plugin

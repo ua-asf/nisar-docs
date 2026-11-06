@@ -7,7 +7,6 @@ short_title: Vertex
 {button}`Search for all NISAR Data Products<https://search.asf.alaska.edu/#/?dataset=NISAR&prodConfig=PR>`
 
 (vertex-overview)=
-
 ## Vertex
 
 [Vertex](https://search.asf.alaska.edu/#/?dataset=NISAR&prodConfig=PR) is ASF's web-based data search interface. It is optimized for searching NASA's SAR holdings, including NISAR. Because search parameters for SAR differ from other types of Earth observation data, it can be helpful to use a search platform tailored specifically for SAR datasets.
@@ -25,7 +24,6 @@ Click on the **Dataset** field and select `NISAR` from the drop-down menu to sea
 ```
 
 (vertex-antarctica)=
-
 ### Antarctica
 
 NISAR has great coverage over Antarctica. Users interested in this area may find it helpful to use the **Antarctic map projection** in Vertex, which renders acquisition footprints at high latitudes much better than the default global view.
@@ -43,7 +41,6 @@ Note that the [**Layers**](https://docs.asf.alaska.edu/vertex/manual/#other-vert
 ## 2. Filter for desired products
 
 (vertex-geographic-extent)=
-
 ### Geographic Extent
 
 To search for a specific geographic region, click on the left-most **Area of Interest** button to choose to draw a point, line, polygon, box, circle, or to upload a geospatial file.
@@ -151,7 +148,6 @@ All product files associated with a GCOV product. The HDF5 file, listed first, c
 [//]: # "### Download Queue"
 
 (vertex-gdal-snippet-exporter)=
-
 ### Subset Geocoded Products with the GDAL Snippet Exporter
 
 [GDAL](https://gdal.org/en/stable/) is a command-line interface (CLI) utility and library that enables the transformation of geographic data. The GDAL snippet exporter allows generating GDAL CLI snippets to extract datasets as a GeoTIFF, spatially subset, or reproject all geocoded ([Level 2](#level-2-geocoded-products) and [Level 3](#level-3-geophysical-products)) NISAR HDF5 products without downloading the entire HDF5 file.
@@ -161,7 +157,6 @@ Users can generate a GDAL CLI code snippet using the [simple dataset extraction]
 The Vertex GDAL snippet export generates CLI snippets which stream products directly from NASA's [Earthdata Cloud (EDC)](https://www.earthdata.nasa.gov/about/earthdata-cloud-evolution) without downloading them first. Ensure that [GDAL is installed](#installing-gdal) and you have [a `.netrc` file with your EDL credentials configured](#netrc-setup) before running output GDAL CLI code snippets.
 
 (simple-dataset-extraction)=
-
 #### Simple Dataset Extraction to GeoTiff
 
 Dataset extraction to GeoTiff can be performed using the simplified GDAL snippet dropdown. To open the GDAL snippet dropdown, click the arrow button on any supported HDF5 file (GCOV, GOFF, GSLC, GUNW or SME2) in the scene file list.
@@ -181,7 +176,6 @@ Then, click on the terminal icon next to your desired dataset to copy the GDAL C
 ```
 
 (detailed-dataset-extraction)=
-
 #### Detailed GDAL Snippet Generation
 
 Spatial subsetting, reprojection, and more can be achieved through the GDAL snippet exporter dialog. To open the GDAL snippet dialog, click the transformation icon on any supported HDF5 file in the scene file list.
