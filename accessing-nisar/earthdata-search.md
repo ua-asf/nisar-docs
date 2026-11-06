@@ -22,7 +22,6 @@ The NISAR mission generates many data product types of varying processing levels
 
 Get started searching for NISAR data quickly by using the search bar on the [Earthdata Search landing page](https://search.earthdata.nasa.gov/). 
 - Enter `nisar_` to search for all available NISAR collections, including ancillary datasets
-- Enter `nisar validated` to search for [NISAR VALIDATED collections](#nisar-validated-data-nov)
 - Enter `nisar provisional` to search for [NISAR PROVISIONAL collections](#nisar-provisional-data-july) 
 - Enter `nisar*beta` to search for pre-calibration [NISAR BETA collections](#nisar-sample-data-feb)
 
