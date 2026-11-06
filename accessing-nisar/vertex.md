@@ -166,7 +166,7 @@ The Vertex GDAL snippet export generates CLI snippets which stream products dire
 
 Dataset extraction to GeoTiff can be performed using the simplified GDAL snippet dropdown. To open the GDAL snippet dropdown, click the arrow button on any supported HDF5 file (GCOV, GOFF, GSLC, GUNW or SME2) in the scene file list.
 
-```{figure} ../assets/vertex-gdal-dropdown
+```{figure} ../assets/vertex-gdal-dropdown.png
 :label: vertex-gdal-dropdown
 :alt: Screenshot displaying the icon to click to open the GDAL snippet dropdown.
 :align: center
@@ -174,7 +174,7 @@ Dataset extraction to GeoTiff can be performed using the simplified GDAL snippet
 
 Then, click on the terminal icon next to your desired dataset to copy the GDAL CLI snippet corresponding to that dataset.
 
-```{figure} ../assets/vertex-gdal-dropdown-expanded
+```{figure} ../assets/vertex-gdal-dropdown-expanded.png
 :label: vertex-gdal-dropdown-expanded
 :alt: Screenshot displaying the GDAL snippet dropdown.
 :align: center
@@ -186,7 +186,7 @@ Then, click on the terminal icon next to your desired dataset to copy the GDAL C
 
 Spatial subsetting, reprojection, and more can be achieved through the GDAL snippet exporter dialog. To open the GDAL snippet dialog, click the transformation icon on any supported HDF5 file in the scene file list.
 
-```{figure} ../assets/vertex-gdal-dialog-button
+```{figure} ../assets/vertex-gdal-dialog-button.png
 :label: vertex-gdal-dialog-button
 :alt: Screenshot displaying the icon to click to open the GDAL snippet dialog.
 :align: center
@@ -194,7 +194,7 @@ Spatial subsetting, reprojection, and more can be achieved through the GDAL snip
 
 Then, select a dataset in the GDAL snippet dialog.
 
-```{figure} ../assets/vertex-gdal-dialog-dataset
+```{figure} ../assets/vertex-gdal-dialog-dataset.png
 :label: vertex-gdal-dialog-dataset
 :alt: Screenshot displaying the datasets in the GDAL snippet dialog.
 :align: center
@@ -203,10 +203,10 @@ Then, select a dataset in the GDAL snippet dialog.
 Configure export options as desired:
 
 - To extract a spatial subset of the dataset(s), ensure you have an area of interest selected in the map view, then check the "Crop to current AOI" option. 
-- To reproject the output dataset to a different projection than the source product, enter an EPSG code (i.e.: `EPSG:3857`) or `WGS84` into the "Output Projection" box. 
+- To reproject the output dataset to a different projection than the source product, enter an EPSG code (e.g. `EPSG:3857`) or `WGS84` into the "Output Projection" box. 
 - Unix users also have the option to configure the snippet for use with [JPL's NISAR HDF5 GDAL Plugin] rather than the GDAL CLI. [Learn more about this option](#jpl-nisar-hdf5-gdal-plugin), which can significantly decrease download times. 
 
-```{figure} ../assets/vertex-gdal-dialog-options
+```{figure} ../assets/vertex-gdal-dialog-options.png
 :label: vertex-gdal-dialog-options
 :alt: Screenshot displaying the GDAL snippet dialog options.
 :align: center
@@ -214,7 +214,7 @@ Configure export options as desired:
 
 Once you have configured the output options, copy the final output snippet by clicking the copy icon above the "GDAL shell command" code block.
 
-```{figure} ../assets/vertex-gdal-dialog-copy
+```{figure} ../assets/vertex-gdal-dialog-copy.png
 :label: vertex-gdal-dialog-copy
 :alt: Screenshot displaying the icon to click to copy the GDAL command output in the GDAL snipet dialog.
 :align: center
