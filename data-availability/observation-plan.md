@@ -106,7 +106,7 @@ For each data extent (pre-calibration data or reference observation plan), there
 (ref-obs-plan-app)=
 ### Reference Observation Plan Apps
 
-These applications allow you to explore the L-band NISAR acquisitions for the full NISAR mission. 
+These applications allow you to explore the L-band NISAR acquisitions for the full NISAR mission observation plan. 
 
 #### [NISAR Reference Observation Plan - Global](https://experience.arcgis.com/experience/6052a864cd01459393884a7f751558e3)
 
