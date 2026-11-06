@@ -28,11 +28,11 @@ NASA uses different [data maturity levels](https://www.earthdata.nasa.gov/learn/
 
 - The BETA collections include products from the first two releases of NISAR data in [January 2026](#timeline-january) and [February 2026](#timeline-february). These products are not fully calibrated, and exhibit a number of [known issues](../data-availability/product-known-issues.md), but are still useful for those who would like to access products from earlier in the mission.
 
-- The PROVISIONAL collections include products from the [July 2026](#timeline-calibrated-forward-processing) release. These products are fully calibrated and partially validated, but processing improvements are still underway. 
-   - Provisional products will be continuously added to the archive as new data is acquired, until the validation period is complete and the [reprocessing campaign](#validated-reprocessing) is launched to generate validated products from the start of the science phase of the mission onwards. 
-   - These provisional products are available for acquisitions starting June 17, 2026.
+- The PROVISIONAL collections include products from the [July 2026](#timeline-calibrated-forward-processing) release. These products are fully calibrated and partially validated, and were used for additional validation efforts.
+   - These provisional products are available for all L-band acquisitions from June 17, 2026 through part of October 23, 2026.
 
-- VALIDATED collections were released [November 6, 2026](#validated-reprocessing) for Level 0-2 products, and include products for all NISAR acquisitions starting from October 21, 2026. These products are fully calibrated and validated. Unlike the PROVISIONAL and BETA datasets, the VALIDATED collections do not include the data maturity in the collection name. For example, the PROVISIONAL GCOV collection is `NISAR_L2_GCOV_PROVISIONAL_V1`, while the VALIDATED collection is simply `NISAR_L2_GCOV_V1`.
+- VALIDATED collections were released [November 6, 2026](#validated-reprocessing) for Level 0-2 products, and include products for all NISAR L-band acquisitions starting from October 21, 2026. These products are fully calibrated and validated. 
+   - Unlike the PROVISIONAL and BETA datasets, the VALIDATED collections do not include the data maturity in the collection name. For example, the PROVISIONAL GCOV collection is `NISAR_L2_GCOV_PROVISIONAL_V1`, while the VALIDATED collection is simply `NISAR_L2_GCOV_V1`.
 
 The BETA products do not generally overlap temporally with the PROVISIONAL or VALIDATED products, and until the [reprocessing campaign](#validated-reprocessing) is complete, BETA and PROVISIONAL data do not overlap temporally with VALIDATED data. Users who want to access the data from earlier in the mission may still find the BETA and/or PROVISIONAL products useful. 
 
