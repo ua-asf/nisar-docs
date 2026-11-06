@@ -46,11 +46,9 @@ No data was collected by the NISAR platform between 2026-07-27T22:03:25Z and 202
 
 ### Resolved Known Issues
 
-These issues have been resolved in newer CRID versions, but may still impact VALIDATED products processed with older CRIDs.
-
 (issue-timestamp-incomplete-l0b)=
 #### Incomplete L0B Products
 
-***Resolved with CRID P05036*** <!--[#TODO: add link to CRID on NIAR page once available]-->
+***Resolved with CRID P05036*** <!--[#TODO: add link to CRID on NISAR page once available]-->
 
 One of the most critical issues with the PROVISIONAL products was a [timestamp issue that resulted in incomplete L0B products](#provisional-issue-incomplete-l0b-products). This manifested in downstream product types as a range of artifacts, including defocused RSLC images, missing data, and decorrelation in InSAR products. The majority of issues with PROVISIONAL products reported to the Earthdata Forum were caused by this issue, but it was resolved before VALIDATED data products were processed. 
