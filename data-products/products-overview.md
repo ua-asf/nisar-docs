@@ -14,9 +14,11 @@ One of the most exciting aspects of the NISAR mission is that it generates a num
 For SAR scientists and those who want to generate products to their own specifications, the [Level 0 (Raw)](#level-0-unfocused-raw-products) data and [Level 1 (Range-Doppler)](#level-1-range-doppler-products) products are also available.
 
 :::{important}NISAR Data Product Availability
-Fully calibrated and validated NISAR data products are now available for Level 0-2 product types! These products are available for all L-band acquisitions starting October 21, 2026, and the products include significant improvements over the PROVISIONAL products. The only product type that does not yet have VALIDATED data available is the [Level 3 Soil Moisture (SME2) product](. 
+Fully calibrated and validated NISAR data products are now available for Level 0-2 product types! These products are available for all L-band acquisitions starting October 21, 2026, and they represent a significant improvement over the PROVISIONAL data products. 
 
 [Learn more about VALIDATED data](#nisar-validated-data-nov) and the [expected timeline for the validated reprocessing campaign](#validated-reprocessing).
+
+Note that VALIDATED data is not yet available for [Level 3 Soil Moisture (SME2) product](#sme2-product-maturity-level).
 :::
 
 (nisar-maturity-levels)=
