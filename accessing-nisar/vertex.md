@@ -203,8 +203,8 @@ Then, select a dataset in the GDAL snippet dialog.
 Configure export options as desired:
 
 - To extract a spatial subset of the dataset(s), ensure you have an area of interest selected in the map view, then check the "Crop to current AOI" option. 
-- To reproject the output dataset to a different projection than the source product, enter an EPSG code (e.g. `EPSG:3857` for Web Mercator) or `WGS84` (for WGS84 Geographic Coordinate System) into the "Output Projection" box. 
-- Unix users also have the option to configure the snippet for use with [JPL's NISAR HDF5 GDAL Plugin] rather than the GDAL CLI. [Learn more about this option](#jpl-nisar-hdf5-gdal-plugin), which can significantly decrease download times. 
+- To reproject the output dataset to a different projection than the source product, enter an EPSG code (e.g. `EPSG:3857` for Web Mercator), or simply `WGS84` for WGS84 Geographic Coordinate System, into the "Output Projection" box. 
+- Unix users also have the option to configure the snippet for use with [JPL's NISAR HDF5 GDAL Plugin](#jpl-nisar-hdf5-gdal-plugin) rather than the standard GDAL CLI, which can significantly decrease download times. The plugin does not currently support installation on Windows operating systems.
 
 ```{figure} ../assets/vertex-gdal-dialog-options.png
 :label: vertex-gdal-dialog-options
