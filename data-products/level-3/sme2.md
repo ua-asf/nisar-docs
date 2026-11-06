@@ -24,7 +24,7 @@ Soil moisture products are generated from a time series analysis using Level 2 [
 
 The algorithms used to generate SME2 products rely on long time series of GCOV products. Due to insufficient availability of validated GCOV time series data, there is not yet a collection of VALIDATED SME2 products. 
 
-The SME2 products in the PROVISIONAL collection should also not be considered fully calibrated. Refer to [PROVISIONAL Known Issues](#provisional-known-issues-sme2) for more information.
+The SME2 products in the PROVISIONAL collection should not be considered fully calibrated. Refer to [PROVISIONAL Known Issues](#provisional-known-issues-sme2) for more information.
 :::
 
 The release of VALIDATED collections in November 2026 did not include a collection for SME2 products. Because these products are not yet fully validated, pending the availability of longer time series of VALIDATED GCOV products, products generated with CRID P05036<!--[#TODO: Verify CRID number]--> are currently still being added to the [PROVISIONAL SME2 collection](https://www.earthdata.nasa.gov/data/catalog/asf-nisar-l3-sme2-provisional-v1-1). 

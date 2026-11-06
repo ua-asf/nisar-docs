@@ -95,17 +95,17 @@ The nominal data release timeline as of November 2026 is described below.
 
 (timeline-january)=
 ### Jan 2026: Sample products
-An [initial release](https://www.earthdata.nasa.gov/news/nisar-sample-data-products-available) of 25 pre-calibration sample data products were made available on January 23, 2026. This release included one or more products of each of the nine Level 1-3 product types.
+An [initial release](https://www.earthdata.nasa.gov/news/nisar-sample-data-products-available) of 25 pre-calibration sample data products took place on January 23, 2026. This release included one or more products of each of the nine Level 1-3 product types.
 
 (timeline-february)=
 ### Feb 2026: Pre-calibration products
-A [larger volume](https://www.earthdata.nasa.gov/news/nisar-release-over-100000-new-data-product-files) of pre-calibration global data products were made available on February 27, 2026. This release included over 100,000 Level 1-3 products totaling over 500 TB of science data. These datasets are marked as BETA, as they are not yet fully calibrated.
+A [larger volume](https://www.earthdata.nasa.gov/news/nisar-release-over-100000-new-data-product-files) of pre-calibration global data products became available on February 27, 2026. This release included over 100,000 Level 1-3 products totaling over 500 TB of science data. These datasets are marked as BETA, as they are not yet fully calibrated.
 
 (timeline-calibrated-forward-processing)=
 ### Jul 2026: Provisional products
 Global L-band NISAR Provisional products were released on July 20, 2026. These datasets are marked as PROVISIONAL, indicating that they are calibrated and partially validated, but processing improvements are still underway. Provisional datasets are available for all acquisitions starting from June 17, 2026 until partway through October 23, 2026.
 
-This release was the first to include [L0B RRSD](#rrsd-product-overview) products, which have a nominal latency of 2-10 hours from data acquisition to availability. Level 1-3 products have a nominal latency of 36-72 hours. Products are continuously generated and made publicly available for all areas shown in @data-acquisition-extent and in the [NISAR Reference Observation Plan](#nisar-reference-observation-plan). 
+This release was the first to include [L0B RRSD](#rrsd-product-overview) products along with Level 1-3 products. PROVISIONAL products were continuously generated as data was acquired, and made publicly available for all areas shown in @data-acquisition-extent and in the [NISAR Reference Observation Plan](#nisar-reference-observation-plan). Note that the [Level 3 Soil Moisture (SME2) products in the PROVISIONAL collection are not considered fully calibrated](#sme2-product-maturity-level).
 
 (timeline-validated-products)=
 ### Nov 2026: Validated products (L0-2)
