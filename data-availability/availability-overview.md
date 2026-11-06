@@ -110,7 +110,7 @@ This release was the first to include [L0B RRSD](#rrsd-product-overview) product
 (timeline-validated-products)=
 ### Nov 2026: Validated products (L0-2)
 
-Validated NISAR Level 0-2 products were released on November 6, 2026. This release includes products from NISAR acquisitions starting October 21, 2026.
+Validated NISAR Level 0-2 products were released on November 6, 2026. This release includes products from all L-band NISAR acquisitions starting October 21, 2026.
 
 (validated-reprocessing)=
 ### 2027: Validated reprocessing
