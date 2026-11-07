@@ -4,21 +4,44 @@ short_title: Available Data
 
 # Available NISAR Data
 
-NISAR launched July 30, 2025, and has been successfully collecting data through its Commissioning phase and into the Science phase. The calibration-validation process is underway, and fully calibrated NISAR PROVISIONAL products for the full observation plan are now available to the public.
+NISAR launched July 30, 2025, and has been successfully collecting data through its Commissioning phase and into the Science phase. The calibration-validation process is complete, and [fully calibrated and validated NISAR products](#nisar-validated-data-nov) are now available to the public.
 
-In addition, a limited set of [NISAR S-band sample data products](https://bhoonidhi.nrsc.gov.in/NISAR/NisarProducts.html) can now be accessed through ISRO's [Bhoonidhi data hub](https://bhoonidhi.nrsc.gov.in/bhoonidhi/home.html). This S-band product release includes RSLC, GSLC, and GCOV products generated from NISAR acquisitions in January and February 2026. Refer to the [Bhoonidhi NISAR Mission site](https://bhoonidhi.nrsc.gov.in/NISAR/) for more information.
+In addition, [NISAR S-band sample data products](https://bhoonidhi.nrsc.gov.in/NISAR/NisarProducts.html) can be accessed through ISRO's [Bhoonidhi data hub](https://bhoonidhi.nrsc.gov.in/bhoonidhi/home.html). Refer to the [Bhoonidhi NISAR Mission site](https://bhoonidhi.nrsc.gov.in/NISAR/) for more information.
+
+(nisar-validated-data-nov)=
+## NISAR VALIDATED Data: November 2026
+
+{button}`Find NISAR VALIDATED L-Band Data <https://search.asf.alaska.edu/#/?prodConfig=PR&dataMaturity=VALIDATED>`
+
+NISAR VALIDATED datasets were released November 6, 2026. These products are fully calibrated and validated, and collections are available for all mission products from Level 0 through Level 2. VALIDATED collections include products from all L-band NISAR acquisitions starting October 21, 2026.
+
+While the [maturity levels](#nisar-maturity-levels) for PROVISIONAL and BETA products are included in the collection names, VALIDATED collections are distinguished by not indicating a maturity level. 
+
+VALIDATED Level 3 [Soil Moisture (SME2)](#sme2-product-overview) products are not yet available, as additional validation efforts using the PROVISIONAL and VALIDATED GCOV datasets are still underway. 
+
+(validated-known-issues)=
+### Known Issues
+
+Most of the known issues identified in the [BETA](./product-known-issues.md) and [PROVISIONAL](./provisional-known-issues.md) products have been resolved in the VALIDATED products, but there are still some [known issues](#nisar-validated-known-issues) in the VALIDATED data products.
+
+(validated-crid)=
+### NISAR Composite Release ID (CRID)
+
+The initial release of VALIDATED data uses NISAR Composite Release ID (CRID) version P05036.<!--[#TODO: Verify CRID and add link]--> Additional updates to the processing software are anticipated before the [reprocessing campaign](#validated-reprocessing) begins. Even once the reprocessing campaign is complete, updates to the processing software can be expected periodically as algorithms are further refined, resulting in products that are generated using different CRID versions. 
+
+CRID version updates, including descriptions of the changes introduced with each version, are tracked on the [NISAR CRID page](https://www.earthdata.nasa.gov/data/platforms/space-based-platforms/nisar/nisar-composite-release-id-crid) for reference. 
 
 (nisar-provisional-data-july)=
 ## NISAR PROVISIONAL Data: July 2026
 
 {button}`Find NISAR PROVISIONAL L-Band Data <https://search.asf.alaska.edu/#/?prodConfig=PR&dataMaturity=PROVISIONAL>`
 
-NISAR PROVISIONAL datasets were released July 20, 2026. These products are fully calibrated and have undergone validation at a limited set of sites around the world. These datasets are designated as PROVISIONAL pending more complete validation over larger areas around the globe, but are a significant improvement over the [BETA products](#nisar-sample-data-feb) released in Feburary 2026.
+NISAR PROVISIONAL datasets were released July 20, 2026. These products are fully calibrated and have undergone validation at a limited set of sites around the world. These datasets are designated as PROVISIONAL pending more complete validation over larger areas around the globe, but are a significant improvement over the [BETA products](#nisar-sample-data-feb) released in February 2026.
 
 NISAR PROVISIONAL collections are available for all mission products from Level 0 to Level 3, including raw Level-0B [RRSD](#rrsd-product-overview) products. Prior data releases did not include RRSD products.
 
 (known-issues)=
-Most of the known issues with the BETA products have been resolved in this release, and the PROVISIONAL products generally meet radiometric and geolocation requirements in lower-latitude areas where ionospheric variability is low, but there are still a few [known issues](#provisional-known-issues) users should be aware of when working with the PROVISIONAL products. 
+Most of the known issues with the BETA products have been resolved in this release, and the PROVISIONAL products generally meet radiometric and geolocation requirements in lower-latitude areas where ionospheric variability is low, but there are still a few [known issues](./provisional-known-issues.md) users should be aware of when working with the PROVISIONAL products. 
 
 :::{important}NISAR Data Gap
 Permanent NISAR instrument data gap exists between `2026-07-27T22:03:25Z` and `2026-08-10T00:55:27Z`.
@@ -29,7 +52,7 @@ The PROVISIONAL products are generated using the [NISAR Composite Release ID (CR
 
 ### Supplemental Provisional Products
 
-The science team has identified a limited set of NISAR frames that will be used to produce deeper time series backward in time to continue with time-series validation work. These products will also enable community access to longer NISAR time series for tool development, as they will extend back in time further than June 17. These products will be included in the PROVISIONAL collections as they are processed.
+The PROVISIONAL collections also include longer time series for specific frames that were selected by the science team for use in time-series validation work.
 
 (nisar-sample-data-feb)=
 ## NISAR BETA Data: February 2026
@@ -68,25 +91,36 @@ Spatial extent of NISAR L-band data collection, highlighted in green.
 
 All L-band data products processed by the mission will be available to the public through the Alaska Satellite Facility.
 
-The nominal data release timeline as of July 2026 is described below.
+The nominal data release timeline as of November 2026 is described below.
 
 (timeline-january)=
 ### Jan 2026: Sample products
-An [initial release](https://www.earthdata.nasa.gov/news/nisar-sample-data-products-available) of 25 pre-calibration sample data products were made available on January 23, 2026. This release included one or more products of each of the nine Level 1-3 product types.
+An [initial release](https://www.earthdata.nasa.gov/news/nisar-sample-data-products-available) of 25 pre-calibration sample data products took place on January 23, 2026. This release included one or more products of each of the nine Level 1-3 product types.
 
 (timeline-february)=
 ### Feb 2026: Pre-calibration products
-A [larger volume](https://www.earthdata.nasa.gov/news/nisar-release-over-100000-new-data-product-files) of pre-calibration global data products were made available on February 27, 2026. This release included over 100,000 Level 1-3 products totaling over 500 TB of science data. These datasets are marked as BETA, as they are not yet fully calibrated.
+A [larger volume](https://www.earthdata.nasa.gov/news/nisar-release-over-100000-new-data-product-files) of pre-calibration global data products became available on February 27, 2026. This release included over 100,000 Level 1-3 products totaling over 500 TB of science data. These datasets are marked as BETA, as they are not yet fully calibrated.
 
 (timeline-calibrated-forward-processing)=
 ### Jul 2026: Provisional products
-Global L-band NISAR Provisional products were released on July 20, 2026. These datasets are marked as PROVISIONAL, indicating that they are calibrated and partially validated, but processing improvements are still underway. Provisional datasets are available for all acquisitions starting from June 17, 2026, and forward processing will continue until fully validated products are released.
+Global L-band NISAR Provisional products were released on July 20, 2026. These datasets are marked as PROVISIONAL, indicating that they are calibrated and partially validated, but processing improvements are still underway. Provisional datasets are available for all acquisitions starting from June 17, 2026 until partway through October 23, 2026.
 
-This release is the first to include [L0B RRSD](#rrsd-product-overview) products, which have a nominal latency of 2-10 hours from data acquisition to availability. Level 1-3 products have a nominal latency of 36-72 hours. Products are continuously generated and made publicly available for all areas shown in @data-acquisition-extent and in the [NISAR Reference Observation Plan](#nisar-reference-observation-plan). 
+This release was the first to include [L0B RRSD](#rrsd-product-overview) products along with Level 1-3 products. PROVISIONAL products were continuously generated as data was acquired, and made publicly available for all areas shown in @data-acquisition-extent and in the [NISAR Reference Observation Plan](#nisar-reference-observation-plan). Note that the [Level 3 Soil Moisture (SME2) products in the PROVISIONAL collection are not considered fully calibrated](#sme2-product-maturity-level).
+
+(timeline-validated-products)=
+### Nov 2026: Validated products (L0-2)
+
+Validated NISAR Level 0-2 products were released on November 6, 2026. This release includes products from all L-band NISAR acquisitions starting October 21, 2026.
 
 (validated-reprocessing)=
-### Q4 2026: Validated reprocessing
+### 2027: Validated reprocessing
 
-Additional validation will take place using the provisional data, resulting in algorithm improvements. Once the products are fully validated, the NISAR project will transition to generating validated products with a new version of the processor and begin a reprocessing campaign. These validated products will supersede any earlier versions of the data in the archive.
+Once forward processing of validated products is underway and any algorithm updates have been integrated into the processing software, the NISAR project will transition to a reprocessing campaign for data acquired before October 21, 2026. These validated products will supersede any earlier versions of the data in the archive.
 
-This reprocessing campaign will generate new versions of Level 0-3 products from the global backlog of all L-band data collected during the science phase of the mission. Data products will be continually published to ASF and made publicly available as they are generated during the reprocessing effort, which is expected to be complete by the end of 2026.
+This reprocessing campaign will generate new versions of Level 0-2 products from the global backlog of all L-band data collected during the science phase of the mission. Data products will be continually published to ASF and made publicly available as they are generated during the reprocessing effort.
+
+### 2027: Validated SME2 products
+
+Once there are sufficiently long time series of validated GCOV products available to validate and refine the Level 3 Soil Moisture (SME2) products, there will be a VALIDATED SME2 collection added to the archive. Until that time, the PROVISIONAL SME2 collection will include products generated using multiple CRIDs. 
+
+

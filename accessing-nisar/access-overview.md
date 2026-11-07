@@ -10,7 +10,7 @@ There are a range of access options available for NISAR L-band data, supporting 
 :::{important}NISAR Data Product Availability
 NISAR mission data is now available for both L-band and S-band datasets!
 
-[Learn more about the available L-band data and the expected timeline for additional product releases](#nisar-provisional-data-july).
+[Learn more about the available L-band data and the expected timeline for additional product releases](#nisar-validated-data-nov).
 
 [Visit ISRO's Bhoonidhi platform to search for beta S-band data products](#bhoonidhi).
 :::

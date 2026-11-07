@@ -96,34 +96,17 @@ The NISAR Reference Observation Plan can be explored interactively using a serie
 
 - Apply filters to view the spatial extent of planned L-band acquisitions based on flight direction, track/frame, polarization, bandwidth, frequency, date, mode changes, or product type
 - Zoom or pan to view your area of interest
-- Click on a footprint to learn about the acquisition information for that frame
+- Click on a footprint to learn about the acquisition information for that frame, including a list of previous and upcoming acquisition dates
 - Export geospatial files containing information about selected frames 
 
 There are different applications available, displaying either the currently available set of [pre-calibration data](#feb-2026-obs-plan-app), or the full [reference observation plan](#ref-obs-plan-app) once calibrated data is available. Refer to @availability-overview to view the release timeline for the different collections of data. 
 
 For each data extent (pre-calibration data or reference observation plan), there are two different apps. One is suitable for viewing most of the globe, while the other is optimized for viewing acquisitions over Antarctica. The apps optimized for Antarctica use a south polar stereographic projection to improve the rendering of frame footprints.
 
-(feb-2026-obs-plan-app)=
-### Pre-Calibration Data Apps
-
-These applications provide an overview of the L-band NISAR images included in the @nisar-sample-data-feb data release. Click an app image or header to open it in a new tab.
-
-#### [NISAR February 2026 Released Data - Global](https://experience.arcgis.com/experience/0042193b06104889971cd77f505190e0/)
-
-<a href="https://experience.arcgis.com/experience/0042193b06104889971cd77f505190e0/">
-<img id="obs-plan-app-feb2026-global-image" src="../assets/obs-plan-app-feb2026-global.png" alt="Click to open the NISAR February 2026 Released Data app (global view)" width="75%">
-</a>
-
-#### [NISAR February 2026 Released Data - Antarctic](https://experience.arcgis.com/experience/8d4533b5909e4ac395acaf6712f58d9f/)
-
-<a href="https://experience.arcgis.com/experience/8d4533b5909e4ac395acaf6712f58d9f/">
-<img id="obs-plan-app-feb2026-antarctic-image" src="../assets/obs-plan-app-feb2026-antarctic.png" alt="Click to open the NISAR February 2026 Released Data app (Antarctic view)" width="75%">
-</a>
-
 (ref-obs-plan-app)=
 ### Reference Observation Plan Apps
 
-These applications provide an overview of the L-band NISAR acquisitions that will be available once [calibrated data is released](#timeline-calibrated-forward-processing).
+These applications allow you to explore the L-band NISAR acquisitions for the full NISAR mission observation plan. 
 
 #### [NISAR Reference Observation Plan - Global](https://experience.arcgis.com/experience/6052a864cd01459393884a7f751558e3)
 
@@ -136,3 +119,12 @@ These applications provide an overview of the L-band NISAR acquisitions that wil
 <a href="https://experience.arcgis.com/experience/83942599aec64c1c8ea8a8b913d22539">
 <img id="obs-plan-app-calibrated-antarctic-image" src="../assets/obs-plan-app-calibrated-antarctic.png" alt="Click to open the NISAR Reference Observation Plan app (Antarctic view)" width="75%">
 </a>
+
+(feb-2026-obs-plan-app)=
+### Pre-Calibration Data Apps
+
+These applications reference the L-band NISAR products included in the @nisar-sample-data-feb data release, which are only available for select frames around the world.
+
+#### [NISAR February 2026 Released Data - Global](https://experience.arcgis.com/experience/0042193b06104889971cd77f505190e0/)
+
+#### [NISAR February 2026 Released Data - Antarctic](https://experience.arcgis.com/experience/8d4533b5909e4ac395acaf6712f58d9f/)

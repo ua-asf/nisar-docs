@@ -103,7 +103,7 @@ For a full list of exportable variables, see [AWS's Temporary Credentials User G
 
 ### 3. Find NISAR products of interest
 
-NISAR production data is all hosted in the `sds-n-cumulus-prod-nisar-products` S3 bucket. Each product type has a prefix, and while you cannot list the full bucket contents, you can list the contents of each prefix. Refer to @prefix-structure for more information about the organization of the NISAR bucket and the tables of prefixes for NISAR [BETA](#tbl:s3-prefix-list-products-beta) and [PROVISIONAL](#tbl:s3-prefix-list-products-provisional) data products and [supporting products](#tbl:s3-prefix-list-supporting).
+NISAR production data is all hosted in the `sds-n-cumulus-prod-nisar-products` S3 bucket. Each product type has a prefix, and while you cannot list the full bucket contents, you can list the contents of each prefix. Refer to @prefix-structure for more information about the organization of the NISAR bucket and the tables of prefixes for NISAR [VALIDATED](#tbl:s3-prefix-list-products-validated), [PROVISIONAL](#tbl:s3-prefix-list-products-provisional), and [BETA](#tbl:s3-prefix-list-products-beta) data products and [supporting products](#tbl:s3-prefix-list-supporting).
 
 For example, if you want to list all available GCOV products, you can use this `aws s3 ls` command: 
 ```
@@ -144,10 +144,27 @@ Products are stored with the same prefix structure in all three NISAR S3 buckets
 To access a product, the S3 path must contain the NISAR [bucket name](#nisar-s3-buckets), the product type prefix, and the individual product prefix, followed by the full filename (including the extension), as illustrated here:  
 `s3://sds-n-cumulus-prod-nisar-BUCKET/`<wbr>`PRODUCT_TYPE_PREFIX/`<wbr>`PRODUCT_NAME_PREFIX/`<wbr>`PRODUCT_NAME.ext`
 
-@tbl:s3-prefix-list-products-provisional lists the prefix for each NISAR PROVISIONAL product type collection, @tbl:s3-prefix-list-products-beta lists the prefix for each NISAR BETA product type collection, and @tbl:s3-prefix-list-supporting lists the prefix for each of the NISAR supporting data types.
+@tbl:s3-prefix-list-products-validated lists the prefix for each NISAR VALIDATED product type collection, @tbl:s3-prefix-list-products-provisional lists the prefix for each NISAR PROVISIONAL product type collection, and @tbl:s3-prefix-list-products-beta lists the prefix for each NISAR BETA product type collection. @tbl:s3-prefix-list-supporting lists the prefix for each of the NISAR supporting data types.
 
 (prefix-tables)=
 ### Prefix Tables
+
+:::{table} NISAR VALIDATED Data Product S3 Prefix List
+:label: tbl:s3-prefix-list-products-validated
+
+| Product | S3 Prefix         |
+|---------|-------------------|
+| SME2    | NISAR_L3_SME2_V1/ |
+| GCOV    | NISAR_L2_GCOV_V1/ |
+| GUNW    | NISAR_L2_GUNW_V1/ |
+| GOFF    | NISAR_L2_GOFF_V1/ |
+| GSLC    | NISAR_L2_GSLC_V1/ |
+| RUNW    | NISAR_L1_RUNW_V1/ |
+| RIFG    | NISAR_L1_RIFG_V1/ |
+| ROFF    | NISAR_L1_ROFF_V1/ |
+| RSLC    | NISAR_L1_RSLC_V1/ |
+
+:::
 
 :::{table} NISAR PROVISIONAL Data Product S3 Prefix List
 :label: tbl:s3-prefix-list-products-provisional
