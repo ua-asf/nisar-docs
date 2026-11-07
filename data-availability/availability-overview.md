@@ -4,16 +4,16 @@ short_title: Available Data
 
 # Available NISAR Data
 
-NISAR launched July 30, 2025, and has been successfully collecting data through its Commissioning phase and into the Science phase. The calibration-validation process is complete, and [fully calibrated and validated NISAR products](#nisar-validated-data-nov) are now available to the public.
+NISAR launched July 30, 2025, and has been successfully collecting data through its Commissioning phase and into the Science phase. The calibration-validation process is complete, and [fully calibrated and validated NISAR L-band products](#nisar-validated-data-nov) are now available to the public.
 
-In addition, [NISAR S-band sample data products](https://bhoonidhi.nrsc.gov.in/NISAR/NisarProducts.html) can be accessed through ISRO's [Bhoonidhi data hub](https://bhoonidhi.nrsc.gov.in/bhoonidhi/home.html). Refer to the [Bhoonidhi NISAR Mission site](https://bhoonidhi.nrsc.gov.in/NISAR/) for more information.
+In addition, [NISAR S-band products](https://bhoonidhi.nrsc.gov.in/NISAR/NisarProducts.html) can be accessed through ISRO's [Bhoonidhi data hub](https://bhoonidhi.nrsc.gov.in/bhoonidhi/home.html). Refer to the [Bhoonidhi NISAR Mission site](https://bhoonidhi.nrsc.gov.in/NISAR/) for more information.
 
 (nisar-validated-data-nov)=
 ## NISAR VALIDATED Data: November 2026
 
 {button}`Find NISAR VALIDATED L-Band Data <https://search.asf.alaska.edu/#/?prodConfig=PR&dataMaturity=VALIDATED>`
 
-NISAR VALIDATED datasets were released November 6, 2026. These products are fully calibrated and validated, and collections are available for all mission products from Level 0 through Level 2. VALIDATED collections include products from all L-band NISAR acquisitions starting October 21, 2026.
+NISAR VALIDATED datasets were released November 6, 2026. These products are fully calibrated and validated, and collections are available for all mission products from Level 0 through Level 2. VALIDATED collections include products for all L-band NISAR acquisitions starting October 21, 2026.
 
 While the [maturity levels](#nisar-maturity-levels) for PROVISIONAL and BETA products are included in the collection names, VALIDATED collections are distinguished by not indicating a maturity level. 
 
@@ -22,7 +22,7 @@ VALIDATED Level 3 [Soil Moisture (SME2)](#sme2-product-overview) products are no
 (validated-known-issues)=
 ### Known Issues
 
-Most of the known issues identified in the [BETA](./product-known-issues.md) and [PROVISIONAL](./provisional-known-issues.md) products have been resolved in the VALIDATED products, but there are still some [known issues](#nisar-validated-known-issues) in the VALIDATED data products.
+Most of the known issues identified in the [BETA](./product-known-issues.md) and [PROVISIONAL](./provisional-known-issues.md) products have been resolved, but there are still some [known issues](#nisar-validated-known-issues) in the VALIDATED data products.
 
 (validated-crid)=
 ### NISAR Composite Release ID (CRID)
@@ -121,6 +121,6 @@ This reprocessing campaign will generate new versions of Level 0-2 products from
 
 ### 2027: Validated SME2 products
 
-Once there are sufficiently long time series of validated GCOV products available to validate and refine the Level 3 Soil Moisture (SME2) products, there will be a VALIDATED SME2 collection added to the archive. Until that time, the PROVISIONAL SME2 collection will include products generated using multiple CRIDs. 
+Once there are sufficiently long time series of validated GCOV products available to validate and refine the Level 3 Soil Moisture (SME2) products, there will be a VALIDATED SME2 collection added to the archive. Until that time, SME2 products will continue to be added to the PROVISIONAL SME2 collection. 
 
 
