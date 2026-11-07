@@ -9,7 +9,7 @@ short_title: SME2
 (sme2-product-overview)=
 ## Product Overview
 
-NISAR backscatter observations are used to estimate a global high-resolution soil moisture product at a pixel spacing of 200 m. This product is generated with each new acquisition, and is expected to have a data latency of 72 hours. Products generated for [5+5 MHz acquisitions](#nisar-frequencies) are aggregated to 400 meters, but are still posted to the 200-m EASE-Grid 2.0.
+NISAR backscatter observations are used to estimate a global high-resolution soil moisture product at a pixel spacing of 200 m. This product is generated with each new acquisition and is expected to have a data latency of 72 hours. Products generated for [5+5 MHz acquisitions](#nisar-frequencies) are aggregated to 400 meters, but are still posted to the 200-m EASE-Grid 2.0.
 
 Soil moisture estimates are provided over areas with dense vegetation (VWC greater than 5 kg/m2) and during periods of precipitation, but these values are flagged as potentially unreliable. No soil moisture retrievals are provided for areas with urban build-up, permanent snow and ice cover, or permanent inland waterbodies, and these pixels are flagged appropriately. No soil moisture retrievals are provided over areas with frozen ground or snow on the ground.
 
