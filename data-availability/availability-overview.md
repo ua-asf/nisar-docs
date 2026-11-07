@@ -22,7 +22,7 @@ VALIDATED Level 3 [Soil Moisture (SME2)](#sme2-product-overview) products are no
 (validated-known-issues)=
 ### Known Issues
 
-Most of the known issues identified in the [BETA](./product-known-issues.md) and [PROVISIONAL](./provisional-known-issues.md) products have been resolved in the VALIDATED products, but there are still some [known issues](#nisar-validated-known-issues) in the VALIDATED data products.
+Most of the known issues identified in the [BETA](./product-known-issues.md) and [PROVISIONAL](./provisional-known-issues.md) products have been resolved, but there are still some [known issues](#nisar-validated-known-issues) in the VALIDATED data products.
 
 (validated-crid)=
 ### NISAR Composite Release ID (CRID)
