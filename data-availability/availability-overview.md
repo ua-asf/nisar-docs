@@ -115,7 +115,7 @@ Validated NISAR Level 0-2 products were released on November 6, 2026. This relea
 (validated-reprocessing)=
 ### 2027: Validated reprocessing
 
-Once forward processing of validated products is underway and any algorithm updates have been integrated to the processing software, the NISAR project will transition to a reprocessing campaign for data acquired before October 21, 2026. These validated products will supersede any earlier versions of the data in the archive.
+Once forward processing of validated products is underway and any algorithm updates have been integrated into the processing software, the NISAR project will transition to a reprocessing campaign for data acquired before October 21, 2026. These validated products will supersede any earlier versions of the data in the archive.
 
 This reprocessing campaign will generate new versions of Level 0-2 products from the global backlog of all L-band data collected during the science phase of the mission. Data products will be continually published to ASF and made publicly available as they are generated during the reprocessing effort.
 
