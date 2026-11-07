@@ -13,7 +13,7 @@ In addition, [NISAR S-band products](https://bhoonidhi.nrsc.gov.in/NISAR/NisarPr
 
 {button}`Find NISAR VALIDATED L-Band Data <https://search.asf.alaska.edu/#/?prodConfig=PR&dataMaturity=VALIDATED>`
 
-NISAR VALIDATED datasets were released November 6, 2026. These products are fully calibrated and validated, and collections are available for all mission products from Level 0 through Level 2. VALIDATED collections include products from all L-band NISAR acquisitions starting October 21, 2026.
+NISAR VALIDATED datasets were released November 6, 2026. These products are fully calibrated and validated, and collections are available for all mission products from Level 0 through Level 2. VALIDATED collections include products for all L-band NISAR acquisitions starting October 21, 2026.
 
 While the [maturity levels](#nisar-maturity-levels) for PROVISIONAL and BETA products are included in the collection names, VALIDATED collections are distinguished by not indicating a maturity level. 
 
