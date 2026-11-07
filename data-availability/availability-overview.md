@@ -121,6 +121,6 @@ This reprocessing campaign will generate new versions of Level 0-2 products from
 
 ### 2027: Validated SME2 products
 
-Once there are sufficiently long time series of validated GCOV products available to validate and refine the Level 3 Soil Moisture (SME2) products, there will be a VALIDATED SME2 collection added to the archive. Until that time, the PROVISIONAL SME2 collection will include products generated using multiple CRIDs. 
+Once there are sufficiently long time series of validated GCOV products available to validate and refine the Level 3 Soil Moisture (SME2) products, there will be a VALIDATED SME2 collection added to the archive. Until that time, SME2 products will continue to be added to the PROVISIONAL SME2 collection. 
 
 
