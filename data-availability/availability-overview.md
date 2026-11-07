@@ -4,9 +4,9 @@ short_title: Available Data
 
 # Available NISAR Data
 
-NISAR launched July 30, 2025, and has been successfully collecting data through its Commissioning phase and into the Science phase. The calibration-validation process is complete, and [fully calibrated and validated NISAR products](#nisar-validated-data-nov) are now available to the public.
+NISAR launched July 30, 2025, and has been successfully collecting data through its Commissioning phase and into the Science phase. The calibration-validation process is complete, and [fully calibrated and validated NISAR L-band products](#nisar-validated-data-nov) are now available to the public.
 
-In addition, [NISAR S-band sample data products](https://bhoonidhi.nrsc.gov.in/NISAR/NisarProducts.html) can be accessed through ISRO's [Bhoonidhi data hub](https://bhoonidhi.nrsc.gov.in/bhoonidhi/home.html). Refer to the [Bhoonidhi NISAR Mission site](https://bhoonidhi.nrsc.gov.in/NISAR/) for more information.
+In addition, [NISAR S-band products](https://bhoonidhi.nrsc.gov.in/NISAR/NisarProducts.html) can be accessed through ISRO's [Bhoonidhi data hub](https://bhoonidhi.nrsc.gov.in/bhoonidhi/home.html). Refer to the [Bhoonidhi NISAR Mission site](https://bhoonidhi.nrsc.gov.in/NISAR/) for more information.
 
 (nisar-validated-data-nov)=
 ## NISAR VALIDATED Data: November 2026
