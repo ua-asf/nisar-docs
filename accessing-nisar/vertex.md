@@ -7,7 +7,6 @@ short_title: Vertex
 {button}`Search for all NISAR Data Products<https://search.asf.alaska.edu/#/?dataset=NISAR&prodConfig=PR>`
 
 (vertex-overview)=
-
 ## Vertex
 
 [Vertex](https://search.asf.alaska.edu/#/?dataset=NISAR&prodConfig=PR) is ASF's web-based data search interface. It is optimized for searching NASA's SAR holdings, including NISAR. Because search parameters for SAR differ from other types of Earth observation data, it can be helpful to use a search platform tailored specifically for SAR datasets.
@@ -17,7 +16,7 @@ short_title: Vertex
 Navigate to [Vertex](https://search.asf.alaska.edu/#/?dataset=NISAR&prodConfig=PR) and set the **Search Type** to `Geographic Search` and select `NISAR` from the **Dataset** menu. Press **Search** to explore search results.
 
 ```{figure} ../assets/vertex-dataset-selection.png
-:label: vertex-dataset-selection
+:label: vertex-dataset-selection-image
 :alt: Image depicting the option to select NISAR from the Dataset options.
 :align: center
 
@@ -25,13 +24,12 @@ Click on the **Dataset** field and select `NISAR` from the drop-down menu to sea
 ```
 
 (vertex-antarctica)=
-
 ### Antarctica
 
 NISAR has great coverage over Antarctica. Users interested in this area may find it helpful to use the **Antarctic map projection** in Vertex, which renders acquisition footprints at high latitudes much better than the default global view.
 
 ```{figure} ../assets/vertex-antarctic-map.png
-:label: vertex-antarctic-map-view
+:label: vertex-antarctic-map-view-image
 :alt: Image illustrating how to use the Antarctic Map View in Vertex.
 :align: center
 
@@ -43,7 +41,6 @@ Note that the [**Layers**](https://docs.asf.alaska.edu/vertex/manual/#other-vert
 ## 2. Filter for desired products
 
 (vertex-geographic-extent)=
-
 ### Geographic Extent
 
 To search for a specific geographic region, click on the left-most **Area of Interest** button to choose to draw a point, line, polygon, box, circle, or to upload a geospatial file.
@@ -51,7 +48,7 @@ To search for a specific geographic region, click on the left-most **Area of Int
 Select a drawing mode to draw a region of interest on the map, then press **Search** to update the search results for the new region of interest.
 
 ```{figure} ../assets/vertex-geographic-search.png
-:label: vertex-geographic-search
+:label: vertex-geographic-search-image
 :alt: Screenshot of Vertex highlighting the Geographic Search option to draw a region of interest to search for products.
 :align: center
 
@@ -65,19 +62,20 @@ _Take care when drawing an AOI while in the [Antarctic Map View](#vertex-antarct
 To search for products in a specific date range, click the **Filters** button to open the **Search Filters** panel and specify a start and end date in the **Date Filters** section. On larger screens, the date range filter will be displayed directly in the top search bar.
 
 ```{figure} ../assets/vertex-date-filters.png
-:label: vertex-date-filters
+:label: vertex-date-filters-image
 :alt: Screenshot displaying the date filters option.
 :align: center
 
 Click the **Filters** button to open the **Search Filters** panel and enter a date range.
 ```
 
+(vertex-scene-name-patterns)=
 ### Scene Name Patterns
 
 Vertex supports [wildcard queries](https://docs.asf.alaska.edu/datasets/wildcard_usage/#vertex), which can be used to filter by [data maturity](https://docs.asf.alaska.edu/datasets/wildcard_usage/#crid-version-number), [polarization](https://docs.asf.alaska.edu/datasets/wildcard_usage/#freq-a-b-polarizations), [cycle](https://docs.asf.alaska.edu/datasets/wildcard_usage/#cycles), or [Stack ID](https://docs.asf.alaska.edu/datasets/wildcard_usage/#stack-ids). To search for NISAR data using scene name patterns, click on **Filters** to open the **Search Filters** panel and input your string in the **Scene Name Patterns** field.
 
 ```{figure} ../assets/vertex-scene-name-patterns.png
-:label: vertex-scene-name-patterns
+:label: vertex-scene-name-patterns-image
 :alt: Screenshot highlighting the scene name pattern filter. 
 :align: center
 
@@ -89,7 +87,7 @@ Click the **Filters** button to open the **Search Filters** panel and enter a sc
 NISAR-specific filters are available to more precisely search for NISAR data products. Refer to the [Vertex Getting Started User Guide](https://docs.asf.alaska.edu/vertex/manual/#product-filters) for a comprehensive list of filters and search options.
 
 ```{figure} ../assets/vertex-nisar-filters.png
-:label: vertex-nisar-filters
+:label: vertex-nisar-filters-image
 :alt: Screenshot displaying the NISAR-specific filters in Vertex.
 :align: center
 
@@ -102,10 +100,10 @@ NISAR-specific filters in Vertex.
 :label: tbl:vertex-product-filters
 
 | Product Filters       | Description                                                                                                                                |
-| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+|-----------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
 | Science Product       | Specific product type, grouped by product level. Multiple selections allowed.                                                              |
 | Product Configuration | Specific processing pipelines, including Production and [Urgent Response](#urgent-response-product-overview). Multiple selections allowed. |
-| Data Maturity         | Specific product validation/calibration status between beta and provisional data. Multiple selections allowed.                             |
+| Data Maturity         | Specific product validation/calibration status, including Validated, Provisional, and Beta. Multiple selections allowed.                   |
 
 :::
 
@@ -115,7 +113,7 @@ NISAR-specific filters in Vertex.
 :label: tbl:vertex-observational-filters
 
 | Observational Filters  | Description                                                                                   |
-| ---------------------- | --------------------------------------------------------------------------------------------- |
+|------------------------|-----------------------------------------------------------------------------------------------|
 | Main Band Polarization | Frequency A polarizations. Multiple selections allowed.                                       |
 | Side Band Polarization | Frequency B polarizations. Multiple selections allowed.                                       |
 | Direction              | Orbit direction (ascending, descending).                                                      |
@@ -150,22 +148,20 @@ All product files associated with a GCOV product. The HDF5 file, listed first, c
 [//]: # "### Download Queue"
 
 (vertex-gdal-snippet-exporter)=
-
 ### Subset Geocoded Products with the GDAL Snippet Exporter
 
-[GDAL](https://gdal.org/en/stable/) is a command-line interface (CLI) utility and library that enables the transformation of geographic data. The GDAL snippet exporter allows generating GDAL CLI snippets to extract datasets as a GeoTIFF, spatially subset, or reproject all geocoded ([Level 1](#level-1-range-doppler-products) and [Level 2](#level-2-geocoded-products)) NISAR HDF5 products without downloading the entire HDF5 file.
+[GDAL](https://gdal.org/en/stable/) is a command-line interface (CLI) utility and library that enables the transformation of geographic data. The GDAL snippet exporter allows generating GDAL CLI snippets to extract datasets as a GeoTIFF, spatially subset, or reproject all geocoded ([Level 2](#level-2-geocoded-products) and [Level 3](#level-3-geophysical-products)) NISAR HDF5 products without downloading the entire HDF5 file.
 
-Users can generate a GDAL CLI code snippet using the [simple dataset extraction](#simple-dataset-extraction) option to download a single dataset or the [detailed dataset extraction](#detailed-dataset-extraction) option to reproject and/or spatially subset before downloading. To learn more about the use of GDAL with NISAR data in general, visit the [NISAR Data User Guide page on GDAL](#gdal-nisar).
+Users can generate a GDAL CLI code snippet using the [simple dataset extraction](#simple-dataset-extraction) option to download a single dataset or the [detailed dataset extraction](#detailed-dataset-extraction) option to reproject and/or spatially subset before downloading. To learn more about using GDAL with NISAR data, visit @gdal-nisar.
 
 The Vertex GDAL snippet export generates CLI snippets which stream products directly from NASA's [Earthdata Cloud (EDC)](https://www.earthdata.nasa.gov/about/earthdata-cloud-evolution) without downloading them first. Ensure that [GDAL is installed](#installing-gdal) and you have [a `.netrc` file with your EDL credentials configured](#netrc-setup) before running output GDAL CLI code snippets.
 
 (simple-dataset-extraction)=
-
 #### Simple Dataset Extraction to GeoTiff
 
 Dataset extraction to GeoTiff can be performed using the simplified GDAL snippet dropdown. To open the GDAL snippet dropdown, click the arrow button on any supported HDF5 file (GCOV, GOFF, GSLC, GUNW or SME2) in the scene file list.
 
-```{figure} ../assets/vertex-gdal-dropdown
+```{figure} ../assets/vertex-gdal-dropdown.png
 :label: vertex-gdal-dropdown
 :alt: Screenshot displaying the icon to click to open the GDAL snippet dropdown.
 :align: center
@@ -173,19 +169,18 @@ Dataset extraction to GeoTiff can be performed using the simplified GDAL snippet
 
 Then, click on the terminal icon next to your desired dataset to copy the GDAL CLI snippet corresponding to that dataset.
 
-```{figure} ../assets/vertex-gdal-dropdown-expanded
+```{figure} ../assets/vertex-gdal-dropdown-expanded.png
 :label: vertex-gdal-dropdown-expanded
 :alt: Screenshot displaying the GDAL snippet dropdown.
 :align: center
 ```
 
 (detailed-dataset-extraction)=
-
 #### Detailed GDAL Snippet Generation
 
 Spatial subsetting, reprojection, and more can be achieved through the GDAL snippet exporter dialog. To open the GDAL snippet dialog, click the transformation icon on any supported HDF5 file in the scene file list.
 
-```{figure} ../assets/vertex-gdal-dialog-button
+```{figure} ../assets/vertex-gdal-dialog-button.png
 :label: vertex-gdal-dialog-button
 :alt: Screenshot displaying the icon to click to open the GDAL snippet dialog.
 :align: center
@@ -193,23 +188,27 @@ Spatial subsetting, reprojection, and more can be achieved through the GDAL snip
 
 Then, select a dataset in the GDAL snippet dialog.
 
-```{figure} ../assets/vertex-gdal-dialog-dataset
+```{figure} ../assets/vertex-gdal-dialog-dataset.png
 :label: vertex-gdal-dialog-dataset
 :alt: Screenshot displaying the datasets in the GDAL snippet dialog.
 :align: center
 ```
 
-To perform a spatial subsetting operation, ensure you have an area of interest selected on the map view, then check the "Crop to current AOI" box. To perform reprojection enter a EPSG code (ie: EPSG:3857) or WGS84 into the "Output Projection" box.
+Configure export options as desired:
 
-```{figure} ../assets/vertex-gdal-dialog-options
+- To extract a spatial subset of the dataset(s), ensure you have an area of interest selected in the map view, then check the **Crop to current AOI** option. 
+- To reproject the output dataset to a different projection than the source product, enter an EPSG code (e.g. `EPSG:3857` for Web Mercator), or simply `WGS84` for WGS84 Geographic Coordinate System, into the **Output Projection** box. 
+- Unix users also have the option to configure the snippet for use with [JPL's NISAR HDF5 GDAL Plugin](#jpl-nisar-hdf5-gdal-plugin) rather than the standard GDAL CLI, which can significantly decrease download times. The plugin does not currently support installation on Windows operating systems.
+
+```{figure} ../assets/vertex-gdal-dialog-options.png
 :label: vertex-gdal-dialog-options
 :alt: Screenshot displaying the GDAL snippet dialog options.
 :align: center
 ```
 
-Once you have configured the output options, copy the final output snippet by clicking the copy icon above the "GDAL shell command" code block.
+Once you have configured the output options, copy the final output snippet by clicking the copy icon above the **_GDAL shell command_** code block.
 
-```{figure} ../assets/vertex-gdal-dialog-copy
+```{figure} ../assets/vertex-gdal-dialog-copy.png
 :label: vertex-gdal-dialog-copy
 :alt: Screenshot displaying the icon to click to copy the GDAL command output in the GDAL snipet dialog.
 :align: center
@@ -217,9 +216,15 @@ Once you have configured the output options, copy the final output snippet by cl
 
 ### Running GDAL Snippets
 
+To run the GDAL code snippets, you must have GDAL installed on your computer. Refer to [installation guidance](#installing-gdal) if you do not already have access to a GDAL Command Line Interface (CLI). 
+
+#### Windows Operating Systems
+
 To run GDAL snippets on Windows, open the OSGeo4W shell and paste the command into the shell. If asked if you are sure you want to paste your clipboard into the shell, click yes. Then, hit enter to run the command.
 
-To run GDAL snippets on Unix open your system shell or terminal, paste the command into the shell, and hit enter.
+#### Unix Operating Systems
+
+To run GDAL snippets on Unix, open your system shell or terminal, paste the command into the shell, and hit enter.
 
 ## Urgent Response Products
 

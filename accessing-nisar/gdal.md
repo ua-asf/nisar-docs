@@ -3,7 +3,6 @@
 The [Geospatial Data Abstraction Library (GDAL)](https://gdal.org/en/stable) is an open-source software library used to work with raster and vector geospatial data. There are a number of GDAL command-line interface (CLI) utilities that we can leverage to transform NISAR data.
 
 (gdal-nisar)=
-
 ## Using GDAL to Transform NISAR Data
 
 NISAR products are distributed in HDF5 format, and the files can be very large. Many users may want to transform the data by extracting just the datasets of interest from the HDF5 files and/or subsetting the data to a defined spatial extent.
@@ -11,7 +10,6 @@ NISAR products are distributed in HDF5 format, and the files can be very large. 
 We can use command-line utilities from the GDAL software library to transform these files. Leveraging GDAL's ability to stream data from Earthdata Cloud directly allows us to download only the data we need in the desired format.
 
 (installing-gdal)=
-
 ### Installing GDAL
 
 To use GDAL CLI commands, you must install GDAL locally. The process for installing GDAL differs based on the operating system installed on your computer, or the compute environment in which you wish to run the exported GDAL snippets.
@@ -524,3 +522,29 @@ gdalwarp -of GTiff ^
 ::::
 
 :::::
+
+
+## GDAL Snippet Exporter
+Vertex provides a user interface for generating GDAL snippets to extract (and optionally spatially subset and reproject) datasets from NISAR HDF5 products, leveraging some of the commands described above.
+
+<!--[#TODO: Add screenshot once the interface is a bit more stable]-->
+[Learn more about using the GDAL Snippet Exporter in Vertex](#vertex-gdal-snippet-exporter)
+
+(jpl-nisar-hdf5-gdal-plugin)=
+## JPL's NISAR HDF5 GDAL Plugin
+
+JPL developed a GDAL plugin that provides streaming capabilities and block-optimized reading for NISAR HDF5 products. While it has not yet been integrated into the main GDAL distribution, Unix users can install it as a GDAL plugin. Installation on Windows operating systems is not yet supported. 
+
+The NISAR HDF5 GDAL Plugin provides substantial performance improvements over using the standard GDAL CLI when extracting datasets from cloud-hosted NISAR HDF5 files. It also provides a range of NISAR-specific functionality, including the ability to read single pixel values, view the full HDF5 structure, or apply a validity mask to an extracted dataset.
+
+- [Learn more about the plugin](https://github.com/ozzp-jpl/nisar-hdf5-gdalplugin/blob/main/docs/HOWTO.md)
+- [Access the plugin](https://anaconda.org/channels/nisar-forge/packages/gdal-driver-nisar/overview) 
+
+### NISAR HDF5 GDAL Plugin in Vertex
+
+The [GDAL Snippet Exporter in Vertex](#vertex-gdal-snippet-exporter) generates code snippets that can be used in the GDAL CLI to extract datasets from NISAR products and apply transformations (spatial subsetting, reprojection) as they are being downloaded. The GDAL Snippet Exporter interface provides an option to use JPL's NISAR HDF5 GDAL Plugin rather than the standard GDAL CLI.
+
+To generate code snippets for use with the NISAR HDF5 GDAL Plugin rather than the standard GDAL CLI: 
+
+- You must be using a Unix-based operating system. If you select Windows as your operating system in the GDAL Snippet Exporter interface, the option to use JPL's NISAR HDF5 GDAL Plugin will not be available. 
+- The NISAR HDF5 GDAL Plugin must be installed on your computer before you can run the GDAL code snippets. If you select the JPL GDAL Plugin option in the GDAL Snippet Exporter interface, installation commands are provided for a range of package management systems.

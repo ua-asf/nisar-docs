@@ -36,18 +36,25 @@ Refer to the [Searching page of the ASF Data Search Manual](https://docs.asf.ala
 
 ### Search by Data Maturity
 
-Filter NISAR data by validation/calibration status by using the `dataMaturity` parameter in your search. You can specify either `PROVISIONAL` for calibrated [NISAR PROVISIONAL](#nisar-provisional-data-july) data or `BETA` for pre-calibration [NISAR BETA](#nisar-sample-data-feb) data. 
+Filter NISAR data by validation/calibration status by using the `dataMaturity` parameter in your search. You can specify `VALIDATED` for fully calibrated and validated [NISAR VALIDATED](#nisar-validated-data-nov) data, `PROVISIONAL` for calibrated but not fully validated [NISAR PROVISIONAL](#nisar-provisional-data-july) data, or `BETA` for pre-calibration [NISAR BETA](#nisar-sample-data-feb) data. 
 
 :::{hint} Example
-To search for PROVISIONAL products, use the following Python code:
 
+To search for VALIDATED products, use the following Python code:
+```python
+import asf_search as asf
+
+results = asf.search(dataset='NISAR', dataMaturity='VALIDATED')
+```
+
+To search for PROVISIONAL products, replace `VALIDATED` with `PROVISIONAL`, as shown below:
 ```python
 import asf_search as asf
 
 results = asf.search(dataset='NISAR', dataMaturity='PROVISIONAL')
 ``` 
 
-To search for BETA products, replace `PROVISIONAL` with `BETA`, as shown below. 
+To search for BETA products, replace `PROVISIONAL` with `BETA`, as shown below:
 ```python
 import asf_search as asf
 
