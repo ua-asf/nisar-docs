@@ -151,8 +151,8 @@ Harmony services are available directly in [Earthdata Search](#earthdata-search-
     ```
 
     - When selecting [datasets to extract](#harmony-dataset-extraction), note that a product may not contain all of the datasets listed in the interface. This list includes all possible datasets that _may_ be present in a product of that type. As long as at least one of the selected datasets is available in the product, the Harmony job will run. 
-       - GeoTIFFs will be generated for any selected datasets that are present in the granule, and any datasets that are not present will be ignored.
-       - If you do not see a download link for a dataset you selected, refer to the file [naming convention](#naming-convention-overview) to determine which polarizations and frequencies would be expected for that product.
+       - GeoTIFFs will be generated for any selected datasets that are present in the product, and any selected datasets that are not present will be ignored.
+       - If you do not see a download link for a dataset you selected, refer to the file [naming convention](#naming-convention-overview) to verify which polarizations and frequencies would be expected for that product.
 
    (eds-harmony-output-format-conversion)=
     #### Output Format Conversion
@@ -174,7 +174,7 @@ Harmony services are available directly in [Earthdata Search](#earthdata-search-
    (eds-harmony-output-projection-selection)=
     #### Output Projection Selection
 
-    By default, the **Output Projection Selection** option is set to `No Reprojection` and the output files are in the same coordinate system as the source HDF5 file. Refer to @nisar-l2-projections for more information on the projections used by the NISAR project. 
+    By default, the **Output Projection Selection** option is set to `No Reprojection` and the output files are in the same coordinate system as the source HDF5 file. Refer to @nisar-l2-projections for more information about the projections used by the NISAR project. 
 
     ```{figure} ../assets/harmony-output-projection-selection.png
     :label: harmony-output-projection-selection-image
