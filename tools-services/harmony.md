@@ -106,7 +106,7 @@ Harmony services are available directly in [Earthdata Search](#earthdata-search-
     :align: center
     :class: framed
     
-    Select the **Customize Download** option and select your desired customization options. 
+    Select the **Customize Download** option and select your desired customization settings. 
     ```
 
    (eds-harmony-spatial-subsetting)=
