@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Updated ASF development roadmap
+- Added download customization guidance to the [Earthdata Search](accessing-nisar/earthdata-search.md#customizing-downloads) page
 
 ## [0.4.39]
 
