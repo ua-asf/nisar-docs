@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Information about the new spatial subsetting and reprojecting options to the [Harmony](tools-services/harmony.md) page
 
+### Changed
+- Updated ASF development roadmap
+
 ## [0.4.39]
 
 ### Added
