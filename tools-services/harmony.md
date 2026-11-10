@@ -10,6 +10,7 @@ ASF and the Harmony team have developed a service for NISAR file customization, 
 
 This Harmony service can be used to customize downloads for the following NISAR products:
 
+(harmony-supported-products-list)=
 - Geocoded Polarimetric Covariance ([GCOV](#gcov-product-overview))
 - Geocoded Unwrapped Interferogram ([GUNW](#gunw-product-overview))
 - Geocoded Pixel Offsets ([GOFF](#goff-product-overview))
