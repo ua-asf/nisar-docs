@@ -265,9 +265,28 @@ Individual HDF5 files can be downloaded directly from the Earthdata Search resul
 Log in with EDL credentials by clicking the **Log In** button (#1) on the upper right-hand side of the screen. Once logged in, click the **download icon** (#2), select the **Download Files** tab, and click the **download icon** next to the filename to download your desired granule directly. 
 ```
 
-For guidance on downloading multiple files in bulk, refer to the [NASA Earthdata Cloud Cookbook](https://nasa-openscapes.github.io/earthdata-cloud-cookbook/how-tos/find-data/earthdata_search.html). 
+#### Bulk Download
 
-You can also download individual layers within each file as stand-alone GeoTIFFs using Harmony. For guidance on how to download subset GeoTIFFs, see @harmony-overview. 
+To leverage bulk download options, click the [green ＋ icon](#harmony-add-to-project-image) rather than the direct download icon for an item. Once you've added all the desired products, click the [My Project](#harmony-open-project-image) button to view the list of added items. 
+
+For guidance on downloading multiple files in bulk from the **My Project** interface, refer to the [NASA Earthdata Cloud Cookbook](https://nasa-openscapes.github.io/earthdata-cloud-cookbook/how-tos/find-data/earthdata_search.html#step-4.-customize-the-download-or-data-access). 
+
+#### Customizing Downloads
+
+The **My Project** interface also allows users to customize product downloads using [Harmony](#ed-harmony) services. 
+
+The [Harmony download customization service for NISAR](#harmony-supported-products-extract) provides the option to [extract individual datasets](#eds-harmony-variable-subsetting) from NISAR HDF5 files for [most NISAR Level 2 and 3 products](#harmony-supported-products-list) and output them as Cloud Optimized GeoTIFF (COG) files. Users can also choose to subset the output COG files to a [defined spatial extent](#eds-harmony-spatial-subsetting) and/or [reproject](#eds-harmony-output-projection-selection) them to a different coordinate system.
+
+```{figure} ../assets/harmony-customize-download.png
+:label: harmony-customize-download-image-intro
+:alt: Screenshot of the interface used to customize downloads using the NISAR Harmony service
+:align: center
+:class: framed
+
+The NISAR Harmony service allows users to extract individual datasets from most Level 2 and 3 products and apply spatial subsetting and reprojection options. Output datasets are delivered in Cloud Optimized GeoTIFF (COG) format.
+```
+
+For step-by-step instructions, refer to @harmony-extract-datasets.
 
 (direct-s3-access-in-earthdata)=
 ### Direct AWS S3 Access
