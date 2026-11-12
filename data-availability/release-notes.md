@@ -85,6 +85,7 @@ Other bug fixes and improvements make this data set more complete and robust tha
 (p05036-known-issues)=
 ### Known Issues 
 
+(issue-calibration-earlier-data)=
 #### Calibration of earlier data
 
 About 30% of the data acquired in specific radar modes and processed before November 12, 2026, are affected by a calibration issue, with radiometric residuals of approximately 1 dB and polarimetric phase inconsistencies. The radar modes affected by this issue are listed in @tbl:degraded-radar-modes; they were fixed for data acquired after November 12, 2026. 
@@ -111,43 +112,50 @@ For details on how to interpret the mode mnemonics, refer to @nisar_summary or @
 
 :::
 
+(issue-gunw-phase-artifact-squint)=
 #### GUNW phase artifact from squint compensation
 
 GUNW products contain an interferometric phase artifact caused by incomplete squint compensation during the interpolation step of rubbersheeting. The artifact is a function of data-driven azimuth offsets used during coregistration and is observed in areas with significant ionospheric phase gradient in along-track direction (usually in high latitudes). 
 
 The phase artifact is deterministic and users can apply a correction<!-- using [#TODO: Add link to notebook when available from JPL)]-->. This issue will be fixed in the next release, removing the need for a user-applied correction.
 
+(issue-cop-dem-lat-band-transition)=
 #### Customized Copernicus DEM v1.3 latitude band transitions
 
 Small elevation errors of approximately ±5 m can occur where terrain changes sharply across latitude band boundaries in the Customized Copernicus DEM (CC-DEM) v1.3, which is derived starting from the Copernicus COP-DEM_GLO-30-DGED/2023_1. Customization is described in the readme.txt distributed with the CC-DEM product.
 
+(issue-valid-mask-fraction-metadata)=
 #### Valid mask fraction metadata not yet searchable
 
 Products include new valid mask fraction metadata fields, but these fields are currently not searchable in CMR. Until the DAAC production ingest is updated, expected in December 2026, products remain searchable using only existing metadata fields.
 
+(issue-stripes-in-slc-loopback)=
 #### Stripes in SLC data from loopback residuals
 
 Low-level stripes may occasionally appear in SLC and derived products over dark backgrounds. These arise from residual energy from looped-back transmit events at the edges of the L0B data. Stripe levels remain within requirements, and work is ongoing to eliminate them.
 
+(issue-joint-mode-products)=
 #### Joint mode 40 MHz products
 
 Products acquired in joint L- and S-band mode at 40 MHz bandwidth show residual radiometric bands that are larger than typical. They are within requirements but visually noticeable.
 
+(issue-joint-mode-data-gaps)=
 #### Joint mode data gaps
 
 A small fraction of data contain along-track gaps of approximately 2 seconds when transitioning between to/from joint L+S acquisition and an L-only acquisition. Less frequent gaps of approximately 0.25 seconds occur when an onboard file reaches its size limit and a new file is opened. The team is working to minimize these gaps in future acquisitions.
 
+(issue-mixed-crids-transitional-insar)=
 #### Mixed CRIDS for transitional interferometry products
 
 In the transition between provisional to validated products, interferometric products are produced by interfering provisional (CRID=P05023) with validated RSLC products (CRID=P05036). Differences in calibration and phase characteristics between the two versions introduce an additional interferometric phase component.
 
 These interferograms will be available for later acquisitions dated October 21, 2026 onward, paired with acquisitions 12 days earlier, or at longer 12-day intervals where needed to find the first suitable earlier acquisition. They will be reprocessed in a future campaign using consistent CRIDs.
 
-### Product characteristics and limitations
+### Product Characteristics and Limitations
 
 #### Soil Moisture (SME2) products
 
-SME2 products remain PROVISIONAL. They require a time series of L2 GCOV inputs, and some cal/val metrics such as unbiased RMSE need longer time series before they can be computed. In quad-pol areas, three to six gaps across the swath arise from NISAR's SweepSAR acquisition and the number of time steps in the algorithm. In that case, one or more of the three SME2 algorithms may not deliver an estimate.
+[SME2 products remain PROVISIONAL](#sme2-product-maturity-level). They require a time series of L2 GCOV inputs, and some cal/val metrics such as unbiased RMSE need longer time series before they can be computed. In quad-pol areas, three to six gaps across the swath arise from NISAR's SweepSAR acquisition and the number of time steps in the algorithm. In that case, one or more of the three SME2 algorithms may not deliver an estimate.
 
 #### Residual radiometric and polarimetric ripples across the swath
 

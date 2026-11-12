@@ -27,6 +27,14 @@ If you encounter issues with NISAR products that are not addressed here, please 
 
 | Issue Summary                                                                                       | Date Added  | Status                                                                                 |
 |-----------------------------------------------------------------------------------------------------|-------------|----------------------------------------------------------------------------------------|
+| [Calibration of earlier data](#issue-calibration-earlier-data)                                      | 12 Nov 2026 | Expect to fix in reprocessing campaign                                                 |
+| [GUNW phase artifact from squint compensation](#issue-gunw-phase-artifact-squint)                   | 12 Nov 2026 | Expect to be fixed with next release                                                   |
+| [Customized Copernicus DEM v1.3 latitude band transitions](#issue-cop-dem-lat-band-transition)      | 12 Nov 2026 | Issue ongoing                                                                          |
+| [Valid mask fraction metadata not yet searchable](#issue-valid-mask-fraction-metadata)              | 12 Nov 2026 | Expected to be resolved Dec 2026                                                       |
+| [Stripes in SLC data from loopback residuals](#issue-stripes-in-slc-loopback)                       | 12 Nov 2026 | Working to develop mitigation techniques                                               |
+| [Joint mode 40 MHz products](#issue-joint-mode-products)                                            | 12 Nov 2026 | Issue ongoing                                                                          |
+| [Joint mode data gaps](#issue-joint-mode-data-gaps)                                                 | 12 Nov 2026 | Working to develop mitigation techniques                                               |
+| [Mixed CRIDS for transitional interferometry products](#issue-mixed-crids-transitional-insar)       | 12 Nov 2026 | Will be reprocessed in future                                                          |
 | [Incomplete L0B Products](#issue-timestamp-incomplete-l0b)                                          | 05 Nov 2026 | Resolved with CRID P05036 <!--[#TODO: add link to CRID on NIAR page once available]--> |
 | [Permanent NISAR instrument data gap between 2026-07-27 and 2026-08-10](#permanent-data-gap-july26) | 10 Aug 2026 | Permanent issue                                                                        |
 
@@ -36,13 +44,12 @@ If you encounter issues with NISAR products that are not addressed here, please 
 
 ### Current Known Issues
 
-These issues are currently impacting VALIDATED products. Some issues are unresolvable, but others may be mitigated in future updates to the NISAR processing software.
+Known issues associated with CRID P05036 (software version used for first validated data release) are documented in the [release notes](#p05036-known-issues). Additional issues not included in the release notes are documented here.
 
 (permanent-data-gap-july26)=
 #### Permanent data gap
 
-No data was collected by the NISAR platform between 2026-07-27T22:03:25Z and 2026-08-10T00:55:27Z. There are not currently any VALIDATED products available for this time range, but once the [reprocessing campaign](#validated-reprocessing) is complete, this data gap will be present in the VALIDATED collections, as well.
-
+No data was collected by the NISAR platform between 2026-07-27T22:03:25Z and 2026-08-10T00:55:27Z. There are not currently any VALIDATED products available for this time range, but the data gap will also be present in the VALIDATED collections once the [reprocessing campaign](#validated-reprocessing) is complete.
 
 ### Resolved Known Issues
 
