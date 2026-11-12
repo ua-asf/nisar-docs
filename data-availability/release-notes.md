@@ -18,7 +18,9 @@ These products are processed with [NISAR Composite Release ID (CRID) P05036](htt
 
 ### Product Maturity
 
-These release notes document the [VALIDATED](#nisar-validated-data-nov) data products. Refer to documentation for the [PROVISIONAL](#nisar-provisional-data-july) and [BETA](#nisar-sample-data-feb) products.
+These release notes document the [VALIDATED](#nisar-validated-data-nov) data products. 
+
+Refer to documentation for the [PROVISIONAL](#nisar-provisional-data-july) and [BETA](#nisar-sample-data-feb) products for information on earlier data maturities.
 
 :::{table} NISAR Data Maturity Levels
 :label: tbl:data-maturity
@@ -33,38 +35,54 @@ These release notes document the [VALIDATED](#nisar-validated-data-nov) data pro
 
 :::
 
-Users should take care when analyzing products of different maturity levels together, since differences in processing software may affect results. Earlier data affected by the radiometric calibration issue will be replaced by VALIDATED products after the [reprocessing campaign](#validated-reprocessing) planned for early 2027.
+Users should take care when analyzing products of different maturity levels together, since differences in processing software may affect results. 
+
+Earlier data affected by the radiometric calibration issue will be replaced by VALIDATED products after the [reprocessing campaign](#validated-reprocessing) planned for early 2027.
 
 ### What's New
 
 #### Radiometric and Polarimetric Calibration
 
-Products processed after November 12, 2026, have significantly improved radiometric and polarimetric calibration, including corrections for polarimetric channel imbalance. P05036 products processed after this date do not require the 59° phase correction previously published for provisional products. Calibration issues affecting P05035 products produced earlier than November 12 are described under Known Issues.
+Products processed after November 12, 2026, have significantly improved radiometric and polarimetric calibration, including corrections for polarimetric channel imbalance. 
+
+P05036 products processed after this date do not require the 59° phase correction previously published for provisional products. Calibration issues affecting P05035 products produced earlier than November 12 are described under [Known Issues](#p05036-known-issues).
 
 #### L0B Update
 
-The timestamp issue that caused incomplete L0B products has been resolved in VALIDATED products. This issue affected downstream products, causing defocused RSLC images, missing data, and decorrelation in InSAR products. It accounted for most issues reported to the Earthdata Forum for PROVISIONAL products.
+The timestamp issue that caused incomplete L0B products has been resolved in VALIDATED products. 
+
+This issue affected downstream products, causing defocused RSLC images, missing data, and decorrelation in InSAR products. It accounted for most issues reported to the Earthdata Forum for PROVISIONAL products.
 
 #### Masking
 
-Missing-data masks and other mask layers are now more complete and consistent across products. A small percentage of data (~1–2%) may be lost due to downlink issues. Data processed with CRID P05036 and above include additional information used to generate missing-data masks and statistics across products. 
+Missing-data masks and other mask layers are now more complete and consistent across products. 
+
+A small percentage of data (~1–2%) may be lost due to downlink issues. Data processed with CRID P05036 and above include additional information used to generate missing-data masks and statistics across products. 
 
 #### Interferogram Coregistration
 
-GUNW/RUNW/RIFG interferograms now consistently use data-driven offsets in addition to geometrical offsets to align reference and secondary images in the coregistration step referred to as “rubbersheeting”.  This configuration reduces residual misalignment between image pairs, improving coherence and the continuity of the interferometric phase across the scene. As a result, the validated GUNW products over solid earth regions now include data-driven pixel offsets instead of a polynomial fit in the provisional products. These pixel offsets can capture large ground movements such as those caused by earthquakes and volcanic activities. 
+GUNW/RUNW/RIFG interferograms now consistently use data-driven offsets in addition to geometrical offsets to align reference and secondary images in the coregistration step referred to as “rubbersheeting”. This configuration reduces residual misalignment between image pairs, improving coherence and the continuity of the interferometric phase across the scene. 
+
+As a result, the validated GUNW products over solid earth regions now include data-driven pixel offsets instead of a polynomial fit in the provisional products. These pixel offsets can capture large ground movements such as those caused by earthquakes and volcanic activities. 
 
 #### Phase Unwrapping 
 
-The quality of phase unwrapping in the validated products has been improved by 1) fixing an edge case in the bridging algorithm 2) allowing to produce connected components with smaller size and 3) by using valid data masks for generating connected components.  
+The quality of phase unwrapping in the validated products has been improved by: 
+- Fixing an edge case in the bridging algorithm.
+- Allowing the production of connected components with smaller size.
+- Using valid data masks for generating connected components.
 
 #### Digital Elevation Model (DEM)
 
-Products are now processed with the NISAR Customized Copernicus DEM (CC-DEM) v1.3, which includes several fixes that improve overall product quality compared with v1.2. These include removal of the artifact along the prime meridian and at DEM tile boundaries at high latitudes. The DEM will remain identical at mid latitudes. Remaining DEM issues are listed under Known Issues. 
+Products are now processed with the NISAR Customized Copernicus DEM (CC-DEM) v1.3, which includes several fixes that improve overall product quality compared with v1.2. 
+
+These improvements include removal of the artifact along the prime meridian and at DEM tile boundaries at high latitudes. The DEM will remain identical at mid latitudes. Remaining DEM issues are listed under [Known Issues](#p05036-known-issues). 
 
 #### Other Improvements
 
 Other bug fixes and improvements make this data set more complete and robust than previous releases. 
 
+(p05036-known-issues)=
 ### Known Issues 
 
 #### Calibration of earlier data
