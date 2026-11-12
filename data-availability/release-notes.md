@@ -171,7 +171,7 @@ Low-level systematic radiometric ripples remain across the swath, with amplitude
 
 Phase unwrapping in challenging environments remains difficult. The project will continue to improve unwrapping performance throughout the mission.
 
-(issue-ionospheric effects)=
+(issue-ionospheric-effects)=
 #### Ionospheric effects
 
 Residual ionospheric effects remain challenging to mitigate at high latitudes. Data are generally usable, but users may encounter geolocation errors, patterned decorrelation bands in interferograms, and residual phase errors after applying the ionospheric correction layer. 
