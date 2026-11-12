@@ -23,21 +23,47 @@ Layers are available for [1-day](#worldview-daily-mosaics) or [12-day](#worldvie
 
 {button}`View NISAR GCOV Layers in Worldview <https://worldview.earthdata.nasa.gov/?v=-283.0791525473933,-136.9755200581828,233.8728850905137,117.46181096672454&l=Reference_Labels_15m(hidden),Reference_Features_15m(hidden),Coastlines_15m,NISAR_L2_Geocoded_Polarimetric_Covariance_12Day,NISAR_L2_Geocoded_Polarimetric_Covariance,Land_Water_Map(opacity=0.77)&lg=true&t=2026-07-17-T13%3A26%3A54Z>`
 
-NISAR GCOV layers in Worldview are displayed as mosaics of [PROVISIONAL GCOV](#nisar-provisional-data-july) products using a false-color [RGB decomposition](#worldview-rgb-decomp) to facilitate more intuitive visual interpretation of SAR backscatter data. The mosaics are posted to a [pixel spacing](#worldview-pixel-spacing) of 15.625 meters. 
+NISAR GCOV layers in Worldview are displayed as daily mosaics using a false-color [RGB decomposition](#worldview-rgb-decomp) to facilitate more intuitive visual interpretation of SAR backscatter data. The mosaics are posted to a [pixel spacing](#worldview-pixel-spacing) of 15.625 meters. They include imagery from both the [VALIDATED](#nisar-validated-data-nov) (21 October 2026 onwards) and [PROVISIONAL](#nisar-provisional-data-july) (prior to 21 October 2026) NISAR GCOV collections.
 
 The layers include all GCOV acquisitions, regardless of the acquisition mode, with the best available product for any given area displayed. This approach prioritizes [Frequency A](#nisar-frequencies) acquisitions and acquisitions with the most available [polarimetric channels](#nisar-polarization). <!-- TODO: The current mosaics do not enforce a display order, so overlapping areas can be a patchwork of components from the overlapping images. The Worldview team is aware, and may implement a fix at some point. If so, add in this documentation: For areas with both ascending and descending acquisitions available for the same day, the most recent image will be displayed.-->
 
-There are two different NISAR GCOV layers available in Worldview: [daily mosaics](#worldview-daily-mosaics) and [12-day mosaics](#worldview-12-day-mosaics).
+There are two different NISAR GCOV layers available to add in Worldview: [daily mosaics](#worldview-daily-mosaics) and [12-day mosaics](#worldview-12-day-mosaics).
 
 (worldview-daily-mosaics)=
 #### Daily Mosaics
 
-NISAR PROVISIONAL GCOV products are displayed as a daily mosaic, and users can use the [time slider](#worldview-time-slider) to click through each day to view a mosaic of the GCOV products acquired on that date. 
+NISAR GCOV products are displayed as a daily mosaic, and users can use the [time slider](#worldview-time-slider) to click through each day to view a mosaic of the GCOV products acquired on that date. 
+
+```{figure} ../assets/worldview-daily-layer.png
+:label: worldview-daily-layer-image
+:alt: Screenshot of the NISAR GCOV daily layer displayed in Worldview.  
+:align: center
+
+The NISAR GCOV daily mosaic layer displayed in Worldview. 
+```
+
+Alternatively, use the slider displayed in the layer to select a custom number of days to display.
+
+```{figure} ../assets/worldview-layer-day-slider.png
+:label: worldview-layer-day-slider-image
+:alt: Screenshot of adjusting the day slider for the NISAR GCOV daily layer to display multiple days in Worldview.  
+:align: center
+
+Adjust the slider for the layer to select a custom number of NISAR GCOV daily mosaics to display in Worldview. 
+```
 
 (worldview-12-day-mosaics)=
 #### Rolling 12-Day Mosaics
 
 This rolling 12-day layer loads the past twelve days of images, with the latest date displayed on top. The NISAR mission has a 12-day repeat cycle, so each of these 12-day mosaics should provide global coverage. 
+
+```{figure} ../assets/worldview-12-day-layer.png
+:label: worldview-12-day-layer-image
+:alt: Screenshot of the NISAR GCOV 12-day layer displayed in Worldview.  
+:align: center
+
+The NISAR GCOV 12-day mosaic layer displayed in Worldview. 
+```
 
 Users can click through the layer day by day, or use the `Custom Interval Selector` option to set a [custom interval](#wv-ts-custom-interval) of 12 days to quickly cycle through global mosaics.
 
