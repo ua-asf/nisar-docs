@@ -60,6 +60,7 @@ Missing-data masks and other mask layers are now more complete and consistent ac
 - A small percentage of data (~1–2%) may be lost due to downlink issues. 
 - Data processed with CRID P05036 and above include additional information used to generate missing-data masks and statistics across products. 
 
+(new-insar-coregistration)=
 #### Interferogram Coregistration
 
 GUNW/RUNW/RIFG interferograms now consistently use data-driven offsets in addition to geometrical offsets to align reference and secondary images in the coregistration step referred to as “rubbersheeting”. This configuration reduces residual misalignment between image pairs, improving coherence and the continuity of the interferometric phase across the scene. 
@@ -156,7 +157,9 @@ These interferograms will be available for later acquisitions dated October 21, 
 
 #### Soil Moisture (SME2) products
 
-[SME2 products remain PROVISIONAL](#sme2-product-maturity-level). They require a time series of L2 GCOV inputs, and some cal/val metrics such as unbiased RMSE need longer time series before they can be computed. In quad-pol areas, three to six gaps across the swath arise from NISAR's SweepSAR acquisition and the number of time steps in the algorithm. In that case, one or more of the three SME2 algorithms may not deliver an estimate.
+[SME2 products remain PROVISIONAL](#sme2-product-maturity-level). They require a time series of L2 GCOV inputs, and some cal/val metrics such as unbiased RMSE need longer time series before they can be computed. 
+
+In quad-pol areas, three to six gaps across the swath arise from NISAR's SweepSAR acquisition and the number of time steps in the algorithm. In that case, one or more of the three SME2 algorithms may not deliver an estimate.
 
 #### Residual radiometric and polarimetric ripples across the swath
 
@@ -168,7 +171,11 @@ Phase unwrapping in challenging environments remains difficult. The project will
 
 #### Ionospheric effects
 
-Residual ionospheric effects remain challenging to mitigate at high latitudes. Data are generally usable, but users may encounter geolocation errors, patterned decorrelation bands in interferograms, and residual phase errors after applying the ionospheric correction layer. Local geometric distortions exceeding a fraction of a pixel can also cause the processing algorithms to introduce additional phase errors. The updated interferogram coregistration, which now incorporates data-driven offsets (see "What's new in this release - Interferogram coregistration"), helps reduce misalignment caused by these distortions, although residual ionospheric effects may persist. 
+Residual ionospheric effects remain challenging to mitigate at high latitudes. Data are generally usable, but users may encounter geolocation errors, patterned decorrelation bands in interferograms, and residual phase errors after applying the ionospheric correction layer. 
+
+Local geometric distortions exceeding a fraction of a pixel can also cause the processing algorithms to introduce additional phase errors. 
+
+The [updated interferogram coregistration](#new-insar-coregistration), which now incorporates data-driven offsets, helps reduce misalignment caused by these distortions, although residual ionospheric effects may persist. 
 
 #### Radio frequency interference
 
