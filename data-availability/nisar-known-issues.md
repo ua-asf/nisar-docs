@@ -19,7 +19,7 @@ If you encounter issues with NISAR products that are not addressed here, please 
 
 ### Known Issues Table
 
-Each known issue is summarized in @tbl:known-issues, which provides a link to a more detailed description of the issue.
+Each known issue is summarized in @tbl:known-issues, with a link provided to a more detailed description.
 
 :::{table} NISAR Known Issues Table
 :label: tbl:known-issues
