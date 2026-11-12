@@ -1,8 +1,12 @@
 # NISAR Observation Plan
 
+(nisar-modes)=
+## NISAR Modes
 The NISAR observation plan is complex. In order to meet the broad science goals of the mission, different 
 radar modes are used to collect data for different geographic areas, as described in the 
 [NISAR Observation Strategy](https://science.nasa.gov/mission/nisar/observation-strategy/).
+
+When the satellite changes acquisition modes in the middle of a frame, separate granules are produced each covering only a portion of the frame. Where possible, a mixed mode granule is also created, covering the full frame and having the coarser of the two resolutions and only the common subset of polarizations.
 
 (nisar-reference-observation-plan)=
 ## NISAR Reference Observation Plan
