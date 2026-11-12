@@ -11,6 +11,7 @@ project:
     - file: about-nisar/nisar-intro.md
     - file: data-availability/availability-overview.md
       children:
+        - file: data-availability/release-notes.md
         - file: data-availability/nisar-known-issues.md
         - file: data-availability/provisional-known-issues.md
           hidden: true
