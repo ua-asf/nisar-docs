@@ -57,7 +57,8 @@ This issue affected downstream products, causing defocused RSLC images, missing 
 
 Missing-data masks and other mask layers are now more complete and consistent across products. 
 
-A small percentage of data (~1–2%) may be lost due to downlink issues. Data processed with CRID P05036 and above include additional information used to generate missing-data masks and statistics across products. 
+- A small percentage of data (~1–2%) may be lost due to downlink issues. 
+- Data processed with CRID P05036 and above include additional information used to generate missing-data masks and statistics across products. 
 
 #### Interferogram Coregistration
 
