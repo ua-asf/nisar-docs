@@ -23,7 +23,9 @@ Layers are available for [1-day](#worldview-daily-mosaics) or [12-day](#worldvie
 
 {button}`View NISAR GCOV Layers in Worldview <https://worldview.earthdata.nasa.gov/?v=-283.0791525473933,-136.9755200581828,233.8728850905137,117.46181096672454&l=Reference_Labels_15m(hidden),Reference_Features_15m(hidden),Coastlines_15m,NISAR_L2_Geocoded_Polarimetric_Covariance_12Day,NISAR_L2_Geocoded_Polarimetric_Covariance,Land_Water_Map(opacity=0.77)&lg=true&t=2026-07-17-T13%3A26%3A54Z>`
 
-NISAR GCOV layers in Worldview are displayed as daily mosaics using a false-color [RGB decomposition](#worldview-rgb-decomp) to facilitate more intuitive visual interpretation of SAR backscatter data. The mosaics are posted to a [pixel spacing](#worldview-pixel-spacing) of 15.625 meters. They include imagery from both the [VALIDATED](#nisar-validated-data-nov) (21 October 2026 onwards) and [PROVISIONAL](#nisar-provisional-data-july) (prior to 21 October 2026) NISAR GCOV collections.
+NISAR GCOV layers in Worldview are displayed as daily mosaics using a false-color [RGB decomposition](#worldview-rgb-decomp) to facilitate more intuitive visual interpretation of SAR backscatter data. 
+
+The mosaics are posted to a [pixel spacing](#worldview-pixel-spacing) of 15.625 meters, and include imagery from both the [VALIDATED](#nisar-validated-data-nov) (21 October 2026 onwards) and [PROVISIONAL](#nisar-provisional-data-july) (prior to 21 October 2026) NISAR GCOV collections.
 
 The layers include all GCOV acquisitions, regardless of the acquisition mode, with the best available product for any given area displayed. This approach prioritizes [Frequency A](#nisar-frequencies) acquisitions and acquisitions with the most available [polarimetric channels](#nisar-polarization). <!-- TODO: The current mosaics do not enforce a display order, so overlapping areas can be a patchwork of components from the overlapping images. The Worldview team is aware, and may implement a fix at some point. If so, add in this documentation: For areas with both ascending and descending acquisitions available for the same day, the most recent image will be displayed.-->
 
@@ -47,9 +49,10 @@ Alternatively, use the slider displayed in the layer to select a custom number o
 ```{figure} ../assets/worldview-layer-day-slider.png
 :label: worldview-layer-day-slider-image
 :alt: Screenshot of adjusting the day slider for the NISAR GCOV daily layer to display multiple days in Worldview.  
-:align: center
+:align: left
+:width: 40%
 
-Adjust the slider for the layer to select a custom number of NISAR GCOV daily mosaics to display in Worldview. 
+Adjust the slider for the layer to select a custom range of NISAR GCOV daily mosaics to display in Worldview. 
 ```
 
 (worldview-12-day-mosaics)=
