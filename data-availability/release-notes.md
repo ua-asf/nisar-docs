@@ -95,7 +95,9 @@ For details on how to interpret the mode mnemonics, refer to @nisar_summary or @
 
 #### GUNW phase artifact from squint compensation
 
-GUNW products contain an interferometric phase artifact caused by incomplete squint compensation during the interpolation step of rubbersheeting. The artifact is a function of data-driven azimuth offsets used during coregistration and is observed in areas with significant ionospheric phase gradient in along-track direction (usually in high latitudes). The phase artifact is deterministic and users can apply a correction using [link to notebook]()<!--[#TODO: Add link when available from JPL)]-->. This issue will be fixed in the next release, removing the need for users to apply the correction.
+GUNW products contain an interferometric phase artifact caused by incomplete squint compensation during the interpolation step of rubbersheeting. The artifact is a function of data-driven azimuth offsets used during coregistration and is observed in areas with significant ionospheric phase gradient in along-track direction (usually in high latitudes). 
+
+The phase artifact is deterministic and users can apply a correction<!-- using [#TODO: Add link to notebook when available from JPL)]-->. This issue will be fixed in the next release, removing the need for a user-applied correction.
 
 #### Customized Copernicus DEM v1.3 latitude band transitions
 
