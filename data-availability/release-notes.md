@@ -161,14 +161,17 @@ These interferograms will be available for later acquisitions dated October 21, 
 
 In quad-pol areas, three to six gaps across the swath arise from NISAR's SweepSAR acquisition and the number of time steps in the algorithm. In that case, one or more of the three SME2 algorithms may not deliver an estimate.
 
+(issue-residual-ripples-across-swath)=
 #### Residual radiometric and polarimetric ripples across the swath
 
 Low-level systematic radiometric ripples remain across the swath, with amplitudes below 0.25 dB in both frequency A and frequency B, well within requirements. A residual ripple of 2–3° is also present in the HH–VV and HV–VH polarimetric phase differences. The project is investigating further radiometric and polarimetric ripple reductions to be addressed in future releases.
 
+(issue-phase-unwrapping)=
 #### Phase unwrapping
 
 Phase unwrapping in challenging environments remains difficult. The project will continue to improve unwrapping performance throughout the mission.
 
+(issue-ionospheric effects)=
 #### Ionospheric effects
 
 Residual ionospheric effects remain challenging to mitigate at high latitudes. Data are generally usable, but users may encounter geolocation errors, patterned decorrelation bands in interferograms, and residual phase errors after applying the ionospheric correction layer. 
@@ -177,6 +180,7 @@ Local geometric distortions exceeding a fraction of a pixel can also cause the p
 
 The [updated interferogram coregistration](#new-insar-coregistration), which now incorporates data-driven offsets, helps reduce misalignment caused by these distortions, although residual ionospheric effects may persist. 
 
+(issue-rfi)=
 #### Radio frequency interference
 
 The RFI mitigation filter generally performs well, but residual interference remains in some areas. The filter can also remove real features in areas with strong signal contrasts.
