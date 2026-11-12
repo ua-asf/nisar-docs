@@ -313,7 +313,7 @@ Open the **Data Source Manager** window, select **WMS/WMTS**, and click the **Ne
 ```
 
 3. Enter a name for the connection in the **Name** field, and enter the following URL into the **URL** field (@worldview-add-wms-connection-image):  
-`https://uat.gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi`  
+`https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi`  
 
 4. Click **OK** to add the WMS server connection to your project. This will provide access to all available GIBS imagery layers served using the EPSG 4326 coordinate system (which includes the NISAR GCOV layers).
 
@@ -322,7 +322,7 @@ Open the **Data Source Manager** window, select **WMS/WMTS**, and click the **Ne
 :alt: Screenshot of a QGIS window ready to load the GIBS WMS service.   
 :align: center
 
-Enter `https://uat.gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi` into the **URL** field for the WMS/WMTS connection and press OK to add the WMS connection to your project. 
+Enter `https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi` into the **URL** field for the WMS/WMTS connection and press OK to add the WMS connection to your project. 
 ```
 
 5. Select the newly added connection from the dropdown menu and click the **Connect** button to list the layers.
@@ -366,7 +366,7 @@ To add a GIBS WMS Server to ArcGIS Pro, click the **Connections** button in the 
 ```
 
 3. Enter the following URL into the **Server URL** field (@gibs-arcgispro-server-gibs-url-image):  
-`https://uat.gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi`  
+`https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi`  
 
     - Leave the default settings for all other fields, including blank fields
 
