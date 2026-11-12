@@ -10,7 +10,9 @@ short_title: Release Notes
 
 Starting with this release, NISAR Level 0 through Level 2 products are designated VALIDATED. The Level 3 Soil Moisture (SME2) products remain PROVISIONAL.
 
-The project and science teams have examined hundreds of thousands of data products at global and regional scales, both synoptically and through detailed scene analysis. From this analysis, the team has determined that the L0–L2 products are validated and suitable for science, with remaining issues reported below and tracked on the @nisar-validated-known-issues page. New L0–L2 products starting with this release are marked VALIDATED and will be found in the Earthdata validated archive.
+The project and science teams have examined hundreds of thousands of data products at global and regional scales, both synoptically and through detailed scene analysis. From this analysis, the team has determined that the L0–L2 products are validated and suitable for science, with remaining issues reported below and tracked on the @nisar-validated-known-issues page. 
+
+New L0–L2 products starting with this release are marked VALIDATED and will be found in the Earthdata validated archive.
 
 These products are processed with [NISAR Composite Release ID (CRID) P05036](https://www.earthdata.nasa.gov/data/platforms/space-based-platforms/nisar/nisar-composite-release-id-crid)<!--[#TODO: add link to specific CRID once it's available]-->. Documented known issues are being worked on and will be resolved or mitigated in future releases.
 
@@ -31,7 +33,7 @@ These release notes document the [VALIDATED](#nisar-validated-data-nov) data pro
 
 :::
 
-Users should take care when analyzing products of different maturity levels together, since differences in processing software may affect results. Earlier data affected by the radiometric calibration issue will be replaced by VALIDATED products after the early 2027 campaign.
+Users should take care when analyzing products of different maturity levels together, since differences in processing software may affect results. Earlier data affected by the radiometric calibration issue will be replaced by VALIDATED products after the [reprocessing campaign](#validated-reprocessing) planned for early 2027.
 
 ### What's New
 
