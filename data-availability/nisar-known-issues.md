@@ -19,7 +19,7 @@ If you encounter issues with NISAR products that are not addressed here, please 
 
 ### Known Issues Table
 
-@tbl:known-issues summarizes the known issues for NISAR VALIDATED products. Each issue is linked to a more detailed description.
+Each known issue is summarized in @tbl:known-issues, which provides a link to a more detailed description of the issue.
 
 :::{table} NISAR Known Issues Table
 :label: tbl:known-issues
@@ -44,7 +44,11 @@ If you encounter issues with NISAR products that are not addressed here, please 
 
 ### Current Known Issues
 
-Known issues associated with CRID P05036 (software version used for first validated data release) are documented in the [release notes](#p05036-known-issues). Additional issues not included in the release notes are documented here.
+These issues are currently impacting VALIDATED products. Some issues are unresolvable, but others may be mitigated in future updates to the NISAR processing software.
+
+#### Known Issues: P05036 Release
+
+Known issues associated with CRID P05036 (the software version used for first validated data release) are documented in the [release notes](#p05036-known-issues). Issue descriptions from the release notes are linked in @tbl:known-issues.
 
 (permanent-data-gap-july26)=
 #### Permanent data gap
