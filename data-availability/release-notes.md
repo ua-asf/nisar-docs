@@ -45,7 +45,7 @@ Earlier data affected by the radiometric calibration issue will be replaced by V
 
 Products acquired after November 12, 2026, have significantly improved radiometric and polarimetric calibration, including corrections for polarimetric channel imbalance. 
 
-P05036 products acquired after this date do not require the 59° phase correction previously published for provisional products. Calibration issues affecting P05036 products acquired earlier than November 12 are described in [Known Issues](#issue-calibration-earlier-data).
+P05036 products acquired after this date do not require [the 59° phase correction previously published for provisional products](#provisional-polarimetric-calibration). Calibration issues affecting P05036 products acquired earlier than November 12 are described in [Known Issues](#issue-calibration-earlier-data).
 
 #### L0B Update
 

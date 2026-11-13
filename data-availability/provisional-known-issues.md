@@ -32,6 +32,7 @@ Low-level ripples in the SLC data and derived products may occasionally be seen 
 
 The calibration of the 5 MHz Frequency B channel, which is designed for split-spectrum processing, has larger systematic radiometric calibration residuals than the main band Frequency A. While there are no radiometric requirements for Frequency B, datasets generated from this channel have been found to be useful in their own right. As such, calibration of the Frequency B channel will be improved.
 
+(provisional-polarimetric-calibration)=
 ### Polarimetric Calibration
 
 The relative phase between polarimetric channels is not fully calibrated due to a change in the phase imbalance between H and V after the polarimetric calibration coefficients were derived. 
