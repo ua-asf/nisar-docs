@@ -8,7 +8,7 @@ radar modes are used to collect data for different geographic areas, as describe
 
 ### Mixed Mode
 
-When the satellite changes acquisition modes in the middle of a frame, separate granules are produced each covering only a portion of the frame. Where possible, a mixed mod granule is also created, covering the full frame and having the coarser of the two resolutions and only the common subset of polarizations. 
+When the satellite changes acquisition modes in the middle of a frame, separate granules are produced each covering only a portion of the frame. Where possible, a mixed mode granule is also created, covering the full frame and having the coarser of the two resolutions and only the common subset of polarizations. 
 
 Mixed mode acquisitions are identified in the [file naming convention](#naming-convention-overview) in different places for different product types:  
 - For [single-acquisition products](#products-generated-from-a-single-acquisition) ([RSLC](#rslc-product-overview), [GSLC](#gslc-product-overview), [GCOV](#gcov-product-overview)) and [SME2 products](#sme2-product-overview), mixed mode is indicated by an **M** (mixed) instead of an **S** (single) for the **_Source of data_** component of the filename.
