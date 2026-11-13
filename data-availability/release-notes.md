@@ -43,9 +43,9 @@ Earlier data affected by the radiometric calibration issue will be replaced by V
 
 #### Radiometric and Polarimetric Calibration
 
-Products processed after November 12, 2026, have significantly improved radiometric and polarimetric calibration, including corrections for polarimetric channel imbalance. 
+Products acquired after November 12, 2026, have significantly improved radiometric and polarimetric calibration, including corrections for polarimetric channel imbalance. 
 
-P05036 products processed after this date do not require the 59° phase correction previously published for provisional products. Calibration issues affecting P05035 products produced earlier than November 12 are described under [Known Issues](#p05036-known-issues).
+P05036 products acquired after this date do not require the 59° phase correction previously published for provisional products. Calibration issues affecting P05036 products acquired earlier than November 12 are described in [Known Issues](#issue-calibration-earlier-data).
 
 #### L0B Update
 
@@ -90,7 +90,7 @@ Other bug fixes and improvements make this data set more complete and robust tha
 (issue-calibration-earlier-data)=
 #### Calibration of earlier data
 
-About 30% of the data acquired in specific radar modes and processed before November 12, 2026, are affected by a calibration issue, with radiometric residuals of approximately 1 dB and polarimetric phase inconsistencies. The radar modes affected by this issue are listed in @tbl:degraded-radar-modes; they were fixed for data acquired after November 12, 2026. 
+About 30% of the data acquired in specific radar modes before November 12, 2026, are affected by a calibration issue, with radiometric residuals of approximately 1 dB and polarimetric phase inconsistencies. The radar modes affected by this issue are listed in @tbl:degraded-radar-modes; they are fixed for data acquired after November 12, 2026. 
 
 Affected data will be corrected during a reprocessing campaign planned for early 2027, covering acquisitions from the start of the science phase on December 29, 2025. Until reprocessed data are available, users combining products processed before and after November 12 should expect radiometric differences and polarimetric phase inconsistencies.
 
