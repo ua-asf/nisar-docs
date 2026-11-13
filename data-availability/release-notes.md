@@ -43,9 +43,9 @@ Earlier data affected by the radiometric calibration issue will be replaced by V
 
 #### Radiometric and Polarimetric Calibration
 
-Products processed after November 12, 2026, have significantly improved radiometric and polarimetric calibration, including corrections for polarimetric channel imbalance. 
+Products acquired after November 12, 2026, have significantly improved radiometric and polarimetric calibration, including corrections for polarimetric channel imbalance. 
 
-P05036 products processed after this date do not require the 59° phase correction previously published for provisional products. Calibration issues affecting P05035 products produced earlier than November 12 are described under [Known Issues](#p05036-known-issues).
+P05036 products acquired after this date do not require [the 59° phase correction previously published for provisional products](#provisional-polarimetric-calibration). Calibration issues affecting P05036 products acquired earlier than November 12 are described in [Known Issues](#issue-calibration-earlier-data).
 
 #### L0B Update
 
@@ -57,8 +57,10 @@ This issue affected downstream products, causing defocused RSLC images, missing 
 
 Missing-data masks and other mask layers are now more complete and consistent across products. 
 
-A small percentage of data (~1–2%) may be lost due to downlink issues. Data processed with CRID P05036 and above include additional information used to generate missing-data masks and statistics across products. 
+- A small percentage of data (~1–2%) may be lost due to downlink issues. 
+- Data processed with CRID P05036 and above include additional information used to generate missing-data masks and statistics across products. 
 
+(new-insar-coregistration)=
 #### Interferogram Coregistration
 
 GUNW/RUNW/RIFG interferograms now consistently use data-driven offsets in addition to geometrical offsets to align reference and secondary images in the coregistration step referred to as “rubbersheeting”. This configuration reduces residual misalignment between image pairs, improving coherence and the continuity of the interferometric phase across the scene. 
@@ -88,7 +90,7 @@ Other bug fixes and improvements make this data set more complete and robust tha
 (issue-calibration-earlier-data)=
 #### Calibration of earlier data
 
-About 30% of the data acquired in specific radar modes and processed before November 12, 2026, are affected by a calibration issue, with radiometric residuals of approximately 1 dB and polarimetric phase inconsistencies. The radar modes affected by this issue are listed in @tbl:degraded-radar-modes; they were fixed for data acquired after November 12, 2026. 
+About 30% of the data acquired in specific radar modes before November 12, 2026, are affected by a calibration issue, with radiometric residuals of approximately 1 dB and polarimetric phase inconsistencies. The radar modes affected by this issue are listed in @tbl:degraded-radar-modes; they are fixed for data acquired after November 12, 2026. 
 
 Affected data will be corrected during a reprocessing campaign planned for early 2027, covering acquisitions from the start of the science phase on December 29, 2025. Until reprocessed data are available, users combining products processed before and after November 12 should expect radiometric differences and polarimetric phase inconsistencies.
 
@@ -155,20 +157,30 @@ These interferograms will be available for later acquisitions dated October 21, 
 
 #### Soil Moisture (SME2) products
 
-[SME2 products remain PROVISIONAL](#sme2-product-maturity-level). They require a time series of L2 GCOV inputs, and some cal/val metrics such as unbiased RMSE need longer time series before they can be computed. In quad-pol areas, three to six gaps across the swath arise from NISAR's SweepSAR acquisition and the number of time steps in the algorithm. In that case, one or more of the three SME2 algorithms may not deliver an estimate.
+[SME2 products remain PROVISIONAL](#sme2-product-maturity-level). They require a time series of L2 GCOV inputs, and some cal/val metrics such as unbiased RMSE need longer time series before they can be computed. 
 
+In quad-pol areas, three to six gaps across the swath arise from NISAR's SweepSAR acquisition and the number of time steps in the algorithm. In that case, one or more of the three SME2 algorithms may not deliver an estimate.
+
+(issue-residual-ripples-across-swath)=
 #### Residual radiometric and polarimetric ripples across the swath
 
 Low-level systematic radiometric ripples remain across the swath, with amplitudes below 0.25 dB in both frequency A and frequency B, well within requirements. A residual ripple of 2–3° is also present in the HH–VV and HV–VH polarimetric phase differences. The project is investigating further radiometric and polarimetric ripple reductions to be addressed in future releases.
 
+(issue-phase-unwrapping)=
 #### Phase unwrapping
 
 Phase unwrapping in challenging environments remains difficult. The project will continue to improve unwrapping performance throughout the mission.
 
+(issue-ionospheric-effects)=
 #### Ionospheric effects
 
-Residual ionospheric effects remain challenging to mitigate at high latitudes. Data are generally usable, but users may encounter geolocation errors, patterned decorrelation bands in interferograms, and residual phase errors after applying the ionospheric correction layer. Local geometric distortions exceeding a fraction of a pixel can also cause the processing algorithms to introduce additional phase errors. The updated interferogram coregistration, which now incorporates data-driven offsets (see "What's new in this release - Interferogram coregistration"), helps reduce misalignment caused by these distortions, although residual ionospheric effects may persist. 
+Residual ionospheric effects remain challenging to mitigate at high latitudes. Data are generally usable, but users may encounter geolocation errors, patterned decorrelation bands in interferograms, and residual phase errors after applying the ionospheric correction layer. 
 
+Local geometric distortions exceeding a fraction of a pixel can also cause the processing algorithms to introduce additional phase errors. 
+
+The [updated interferogram coregistration](#new-insar-coregistration), which now incorporates data-driven offsets, helps reduce misalignment caused by these distortions, although residual ionospheric effects may persist. 
+
+(issue-rfi)=
 #### Radio frequency interference
 
 The RFI mitigation filter generally performs well, but residual interference remains in some areas. The filter can also remove real features in areas with strong signal contrasts.
