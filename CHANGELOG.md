@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.4.41]
 
+### Added
+- Information about mixed mode products to the [NISAR Observation Plan](data-availability/observation-plan.md) page
+
 ### Changed
 - Updated Worldview description page
 
