@@ -4,18 +4,28 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.4.40]
+
+### Added
+- Information about the new spatial subsetting and reprojecting options to the [Harmony](tools-services/harmony.md) page
+
+### Changed
+- Updated ASF development roadmap
+- Added download customization guidance to the [Earthdata Search](accessing-nisar/earthdata-search.md#customizing-downloads) page
+
 ## [0.4.39]
 
 ### Added
-- Guidance on using JPL's NISAR HDF5 GDAL Plugin, including the option available in the Vertex GDAL Snippet Exporter
+- Information about the validated data release
+- Guidance for using JPL's NISAR HDF5 GDAL Plugin, including the option available in the Vertex GDAL Snippet Exporter
 
 ### Changed
-- Updated Contributing in README.md to clarify the new contribution workflow introduced in v0.4.36.
+- Updated Contributing in README.md to clarify the new contribution workflow introduced in v0.4.36
 
 ## [0.4.38]
 
 ### Added
-- `dependabot.yml` config to automate version updates for conda and GitHub Actions dependencies. 
+- `dependabot.yml` config to automate version updates for conda and GitHub Actions dependencies
 
 ## [0.4.37]
 
