@@ -76,7 +76,7 @@ The quality of phase unwrapping in the validated products has been improved by:
 
 Products are now processed with the NISAR Customized Copernicus DEM (CC-DEM) v1.3, which includes several fixes that improve overall product quality compared with v1.2. 
 
-These improvements include removal of the artifact along the prime meridian and at DEM tile boundaries at high latitudes. The DEM will remain identical at mid latitudes. Remaining DEM issues are listed under [Known Issues](#p05036-known-issues). 
+These improvements include removal of the artifact along the prime meridian and at DEM tile boundaries at high latitudes. The DEM will remain identical at mid latitudes. Remaining DEM issues are listed under [Known Issues](#issue-cop-dem-lat-band-transition). 
 
 #### Other Improvements
 
