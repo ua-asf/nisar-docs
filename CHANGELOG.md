@@ -8,7 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.4.42]
 
 ### Added
-- Release notes page for Validated data
+- [Release notes](data-availability/release-notes.md) page for Validated data
 
 ## [0.4.41]
 
