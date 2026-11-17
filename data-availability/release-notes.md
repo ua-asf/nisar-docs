@@ -94,23 +94,22 @@ About 30% of the data acquired in specific radar modes before November 12, 2026,
 
 Affected data will be corrected during a reprocessing campaign planned for early 2027, covering acquisitions from the start of the science phase on December 29, 2025. Until reprocessed data are available, users combining products processed before and after November 12 should expect radiometric differences and polarimetric phase inconsistencies.
 
-:::{table} Science radar modes degraded before November 12, 2026, and fixed for subsequent acquisitions
+:::{table} Science radar modes degraded before November 12, 2026, and fixed for subsequent acquisitions. For details on how to interpret the mode mnemonics, refer to @nisar_summary or @mnemonic-scheme. For joint L+S modes, the S-band mnemonic is listed below the L-band mnemonic. Affected polarization indicates the L-band polarization(s) affected by the calibration issue: H, V, or both (H, V).
 :label: tbl:degraded-radar-modes
 :align: center
 
-For details on how to interpret the mode mnemonics, refer to @nisar_summary or @mnemonic-scheme.
-
-| RCID | Mode mnemonics            | Science Target                                          |
-|:-----|:--------------------------|:--------------------------------------------------------|
-| 151  | L:SCI:SH:40M05N:FS:B4:D11 | Land Ice Low Res                                        |
-| 156  | L:SCI:DH:40M05N:FS:B4:D02 | L-only Background Land                                  |
-| 217  | L:SCI:DH:40M05N:FS:B4:D02 | High-Res Deformation (Urban/Landslide)                  |
-| 223  | L:SCI:SH:40M05N:FS:B4:D02 | Land Ice Low Res                                        |
-| 236  | L:SCI:DH:40M05N:FS:B4:D02 | Glacial Ice-Himalayas                                   |
-| 237  | L:SCI:QP:20M05N:FS:B4:F05 | ISRO Cal/Val                                            |
-| 238  | L:SCI:DH:40M05N:FS:B4:D02 | ISRO Background Land and Global Science Cal/Val targets |
-| 247  | L:SCI:SH:40M05N:FS:B4:D02 | Land Ice - Antarctica                                   |
-| 248  | L:SCI:SH:40M05N:FS:B4:D02 | ISRO Bohai Bay and NASA Urban Area                      |
+| RCID | Mode mnemonics                               | Affected polarization | Science Target                                          |
+|:-----|:---------------------------------------------|:----------------------|:--------------------------------------------------------|
+| 151  | L:SCI:SH:40M+05N:FS:B4:D02                   | H                     | Land Ice Low Res                                        |
+| 156  | L:SCI:DH:40M+05N:FS:B4:D02                   | H, V                  | L-only Background Land                                  |
+| 216  | L:SCI:DH:40M+05N:FS:B4:D02<br>S:DB:CP:37W:B4 | H, V                  | Glacial Ice-Himalayas                                   |
+| 217  | L:SCI:DH:40M+05N:FS:B4:D02<br>S:DB:SH:75W:B4 | H, V                  | High-Res Deformation (Urban/Landslide)                  |
+| 223  | L:SCI:SH:40M+05N:FS:B4:D02<br>S:DB:CP:25W:B4 | H                     | Land Ice Low Res                                        |
+| 236  | L:SCI:DH:40M+05N:FS:B4:D02<br>S:DB:CP:25W:B4 | H, V                  | Glacial Ice-Himalayas                                   |
+| 237  | L:SCI:QP:20M+05N:FS:F05<br>S:DB:DH:37N:B4    | V                     | ISRO Cal/Val                                            |
+| 238  | L:SCI:DH:40M+05N:FS:B4:D02<br>S:DB:DH:37W:B4 | H, V                  | ISRO Background Land and Global Science Cal/Val targets |
+| 247  | L:SCI:SH:40M+05N:FS:B4:D02<br>S:--:SH:37W:B4 | H                     | Land Ice - Antarctica                                   |
+| 248  | L:SCI:DH:40M+05N:FS:B4:D02<br>S:DB:DV:10W:B4 | H, V                  | ISRO Bohai Bay and NASA Urban Area                      |
 
 :::
 
