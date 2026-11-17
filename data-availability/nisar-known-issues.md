@@ -41,7 +41,7 @@ Each known issue is summarized in @tbl:known-issues, with a link provided to a m
 | [Customized Copernicus DEM v1.3 latitude band transitions](#issue-cop-dem-lat-band-transition)             |             | Issue ongoing                                                                                                             |
 | [Unrecoverable Data Loss](#issue-unrecoverable-data-modes)                                                 |             | Permanent issue                                                                                                           |
 | [Permanent NISAR instrument data gap between 2026-07-27 and 2026-08-10](#permanent-data-gap-july26)        | 10 Aug 2026 | Permanent issue                                                                                                           |
-| [Incomplete L0B Products](#issue-timestamp-incomplete-l0b)                                                 | 05 Nov 2026 | Resolved with CRID P05036 <!--[#TODO: add link to CRID on NIAR page once available]-->                                    |
+| [Incomplete L0B Products](#issue-timestamp-incomplete-l0b)                                                 | 13 Aug 2026 | Resolved with CRID P05036 <!--[#TODO: add link to CRID on NIAR page once available]-->                                    |
 
 :::
 
