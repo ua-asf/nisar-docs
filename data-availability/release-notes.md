@@ -113,6 +113,24 @@ Affected data will be corrected during a reprocessing campaign planned for early
 
 :::
 
+(issue-unrecoverable-data-modes)=
+#### Unrecoverable Data Loss
+Data acquired in a small number of radar modes suffered unrecoverable loss in one or both L-band polarizations. The affected modes are listed in Table 2. Modes 231 and 233 were used for sea ice acquisitions north of Alaska (Beaufort Sea), and modes 249, 250, and 251 were used for a limited number of observations over the Amazon. Because the loss is unrecoverable, these data will not be restored by the planned reprocessing campaign.
+
+:::{table} Radar modes with unrecoverable data loss in one or both polarizations. For details on how to interpret the mode mnemonics, refer to @nisar_summary or @mnemonic-scheme. For joint L+S modes, the S-band mnemonic is listed below the L-band mnemonic. Affected polarization indicates the L-band polarization(s) affected by the calibration issue: H, V, or both (H, V).
+:label: tbl:unrecoverable-data-loss
+:align: center
+
+| RCID | Mode mnemonics                               | Affected polarization | Science Target                                 |
+|:-----|:---------------------------------------------|:----------------------|:-----------------------------------------------|
+| 231  | L:SCI:QD:05W+---:FS:B4:D09<br>S:DB:DV:10W:B4 | V                     | BeaufortSea                                    |
+| 233  | L:SCI:QD:05W+---:FS:B4:D09<br>S:DB:CP:25W:B4 | H                     | BeaufortSea / Antarctica Stations              |
+| 249  | L:SCI:DH:40M+---:FS:B4:D11<br>S:DR:DH:25W:B4 | H, V                  | Joint Pointing over Radar Bright Targets       |
+| 250  | L:SCI:DV:40M+---:FS:B4:D11<br>S:DR:DV:25W:B4 | H, V                  | Joint Pointing over Radar Bright Targets       |
+| 251  | L:SCI:QD:05W+---:FS:B4:D11<br>S:DR:CP:25W:B4 | V                     | Joint Pointing over Homogeneous Targets QD Pol |
+
+:::
+
 (issue-gunw-phase-artifact-squint)=
 #### GUNW phase artifact from squint compensation
 
