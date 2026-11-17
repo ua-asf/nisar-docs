@@ -1,8 +1,21 @@
 # NISAR Observation Plan
 
+(nisar-modes)=
+## NISAR Modes
 The NISAR observation plan is complex. In order to meet the broad science goals of the mission, different 
 radar modes are used to collect data for different geographic areas, as described in the 
 [NISAR Observation Strategy](https://science.nasa.gov/mission/nisar/observation-strategy/).
+
+### Mixed Mode
+
+When the satellite changes acquisition modes in the middle of a frame, separate granules are produced each covering only a portion of the frame. Where possible, a mixed mode granule is also created, covering the full frame and having the coarser of the two resolutions and only the common subset of polarizations. 
+
+Mixed mode acquisitions are identified in the [file naming convention](#naming-convention-overview) in different places for different product types:  
+- For [single-acquisition products](#products-generated-from-a-single-acquisition) ([RSLC](#rslc-product-overview), [GSLC](#gslc-product-overview), [GCOV](#gcov-product-overview)) and [SME2 products](#sme2-product-overview), mixed mode is indicated by an **M** (mixed) instead of an **S** (single) for the **_Source of data_** component of the filename.
+- For [raw data products](#raw-data-products) ([RRSD](#rrsd-product-overview)), mixed mode is indicated by an **M** rather than an **S** in the last digit of the **_Radar Mode (RDME)_** component of the filename.
+- The naming scheme for [products generated from pairs of acquisitions](#products-generated-from-a-pair-of-acquisitions) ([RIFG](#rifg-product-overview), [RUNW](#runw-product-overview), [GUNW](#gunw-product-overview), [ROFF](#roff-product-overview), [GOFF](#goff-product-overview)) does not identify mixed mode products. 
+  - The individual products that are generated for the different modes are identified with a **P** (partial) rather than an **F** (full), but the mixed mode product is designated with an **F** like any other non-mixed product.
+  - There is no easy way to exclude mixed mode pair-wise products from a search at this time, so it's important to be aware that search results may include mixed mode products.
 
 (nisar-reference-observation-plan)=
 ## NISAR Reference Observation Plan
