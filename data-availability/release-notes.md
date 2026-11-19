@@ -94,23 +94,40 @@ About 30% of the data acquired in specific radar modes before November 12, 2026,
 
 Affected data will be corrected during a reprocessing campaign planned for early 2027, covering acquisitions from the start of the science phase on December 29, 2025. Until reprocessed data are available, users combining products processed before and after November 12 should expect radiometric differences and polarimetric phase inconsistencies.
 
-:::{table} Science radar modes degraded before November 12, 2026, and fixed for subsequent acquisitions
+:::{table} Science radar modes degraded before November 12, 2026, and fixed for subsequent acquisitions. For details on how to interpret the mode mnemonics, refer to @nisar_summary or @mnemonic-scheme. For joint L+S modes, the S-band mnemonic is listed below the L-band mnemonic. Affected polarization indicates the L-band polarization(s) affected by the calibration issue: H, V, or both (H, V).
 :label: tbl:degraded-radar-modes
 :align: center
 
-For details on how to interpret the mode mnemonics, refer to @nisar_summary or @mnemonic-scheme.
+| RCID | Mode mnemonics                               | Affected polarization | Science Target                                          |
+|:-----|:---------------------------------------------|:----------------------|:--------------------------------------------------------|
+| 151  | L:SCI:SH:40M+05N:FS:B4:D02                   | H                     | Land Ice Low Res                                        |
+| 156  | L:SCI:DH:40M+05N:FS:B4:D02                   | H, V                  | L-only Background Land                                  |
+| 216  | L:SCI:DH:40M+05N:FS:B4:D02<br>S:DB:CP:37W:B4 | H, V                  | Glacial Ice-Himalayas                                   |
+| 217  | L:SCI:DH:40M+05N:FS:B4:D02<br>S:DB:SH:75W:B4 | H, V                  | High-Res Deformation (Urban/Landslide)                  |
+| 223  | L:SCI:SH:40M+05N:FS:B4:D02<br>S:DB:CP:25W:B4 | H                     | Land Ice Low Res                                        |
+| 236  | L:SCI:DH:40M+05N:FS:B4:D02<br>S:DB:CP:25W:B4 | H, V                  | Glacial Ice-Himalayas                                   |
+| 237  | L:SCI:QP:20M+05N:FS:F05<br>S:DB:DH:37N:B4    | V                     | ISRO Cal/Val                                            |
+| 238  | L:SCI:DH:40M+05N:FS:B4:D02<br>S:DB:DH:37W:B4 | H, V                  | ISRO Background Land and Global Science Cal/Val targets |
+| 247  | L:SCI:SH:40M+05N:FS:B4:D02<br>S:--:SH:37W:B4 | H                     | Land Ice - Antarctica                                   |
+| 248  | L:SCI:DH:40M+05N:FS:B4:D02<br>S:DB:DV:10W:B4 | H, V                  | ISRO Bohai Bay and NASA Urban Area                      |
 
-| RCID | Mode mnemonics            | Science Target                                          |
-|:-----|:--------------------------|:--------------------------------------------------------|
-| 151  | L:SCI:SH:40M05N:FS:B4:D11 | Land Ice Low Res                                        |
-| 156  | L:SCI:DH:40M05N:FS:B4:D02 | L-only Background Land                                  |
-| 217  | L:SCI:DH:40M05N:FS:B4:D02 | High-Res Deformation (Urban/Landslide)                  |
-| 223  | L:SCI:SH:40M05N:FS:B4:D02 | Land Ice Low Res                                        |
-| 236  | L:SCI:DH:40M05N:FS:B4:D02 | Glacial Ice-Himalayas                                   |
-| 237  | L:SCI:QP:20M05N:FS:B4:F05 | ISRO Cal/Val                                            |
-| 238  | L:SCI:DH:40M05N:FS:B4:D02 | ISRO Background Land and Global Science Cal/Val targets |
-| 247  | L:SCI:SH:40M05N:FS:B4:D02 | Land Ice - Antarctica                                   |
-| 248  | L:SCI:SH:40M05N:FS:B4:D02 | ISRO Bohai Bay and NASA Urban Area                      |
+:::
+
+(issue-unrecoverable-data-modes)=
+#### Unrecoverable Data Loss
+Data acquired in a small number of radar modes suffered unrecoverable loss in one or both L-band polarizations. The affected modes are listed in Table 2. Modes 231 and 233 were used for sea ice acquisitions north of Alaska (Beaufort Sea), and modes 249, 250, and 251 were used for a limited number of observations over the Amazon. Because the loss is unrecoverable, these data will not be restored by the planned reprocessing campaign.
+
+:::{table} Radar modes with unrecoverable data loss in one or both polarizations. For details on how to interpret the mode mnemonics, refer to @nisar_summary or @mnemonic-scheme. For joint L+S modes, the S-band mnemonic is listed below the L-band mnemonic. Affected polarization indicates the L-band polarization(s) affected by the calibration issue: H, V, or both (H, V).
+:label: tbl:unrecoverable-data-loss
+:align: center
+
+| RCID | Mode mnemonics                               | Affected polarization | Science Target                                 |
+|:-----|:---------------------------------------------|:----------------------|:-----------------------------------------------|
+| 231  | L:SCI:QD:05W+---:FS:B4:D09<br>S:DB:DV:10W:B4 | V                     | BeaufortSea                                    |
+| 233  | L:SCI:QD:05W+---:FS:B4:D09<br>S:DB:CP:25W:B4 | H                     | BeaufortSea / Antarctica Stations              |
+| 249  | L:SCI:DH:40M+---:FS:B4:D11<br>S:DR:DH:25W:B4 | H, V                  | Joint Pointing over Radar Bright Targets       |
+| 250  | L:SCI:DV:40M+---:FS:B4:D11<br>S:DR:DV:25W:B4 | H, V                  | Joint Pointing over Radar Bright Targets       |
+| 251  | L:SCI:QD:05W+---:FS:B4:D11<br>S:DR:CP:25W:B4 | V                     | Joint Pointing over Homogeneous Targets QD Pol |
 
 :::
 
