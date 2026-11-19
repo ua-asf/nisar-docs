@@ -59,4 +59,4 @@ No data was collected by the NISAR platform between 2026-07-27T22:03:25Z and 202
 
 ***Resolved with [CRID P05036](https://www.earthdata.nasa.gov/data/platforms/space-based-platforms/nisar/nisar-composite-release-id-crid#toc-p05036)***
 
-One of the most critical issues with the PROVISIONAL products, which was resolved before any VALIDATED data products were processed, was a [timestamp issue that resulted in incomplete L0B products](#provisional-issue-incomplete-l0b-products). This manifested in downstream product types as a range of artifacts, including defocused RSLC images, missing data, and decorrelation in InSAR products. The majority of issues with PROVISIONAL products reported to the Earthdata Forum were caused by this issue, but it is not an issue for VALIDATED products. 
+One of the most critical issues with the PROVISIONAL products, which was resolved before any VALIDATED data products were processed, was a [timestamp issue that resulted in incomplete L0B products](#provisional-issue-incomplete-l0b-products). The majority of Earthdata Forum posts about PROVISIONAL products stem from this issue, but it is not an issue for VALIDATED products. 
