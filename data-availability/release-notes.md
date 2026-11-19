@@ -14,7 +14,7 @@ The project and science teams have examined hundreds of thousands of data produc
 
 New L0–L2 products starting with this release are marked VALIDATED and will be found in the Earthdata validated archive.
 
-These products are processed with [NISAR Composite Release ID (CRID) P05036](https://www.earthdata.nasa.gov/data/platforms/space-based-platforms/nisar/nisar-composite-release-id-crid)<!--[#TODO: add link to specific CRID once it's available]-->. Documented known issues are being worked on and will be resolved or mitigated in future releases.
+These products are processed with [NISAR Composite Release ID (CRID) P05036](https://www.earthdata.nasa.gov/data/platforms/space-based-platforms/nisar/nisar-composite-release-id-crid#toc-p05036). Documented known issues are being worked on and will be resolved or mitigated in future releases.
 
 ### Product Maturity
 
@@ -156,7 +156,7 @@ A small fraction of data contain along-track gaps of approximately 2 seconds whe
 (issue-mixed-crids-transitional-insar)=
 #### Mixed CRIDS for transitional interferometry products
 
-In the transition between provisional to validated products, interferometric products are produced by interfering provisional (CRID=P05023) with validated RSLC products (CRID=P05036). Differences in calibration and phase characteristics between the two versions introduce an additional interferometric phase component.
+In the transition between provisional to validated products, interferometric products are produced by interfering provisional (CRID=[P05023](https://www.earthdata.nasa.gov/data/platforms/space-based-platforms/nisar/nisar-composite-release-id-crid#toc-p05023)) with validated RSLC products (CRID=[P05036](https://www.earthdata.nasa.gov/data/platforms/space-based-platforms/nisar/nisar-composite-release-id-crid#toc-p05036)). Differences in calibration and phase characteristics between the two versions introduce an additional interferometric phase component.
 
 These interferograms will be available for later acquisitions dated October 21, 2026 onward, paired with acquisitions 12 days earlier, or at longer 12-day intervals where needed to find the first suitable earlier acquisition. They will be reprocessed in a future campaign using consistent CRIDs.
 

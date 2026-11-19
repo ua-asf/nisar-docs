@@ -27,7 +27,7 @@ Most of the known issues identified in the [BETA](./product-known-issues.md) and
 (validated-crid)=
 ### NISAR Composite Release ID (CRID)
 
-The initial release of VALIDATED data uses NISAR Composite Release ID (CRID) version P05036.<!--[#TODO: Verify CRID and add link]--> Additional updates to the processing software are anticipated before the [reprocessing campaign](#validated-reprocessing) begins. Even once the reprocessing campaign is complete, updates to the processing software can be expected periodically as algorithms are further refined, resulting in products that are generated using different CRID versions. 
+The initial release of VALIDATED data uses NISAR Composite Release ID (CRID) version [P05036](https://www.earthdata.nasa.gov/data/platforms/space-based-platforms/nisar/nisar-composite-release-id-crid#toc-p05036). Additional updates to the processing software are anticipated before the [reprocessing campaign](#validated-reprocessing) begins. Even once the reprocessing campaign is complete, updates to the processing software can be expected periodically as algorithms are further refined, resulting in products that are generated using different CRID versions. 
 
 CRID version updates, including descriptions of the changes introduced with each version, are tracked on the [NISAR CRID page](https://www.earthdata.nasa.gov/data/platforms/space-based-platforms/nisar/nisar-composite-release-id-crid) for reference. 
 
@@ -48,7 +48,7 @@ Permanent NISAR instrument data gap exists between `2026-07-27T22:03:25Z` and `2
 
 :::
 
-The PROVISIONAL products are generated using the [NISAR Composite Release ID (CRID) P05023](https://www.earthdata.nasa.gov/data/platforms/space-based-platforms/nisar/nisar-composite-release-id-crid), and are available for all acquisitions starting June 17, 2026. Users should take care if they choose to combine PROVISIONAL products with BETA products (generated at lower CRID numbers than 05023) in analysis workflows, as some differences will be due to changes in the processing software.
+The PROVISIONAL products are generated using the [NISAR Composite Release ID (CRID) P05023](https://www.earthdata.nasa.gov/data/platforms/space-based-platforms/nisar/nisar-composite-release-id-crid#toc-p05023), and are available for all acquisitions starting June 17, 2026. Users should take care if they choose to combine PROVISIONAL products with BETA products (generated at lower CRID numbers than P05023) or with VALIDATED products (generated at CRID P05036 and higher) in analysis workflows, as some differences will be due to changes in the processing software.
 
 ### Supplemental Provisional Products
 
