@@ -59,7 +59,7 @@ The PROVISIONAL collections also include longer time series for specific frames 
 
 {button}`Find NISAR BETA L-Band Data <https://search.asf.alaska.edu/#/?prodConfig=PR&dataMaturity=BETA>`
 
-Prior to the release of the PROVISIONAL products, a selection of pre-calibration BETA NISAR L-band products was made available through the ASF DAAC. These BETA products were released to allow users to develop workflows to access the data and metadata for each product type, to become familiar with the characteristics of the L-band products, and to begin working with the data in a substantive way.
+Prior to the release of the PROVISIONAL products, a selection of pre-calibration BETA NISAR L-band products was made available through ASF. These BETA products were released to allow users to develop workflows to access the data and metadata for each product type, to become familiar with the characteristics of the L-band products, and to begin working with the data in a substantive way.
 
 (sample-product-limitations)=
 The BETA products are not fully calibrated, and there are a number of [known issues](./product-known-issues.md) users should be aware of when working with these datasets. The PROVISIONAL products released in July 2026 are fully calibrated and partially validated, and are a significant improvement over the BETA products. Users should exercise care if attempting to analyze BETA products together with PROVISIONAL products.
