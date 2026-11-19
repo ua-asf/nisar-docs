@@ -45,7 +45,7 @@ These issues are currently impacting VALIDATED products. Some issues are unresol
 
 #### Known Issues: P05036 Release
 
-Known issues associated with CRID P05036 (the software version used for first validated data release) are documented in the [release notes](#p05036-known-issues). Issue descriptions from the release notes are linked in @tbl:known-issues.
+Known issues associated with CRID [P05036](https://www.earthdata.nasa.gov/data/platforms/space-based-platforms/nisar/nisar-composite-release-id-crid#toc-p05036) (the software version used for first validated data release) are documented in the [release notes](#p05036-known-issues). Issue descriptions from the release notes are linked in @tbl:known-issues.
 
 (permanent-data-gap-july26)=
 #### Permanent data gap
