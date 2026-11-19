@@ -89,7 +89,7 @@ Spatial extent of NISAR L-band data collection, highlighted in green.
 <span style="font-size: 12px;">_Basemap credits: Esri, TomTom, Garmin, FAO, NOAA, USGS, (c) OpenStreetMap contributors, and the GIS User Community._</span>
 ```
 
-All L-band data products processed by the mission will be available to the public through the Alaska Satellite Facility.
+All L-band data products processed by the mission are available to the public through the Alaska Satellite Facility.
 
 The nominal data release timeline as of November 2026 is described below.
 
@@ -103,14 +103,16 @@ A [larger volume](https://www.earthdata.nasa.gov/news/nisar-release-over-100000-
 
 (timeline-calibrated-forward-processing)=
 ### Jul 2026: Provisional products
-Global L-band NISAR Provisional products were released on July 20, 2026. These datasets are marked as PROVISIONAL, indicating that they are calibrated and partially validated, but processing improvements are still underway. Provisional datasets are available for all acquisitions starting from June 17, 2026 until partway through October 23, 2026.
+Global L-band [NISAR Provisional products were released on July 20, 2026](#nisar-provisional-data-july). These datasets are marked as PROVISIONAL, indicating that they are calibrated and partially validated, but processing improvements are still underway. Provisional datasets are available for all acquisitions starting from June 17, 2026, until partway through October 23, 2026.
 
-This release was the first to include [L0B RRSD](#rrsd-product-overview) products along with Level 1-3 products. PROVISIONAL products were continuously generated as data was acquired, and made publicly available for all areas shown in @data-acquisition-extent and in the [NISAR Reference Observation Plan](#nisar-reference-observation-plan). Note that the [Level 3 Soil Moisture (SME2) products in the PROVISIONAL collection are not considered fully calibrated](#sme2-product-maturity-level).
+This release was the first to include [L0B RRSD](#rrsd-product-overview) products along with Level 1-3 products. PROVISIONAL products were continuously generated as data was acquired, and made publicly available for all areas shown in @data-acquisition-extent and in the [NISAR Reference Observation Plan](#nisar-reference-observation-plan). 
+
+Note that the [Level 3 Soil Moisture (SME2) products in the PROVISIONAL collection are not considered fully calibrated](#sme2-product-maturity-level).
 
 (timeline-validated-products)=
 ### Nov 2026: Validated products (L0-2)
 
-Validated NISAR Level 0-2 products were released on November 6, 2026. This release includes products from all L-band NISAR acquisitions starting October 21, 2026.
+[Validated NISAR Level 0-2 products were released on November 6, 2026](#nisar-validated-data-nov). This release includes products from all L-band NISAR acquisitions starting October 21, 2026.
 
 (validated-reprocessing)=
 ### 2027: Validated reprocessing
