@@ -153,11 +153,6 @@ Products include new valid mask fraction metadata fields, but these fields are c
 
 Low-level stripes may occasionally appear in SLC and derived products over dark backgrounds. These arise from residual energy from looped-back transmit events at the edges of the L0B data. Stripe levels remain within requirements, and work is ongoing to eliminate them.
 
-(issue-joint-mode-products)=
-#### Joint mode 40 MHz products
-
-Products acquired in joint L- and S-band mode at 40 MHz bandwidth show residual radiometric bands that are larger than typical. They are within requirements but visually noticeable.
-
 (issue-joint-mode-data-gaps)=
 #### Joint mode data gaps
 
