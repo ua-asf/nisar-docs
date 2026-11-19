@@ -1,7 +1,7 @@
 ---
 short_title: Release Notes
 ---
-
+(release-notes)=
 # NISAR Validated Products 
 
 ## Release Notes: CRID P05036
@@ -147,11 +147,6 @@ Small elevation errors of approximately ±5 m can occur where terrain changes sh
 #### Valid mask fraction metadata not yet searchable
 
 Products include new valid mask fraction metadata fields, but these fields are currently not searchable in CMR. Until the DAAC production ingest is updated, expected in December 2026, products remain searchable using only existing metadata fields.
-
-(issue-stripes-in-slc-loopback)=
-#### Stripes in SLC data from loopback residuals
-
-Low-level stripes may occasionally appear in SLC and derived products over dark backgrounds. These arise from residual energy from looped-back transmit events at the edges of the L0B data. Stripe levels remain within requirements, and work is ongoing to eliminate them.
 
 (issue-joint-mode-data-gaps)=
 #### Joint mode data gaps
