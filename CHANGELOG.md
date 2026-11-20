@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - [Release notes](data-availability/release-notes.md) page for Validated data
+- Issue summaries to Known Issues table for validated data
 
 ## [0.4.41]
 
