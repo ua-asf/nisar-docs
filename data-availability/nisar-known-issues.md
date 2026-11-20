@@ -9,9 +9,9 @@ To learn about the known issues for PROVISIONAL or BETA products, click the butt
 (nisar-validated-known-issues)=
 ## Validated Product Known Issues
 
-The VALIDATED products [released in November 2026](#nisar-validated-data-nov) are fully calibrated and validated, and have been approved for use in scientific analysis. There are, however, some known issues that are important to be aware of when using the data.
+The VALIDATED products [released in November 2026](#nisar-validated-data-nov) are fully calibrated and validated, and have been approved for use in scientific analysis. There are, however, some known issues and limitations that are important to be aware of when using the data.
 
-Known issues are summarized in @tbl:known-issues. To learn more about the issues and limitations for a specific processing version (CRID), refer to the [Release Notes](#release-notes) page. Additional issues that surface over time will be added as information becomes available, and entries will be updated as issues are resolved. 
+Known issues and limitations are summarized in @tbl:known-issues. To learn more about the issues and limitations for a specific processing version (CRID), refer to the [Release Notes](#release-notes) page. Additional issues that surface over time will be added as information becomes available, and entries will be updated as issues are resolved. 
 
 If you encounter issues with NISAR products that are not addressed here, please post them to [NASA's Earthdata Forum](#nisar-in-earthdata-forum).
 
@@ -54,9 +54,8 @@ No data was collected by the NISAR platform between 2026-07-27T22:03:25Z and 202
 
 ### Resolved Known Issues
 
-(issue-timestamp-incomplete-l0b)=
-#### Incomplete L0B Products
+#### Resolved with [CRID P05036](https://www.earthdata.nasa.gov/data/platforms/space-based-platforms/nisar/nisar-composite-release-id-crid#toc-p05036)
 
-***Resolved with [CRID P05036](https://www.earthdata.nasa.gov/data/platforms/space-based-platforms/nisar/nisar-composite-release-id-crid#toc-p05036)***
+The processing version used for the [first release of VALIDATED data](#nisar-validated-data-nov) ([CRID P05036](https://www.earthdata.nasa.gov/data/platforms/space-based-platforms/nisar/nisar-composite-release-id-crid#toc-p05036)) implemented fixes for [many of the issues](#p05036-whats-new) that impact [PROVISIONAL products](#nisar-provisional-data-july). 
 
-One of the most critical issues with the PROVISIONAL products, which was resolved before any VALIDATED data products were processed, was a [timestamp issue that resulted in incomplete L0B products](#provisional-issue-incomplete-l0b-products). The majority of Earthdata Forum posts about PROVISIONAL products stem from this issue, but it is not an issue for VALIDATED products. 
+Notably, this version of the processor [fixes an issue](#p05036-fix-l0b) that is the source of many of the artifacts users encounter in PROVISIONAL products: a [timestamp issue that resulted in incomplete L0B products](#provisional-issue-incomplete-l0b-products).

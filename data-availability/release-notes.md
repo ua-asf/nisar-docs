@@ -39,6 +39,7 @@ Users should take care when analyzing products of different maturity levels toge
 
 Earlier data affected by the radiometric calibration issue will be replaced by VALIDATED products after the [reprocessing campaign](#validated-reprocessing) planned for early 2027.
 
+(p05036-whats-new)=
 ### What's New
 
 #### Radiometric and Polarimetric Calibration
@@ -47,6 +48,7 @@ Products acquired after November 12, 2026, have significantly improved radiometr
 
 P05036 products acquired after this date do not require [the 59° phase correction previously published for provisional products](#provisional-polarimetric-calibration). Calibration issues affecting P05036 products acquired earlier than November 12 are described in [Known Issues](#issue-calibration-earlier-data).
 
+(p05036-fix-l0b)=
 #### L0B Update
 
 The timestamp issue that caused incomplete L0B products has been resolved in VALIDATED products. 
