@@ -9,9 +9,9 @@ To learn about the known issues for PROVISIONAL or BETA products, click the butt
 (nisar-validated-known-issues)=
 ## Validated Product Known Issues
 
-The VALIDATED products [released in November 2026](#nisar-validated-data-nov) are fully calibrated and validated, and have been approved for use in scientific analysis. There are, however, some known issues and limitations that are important to be aware of when using the data.
+The VALIDATED products [released in November 2026](#nisar-validated-data-nov) are fully calibrated and validated, and have been approved for use in scientific analysis. There are, however, some known issues and limitations (summarized in @tbl:known-issues) that are important to be aware of when using the data.
 
-Known issues and limitations are summarized in @tbl:known-issues. To learn more about the issues and limitations for a specific processing version (CRID), refer to the [Release Notes](#release-notes) page. Additional issues that surface over time will be added as information becomes available, and entries will be updated as issues are resolved. 
+To learn more about the issues and limitations for a specific processing version (CRID), refer to the [Release Notes](#release-notes) page. Additional issues that surface over time will be added to @tbl:known-issues as information becomes available, and entries will be updated as issues are resolved. 
 
 If you encounter issues with NISAR products that are not addressed here, please post them to [NASA's Earthdata Forum](#nisar-in-earthdata-forum).
 
