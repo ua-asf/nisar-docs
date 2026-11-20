@@ -9,19 +9,15 @@ To learn about the known issues for PROVISIONAL or BETA products, click the butt
 (nisar-validated-known-issues)=
 ## Validated Product Known Issues
 
-The VALIDATED products [released in November 2026](#nisar-validated-data-nov) are fully calibrated and validated.
+The VALIDATED products [released in November 2026](#nisar-validated-data-nov) are fully calibrated and validated, and have been approved for use in scientific analysis. There are, however, some known issues that are important to be aware of when using the data.
 
-While these products meet calibration and validation requirements for the mission, there are some known issues and limitations that users should be aware of. Some of the issues are limitations inherent to the mission data, while others have the potential to be addressed in the future using new processing approaches. 
-
-Known issues with the NISAR data are tracked in @tbl:known-issues, and additional issues that surface over time will be added as information becomes available. Entries will be updated as issues are resolved or determined to be permanent. 
+Known issues are summarized in @tbl:known-issues. To learn more about the issues and limitations for a specific processing version (CRID), refer to the [Release Notes](#release-notes) page. Additional issues that surface over time will be added as information becomes available, and entries will be updated as issues are resolved. 
 
 If you encounter issues with NISAR products that are not addressed here, please post them to [NASA's Earthdata Forum](#nisar-in-earthdata-forum).
 
 ### Known Issues Table
 
-Each known issue is summarized in @tbl:known-issues, with a link provided to a more detailed description.
-
-:::{table} NISAR Known Issues Table
+:::{table} Summary of known issues for NISAR products, including links to descriptions.
 :label: tbl:known-issues
 :align: center
 
@@ -32,12 +28,10 @@ Each known issue is summarized in @tbl:known-issues, with a link provided to a m
 | [Valid mask fraction metadata not yet searchable](#issue-valid-mask-fraction-metadata)                     | 12 Nov 2026 | Expected to be resolved Dec 2026                                                                                          |
 | [Mixed CRIDS for transitional interferometry products](#issue-mixed-crids-transitional-insar)              | 12 Nov 2026 | Will be reprocessed in future                                                                                             |
 | [Ionospheric effects](#issue-ionospheric-effects)                                                          |             | Improved by [new coregistration approach](#new-insar-coregistration); working to develop additional mitigation techniques |
-| [Stripes in SLC data from loopback residuals](#issue-stripes-in-slc-loopback)                              |             | Working to develop mitigation techniques                                                                                  |
 | [Joint mode data gaps](#issue-joint-mode-data-gaps)                                                        |             | Working to develop mitigation techniques                                                                                  |
 | [Residual radiometric and polarimetric ripples across the swath](#issue-residual-ripples-across-swath)     |             | Working to develop mitigation techniques                                                                                  |
 | [Phase unwrapping in challenging environments](#issue-phase-unwrapping)                                    |             | Working to develop mitigation techniques                                                                                  |
 | [Radio Frequency Interference (RFI)](#issue-rfi)                                                           |             |                                                                                                                           |
-| [Joint mode 40 MHz products show larger-than-usual residual radiometric bands](#issue-joint-mode-products) |             | Issue ongoing                                                                                                             |
 | [Customized Copernicus DEM v1.3 latitude band transitions](#issue-cop-dem-lat-band-transition)             |             | Issue ongoing                                                                                                             |
 | [Unrecoverable Data Loss](#issue-unrecoverable-data-modes)                                                 |             | Permanent issue                                                                                                           |
 | [Permanent NISAR instrument data gap between 2026-07-27 and 2026-08-10](#permanent-data-gap-july26)        | 10 Aug 2026 | Permanent issue                                                                                                           |
@@ -51,7 +45,7 @@ These issues are currently impacting VALIDATED products. Some issues are unresol
 
 #### Known Issues: P05036 Release
 
-Known issues associated with CRID P05036 (the software version used for first validated data release) are documented in the [release notes](#p05036-known-issues). Issue descriptions from the release notes are linked in @tbl:known-issues.
+Known issues associated with CRID [P05036](https://www.earthdata.nasa.gov/data/platforms/space-based-platforms/nisar/nisar-composite-release-id-crid#toc-p05036) (the software version used for the first validated data release) are documented in the [release notes](#p05036-known-issues). Issue descriptions from the release notes are linked in @tbl:known-issues.
 
 (permanent-data-gap-july26)=
 #### Permanent data gap
@@ -63,6 +57,6 @@ No data was collected by the NISAR platform between 2026-07-27T22:03:25Z and 202
 (issue-timestamp-incomplete-l0b)=
 #### Incomplete L0B Products
 
-***Resolved with CRID P05036*** <!--[#TODO: add link to CRID on NISAR page once available]-->
+***Resolved with [CRID P05036](https://www.earthdata.nasa.gov/data/platforms/space-based-platforms/nisar/nisar-composite-release-id-crid#toc-p05036)***
 
-One of the most critical issues with the PROVISIONAL products was a [timestamp issue that resulted in incomplete L0B products](#provisional-issue-incomplete-l0b-products). This manifested in downstream product types as a range of artifacts, including defocused RSLC images, missing data, and decorrelation in InSAR products. The majority of issues with PROVISIONAL products reported to the Earthdata Forum were caused by this issue, but it was resolved before VALIDATED data products were processed. 
+One of the most critical issues with the PROVISIONAL products, which was resolved before any VALIDATED data products were processed, was a [timestamp issue that resulted in incomplete L0B products](#provisional-issue-incomplete-l0b-products). The majority of Earthdata Forum posts about PROVISIONAL products stem from this issue, but it is not an issue for VALIDATED products. 
