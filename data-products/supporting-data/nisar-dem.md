@@ -33,7 +33,7 @@ This dataset allows SAR scientists to generate their own higher-level products f
 This dataset is _not_ generated from NISAR-acquired data. It is modified from an existing DEM, and used in NISAR data processing workflows. 
 :::
 
-The data are available from NASA's Alaska Satellite Facility Distributed Active Archive Center (ASF DAAC) through [Earthdata Search](https://search.earthdata.nasa.gov/search?q=NISAR_DEM) as well as through [direct S3 access](#aws-s3-access-overview) within the AWS us-west-2 region.
+The DEM files are managed by ASF, and can be found using [Earthdata Search](https://search.earthdata.nasa.gov/search?q=NISAR_DEM) or by [direct S3 access](#aws-s3-access-overview) within the AWS us-west-2 region.
 
 (dem-datasets)=
 ## DEM Datasets

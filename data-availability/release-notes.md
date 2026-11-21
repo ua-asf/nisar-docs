@@ -1,0 +1,201 @@
+---
+short_title: Release Notes
+---
+(release-notes)=
+# NISAR Validated Products 
+
+## Release Notes: CRID P05036
+
+### Release Overview
+
+Starting with this release, NISAR Level 0 through Level 2 products are designated VALIDATED. The Level 3 Soil Moisture (SME2) products remain PROVISIONAL.
+
+The project and science teams have examined hundreds of thousands of data products at global and regional scales, both synoptically and through detailed scene analysis. From this analysis, the team has determined that the L0–L2 products are validated and suitable for science, with remaining issues reported below and tracked on the @nisar-validated-known-issues page. 
+
+New L0–L2 products starting with this release are marked VALIDATED and will be found in the Earthdata validated archive.
+
+These products are processed with [NISAR Composite Release ID (CRID) P05036](https://www.earthdata.nasa.gov/data/platforms/space-based-platforms/nisar/nisar-composite-release-id-crid#toc-p05036). Documented known issues are being worked on and will be resolved or mitigated in future releases.
+
+### Product Maturity
+
+These release notes document the [VALIDATED](#nisar-validated-data-nov) data products. 
+
+Refer to documentation for the [PROVISIONAL](#nisar-provisional-data-july) and [BETA](#nisar-sample-data-feb) products for information on earlier data maturities.
+
+:::{table} NISAR Data Maturity Levels
+:label: tbl:data-maturity
+:align: center
+
+| Maturity               | CRID                   | Products | Archive                     |
+|:-----------------------|:-----------------------|:---------|:----------------------------|
+| VALIDATED              | P05036 and higher      | L0–L2    | Earthdata validated archive |
+| PROVISIONAL            | P05036 and higher      | L3 SME2  | Provisional collection      |
+| PROVISIONAL            | P05023 to below P05036 | All      | Provisional collection      |
+| BETA (pre-calibration) | Below P05023           | All      | Beta collection             |
+
+:::
+
+Users should take care when analyzing products of different maturity levels together, since differences in processing software may affect results. 
+
+Earlier data affected by the radiometric calibration issue will be replaced by VALIDATED products after the [reprocessing campaign](#validated-reprocessing) planned for early 2027.
+
+(p05036-whats-new)=
+### What's New
+
+#### Radiometric and Polarimetric Calibration
+
+Products acquired after November 12, 2026, have significantly improved radiometric and polarimetric calibration, including corrections for polarimetric channel imbalance. 
+
+P05036 products acquired after this date do not require [the 59° phase correction previously published for provisional products](#provisional-polarimetric-calibration). Calibration issues affecting P05036 products acquired earlier than November 12 are described in [Known Issues](#issue-calibration-earlier-data).
+
+(p05036-fix-l0b)=
+#### L0B Update
+
+The timestamp issue that caused incomplete L0B products has been resolved in VALIDATED products. 
+
+This issue affected downstream products, causing defocused RSLC images, missing data, and decorrelation in InSAR products. It accounted for most issues reported to the Earthdata Forum for PROVISIONAL products.
+
+#### Masking
+
+Missing-data masks and other mask layers are now more complete and consistent across products. 
+
+- A small percentage of data (~1–2%) may be lost due to downlink issues. 
+- Data processed with CRID P05036 and above include additional information used to generate missing-data masks and statistics across products. 
+
+(new-insar-coregistration)=
+#### Interferogram Coregistration
+
+GUNW/RUNW/RIFG interferograms now consistently use data-driven offsets in addition to geometrical offsets to align reference and secondary images in the coregistration step referred to as “rubbersheeting”. This configuration reduces residual misalignment between image pairs, improving coherence and the continuity of the interferometric phase across the scene. 
+
+As a result, the validated GUNW products over solid earth regions now include data-driven pixel offsets instead of a polynomial fit in the provisional products. These pixel offsets can capture large ground movements such as those caused by earthquakes and volcanic activities. 
+
+#### Phase Unwrapping 
+
+The quality of phase unwrapping in the validated products has been improved by: 
+- Fixing an edge case in the bridging algorithm.
+- Allowing the production of connected components with smaller size.
+- Using valid data masks for generating connected components.
+
+#### Digital Elevation Model (DEM)
+
+Products are now processed with the NISAR Customized Copernicus DEM (CC-DEM) v1.3, which includes several fixes that improve overall product quality compared with v1.2. 
+
+These improvements include removal of the artifact along the prime meridian and at DEM tile boundaries at high latitudes. The DEM will remain identical at mid latitudes. Remaining DEM issues are listed under [Known Issues](#issue-cop-dem-lat-band-transition). 
+
+#### Other Improvements
+
+Other bug fixes and improvements make this data set more complete and robust than previous releases. 
+
+(p05036-known-issues)=
+### Known Issues 
+
+(issue-calibration-earlier-data)=
+#### Calibration of earlier data
+
+About 30% of the data acquired in specific radar modes before November 12, 2026, are affected by a calibration issue, with radiometric residuals of approximately 1 dB and polarimetric phase inconsistencies. The radar modes affected by this issue are listed in @tbl:degraded-radar-modes; they are fixed for data acquired after November 12, 2026. 
+
+Affected data will be corrected during a reprocessing campaign planned for early 2027, covering acquisitions from the start of the science phase on December 29, 2025. Until reprocessed data are available, users combining products processed before and after November 12 should expect radiometric differences and polarimetric phase inconsistencies.
+
+:::{table} Science radar modes degraded before November 12, 2026, and fixed for subsequent acquisitions. For details on how to interpret the mode mnemonics, refer to @nisar_summary or @mnemonic-scheme. For joint L+S modes, the S-band mnemonic is listed below the L-band mnemonic. Affected polarization indicates the L-band polarization(s) affected by the calibration issue: H, V, or both (H, V).
+:label: tbl:degraded-radar-modes
+:align: center
+
+| RCID | Mode mnemonics                               | Affected polarization | Science Target                                          |
+|:-----|:---------------------------------------------|:----------------------|:--------------------------------------------------------|
+| 151  | L:SCI:SH:40M+05N:FS:B4:D02                   | H                     | Land Ice Low Res                                        |
+| 156  | L:SCI:DH:40M+05N:FS:B4:D02                   | H, V                  | L-only Background Land                                  |
+| 216  | L:SCI:DH:40M+05N:FS:B4:D02<br>S:DB:CP:37W:B4 | H, V                  | Glacial Ice-Himalayas                                   |
+| 217  | L:SCI:DH:40M+05N:FS:B4:D02<br>S:DB:SH:75W:B4 | H, V                  | High-Res Deformation (Urban/Landslide)                  |
+| 223  | L:SCI:SH:40M+05N:FS:B4:D02<br>S:DB:CP:25W:B4 | H                     | Land Ice Low Res                                        |
+| 236  | L:SCI:DH:40M+05N:FS:B4:D02<br>S:DB:CP:25W:B4 | H, V                  | Glacial Ice-Himalayas                                   |
+| 237  | L:SCI:QP:20M+05N:FS:F05<br>S:DB:DH:37N:B4    | V                     | ISRO Cal/Val                                            |
+| 238  | L:SCI:DH:40M+05N:FS:B4:D02<br>S:DB:DH:37W:B4 | H, V                  | ISRO Background Land and Global Science Cal/Val targets |
+| 247  | L:SCI:SH:40M+05N:FS:B4:D02<br>S:--:SH:37W:B4 | H                     | Land Ice - Antarctica                                   |
+| 248  | L:SCI:DH:40M+05N:FS:B4:D02<br>S:DB:DV:10W:B4 | H, V                  | ISRO Bohai Bay and NASA Urban Area                      |
+
+:::
+
+(issue-unrecoverable-data-modes)=
+#### Unrecoverable Data Loss
+Data acquired in a small number of radar modes suffered unrecoverable loss in one or both L-band polarizations prior to November 12, 2026. The affected modes are listed in @tbl:unrecoverable-data-loss. Modes 231 and 233 were used for sea ice acquisitions north of Alaska (Beaufort Sea), and modes 249, 250, and 251 were used for a limited number of observations over the Amazon. Because the loss is unrecoverable, these data will not be restored by the planned reprocessing campaign.
+
+:::{table} Radar modes with unrecoverable data loss in one or both polarizations for acquisitions prior to November 12, 2026. For details on how to interpret the mode mnemonics, refer to @nisar_summary or @mnemonic-scheme. For joint L+S modes, the S-band mnemonic is listed below the L-band mnemonic. Affected polarization indicates the L-band polarization(s) affected by the calibration issue: H, V, or both (H, V).
+:label: tbl:unrecoverable-data-loss
+:align: center
+
+| RCID | Mode mnemonics                               | Affected polarization | Science Target                                 |
+|:-----|:---------------------------------------------|:----------------------|:-----------------------------------------------|
+| 231  | L:SCI:QD:05W+---:FS:B4:D09<br>S:DB:DV:10W:B4 | V                     | BeaufortSea                                    |
+| 233  | L:SCI:QD:05W+---:FS:B4:D09<br>S:DB:CP:25W:B4 | H                     | BeaufortSea / Antarctica Stations              |
+| 249  | L:SCI:DH:40M+---:FS:B4:D11<br>S:DR:DH:25W:B4 | H, V                  | Joint Pointing over Radar Bright Targets       |
+| 250  | L:SCI:DV:40M+---:FS:B4:D11<br>S:DR:DV:25W:B4 | H, V                  | Joint Pointing over Radar Bright Targets       |
+| 251  | L:SCI:QD:05W+---:FS:B4:D11<br>S:DR:CP:25W:B4 | V                     | Joint Pointing over Homogeneous Targets QD Pol |
+
+:::
+
+(issue-gunw-phase-artifact-squint)=
+#### GUNW phase artifact from squint compensation
+
+GUNW products contain an interferometric phase artifact caused by incomplete squint compensation during the interpolation step of rubbersheeting. The artifact is a function of data-driven azimuth offsets used during coregistration and is observed in areas with significant ionospheric phase gradient in along-track direction (usually in high latitudes). 
+
+The phase artifact is deterministic and users can apply a correction<!-- using [#TODO: Add link to notebook when available from JPL)]-->. This issue will be fixed in the next release, removing the need for a user-applied correction.
+
+(issue-cop-dem-lat-band-transition)=
+#### Customized Copernicus DEM v1.3 latitude band transitions
+
+Small elevation errors of approximately ±5 m can occur where terrain changes sharply across latitude band boundaries in the Customized Copernicus DEM (CC-DEM) v1.3, which is derived starting from the Copernicus COP-DEM_GLO-30-DGED/2023_1. Customization is described in the readme.txt distributed with the CC-DEM product.
+
+(issue-valid-mask-fraction-metadata)=
+#### Valid mask fraction metadata not yet searchable
+
+Products include new valid mask fraction metadata fields, but these fields are currently not searchable in CMR. Until the DAAC production ingest is updated, expected in December 2026, products remain searchable using only existing metadata fields.
+
+(issue-joint-mode-data-gaps)=
+#### Joint mode data gaps
+
+A small fraction of data contain along-track gaps of approximately 2 seconds when transitioning between to/from joint L+S acquisition and an L-only acquisition. Less frequent gaps of approximately 0.25 seconds occur when an onboard file reaches its size limit and a new file is opened. The team is working to minimize these gaps in future acquisitions.
+
+(issue-mixed-crids-transitional-insar)=
+#### Mixed CRIDS for transitional interferometry products
+
+In the transition between provisional to validated products, interferometric products are produced by interfering provisional (CRID=[P05023](https://www.earthdata.nasa.gov/data/platforms/space-based-platforms/nisar/nisar-composite-release-id-crid#toc-p05023)) with validated RSLC products (CRID=[P05036](https://www.earthdata.nasa.gov/data/platforms/space-based-platforms/nisar/nisar-composite-release-id-crid#toc-p05036)). Differences in calibration and phase characteristics between the two versions introduce an additional interferometric phase component.
+
+These interferograms will be available for later acquisitions dated October 21, 2026 onward, paired with acquisitions 12 days earlier, or at longer 12-day intervals where needed to find the first suitable earlier acquisition. They will be reprocessed in a future campaign using consistent CRIDs.
+
+### Product Characteristics and Limitations
+
+#### Soil Moisture (SME2) products
+
+[SME2 products remain PROVISIONAL](#sme2-product-maturity-level). They require a time series of L2 GCOV inputs, and some cal/val metrics such as unbiased RMSE need longer time series before they can be computed. 
+
+In quad-pol areas, three to six gaps across the swath arise from NISAR's SweepSAR acquisition and the number of time steps in the algorithm. In that case, one or more of the three SME2 algorithms may not deliver an estimate.
+
+(issue-residual-ripples-across-swath)=
+#### Residual radiometric and polarimetric ripples across the swath
+
+Low-level systematic radiometric ripples remain across the swath, with amplitudes below 0.25 dB in both frequency A and frequency B, well within requirements. A residual ripple of 2–3° is also present in the HH–VV and HV–VH polarimetric phase differences. The project is investigating further radiometric and polarimetric ripple reductions to be addressed in future releases.
+
+(issue-phase-unwrapping)=
+#### Phase unwrapping
+
+Phase unwrapping in challenging environments remains difficult. The project will continue to improve unwrapping performance throughout the mission.
+
+(issue-ionospheric-effects)=
+#### Residual ionospheric effects
+
+Residual ionospheric effects remain challenging to mitigate at high latitudes. Data are generally usable, but users may encounter geolocation errors, patterned decorrelation bands in interferograms, and residual phase errors after applying the ionospheric correction layer. 
+
+Local geometric distortions exceeding a fraction of a pixel can also cause the processing algorithms to introduce additional phase errors. 
+
+The [updated interferogram coregistration](#new-insar-coregistration), which now incorporates data-driven offsets, helps reduce misalignment caused by these distortions, although residual ionospheric effects may persist. 
+
+(issue-rfi)=
+#### Residual Radio Frequency Interference (RFI)
+
+The RFI mitigation filter generally performs well, but residual interference remains in some areas. The filter can also remove real features in areas with strong signal contrasts.
+
+### Ongoing monitoring and assessment
+
+#### Corner reflector radiometric trends
+
+The team is investigating possible temporal trends in radar cross section (RCS) measured over corner reflectors. These trends will be better characterized and documented as more data become available.
