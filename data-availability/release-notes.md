@@ -190,7 +190,7 @@ Local geometric distortions exceeding a fraction of a pixel can also cause the p
 The [updated interferogram coregistration](#new-insar-coregistration), which now incorporates data-driven offsets, helps reduce misalignment caused by these distortions, although residual ionospheric effects may persist. 
 
 (issue-rfi)=
-#### Radio frequency interference
+#### Residual Radio Frequency Interference (RFI)
 
 The RFI mitigation filter generally performs well, but residual interference remains in some areas. The filter can also remove real features in areas with strong signal contrasts.
 
