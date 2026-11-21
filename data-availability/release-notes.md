@@ -117,9 +117,9 @@ Affected data will be corrected during a reprocessing campaign planned for early
 
 (issue-unrecoverable-data-modes)=
 #### Unrecoverable Data Loss
-Data acquired in a small number of radar modes suffered unrecoverable loss in one or both L-band polarizations. The affected modes are listed in Table 2. Modes 231 and 233 were used for sea ice acquisitions north of Alaska (Beaufort Sea), and modes 249, 250, and 251 were used for a limited number of observations over the Amazon. Because the loss is unrecoverable, these data will not be restored by the planned reprocessing campaign.
+Data acquired in a small number of radar modes suffered unrecoverable loss in one or both L-band polarizations prior to November 12, 2026. The affected modes are listed in @tbl:unrecoverable-data-loss. Modes 231 and 233 were used for sea ice acquisitions north of Alaska (Beaufort Sea), and modes 249, 250, and 251 were used for a limited number of observations over the Amazon. Because the loss is unrecoverable, these data will not be restored by the planned reprocessing campaign.
 
-:::{table} Radar modes with unrecoverable data loss in one or both polarizations. For details on how to interpret the mode mnemonics, refer to @nisar_summary or @mnemonic-scheme. For joint L+S modes, the S-band mnemonic is listed below the L-band mnemonic. Affected polarization indicates the L-band polarization(s) affected by the calibration issue: H, V, or both (H, V).
+:::{table} Radar modes with unrecoverable data loss in one or both polarizations for acquisitions prior to November 12, 2026. For details on how to interpret the mode mnemonics, refer to @nisar_summary or @mnemonic-scheme. For joint L+S modes, the S-band mnemonic is listed below the L-band mnemonic. Affected polarization indicates the L-band polarization(s) affected by the calibration issue: H, V, or both (H, V).
 :label: tbl:unrecoverable-data-loss
 :align: center
 
