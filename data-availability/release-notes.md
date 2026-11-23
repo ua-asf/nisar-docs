@@ -51,7 +51,7 @@ P05036 products acquired after this date do not require [the 59° phase correcti
 (p05036-fix-l0b)=
 #### L0B Update
 
-The timestamp issue that caused incomplete L0B products has been resolved in VALIDATED products. 
+The [timestamp issue that caused incomplete L0B products](#provisional-issue-incomplete-l0b-products) has been resolved in VALIDATED products. 
 
 This issue affected downstream products, causing defocused RSLC images, missing data, and decorrelation in InSAR products. It accounted for most issues reported to the Earthdata Forum for PROVISIONAL products.
 
